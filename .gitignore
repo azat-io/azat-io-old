@@ -1,0 +1,19 @@
+# Node.js
+node_modules
+
+# Editor
+.vscode/
+.vim/
+
+# Vuepress
+content/.vuepress/
+
+# Build
+dist/
+
+# Data
+theme/
+
+# Misc
+.DS_Store
+.tool-versions

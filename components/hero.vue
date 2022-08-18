@@ -1,0 +1,95 @@
+<script lang="ts" setup>
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+
+import Container from '~/components/container.vue'
+import { isMobile } from '~/lib/is-mobile'
+
+let t = useThemeLocaleData<{
+  subtitle: string
+  title: string
+}>()
+</script>
+
+<template>
+  <div :class="$style.hero">
+    <img
+      v-if="isMobile"
+      :class="$style.video"
+      src="/assets/hero.webp"
+      alt="Azat S."
+    />
+    <video
+      v-else
+      :class="$style.video"
+      poster="/assets/hero.webp"
+      tabindex="-1"
+      playsinline
+      autoplay
+      muted
+      loop
+    >
+      <source src="/assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div :class="$style.paranja" />
+    <div :class="$style.greeting">
+      <Container>
+        <h1 :class="$style['header-title']" v-text="t.title" />
+        <h2 :class="$style['header-subtitle']" v-text="t.subtitle" />
+      </Container>
+    </div>
+  </div>
+</template>
+
+<style module>
+.hero {
+  position: relative;
+}
+
+.paranja {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: oklch(12% 0 0 / 40%);
+}
+
+.greeting {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+}
+
+.header-title {
+  margin: 0 0 var(--size-xs);
+  font-size: var(--font-size-xxxxxl);
+  font-weight: bold;
+  line-height: var(--line-height-xxxxxl);
+  color: var(--color-text);
+  text-shadow: 1px 2px lch(12% 0 0 / 30%);
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: var(--font-size-xxxxl);
+  font-weight: normal;
+  line-height: var(--line-height-xxxxl);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  min-height: 320px;
+  max-height: 560px;
+  overflow: hidden;
+  filter: sepia(0.3);
+}
+
+.video::-webkit-media-controls {
+  display: none !important;
+}
+</style>

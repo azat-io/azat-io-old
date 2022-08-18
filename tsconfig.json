@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "preserveValueImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "module": "esnext",
+    "target": "es2020",
+    "jsx": "preserve",
+    "allowJs": true,
+    "strict": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "paths": {
+      "~/components/*": ["./components/*"],
+      "~/plugins/*": ["./plugins/*"],
+      "~/assets/*": ["./assets/*"],
+      "~/stores/*": ["./stores/*"],
+      "~/icons/*": ["./icons/*"],
+      "~/pages/*": ["./pages/*"],
+      "~/lib/*": ["./lib/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

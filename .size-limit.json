@@ -1,0 +1,14 @@
+[
+  {
+    "name": "All scripts to execute",
+    "path": ["dist/assets/*.js"],
+    "limit": "60 kB",
+    "brotli": true
+  },
+  {
+    "name": "All styles to execute",
+    "path": ["dist/assets/*.css"],
+    "limit": "5 kB",
+    "brotli": true
+  }
+]
