@@ -1,0 +1,15 @@
+{
+  "also-translated": "Also translated into:",
+  "language": "Language",
+  "languages": {
+    "en": "English",
+    "ru": "Russian"
+  },
+  "made-with": "Made with",
+  "minutes-to-read": {
+    "one": "minute to read",
+    "other": "minutes to read"
+  },
+  "subtitle": "of reinventing the wheel",
+  "title": "Manual"
+}

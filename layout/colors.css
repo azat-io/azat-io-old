@@ -1,0 +1,13 @@
+:root {
+  color-scheme: dark;
+
+  --color-brand: oklch(83% 0.15 83);
+  --color-brand-hover: oklch(75% 0.15 83);
+  --color-text: oklch(98% 0.05 97.5);
+  --color-primary: oklch(22% 0 0);
+  --color-secondary: oklch(23% 0 0);
+  --color-tertiary: oklch(24% 0 0);
+  --color-inverse: oklch(21% 0 0);
+  --color-code-background: oklch(21% 0 0);
+  --color-code-text: oklch(92% 0.05 97.5);
+}
