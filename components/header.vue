@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
 import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
-import { directive as vClickAway } from 'vue3-click-away'
 import { watchEffect, shallowRef, reactive, ref } from 'vue'
+import { directive as vClickAway } from 'vue3-click-away'
 import type { DefineComponent } from 'vue'
 
 import LanguageIcon from '~/assets/language.svg'

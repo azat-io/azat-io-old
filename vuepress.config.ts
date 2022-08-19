@@ -75,7 +75,7 @@ export default (async () => {
       ],
     ],
     locales: {
-      '/en': {
+      '/': {
         lang: 'en-US',
         title: 'Azat S.',
       },
@@ -91,8 +91,12 @@ export default (async () => {
         404: path.resolve(__dirname, 'pages/not-found.vue'),
       },
     },
-    public: path.resolve(__dirname, 'public'),
     open: true,
+    public: path.resolve(__dirname, 'public'),
+    pagePatterns:
+      process.env.NODE_ENV === 'production'
+        ? ['**/*.md', '!index.md']
+        : ['**/*.md'],
     alias: {
       '~': __dirname,
     },
@@ -108,7 +112,7 @@ export default (async () => {
       themeDataPlugin({
         themeData: {
           locales: {
-            '/en': en,
+            '/': en,
             '/ru': ru,
           },
         },
