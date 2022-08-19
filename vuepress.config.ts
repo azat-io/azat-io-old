@@ -58,19 +58,21 @@ export default (async () => {
       [
         'link',
         {
-          rel: 'prefetch',
+          rel: 'preload',
           href: '/fonts/stem-regular.woff2',
           type: 'font/woff2',
           as: 'font',
+          crossorigin: true,
         },
       ],
       [
         'link',
         {
-          rel: 'prefetch',
+          rel: 'preload',
           href: '/fonts/stem-bold.woff2',
           type: 'font/woff2',
           as: 'font',
+          crossorigin: true,
         },
       ],
     ],
