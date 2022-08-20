@@ -98,7 +98,7 @@ watchEffect(() => {
         props.transparent && !(onTop.value || localePopupOpen),
     }"
   >
-    <RouterLink :class="$style.title" :to="route">
+    <RouterLink :class="$style.title" :to="route === '/' ? '/en' : route">
       <Logo :class="$style.logo" />
       {{ data.title }}
     </RouterLink>
