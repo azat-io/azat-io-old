@@ -52,15 +52,12 @@ let closeLocalePopup = () => {
 }
 
 let onTop = reactive({
-  value: false,
+  value: true,
 })
 
 let onScroll = () => {
-  if (window?.scrollY > (header.value?.getBoundingClientRect().height ?? 0)) {
-    onTop.value = true
-  } else {
-    onTop.value = false
-  }
+  onTop.value =
+    window?.scrollY < (header.value?.getBoundingClientRect().height ?? 0)
 }
 
 watchEffect(() => {
@@ -82,8 +79,6 @@ watchEffect(() => {
 
 watchEffect(() => {
   if (!__VUEPRESS_SSR__ && props.transparent) {
-    onTop.value =
-      window?.scrollY > (header.value?.getBoundingClientRect().height ?? 0)
     document.addEventListener('scroll', onScroll)
   }
 })
@@ -95,7 +90,7 @@ watchEffect(() => {
     :class="{
       [$style.header]: true,
       [$style.transparent]:
-        props.transparent && !(onTop.value || localePopupOpen),
+        props.transparent && onTop.value && !localePopupOpen,
     }"
   >
     <RouterLink :class="$style.title" :to="route === '/' ? '/en' : route">

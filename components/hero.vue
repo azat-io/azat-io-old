@@ -22,6 +22,8 @@ let t = useThemeLocaleData<{
       v-else
       :class="$style.video"
       poster="/assets/hero.webp"
+      :width="1280"
+      :height="720"
       tabindex="-1"
       playsinline
       autoplay
@@ -29,6 +31,7 @@ let t = useThemeLocaleData<{
       loop
     >
       <source src="/assets/hero.mp4" type="video/mp4" />
+      <img src="/assets/hero.webp" alt="Azat S." />
     </video>
     <div :class="$style.paranja" />
     <div :class="$style.greeting">
@@ -86,6 +89,7 @@ let t = useThemeLocaleData<{
   min-height: 320px;
   max-height: 560px;
   overflow: hidden;
+  user-select: none;
   filter: sepia(0.3);
 }
 

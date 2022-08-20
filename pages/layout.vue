@@ -103,7 +103,7 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
   height: clamp(20rem, 17rem + 10vw, 25rem);
   margin-top: var(--size-header);
   user-select: none;
-  background: oklch(75% 0 96.5);
+  background: oklch(76.69% 0.016 90);
 }
 
 .hero-image {
