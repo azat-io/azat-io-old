@@ -5,8 +5,9 @@ export let seoPlugin = (): PluginFunction => () => ({
   extendsPage: page => {
     let head = page.frontmatter.head || []
     let hero = page.frontmatter.hero as {
-      avif: string
-      webp: string
+      avif?: string
+      webp?: string
+      png: string
     }
     head.push(['meta', { property: 'og:locale', content: page.lang }])
     if (page.title) {
@@ -26,7 +27,7 @@ export let seoPlugin = (): PluginFunction => () => ({
       { property: 'og:url', content: `https://azat.io${page.path}` },
     ])
     if (page.frontmatter.hero) {
-      head.push(['meta', { property: 'og:image', content: hero.webp }])
+      head.push(['meta', { property: 'og:image', content: hero.png }])
     }
     if (page.title) {
       head.push(['meta', { name: 'twitter:title', content: page.title }])
@@ -38,7 +39,7 @@ export let seoPlugin = (): PluginFunction => () => ({
       ])
     }
     if (page.frontmatter.hero) {
-      head.push(['meta', { name: 'twitter:image', content: hero.webp }])
+      head.push(['meta', { name: 'twitter:image', content: hero.png }])
     }
     head.push(['meta', { name: 'twitter:card', content: 'summary' }])
     head.push(['meta', { name: 'twitter:site', content: '@azat_io' }])
