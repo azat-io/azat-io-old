@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
 import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
-import { watchEffect, shallowRef, reactive, ref } from 'vue'
 import { directive as vClickAway } from 'vue3-click-away'
+import { watchEffect, shallowRef, ref } from 'vue'
 import type { DefineComponent } from 'vue'
 
 import LanguageIcon from '~/assets/language.svg'
@@ -41,6 +41,8 @@ let locales = shallowRef<
 
 let localePopupOpen = ref(false)
 
+let onTop = ref(true)
+
 let openLocalePopup = () => {
   if (!localePopupOpen.value) {
     localePopupOpen.value = true
@@ -50,10 +52,6 @@ let openLocalePopup = () => {
 let closeLocalePopup = () => {
   localePopupOpen.value = false
 }
-
-let onTop = reactive({
-  value: true,
-})
 
 let onScroll = () => {
   onTop.value =
@@ -89,8 +87,7 @@ watchEffect(() => {
     ref="header"
     :class="{
       [$style.header]: true,
-      [$style.transparent]:
-        props.transparent && onTop.value && !localePopupOpen,
+      [$style.transparent]: props.transparent && onTop && !localePopupOpen,
     }"
   >
     <RouterLink :class="$style.title" :to="route === '/' ? '/en' : route">
