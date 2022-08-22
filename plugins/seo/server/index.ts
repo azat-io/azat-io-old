@@ -21,6 +21,13 @@ export let seoPlugin = (): PluginFunction => () => ({
     }
     if (!page.frontmatter.layout) {
       head.push(['meta', { property: 'og:type', content: 'article' }])
+      head.push([
+        'meta',
+        {
+          property: 'article:published_time',
+          content: new Date(page.frontmatter.date!).toISOString(),
+        },
+      ])
     }
     head.push([
       'meta',

@@ -81,7 +81,9 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
           </RouterLink>
         </div>
       </div>
-      <Content />
+      <article>
+        <Content />
+      </article>
     </Container>
     <Footer />
   </main>
