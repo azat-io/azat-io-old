@@ -3,7 +3,6 @@ import { onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
 import copyIcon from '~/assets/copy.svg?raw'
-import { isMobile } from '~/lib/is-mobile'
 
 import './index.css'
 
@@ -28,6 +27,11 @@ type Language = keyof typeof languages
 export default defineClientConfig({
   setup: () => {
     let route = useRoute()
+    let isMobile = __VUEPRESS_SSR__
+      ? true
+      : /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        )
 
     let genenrateButton = (): void => {
       let selector = 'div[class*="language-"]'

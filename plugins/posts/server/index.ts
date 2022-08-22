@@ -32,6 +32,11 @@ let preparePosts = async (app: App): Promise<void> => {
           language: ISO6391.getNativeName(getLanguage(htmlFilePathRelative)),
           path: languagePagePath,
         })),
+      formattedDate: new Intl.DateTimeFormat(lang, {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      }).format(new Date(frontmatter.date!)),
       readingTime: Math.ceil(readingTime(content).minutes),
       language: getLanguage(lang),
       title: frontmatter.title!,

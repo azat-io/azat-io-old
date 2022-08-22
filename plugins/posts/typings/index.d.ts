@@ -3,6 +3,7 @@ export interface Post {
     language: string
     path: string
   }[]
+  formattedDate: string
   date: string
   language: string
   path: string

@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-import { usePageLang } from '@vuepress/client'
-
 import { usePosts } from '~/plugins/posts/client'
 import Container from '~/components/container.vue'
-import { formatDate } from '~/lib/format-date'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 import Hero from '~/components/hero.vue'
 
-let lang = usePageLang()
 let posts = usePosts()
 </script>
 
@@ -18,11 +14,11 @@ let posts = usePosts()
     <Hero />
     <Container>
       <div :class="$style.posts">
-        <div v-for="{ title, path, date } in posts" :key="title">
+        <div v-for="{ title, path, formattedDate } in posts" :key="title">
           <RouterLink :to="path" :class="$style.link">
             <h3 :class="$style.title" v-text="title" />
           </RouterLink>
-          <span :class="$style.date" v-text="formatDate(lang, date)" />
+          <span :class="$style.date" v-text="formattedDate" />
         </div>
       </div>
     </Container>
