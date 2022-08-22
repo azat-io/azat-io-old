@@ -5,7 +5,6 @@ import { computed } from 'vue'
 
 import Container from '~/components/container.vue'
 import { usePost } from '~/plugins/posts/client'
-import { formatDate } from '~/lib/format-date'
 import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
@@ -46,10 +45,7 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
     <Container as="article">
       <h1 :class="$style.title" v-text="pageFrontmatter.title" />
       <div :class="$style.info">
-        <span
-          :class="$style['info-text']"
-          v-text="formatDate(lang, pageFrontmatter.date!)"
-        />
+        <span :class="$style['info-text']" v-text="post.formattedDate" />
         <span :class="$style['info-text']">
           <CoffeeIcon
             v-for="n in coffeeCups"

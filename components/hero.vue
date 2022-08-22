@@ -2,7 +2,6 @@
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
 
 import Container from '~/components/container.vue'
-import { isMobile } from '~/lib/is-mobile'
 
 let t = useThemeLocaleData<{
   subtitle: string
@@ -13,14 +12,12 @@ let t = useThemeLocaleData<{
 <template>
   <div :class="$style.hero">
     <img
-      v-if="isMobile"
-      :class="$style.video"
+      :class="[$style.content, $style.image]"
       src="/assets/hero.webp"
       alt="Azat S."
     />
     <video
-      v-else
-      :class="$style.video"
+      :class="[$style.content, $style.video]"
       poster="/assets/hero.webp"
       :width="1280"
       :height="720"
@@ -81,8 +78,7 @@ let t = useThemeLocaleData<{
   line-height: var(--line-height-xxxxl);
 }
 
-.video {
-  display: block;
+.content {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -93,7 +89,21 @@ let t = useThemeLocaleData<{
   filter: sepia(0.3);
 }
 
-.video::-webkit-media-controls {
+.content::-webkit-media-controls {
   display: none !important;
+}
+
+.video {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .image {
+    display: none;
+  }
+
+  .video {
+    display: block;
+  }
 }
 </style>
