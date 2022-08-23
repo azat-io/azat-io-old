@@ -1,7 +1,7 @@
 {
   "name": "azat-io",
   "private": true,
-  "repository": "git@github.com:azat-io/azat-io.git",
+  "repository": "azat-io/azat-io",
   "author": "Azat S. <to@azat.io>",
   "engines": {
     "node": ">=18"
@@ -21,6 +21,7 @@
     "jsonc-parser": "3.1.0",
     "markdown-it-image-lazy-loading": "1.2.0",
     "markdown-it-imsize": "2.0.1",
+    "postcss": "8.4.16",
     "postcss-100vh-fix": "1.0.2",
     "reading-time": "1.5.0",
     "rss": "1.2.2",

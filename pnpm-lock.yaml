@@ -30,6 +30,7 @@ specifiers:
   markdown-it-image-lazy-loading: 1.2.0
   markdown-it-imsize: 2.0.1
   nano-staged: 0.8.0
+  postcss: 8.4.16
   postcss-100vh-fix: 1.0.2
   postcss-html: 1.5.0
   reading-time: 1.5.0
@@ -49,7 +50,7 @@ specifiers:
   vuepress-vite: 2.0.0-beta.49
 
 dependencies:
-  '@csstools/postcss-oklab-function': 1.1.1
+  '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.16
   '@vuepress/bundler-vite': 2.0.0-beta.49
   '@vuepress/cli': 2.0.0-beta.49
   '@vuepress/client': 2.0.0-beta.49
@@ -57,13 +58,14 @@ dependencies:
   '@vuepress/plugin-shiki': 2.0.0-beta.49
   '@vuepress/plugin-theme-data': 2.0.0-beta.49
   '@vuepress/utils': 2.0.0-beta.49
-  autoprefixer: 10.4.8
+  autoprefixer: 10.4.8_postcss@8.4.16
   chokidar: 3.5.3
   iso-639-1: 2.1.15
   jsonc-parser: 3.1.0
   markdown-it-image-lazy-loading: 1.2.0
   markdown-it-imsize: 2.0.1
-  postcss-100vh-fix: 1.0.2
+  postcss: 8.4.16
+  postcss-100vh-fix: 1.0.2_postcss@8.4.16
   reading-time: 1.5.0
   rss: 1.2.2
   shiki: 0.10.1
@@ -139,22 +141,24 @@ packages:
       '@babel/helper-validator-identifier': 7.18.6
       to-fast-properties: 2.0.0
 
-  /@csstools/postcss-oklab-function/1.1.1:
+  /@csstools/postcss-oklab-function/1.1.1_postcss@8.4.16:
     resolution: {integrity: sha512-nJpJgsdA3dA9y5pgyb/UfEzE7W5Ka7u0CX0/HIMVBNWzWemdcTH3XwANECU6anWv/ao4vVNLTMxhiPNZsTK6iA==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.2
     dependencies:
-      '@csstools/postcss-progressive-custom-properties': 1.3.0
+      '@csstools/postcss-progressive-custom-properties': 1.3.0_postcss@8.4.16
+      postcss: 8.4.16
       postcss-value-parser: 4.2.0
     dev: false
 
-  /@csstools/postcss-progressive-custom-properties/1.3.0:
+  /@csstools/postcss-progressive-custom-properties/1.3.0_postcss@8.4.16:
     resolution: {integrity: sha512-ASA9W1aIy5ygskZYuWams4BzafD12ULvSypmaLJT2jvQ8G0M3I8PRQhC0h7mG0Z3LI05+agZjqSR9+K9yaQQjA==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
       postcss: ^8.3
     dependencies:
+      postcss: 8.4.16
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -669,9 +673,9 @@ packages:
       '@vuepress/core': 2.0.0-beta.49
       '@vuepress/shared': 2.0.0-beta.49
       '@vuepress/utils': 2.0.0-beta.49
-      autoprefixer: 10.4.8_postcss@8.4.14
+      autoprefixer: 10.4.8_postcss@8.4.16
       connect-history-api-fallback: 2.0.0
-      postcss: 8.4.14
+      postcss: 8.4.16
       rollup: 2.77.2
       vite: 2.9.14
       vue: 3.2.37
@@ -1060,7 +1064,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /autoprefixer/10.4.8:
+  /autoprefixer/10.4.8_postcss@8.4.16:
     resolution: {integrity: sha512-75Jr6Q/XpTqEf6D2ltS5uMewJIx5irCU1oBYJrWjFenq/m12WRRrz6g15L1EIoYvPLXTbEry7rDOwrcYNj77xw==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
@@ -1072,22 +1076,7 @@ packages:
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
-      postcss-value-parser: 4.2.0
-    dev: false
-
-  /autoprefixer/10.4.8_postcss@8.4.14:
-    resolution: {integrity: sha512-75Jr6Q/XpTqEf6D2ltS5uMewJIx5irCU1oBYJrWjFenq/m12WRRrz6g15L1EIoYvPLXTbEry7rDOwrcYNj77xw==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
-    dependencies:
-      browserslist: 4.21.3
-      caniuse-lite: 1.0.30001374
-      fraction.js: 4.2.0
-      normalize-range: 0.1.2
-      picocolors: 1.0.0
-      postcss: 8.4.14
+      postcss: 8.4.16
       postcss-value-parser: 4.2.0
     dev: false
 
@@ -3137,11 +3126,13 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  /postcss-100vh-fix/1.0.2:
+  /postcss-100vh-fix/1.0.2_postcss@8.4.16:
     resolution: {integrity: sha512-t7vqk9AfjI4fXmWlQCEiMZFFhi1hro4WlECINI1TV6Qh1XapUJE++gCmNr95F5Hen/+bz1OmO+SiSB9TZmFmSg==}
     engines: {node: '>=10.0'}
     peerDependencies:
       postcss: ^8.1.0
+    dependencies:
+      postcss: 8.4.16
     dev: false
 
   /postcss-html/1.5.0:
@@ -3150,8 +3141,8 @@ packages:
     dependencies:
       htmlparser2: 8.0.1
       js-tokens: 8.0.0
-      postcss: 8.4.14
-      postcss-safe-parser: 6.0.0_postcss@8.4.14
+      postcss: 8.4.16
+      postcss-safe-parser: 6.0.0_postcss@8.4.16
     dev: true
 
   /postcss-media-query-parser/0.2.3:
@@ -3160,15 +3151,6 @@ packages:
 
   /postcss-resolve-nested-selector/0.1.1:
     resolution: {integrity: sha512-HvExULSwLqHLgUy1rl3ANIqCsvMS0WHss2UOsXhXnQaZ9VCc2oBvIpXrl00IUFT5ZDITME0o6oiXeiHr2SAIfw==}
-    dev: true
-
-  /postcss-safe-parser/6.0.0_postcss@8.4.14:
-    resolution: {integrity: sha512-FARHN8pwH+WiS2OPCxJI8FuRJpTVnn6ZNFiqAM2aeW2LwTHWWmWgIyKC6cUo0L8aeKiF/14MNvnpls6R2PBeMQ==}
-    engines: {node: '>=12.0'}
-    peerDependencies:
-      postcss: ^8.3.3
-    dependencies:
-      postcss: 8.4.14
     dev: true
 
   /postcss-safe-parser/6.0.0_postcss@8.4.16:
@@ -3188,24 +3170,16 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss-sorting/7.0.1_postcss@8.4.14:
+  /postcss-sorting/7.0.1_postcss@8.4.16:
     resolution: {integrity: sha512-iLBFYz6VRYyLJEJsBJ8M3TCqNcckVzz4wFounSc5Oez35ogE/X+aoC5fFu103Ot7NyvjU3/xqIXn93Gp3kJk4g==}
     peerDependencies:
       postcss: ^8.3.9
     dependencies:
-      postcss: 8.4.14
+      postcss: 8.4.16
     dev: true
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-
-  /postcss/8.4.14:
-    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.4
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
 
   /postcss/8.4.16:
     resolution: {integrity: sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==}
@@ -3621,8 +3595,8 @@ packages:
     peerDependencies:
       stylelint: ^14.0.0
     dependencies:
-      postcss: 8.4.14
-      postcss-sorting: 7.0.1_postcss@8.4.14
+      postcss: 8.4.16
+      postcss-sorting: 7.0.1_postcss@8.4.16
       stylelint: 14.10.0
     dev: true
 
@@ -3891,7 +3865,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.14.53
-      postcss: 8.4.14
+      postcss: 8.4.16
       resolve: 1.22.1
       rollup: 2.77.2
     optionalDependencies:
