@@ -9,20 +9,21 @@ declare module '@temp/posts/data' {
 }
 
 declare module 'postcss-100vh-fix' {
-  import { Plugin } from 'postcss'
+  import type { PluginCreator } from 'postcss'
 
-  export default Plugin
+  let plugin: PluginCreator
+  export default plugin
 }
 
 declare module 'markdown-it-image-lazy-loading' {
-  import { PluginSimple } from 'markdown-it'
+  import type { PluginSimple } from 'markdown-it'
 
   let plugin: PluginSimple
   export default plugin
 }
 
 declare module 'markdown-it-imsize' {
-  import { PluginSimple } from 'markdown-it'
+  import type { PluginSimple } from 'markdown-it'
 
   let plugin: PluginSimple
   export default plugin
