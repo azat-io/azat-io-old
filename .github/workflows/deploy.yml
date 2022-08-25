@@ -12,13 +12,37 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Set outputs
+        id: vars
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: Start build notfication
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          disable_web_page_preview: true
+          format: html
+          message: |
+            ⏳ <a href="${{ github.server_url }}/${{ github.repository }}"><b>${{ github.repository }}</b></a>
+
+            ${{ github.workflow }}
+
+            By: ${{ github.actor }}
+            Branch: ${{ github.ref }}
+            Commit: ${{ github.event.head_commit.message }}
+            SHA: ${{ steps.vars.outputs.sha_short }}
+
+            <a href="${{ github.event.head_commit.url }}">Link</a>
+
       - name: Set node version to 18.x
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
 
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         id: pnpm-install
         with:
           version: 7
@@ -29,8 +53,8 @@ jobs:
         run: |
           echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -56,3 +80,23 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
+
+      - name: Finish build notfication
+        uses: appleboy/telegram-action@master
+        if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          disable_web_page_preview: true
+          format: html
+          message: |
+            ${{ job.status == 'success' && '✅' || '🆘' }} <a href="${{ github.server_url }}/${{ github.repository }}"><b>${{ github.repository }}</b></a>
+
+            ${{ github.workflow }}
+
+            By: ${{ github.actor }}
+            Branch: ${{ github.ref }}
+            Commit: ${{ github.event.head_commit.message }}
+            SHA: ${{ steps.vars.outputs.sha_short }}
+
+            <a href="${{ github.event.head_commit.url }}">Link</a>
