@@ -13,6 +13,7 @@ import { loadTheme } from 'shiki'
 
 import { cleanUrlsPlugin } from './plugins/clean-urls'
 import { copyCodePlugin } from './plugins/copy-code'
+import { sitemapPlugin } from './plugins/sitemap'
 import { postsPlugin } from './plugins/posts'
 import { seoPlugin } from './plugins/seo'
 import en from './locales/en.json'
@@ -109,6 +110,9 @@ export default (async () => {
       }),
       cleanUrlsPlugin(),
       copyCodePlugin(),
+      sitemapPlugin({
+        hostname: 'https://azat.io',
+      }),
       postsPlugin(),
       seoPlugin(),
       themeDataPlugin({
