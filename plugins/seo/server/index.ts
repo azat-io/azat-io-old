@@ -4,11 +4,6 @@ export let seoPlugin = (): PluginFunction => () => ({
   name: 'vuepress-seo',
   extendsPage: page => {
     let head = page.frontmatter.head || []
-    let hero = page.frontmatter.hero as {
-      avif?: string
-      webp?: string
-      png: string
-    }
     head.push(['meta', { property: 'og:locale', content: page.lang }])
     if (page.title) {
       head.push(['meta', { property: 'og:title', content: page.title }])
@@ -33,8 +28,16 @@ export let seoPlugin = (): PluginFunction => () => ({
       'meta',
       { property: 'og:url', content: `https://azat.io${page.path}` },
     ])
-    if (page.frontmatter.hero) {
-      head.push(['meta', { property: 'og:image', content: hero.png }])
+    if (page.frontmatter.preview) {
+      head.push([
+        'meta',
+        { property: 'og:image', content: page.frontmatter.preview as string },
+      ])
+    } else {
+      head.push([
+        'meta',
+        { property: 'og:image', content: '/assets/hero-preview.png' },
+      ])
     }
     if (page.title) {
       head.push(['meta', { name: 'twitter:title', content: page.title }])
@@ -45,8 +48,16 @@ export let seoPlugin = (): PluginFunction => () => ({
         { name: 'twitter:description', content: page.frontmatter.description },
       ])
     }
-    if (page.frontmatter.hero) {
-      head.push(['meta', { name: 'twitter:image', content: hero.png }])
+    if (page.frontmatter.preview) {
+      head.push([
+        'meta',
+        { name: 'twitter:image', content: page.frontmatter.preview as string },
+      ])
+    } else {
+      head.push([
+        'meta',
+        { name: 'twitter:image', content: '/assets/hero-preview.png' },
+      ])
     }
     head.push(['meta', { name: 'twitter:card', content: 'summary' }])
     head.push(['meta', { name: 'twitter:site', content: '@azat_io' }])
