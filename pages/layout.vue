@@ -39,7 +39,6 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
         :src="pageFrontmatter.hero.webp"
         :alt="pageFrontmatter.title"
         draggable="false"
-        loading="lazy"
       />
     </picture>
     <Container as="article">
