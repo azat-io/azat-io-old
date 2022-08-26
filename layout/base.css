@@ -62,7 +62,7 @@ h4 {
 }
 
 a {
-  padding: 0 2px;
+  padding-inline: 2px;
   color: var(--color-brand);
   text-decoration: none;
   border-radius: var(--size-xxs);
