@@ -21,6 +21,7 @@ let pageFrontmatter = usePageFrontmatter<{
 }>()
 let t = useThemeLocaleData<{
   'also-translated': string
+  'edit-this-page': string
   'minutes-to-read': {
     [key: string]: string
   }
@@ -83,6 +84,13 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
       <article>
         <Content />
       </article>
+      <a
+        :href="`https://github.com/azat-io/azat-io/edit/main/content${post.path}.md`"
+        :class="$style['edit-link']"
+        target="_blank"
+        rel="noreferrer"
+        v-text="t['edit-this-page']"
+      />
     </Container>
     <Footer />
   </main>
@@ -175,6 +183,13 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
 .tag:focus-visible {
   background: var(--color-brand-hover);
   box-shadow: 0 0 0 2px var(--color-brand);
+}
+
+.edit-link {
+  display: inline-block;
+  margin-top: var(--size-m);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 
 @media (min-width: 480px) {
