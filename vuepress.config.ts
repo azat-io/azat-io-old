@@ -15,6 +15,7 @@ import { cleanUrlsPlugin } from './plugins/clean-urls'
 import { copyCodePlugin } from './plugins/copy-code'
 import { sitemapPlugin } from './plugins/sitemap'
 import { postsPlugin } from './plugins/posts'
+import { umamiPlugin } from './plugins/umami'
 import { seoPlugin } from './plugins/seo'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
@@ -114,6 +115,10 @@ export default (async () => {
         hostname: 'https://azat.io',
       }),
       postsPlugin(),
+      umamiPlugin({
+        id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
+        src: 'https://analytics.azat.io/umami.js',
+      }),
       seoPlugin(),
       themeDataPlugin({
         themeData: {
