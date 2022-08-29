@@ -20,9 +20,7 @@ export let umamiPlugin =
 
     return {
       ...plugin,
-
       clientConfigFile: path.resolve(__dirname, '../client/index.ts'),
-
       define: {
         __UMAMI_ID__: id,
         __UMAMI_SRC__: src,

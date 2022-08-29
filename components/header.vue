@@ -191,7 +191,7 @@ watchEffect(() => {
 }
 
 .item:focus-visible {
-  background: oklch(88% 75 80 / 20%);
+  background: var(--color-brand-overlay);
   box-shadow: 0 0 0 2px var(--color-brand);
 }
 

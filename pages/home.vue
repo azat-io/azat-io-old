@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { usePosts } from '~/plugins/posts/client'
 import Container from '~/components/container.vue'
+import { usePosts } from '~/plugins/posts/client'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 import Hero from '~/components/hero.vue'

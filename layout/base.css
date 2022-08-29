@@ -71,13 +71,13 @@ a {
 }
 
 a:focus-visible {
-  background: oklch(88% 75 80 / 20%);
+  background: var(--color-brand-overlay);
   box-shadow: 0 0 0 2px var(--color-brand);
 }
 
 a:hover {
   text-decoration: none;
-  background: oklch(88% 75 80 / 20%);
+  background: var(--color-brand-overlay);
   transition: background 200ms;
 }
 
