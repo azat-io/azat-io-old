@@ -123,7 +123,7 @@ pre,
 code {
   overflow: auto;
   font-family: 'Martian Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
   background: var(--color-code-background) !important;
 }
