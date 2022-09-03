@@ -19,10 +19,17 @@ export let usePosts = (): ComputedRef<Post[]> => {
   )
 }
 
-export let usePost = (): ComputedRef<Post> => {
+export let usePost = (): ComputedRef<{
+  current: Post
+  previous: Post | undefined
+  next: Post | undefined
+}> => {
   let page = usePageData()
-  return computed(() =>
-    postsMap.value.find(
+  let postList = usePosts()
+  let formattedPostList = postList.value.reverse()
+
+  let currentPostIndex = computed(() =>
+    formattedPostList.findIndex(
       ({ path }) =>
         path ===
         (page.value.path.endsWith('.html')
@@ -30,6 +37,11 @@ export let usePost = (): ComputedRef<Post> => {
           : page.value.path),
     ),
   )
+  return computed(() => ({
+    current: formattedPostList[currentPostIndex.value],
+    previous: formattedPostList[currentPostIndex.value - 1],
+    next: formattedPostList[currentPostIndex.value + 1],
+  }))
 }
 
 // @ts-ignore

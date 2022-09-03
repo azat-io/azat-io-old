@@ -25,9 +25,13 @@ let t = useThemeLocaleData<{
   'minutes-to-read': {
     [key: string]: string
   }
+  'next-post': string
+  'previous-post': string
 }>()
 
-let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
+let coffeeCups = computed(() =>
+  Math.ceil((post.value.current.readingTime ?? 0) / 5),
+)
 </script>
 
 <template>
@@ -45,7 +49,10 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
     <Container as="article">
       <h1 :class="$style.title" v-text="pageFrontmatter.title" />
       <div :class="$style.info">
-        <span :class="$style['info-text']" v-text="post.formattedDate" />
+        <span
+          :class="$style['info-text']"
+          v-text="post.current.formattedDate"
+        />
         <span :class="$style['info-text']">
           <CoffeeIcon
             v-for="n in coffeeCups"
@@ -53,17 +60,17 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
             :class="{ [$style['last-cup']]: n === coffeeCups }"
           />
           {{
-            post?.readingTime &&
-            `${post.readingTime} ${
+            post.current.readingTime &&
+            `${post.current.readingTime} ${
               t['minutes-to-read'][
-                new Intl.PluralRules(lang).select(post.readingTime)
+                new Intl.PluralRules(lang).select(post.current.readingTime)
               ]
             }`
           }}
         </span>
       </div>
       <div
-        v-if="post.availableLanguages.length"
+        v-if="post.current.availableLanguages.length"
         :class="$style['available-languages']"
       >
         <h4
@@ -72,7 +79,7 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
         />
         <div :class="$style['available-languages-list']">
           <RouterLink
-            v-for="{ path, language } in post.availableLanguages"
+            v-for="{ path, language } in post.current.availableLanguages"
             :key="language"
             :class="$style.tag"
             :to="path"
@@ -85,12 +92,32 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
         <Content />
       </article>
       <a
-        :href="`https://github.com/azat-io/azat-io/edit/main/content${post.path}.md`"
+        :href="`https://github.com/azat-io/azat-io/edit/main/content${post.current.path}.md`"
         :class="$style['edit-link']"
         target="_blank"
         rel="noreferrer"
         v-text="t['edit-this-page']"
       />
+      <div
+        v-if="post.previous || post.next"
+        :class="{
+          [$style['post-list']]: true,
+          [$style['post-list-only-next']]: !post.previous,
+        }"
+      >
+        <div v-if="post.previous" :class="$style['post-previous']">
+          <h5 :class="$style['post-title']" v-text="t['previous-post']" />
+          <RouterLink :class="$style['post-link']" :to="post.previous.path">
+            {{ post.previous.title }}
+          </RouterLink>
+        </div>
+        <div v-if="post.next" :class="$style['post-next']">
+          <h5 :class="$style['post-title']" v-text="t['next-post']" />
+          <RouterLink :class="$style['post-link']" :to="post.next.path">
+            {{ post.next.title }}
+          </RouterLink>
+        </div>
+      </div>
     </Container>
     <Footer />
   </main>
@@ -192,11 +219,45 @@ let coffeeCups = computed(() => Math.ceil((post.value.readingTime ?? 0) / 5))
   line-height: var(--line-height-s);
 }
 
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--size-s);
+  margin-top: var(--size-m);
+}
+
+.post-title {
+  margin: 0 0 var(--size-xxs);
+  font-size: var(--font-size-s);
+  font-weight: normal;
+  line-height: var(--line-height-s);
+}
+
+.post-link {
+  padding: 0;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+}
+
 @media (min-width: 480px) {
   .available-languages {
     grid-template-columns: auto 1fr;
     grid-gap: var(--size-s);
     padding: var(--size-s) var(--size-m);
+  }
+}
+
+@media (min-width: 640px) {
+  .post-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .post-list-only-next {
+    direction: rtl;
+  }
+
+  .post-next {
+    text-align: right;
   }
 }
 </style>

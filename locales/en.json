@@ -11,6 +11,8 @@
     "one": "minute to read",
     "other": "minutes to read"
   },
+  "next-post": "Next post",
+  "previous-post": "Previous post",
   "subtitle": "of reinventing the wheel",
   "title": "Manual"
 }
