@@ -14,6 +14,7 @@ import { loadTheme } from 'shiki'
 import { cleanUrlsPlugin } from './plugins/clean-urls'
 import { copyCodePlugin } from './plugins/copy-code'
 import { sitemapPlugin } from './plugins/sitemap'
+import { mermaidPlugin } from './plugins/mermaid'
 import { postsPlugin } from './plugins/posts'
 import { umamiPlugin } from './plugins/umami'
 import { seoPlugin } from './plugins/seo'
@@ -105,6 +106,7 @@ export default (async () => {
       '~': __dirname,
     },
     clientConfigFile: path.resolve(__dirname, 'client'),
+    shouldPrefetch: (file: string) => !file.includes('mermaid'),
     plugins: [
       shikiPlugin({
         theme,
@@ -114,6 +116,7 @@ export default (async () => {
       sitemapPlugin({
         hostname: 'https://azat.io',
       }),
+      mermaidPlugin(),
       postsPlugin(),
       umamiPlugin({
         id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
@@ -135,6 +138,9 @@ export default (async () => {
     },
     bundler: viteBundler({
       viteOptions: {
+        build: {
+          chunkSizeWarningLimit: 1111,
+        },
         css: {
           postcss: {
             plugins: [postcssOklabFunction, postcss100vhFix, autoprefixer],
