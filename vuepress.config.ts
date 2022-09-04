@@ -143,7 +143,15 @@ export default (async () => {
         },
         css: {
           postcss: {
-            plugins: [postcssOklabFunction, postcss100vhFix, autoprefixer],
+            plugins: [
+              postcssOklabFunction({
+                subFeatures: {
+                  displayP3: false,
+                },
+              }),
+              postcss100vhFix,
+              autoprefixer,
+            ],
           },
         },
         plugins: [
