@@ -11,9 +11,6 @@ content/.vuepress/
 # Build
 dist/
 
-# Data
-theme/
-
 # Misc
 .DS_Store
 .tool-versions

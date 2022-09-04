@@ -83,6 +83,6 @@ mkdir(join(__dirname, '../theme'), { recursive: true }, error => {
 })
 
 writeFileSync(
-  join(__dirname, '../theme/gruvbox.json'),
+  join(__dirname, '../layout/gruvbox.json'),
   JSON.stringify(contentObj, null, 2),
 )

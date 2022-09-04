@@ -22,7 +22,7 @@ import en from './locales/en.json'
 import ru from './locales/ru.json'
 
 export default (async () => {
-  let theme = await loadTheme(path.resolve(__dirname, 'theme/gruvbox.json'))
+  let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
   return defineUserConfig({
     lang: 'en-US',
     title: 'Azat S.',
