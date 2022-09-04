@@ -8,12 +8,10 @@ clean:
 install:
 	pnpm install
 	pnpm exec simple-git-hooks
-	$(MAKE) install_theme
 
 install_prod:
 	pnpm fetch --prod
 	pnpm install -r --offline --prod --ignore-scripts
-	$(MAKE) install_theme
 
 install_theme:
 	pnpm exec tsm scripts/get-theme.ts
