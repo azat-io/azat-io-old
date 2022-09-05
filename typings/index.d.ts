@@ -8,6 +8,17 @@ declare module '@temp/posts/data' {
   export let posts: Post[]
 }
 
+declare module '~/data/countries.json' {
+  interface Country {
+    name: string
+    originName: string
+    code: string
+  }
+
+  let countries: Country[]
+  export default countries
+}
+
 declare module 'postcss-100vh-fix' {
   import type { PluginCreator } from 'postcss'
 

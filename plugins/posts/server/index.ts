@@ -16,12 +16,7 @@ if (import.meta.hot) {
 
 let preparePosts = async (app: App): Promise<void> => {
   let posts = app.pages
-    .filter(
-      ({ frontmatter }) =>
-        frontmatter.layout !== 'root' &&
-        frontmatter.layout !== '404' &&
-        frontmatter.layout !== 'home',
-    )
+    .filter(({ frontmatter }) => !frontmatter.layout)
     .map(({ frontmatter, content, lang, slug, path }) => ({
       availableLanguages: app.pages
         .filter(

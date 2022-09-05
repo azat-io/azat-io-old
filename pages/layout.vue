@@ -46,7 +46,7 @@ let coffeeCups = computed(() =>
         draggable="false"
       />
     </picture>
-    <Container as="article">
+    <Container :class="$style.container" as="article">
       <h1 :class="$style.title" v-text="pageFrontmatter.title" />
       <div :class="$style.info">
         <span
@@ -125,9 +125,13 @@ let coffeeCups = computed(() =>
 
 <style module>
 .main {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.container {
+  flex: 1 1 100%;
 }
 
 .hero {

@@ -106,7 +106,12 @@ export default (async () => {
       '~': __dirname,
     },
     clientConfigFile: path.resolve(__dirname, 'client'),
-    shouldPrefetch: (file: string) => !file.includes('mermaid'),
+    shouldPrefetch: (file: string) =>
+      !(
+        file.includes('mermaid') ||
+        file.includes('flag-') ||
+        file.includes('world-map')
+      ),
     plugins: [
       shikiPlugin({
         theme,

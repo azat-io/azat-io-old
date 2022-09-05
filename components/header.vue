@@ -1,14 +1,11 @@
 <script lang="ts" setup>
-import type { DefineComponent } from 'vue'
-
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
 import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
 import { directive as vClickAway } from 'vue3-click-away'
 import { watchEffect, shallowRef, ref } from 'vue'
 
 import LanguageIcon from '~/assets/language.svg'
-import FlagEnIcon from '~/assets/flag-en.svg'
-import FlagRuIcon from '~/assets/flag-ru.svg'
+import Country from '~/components/country.vue'
 import Logo from '~/assets/logo.svg'
 
 interface Props {
@@ -33,7 +30,7 @@ let t = useThemeLocaleData<{
 
 let locales = shallowRef<
   {
-    icon: DefineComponent
+    code: string
     name: string
     originName: string
     path: string
@@ -62,13 +59,13 @@ let onScroll = () => {
 watchEffect(() => {
   locales.value = [
     {
-      icon: FlagEnIcon,
+      code: 'us',
       name: t.value.languages.en,
       originName: 'English',
       path: '/en',
     },
     {
-      icon: FlagRuIcon,
+      code: 'ru',
       name: t.value.languages.ru,
       originName: 'Русский',
       path: '/ru',
@@ -109,17 +106,15 @@ watchEffect(() => {
         :class="$style['locale-list']"
       >
         <RouterLink
-          v-for="{ path, icon, name, originName } in locales"
+          v-for="{ path, ...locale } in locales"
           :key="path"
           :class="$style['locale-item']"
           :to="path"
           @click="closeLocalePopup"
         >
-          <component :is="icon" :class="$style['locale-icon']" />
-          <div>
-            <span :class="$style['locale-name']" v-text="name" />
-            <span :class="$style['locale-origin-name']" v-text="originName" />
-          </div>
+          <Suspense>
+            <Country :class="$style.country" v-bind="locale" />
+          </Suspense>
         </RouterLink>
       </div>
     </Transition>
@@ -206,8 +201,6 @@ watchEffect(() => {
   right: var(--size-m);
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--size-m);
-  padding: var(--size-m);
   background: var(--color-primary);
   border: 1px solid var(--color-tertiary);
   border-radius: 0 0 var(--size-xs) var(--size-xs);
@@ -225,7 +218,6 @@ watchEffect(() => {
 .locale-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--size-s);
   align-items: center;
 }
 
@@ -233,22 +225,16 @@ watchEffect(() => {
   background: inherit;
 }
 
-.locale-icon {
-  width: 48px;
-  margin-top: var(--size-xxs);
+.country {
+  padding: var(--size-xs) var(--size-m);
 }
 
-.locale-name {
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
-  color: var(--color-brand);
+.locale-item:first-child .country {
+  margin-top: var(--size-s);
 }
 
-.locale-origin-name {
-  display: block;
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
-  color: var(--color-text);
+.locale-item:last-child .country {
+  margin-bottom: var(--size-s);
 }
 
 @keyframes grow-down {

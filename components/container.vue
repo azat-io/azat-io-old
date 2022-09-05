@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 interface Props {
-  className?: string
   as?: string
 }
 
@@ -8,13 +7,7 @@ let props = defineProps<Props>()
 </script>
 
 <template>
-  <component
-    :is="props.as ?? 'div'"
-    :class="{
-      [$style.container]: true,
-      [props.className ?? '']: !!className,
-    }"
-  >
+  <component :is="props.as ?? 'div'" :class="$style.container">
     <slot />
   </component>
 </template>
