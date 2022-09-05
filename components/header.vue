@@ -17,6 +17,7 @@ let props = withDefaults(defineProps<Props>(), {
 })
 
 let header = shallowRef<HTMLElement>()
+let languageButton = shallowRef<HTMLElement>()
 
 let data = useSiteLocaleData()
 let route = useRouteLocale()
@@ -41,14 +42,14 @@ let localePopupOpen = ref(false)
 
 let onTop = ref(true)
 
-let openLocalePopup = () => {
-  if (!localePopupOpen.value) {
-    localePopupOpen.value = true
-  }
+let toggleLocalePopup = () => {
+  localePopupOpen.value = !localePopupOpen.value
 }
 
-let closeLocalePopup = () => {
-  localePopupOpen.value = false
+let closeLocalePopup = (event: MouseEvent) => {
+  if (!(event.type === 'touchstart' && event.target === languageButton.value)) {
+    localePopupOpen.value = false
+  }
 }
 
 let onScroll = () => {
@@ -92,19 +93,20 @@ watchEffect(() => {
       <Logo :class="$style.logo" />
       {{ data.title }}
     </RouterLink>
-    <button :class="$style.item" @click="openLocalePopup">
+    <button
+      ref="languageButton"
+      :class="$style.item"
+      @click="toggleLocalePopup"
+    >
       <LanguageIcon :class="$style.icon" />
       {{ t.language }}
     </button>
     <Transition
+      v-click-away="closeLocalePopup"
       :enter-active-class="$style['locale-list-enter']"
       :leave-active-class="$style['locale-list-leave']"
     >
-      <div
-        v-if="localePopupOpen"
-        v-click-away="closeLocalePopup"
-        :class="$style['locale-list']"
-      >
+      <div v-if="localePopupOpen" :class="$style['locale-list']">
         <RouterLink
           v-for="{ path, ...locale } in locales"
           :key="path"
