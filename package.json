@@ -32,7 +32,7 @@
     "sitemap": "7.1.1",
     "tsm": "2.2.2",
     "typescript": "4.8.2",
-    "vite-svg-loader": "3.5.1",
+    "vite-svg-loader": "3.6.0",
     "vue": "3.2.38",
     "vue-router": "4.1.5",
     "vue3-click-away": "1.2.4",
@@ -40,13 +40,13 @@
   },
   "devDependencies": {
     "@logux/eslint-config": "47.2.0",
-    "@logux/stylelint-config": "0.11.0",
-    "@size-limit/file": "8.0.1",
+    "@logux/stylelint-config": "0.12.0",
+    "@size-limit/file": "8.1.0",
     "@types/mermaid": "8.2.9",
-    "@types/node": "18.7.14",
+    "@types/node": "18.7.16",
     "@types/rss": "0.0.29",
-    "@typescript-eslint/eslint-plugin": "5.36.1",
-    "@typescript-eslint/parser": "5.36.1",
+    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/parser": "5.36.2",
     "eslint": "8.23.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.26.0",
@@ -57,9 +57,9 @@
     "nano-staged": "0.8.0",
     "postcss-html": "1.5.0",
     "simple-git-hooks": "2.8.0",
-    "size-limit": "8.0.1",
+    "size-limit": "8.1.0",
     "stylelint": "14.11.0",
     "stylelint-config-html": "1.1.0",
-    "vue-tsc": "0.40.5"
+    "vue-tsc": "0.40.12"
   }
 }
