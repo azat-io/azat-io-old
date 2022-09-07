@@ -8,6 +8,18 @@ declare module '@temp/posts/data' {
   export let posts: Post[]
 }
 
+declare module '~/data/celebrities.json' {
+  interface Celebrity {
+    name: string
+    description: string
+    born: string
+    died: string
+  }
+
+  let celebrities: Celebrity[]
+  export default celebrities
+}
+
 declare module '~/data/countries.json' {
   interface Country {
     name: string
