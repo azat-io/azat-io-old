@@ -10,8 +10,7 @@ install:
 	pnpm exec simple-git-hooks
 
 install_prod:
-	pnpm fetch --prod
-	pnpm install -r --offline --prod --ignore-scripts
+	pnpm install --frozen-lockfile --prod --ignore-scripts
 
 install_theme:
 	pnpm exec tsm scripts/get-theme.ts

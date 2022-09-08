@@ -36,33 +36,11 @@ jobs:
 
             <a href="${{ github.event.head_commit.url }}">Link</a>
 
-      - name: Set node version to 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.0.1
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      - name: Install tools from asdf config
+        uses: ai/asdf-cache-action@v1
 
       - name: Install dependencies
-        run: make install_prod
+        run: pnpm install --frozen-lockfile --prod --ignore-scripts
 
       - name: Build
         run: make build
