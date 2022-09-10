@@ -160,6 +160,7 @@ watchEffect(() => {
   font-weight: 700;
   line-height: var(--line-height-l);
   color: var(--color-text);
+  white-space: nowrap;
 }
 
 .title:hover {
