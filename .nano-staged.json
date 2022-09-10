@@ -1,4 +1,4 @@
 {
-  "*.{ts,vue}": "make lint_es",
-  "*.{css,pcss,vue}": "make lint_css"
+  "*.{ts,vue}": "eslint",
+  "*.{css,pcss,vue}": "stylelint"
 }
