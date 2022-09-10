@@ -137,7 +137,6 @@ let coffeeCups = computed(() =>
 .hero {
   display: block;
   height: clamp(20rem, 17rem + 10vw, 25rem);
-  margin-top: var(--size-header);
   user-select: none;
   background: oklch(76.69% 0.016 90);
 }

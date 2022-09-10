@@ -39,7 +39,7 @@ import Footer from '~/components/footer.vue'
 }
 
 .title {
-  margin-top: var(--size-header);
+  margin-top: 0;
 }
 
 .list {
