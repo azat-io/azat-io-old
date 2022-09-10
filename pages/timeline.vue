@@ -124,7 +124,7 @@ let celebritiesData = celebrities
 }
 
 .title {
-  margin-top: var(--size-header);
+  margin-top: 0;
 }
 
 .examples {

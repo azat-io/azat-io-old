@@ -87,6 +87,7 @@ watchEffect(() => {
     :class="{
       [$style.header]: true,
       [$style.transparent]: props.transparent && onTop && !localePopupOpen,
+      [$style.fixed]: props.transparent,
     }"
   >
     <RouterLink :class="$style.title" :to="route === '/' ? '/en' : route">
@@ -125,7 +126,7 @@ watchEffect(() => {
 
 <style module>
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -134,8 +135,7 @@ watchEffect(() => {
   align-items: center;
   justify-content: space-between;
   min-width: 320px;
-  height: var(--size-header);
-  padding: 0 var(--size-s);
+  padding: var(--size-xs) var(--size-s);
   background: var(--color-primary);
   border-bottom: 1px solid var(--color-tertiary);
   transition: all 250ms;
@@ -146,6 +146,10 @@ watchEffect(() => {
   background: transparent;
   border-color: transparent;
   transition-delay: 250ms;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .title {
@@ -163,7 +167,7 @@ watchEffect(() => {
 }
 
 .logo {
-  height: var(--size-m);
+  height: calc(var(--size-m) - var(--size-xxs));
   color: var(--color-brand);
 }
 
@@ -199,7 +203,7 @@ watchEffect(() => {
 
 .locale-list {
   position: absolute;
-  top: var(--size-header);
+  top: 100%;
   right: var(--size-m);
   display: grid;
   grid-template-columns: 1fr;
@@ -269,7 +273,11 @@ watchEffect(() => {
 
 @media (min-width: 480px) {
   .header {
-    padding: 0 var(--size-m);
+    padding: var(--size-s) var(--size-m);
+  }
+
+  .logo {
+    height: var(--size-m);
   }
 }
 </style>
