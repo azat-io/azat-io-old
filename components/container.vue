@@ -16,7 +16,7 @@ let props = defineProps<Props>()
 .container {
   width: 100vw;
   min-width: 320px;
-  max-width: 1600px;
+  max-width: 1280px;
   padding: var(--size-l) var(--size-s);
   margin: 0 auto;
 }
@@ -35,7 +35,7 @@ let props = defineProps<Props>()
 
 @media (min-width: 1200px) {
   .container {
-    width: calc(100vw - 480px);
+    width: calc(100vw - 560px);
   }
 }
 </style>

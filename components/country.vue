@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import type { DefineComponent } from 'vue'
 
+import FlagRuIcon from '~/assets/flag-ru.svg'
+import FlagUsIcon from '~/assets/flag-us.svg'
+
 interface Props {
   name: string
   originName: string
@@ -31,13 +34,13 @@ if (props.code === 'ae') {
 } else if (props.code === 'ps') {
   icon = (await import(`~/assets/flag-ps.svg`)).default
 } else if (props.code === 'ru') {
-  icon = (await import(`~/assets/flag-ru.svg`)).default
+  icon = FlagRuIcon
 } else if (props.code === 'ua') {
   icon = (await import(`~/assets/flag-ua.svg`)).default
 } else if (props.code === 'ug') {
   icon = (await import(`~/assets/flag-ug.svg`)).default
 } else if (props.code === 'us') {
-  icon = (await import(`~/assets/flag-us.svg`)).default
+  icon = FlagUsIcon
 } else {
   icon = (await import(`~/assets/flag-unknown.svg`)).default
 }

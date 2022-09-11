@@ -46,7 +46,7 @@ let coffeeCups = computed(() =>
         draggable="false"
       />
     </picture>
-    <Container :class="$style.container" as="article">
+    <Container :class="$style.container">
       <h1 :class="$style.title" v-text="pageFrontmatter.title" />
       <div :class="$style.info">
         <span
@@ -88,7 +88,7 @@ let coffeeCups = computed(() =>
           </RouterLink>
         </div>
       </div>
-      <article>
+      <article :class="$style.article">
         <Content />
       </article>
       <a
@@ -156,7 +156,7 @@ let coffeeCups = computed(() =>
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-xs) var(--size-l);
-  margin: var(--size-m) 0;
+  margin: var(--size-s) 0 var(--size-m);
 }
 
 .info-text {
@@ -176,6 +176,7 @@ let coffeeCups = computed(() =>
   grid-template-columns: 1fr;
   grid-gap: var(--size-xs);
   padding: var(--size-s);
+  margin-top: var(--size-m);
   background: var(--color-inverse);
   border: 1px solid var(--color-tertiary);
   border-radius: var(--size-s);
@@ -213,6 +214,10 @@ let coffeeCups = computed(() =>
 .tag:focus-visible {
   background: var(--color-brand-hover);
   box-shadow: 0 0 0 2px var(--color-brand);
+}
+
+.article {
+  margin-top: var(--size-xl);
 }
 
 .edit-link {

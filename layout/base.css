@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  margin-top: var(--size-xl);
+  margin-top: var(--size-xxl);
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
 }
@@ -133,6 +133,10 @@ pre {
   border-radius: var(--size-xs);
 }
 
+p {
+  margin-block: var(--size-s);
+}
+
 :not(pre) > code {
   padding: var(--size-xs) var(--size-xxs);
   font-size: var(--font-size-xxs);
@@ -172,5 +176,9 @@ pre {
 @media (min-width: 480px) {
   pre {
     padding: var(--size-m);
+  }
+
+  p {
+    margin-block: calc(var(--size-s) + var(--size-xxs));
   }
 }
