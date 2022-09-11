@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 
 import Container from '~/components/container.vue'
 
