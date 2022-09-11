@@ -47,6 +47,8 @@ let socialIcons = [
 
 <style module>
 .footer {
+  position: sticky;
+  top: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

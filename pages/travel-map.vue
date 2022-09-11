@@ -8,36 +8,22 @@ import Footer from '~/components/footer.vue'
 </script>
 
 <template>
-  <main :class="$style.main">
-    <Header />
-    <Container :class="$style.container">
-      <h1 :class="$style.title">Travel map</h1>
-      <Suspense>
-        <WorldMap
-          :countries="countries.map(({ code }) => code.toUpperCase())"
-        />
+  <Header />
+  <Container>
+    <h1 :class="$style.title">Travel map</h1>
+    <Suspense>
+      <WorldMap :countries="countries.map(({ code }) => code.toUpperCase())" />
+    </Suspense>
+    <div :class="$style.list">
+      <Suspense v-for="(country, index) in countries" :key="index">
+        <Country v-bind="country" />
       </Suspense>
-      <div :class="$style.list">
-        <Suspense v-for="(country, index) in countries" :key="index">
-          <Country v-bind="country" />
-        </Suspense>
-      </div>
-    </Container>
-    <Footer />
-  </main>
+    </div>
+  </Container>
+  <Footer />
 </template>
 
 <style module>
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  flex: 1 1 100%;
-}
-
 .title {
   margin-top: 0;
 }
