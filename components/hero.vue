@@ -106,4 +106,10 @@ let t = useThemeLocaleData<{
     display: block;
   }
 }
+
+@media (min-width: 1400px) {
+  .content {
+    max-height: 640px;
+  }
+}
 </style>

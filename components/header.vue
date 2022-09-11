@@ -135,7 +135,7 @@ watchEffect(() => {
   align-items: center;
   justify-content: space-between;
   min-width: 320px;
-  padding: var(--size-xs) var(--size-s);
+  padding: var(--size-s);
   background: var(--color-primary);
   border-bottom: 1px solid var(--color-tertiary);
   transition: all 250ms;
