@@ -26,10 +26,10 @@ export let usePost = (): ComputedRef<{
 }> => {
   let page = usePageData()
   let postList = usePosts()
-  let formattedPostList = postList.value.reverse()
+  let formattedPostList = computed(() => postList.value.reverse())
 
   let currentPostIndex = computed(() =>
-    formattedPostList.findIndex(
+    formattedPostList.value.findIndex(
       ({ path }) =>
         path ===
         (page.value.path.endsWith('.html')
@@ -38,9 +38,9 @@ export let usePost = (): ComputedRef<{
     ),
   )
   return computed(() => ({
-    current: formattedPostList[currentPostIndex.value],
-    previous: formattedPostList[currentPostIndex.value - 1],
-    next: formattedPostList[currentPostIndex.value + 1],
+    current: formattedPostList.value[currentPostIndex.value],
+    previous: formattedPostList.value[currentPostIndex.value - 1],
+    next: formattedPostList.value[currentPostIndex.value + 1],
   }))
 }
 
