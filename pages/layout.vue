@@ -35,105 +35,90 @@ let coffeeCups = computed(() =>
 </script>
 
 <template>
-  <main :class="$style.main">
-    <Header />
-    <picture v-if="pageFrontmatter.hero" :class="$style.hero">
-      <source type="image/avif" :srcSet="pageFrontmatter.hero.avif" />
-      <img
-        :class="$style['hero-image']"
-        :src="pageFrontmatter.hero.webp"
-        :alt="pageFrontmatter.title"
-        draggable="false"
-      />
-    </picture>
-    <Container :class="$style.container">
-      <h1 :class="$style.title" v-text="pageFrontmatter.title" />
-      <div :class="$style.info">
-        <span
-          :class="$style['info-text']"
-          v-text="post.current.formattedDate"
+  <Header />
+  <picture v-if="pageFrontmatter.hero" :class="$style.hero">
+    <source type="image/avif" :srcSet="pageFrontmatter.hero.avif" />
+    <img
+      :class="$style['hero-image']"
+      :src="pageFrontmatter.hero.webp"
+      :alt="pageFrontmatter.title"
+      draggable="false"
+    />
+  </picture>
+  <Container>
+    <h1 :class="$style.title" v-text="pageFrontmatter.title" />
+    <div :class="$style.info">
+      <span :class="$style['info-text']" v-text="post.current.formattedDate" />
+      <span :class="$style['info-text']">
+        <CoffeeIcon
+          v-for="n in coffeeCups"
+          :key="n"
+          :class="{ [$style['last-cup']]: n === coffeeCups }"
         />
-        <span :class="$style['info-text']">
-          <CoffeeIcon
-            v-for="n in coffeeCups"
-            :key="n"
-            :class="{ [$style['last-cup']]: n === coffeeCups }"
-          />
-          {{
-            post.current.readingTime &&
-            `${post.current.readingTime} ${
-              t['minutes-to-read'][
-                new Intl.PluralRules(lang).select(post.current.readingTime)
-              ]
-            }`
-          }}
-        </span>
-      </div>
-      <div
-        v-if="post.current.availableLanguages.length"
-        :class="$style['available-languages']"
-      >
-        <h4
-          :class="$style['available-languages-title']"
-          v-text="t['also-translated']"
-        />
-        <div :class="$style['available-languages-list']">
-          <RouterLink
-            v-for="{ path, language } in post.current.availableLanguages"
-            :key="language"
-            :class="$style.tag"
-            :to="path"
-          >
-            {{ language }}
-          </RouterLink>
-        </div>
-      </div>
-      <article :class="$style.article">
-        <Content />
-      </article>
-      <a
-        :href="`https://github.com/azat-io/azat-io/edit/main/content${post.current.path}.md`"
-        :class="$style['edit-link']"
-        target="_blank"
-        rel="noreferrer"
-        v-text="t['edit-this-page']"
+        {{
+          post.current.readingTime &&
+          `${post.current.readingTime} ${
+            t['minutes-to-read'][
+              new Intl.PluralRules(lang).select(post.current.readingTime)
+            ]
+          }`
+        }}
+      </span>
+    </div>
+    <div
+      v-if="post.current.availableLanguages.length"
+      :class="$style['available-languages']"
+    >
+      <h4
+        :class="$style['available-languages-title']"
+        v-text="t['also-translated']"
       />
-      <div
-        v-if="post.previous || post.next"
-        :class="{
-          [$style['post-list']]: true,
-          [$style['post-list-only-next']]: !post.previous,
-        }"
-      >
-        <div v-if="post.previous" :class="$style['post-previous']">
-          <h5 :class="$style['post-title']" v-text="t['previous-post']" />
-          <RouterLink :class="$style['post-link']" :to="post.previous.path">
-            {{ post.previous.title }}
-          </RouterLink>
-        </div>
-        <div v-if="post.next" :class="$style['post-next']">
-          <h5 :class="$style['post-title']" v-text="t['next-post']" />
-          <RouterLink :class="$style['post-link']" :to="post.next.path">
-            {{ post.next.title }}
-          </RouterLink>
-        </div>
+      <div :class="$style['available-languages-list']">
+        <RouterLink
+          v-for="{ path, language } in post.current.availableLanguages"
+          :key="language"
+          :class="$style.tag"
+          :to="path"
+        >
+          {{ language }}
+        </RouterLink>
       </div>
-    </Container>
-    <Footer />
-  </main>
+    </div>
+    <article :class="$style.article">
+      <Content />
+    </article>
+    <a
+      :href="`https://github.com/azat-io/azat-io/edit/main/content${post.current.path}.md`"
+      :class="$style['edit-link']"
+      target="_blank"
+      rel="noreferrer"
+      v-text="t['edit-this-page']"
+    />
+    <div
+      v-if="post.previous || post.next"
+      :class="{
+        [$style['post-list']]: true,
+        [$style['post-list-only-next']]: !post.previous,
+      }"
+    >
+      <div v-if="post.previous" :class="$style['post-previous']">
+        <h5 :class="$style['post-title']" v-text="t['previous-post']" />
+        <RouterLink :class="$style['post-link']" :to="post.previous.path">
+          {{ post.previous.title }}
+        </RouterLink>
+      </div>
+      <div v-if="post.next" :class="$style['post-next']">
+        <h5 :class="$style['post-title']" v-text="t['next-post']" />
+        <RouterLink :class="$style['post-link']" :to="post.next.path">
+          {{ post.next.title }}
+        </RouterLink>
+      </div>
+    </div>
+  </Container>
+  <Footer />
 </template>
 
 <style module>
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  flex: 1 1 100%;
-}
-
 .hero {
   display: block;
   height: clamp(20rem, 17rem + 10vw, 25rem);

@@ -44,85 +44,73 @@ let celebritiesData = celebrities
 </script>
 
 <template>
-  <main :class="$style.main">
-    <Header />
-    <Container :class="$style.container">
-      <h1 :class="$style.title">Timeline</h1>
+  <Header />
+  <Container>
+    <h1 :class="$style.title">Timeline</h1>
+    <p>
+      My lifetime visualization. Each cell represents one week. There are 52
+      weeks in each row, which equals 1 year
+    </p>
+    <p>
+      Life expectancy data based on
+      <a
+        href="https://cdn.who.int/media/docs/default-source/gho-documents/world-health-statistic-reports/worldhealthstatistics_2022.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        World Health Organization monitoring
+      </a>
+    </p>
+    <div :class="$style.examples">
+      <p><span :class="[$style.example, $style.passed]" /> - Past week</p>
       <p>
-        My lifetime visualization. Each cell represents one week. There are 52
-        weeks in each row, which equals 1 year
+        <span :class="[$style.example, $style['hale-example']]" /> - Healthy
+        life expectancy
       </p>
       <p>
-        Life expectancy data based on
-        <a
-          href="https://cdn.who.int/media/docs/default-source/gho-documents/world-health-statistic-reports/worldhealthstatistics_2022.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          World Health Organization monitoring
-        </a>
+        <span :class="[$style.example, $style['leb-example']]" /> - Life
+        expectancy at birth
       </p>
-      <div :class="$style.examples">
-        <p><span :class="[$style.example, $style.passed]" /> - Past week</p>
-        <p>
-          <span :class="[$style.example, $style['hale-example']]" /> - Healthy
-          life expectancy
-        </p>
-        <p>
-          <span :class="[$style.example, $style['leb-example']]" /> - Life
-          expectancy at birth
-        </p>
-        <p>
-          <span :class="[$style.example, $style['dead-example']]" v-text="4" />
-          - Celebrity death date
-        </p>
+      <p>
+        <span :class="[$style.example, $style['dead-example']]" v-text="4" />
+        - Celebrity death date
+      </p>
+    </div>
+    <div :class="$style.timeline">
+      <div
+        v-for="index in Math.floor(lifeExpectancyAtBirth * 52)"
+        :key="index"
+        :class="{
+          [$style.element]: true,
+          [$style.passed]: livedWeeks > index,
+          [$style.healthy]: healthyLifeExpectancy * 52 > index,
+          [$style['celebrity-death']]: celebritiesData.some(
+            ({ livedWeeks }) => livedWeeks === index,
+          ),
+          [$style.counter]: index % (52 * 4) === 0,
+        }"
+      />
+    </div>
+    <div :class="$style.celebrities">
+      <div
+        v-for="({ name, description, born, died }, index) in celebritiesData"
+        :key="index"
+        :class="$style.celebrity"
+      >
+        <h4 :class="$style['celebrity-title']">
+          <span :class="$style.count" v-text="index + 1" />
+          {{ name }}
+        </h4>
+        <p :class="$style.info">Born: {{ born }}</p>
+        <p :class="$style.info">Died: {{ died }}</p>
+        <p v-text="description" />
       </div>
-      <div :class="$style.timeline">
-        <div
-          v-for="index in Math.floor(lifeExpectancyAtBirth * 52)"
-          :key="index"
-          :class="{
-            [$style.element]: true,
-            [$style.passed]: livedWeeks > index,
-            [$style.healthy]: healthyLifeExpectancy * 52 > index,
-            [$style['celebrity-death']]: celebritiesData.some(
-              ({ livedWeeks }) => livedWeeks === index,
-            ),
-            [$style.counter]: index % (52 * 4) === 0,
-          }"
-        />
-      </div>
-      <div :class="$style.celebrities">
-        <div
-          v-for="({ name, description, born, died }, index) in celebritiesData"
-          :key="index"
-          :class="$style.celebrity"
-        >
-          <h4 :class="$style['celebrity-title']">
-            <span :class="$style.count" v-text="index + 1" />
-            {{ name }}
-          </h4>
-          <p :class="$style.info">Born: {{ born }}</p>
-          <p :class="$style.info">Died: {{ died }}</p>
-          <p v-text="description" />
-        </div>
-      </div>
-    </Container>
-    <Footer />
-  </main>
+    </div>
+  </Container>
+  <Footer />
 </template>
 
 <style module>
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  flex: 1 1 100%;
-}
-
 .title {
   margin-top: 0;
 }

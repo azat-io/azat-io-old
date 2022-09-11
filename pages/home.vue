@@ -9,30 +9,22 @@ let posts = usePosts()
 </script>
 
 <template>
-  <main :class="$style.main">
-    <Header transparent />
-    <Hero />
-    <Container>
-      <div :class="$style.posts">
-        <div v-for="{ title, path, formattedDate } in posts" :key="title">
-          <RouterLink :to="path" :class="$style.link">
-            <h3 :class="$style.title" v-text="title" />
-          </RouterLink>
-          <span :class="$style.date" v-text="formattedDate" />
-        </div>
+  <Header transparent />
+  <Hero />
+  <Container>
+    <div :class="$style.posts">
+      <div v-for="{ title, path, formattedDate } in posts" :key="title">
+        <RouterLink :to="path" :class="$style.link">
+          <h3 :class="$style.title" v-text="title" />
+        </RouterLink>
+        <span :class="$style.date" v-text="formattedDate" />
       </div>
-    </Container>
-    <Footer />
-  </main>
+    </div>
+  </Container>
+  <Footer />
 </template>
 
 <style module>
-.main {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
 .link {
   display: inline-block;
   padding: 0;
