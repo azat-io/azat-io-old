@@ -138,8 +138,8 @@ watchEffect(() => {
   padding: var(--size-s);
   background: var(--color-primary);
   border-bottom: 1px solid var(--color-tertiary);
-  transition: all 250ms;
-  will-change: background, border-color;
+  transition-duration: 250ms;
+  transition-property: background, border-color;
 }
 
 .transparent {
@@ -184,8 +184,8 @@ watchEffect(() => {
   border: none;
   border-radius: var(--size-xxs);
   outline: none;
-  transition: all 250ms;
-  will-change: background, box-shadow, color;
+  transition-duration: 250ms;
+  transition-property: background, box-shadow, color;
 }
 
 .item:hover {
