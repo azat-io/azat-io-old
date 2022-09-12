@@ -9,26 +9,24 @@ declare module '@temp/posts/data' {
 }
 
 declare module '~/data/celebrities.json' {
-  interface Celebrity {
-    name: string
-    description: string
-    born: string
-    died: string
-  }
+  import type { Celebrity } from './celebrity.d.js'
 
   let celebrities: Celebrity[]
   export default celebrities
 }
 
 declare module '~/data/countries.json' {
-  interface Country {
-    name: string
-    originName: string
-    code: string
-  }
+  import type { Country } from './country.d.js'
 
   let countries: Country[]
   export default countries
+}
+
+declare module '@csstools/postcss-oklab-function' {
+  import type { PluginCreator } from 'postcss'
+
+  let plugin: PluginCreator
+  export default plugin
 }
 
 declare module 'postcss-100vh-fix' {

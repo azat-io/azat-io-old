@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import type { Country as CountryType } from '~/typings/country.d.js'
 import Container from '~/components/container.vue'
 import WorldMap from '~/components/world-map.vue'
 import Country from '~/components/country.vue'
 import countries from '~/data/countries.json'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+
+let countryList = countries as unknown as CountryType[]
 </script>
 
 <template>
@@ -12,10 +15,12 @@ import Footer from '~/components/footer.vue'
   <Container>
     <h1 :class="$style.title">Travel map</h1>
     <Suspense>
-      <WorldMap :countries="countries.map(({ code }) => code.toUpperCase())" />
+      <WorldMap
+        :countries="countryList.map(({ code }) => code.toUpperCase())"
+      />
     </Suspense>
     <div :class="$style.list">
-      <Suspense v-for="(country, index) in countries" :key="index">
+      <Suspense v-for="(country, index) in countryList" :key="index">
         <Country v-bind="country" />
       </Suspense>
     </div>

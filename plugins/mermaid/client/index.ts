@@ -1,4 +1,5 @@
 import type { VNode } from 'vue'
+import type { Mermaid } from 'mermaid'
 
 import { defineComponent, onMounted, nextTick, ref, h } from 'vue'
 import { defineClientConfig } from '@vuepress/client'
@@ -25,7 +26,8 @@ let MermaidComponent = defineComponent({
     let svgCode = ref('')
 
     onMounted(async () => {
-      let { initialize, render } = (await import('mermaid')).default
+      let { initialize, render } = (await import('mermaid'))
+        .default as unknown as Mermaid
       let code = decodeURIComponent(props.code)
 
       initialize({

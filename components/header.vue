@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
 import { directive as vClickAway } from 'vue3-click-away'
 import { watchEffect, shallowRef, ref } from 'vue'
