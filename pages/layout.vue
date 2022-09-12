@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 import { usePageFrontmatter, usePageLang } from '@vuepress/client'
 import { computed } from 'vue'
 
+import { usePost } from '~/plugins/posts/client/index.js'
 import Container from '~/components/container.vue'
-import { usePost } from '~/plugins/posts/client'
 import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'

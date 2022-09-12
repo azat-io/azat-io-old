@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 
 import TwitterIcon from '~/assets/twitter.svg'
 import GithubIcon from '~/assets/github.svg'
