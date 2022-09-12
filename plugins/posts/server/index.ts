@@ -4,7 +4,7 @@ import readingTime from 'reading-time'
 import { watch } from 'chokidar'
 import ISO6391 from 'iso-639-1'
 
-import { getLanguage } from '../shared'
+import { getLanguage } from '../shared/index.js'
 
 const HMR_CODE = `
 if (import.meta.hot) {

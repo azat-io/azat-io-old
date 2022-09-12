@@ -19,6 +19,7 @@
     "paths": {
       "~/components/*": ["./components/*"],
       "~/plugins/*": ["./plugins/*"],
+      "~/typings/*": ["./typings/*"],
       "~/assets/*": ["./assets/*"],
       "~/stores/*": ["./stores/*"],
       "~/icons/*": ["./icons/*"],
@@ -26,5 +27,6 @@
       "~/lib/*": ["./lib/*"]
     }
   },
+  "include": ["**/*.ts", "**/*.vue"],
   "exclude": ["node_modules"]
 }

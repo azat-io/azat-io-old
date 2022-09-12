@@ -11,160 +11,155 @@ import svgLoader from 'vite-svg-loader'
 import { path } from '@vuepress/utils'
 import { loadTheme } from 'shiki'
 
-import { cleanUrlsPlugin } from './plugins/clean-urls'
-import { copyCodePlugin } from './plugins/copy-code'
-import { sitemapPlugin } from './plugins/sitemap'
-import { mermaidPlugin } from './plugins/mermaid'
-import { postsPlugin } from './plugins/posts'
-import { umamiPlugin } from './plugins/umami'
-import { seoPlugin } from './plugins/seo'
+import { cleanUrlsPlugin } from './plugins/clean-urls/index.js'
+import { copyCodePlugin } from './plugins/copy-code/index.js'
+import { sitemapPlugin } from './plugins/sitemap/index.js'
+import { mermaidPlugin } from './plugins/mermaid/index.js'
+import { postsPlugin } from './plugins/posts/index.js'
+import { umamiPlugin } from './plugins/umami/index.js'
+import { seoPlugin } from './plugins/seo/index.js'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
 
-export default (async () => {
-  let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
-  return defineUserConfig({
-    lang: 'en-US',
-    title: 'Azat S.',
-    description: 'Personal blog by Azat S.',
-    head: [
-      [
-        'meta',
-        {
-          name: 'theme-color',
-          content: '#1b1b1b',
-        },
-      ],
-      [
-        'link',
-        {
-          rel: 'icon',
-          sizes: 'any',
-          href: '/favicon.ico',
-        },
-      ],
-      [
-        'link',
-        {
-          rel: 'icon',
-          type: 'image/svg+xml',
-          href: '/icon.svg',
-        },
-      ],
-      [
-        'link',
-        {
-          rel: 'apple-touch-icon',
-          href: '/apple-touch-icon.png',
-        },
-      ],
-      [
-        'link',
-        {
-          rel: 'preload',
-          href: '/fonts/stem-regular.woff2',
-          type: 'font/woff2',
-          as: 'font',
-          crossorigin: true,
-        },
-      ],
-      [
-        'link',
-        {
-          rel: 'preload',
-          href: '/fonts/stem-bold.woff2',
-          type: 'font/woff2',
-          as: 'font',
-          crossorigin: true,
-        },
-      ],
+let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
+
+export default defineUserConfig({
+  lang: 'en-US',
+  title: 'Azat S.',
+  description: 'Personal blog by Azat S.',
+  head: [
+    [
+      'meta',
+      {
+        name: 'theme-color',
+        content: '#1b1b1b',
+      },
     ],
-    locales: {
-      '/': {
-        lang: 'en-US',
-        title: 'Azat S.',
+    [
+      'link',
+      {
+        rel: 'icon',
+        sizes: 'any',
+        href: '/favicon.ico',
       },
-      '/ru': {
-        lang: 'ru-RU',
-        title: 'Азат Ш.',
-      },
-    },
-    theme: {
-      name: 'azat-io-theme',
-      layouts: {
-        Layout: path.resolve(__dirname, 'pages/layout.vue'),
-        404: path.resolve(__dirname, 'pages/not-found.vue'),
-      },
-    },
-    open: true,
-    public: path.resolve(__dirname, 'public'),
-    pagePatterns:
-      process.env.NODE_ENV === 'production'
-        ? ['**/*.md', '!index.md']
-        : ['**/*.md'],
-    alias: {
-      '~': __dirname,
-    },
-    clientConfigFile: path.resolve(__dirname, 'client'),
-    shouldPrefetch: (file: string) =>
-      !(
-        file.includes('mermaid') ||
-        file.includes('flag-') ||
-        file.includes('world-map')
-      ),
-    plugins: [
-      shikiPlugin({
-        theme,
-      }),
-      cleanUrlsPlugin(),
-      copyCodePlugin(),
-      sitemapPlugin({
-        hostname: 'https://azat.io',
-      }),
-      mermaidPlugin(),
-      postsPlugin(),
-      umamiPlugin({
-        id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
-        src: 'https://analytics.azat.io/umami.js',
-      }),
-      seoPlugin(),
-      themeDataPlugin({
-        themeData: {
-          locales: {
-            '/': en,
-            '/ru': ru,
-          },
-        },
-      }),
     ],
-    extendsMarkdown: md => {
-      md.use(mdImageLazyLoading)
-      md.use(mdImageSize)
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/icon.svg',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'preload',
+        href: '/fonts/stem-regular.woff2',
+        type: 'font/woff2',
+        as: 'font',
+        crossorigin: true,
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'preload',
+        href: '/fonts/stem-bold.woff2',
+        type: 'font/woff2',
+        as: 'font',
+        crossorigin: true,
+      },
+    ],
+  ],
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: 'Azat S.',
     },
-    bundler: viteBundler({
-      viteOptions: {
-        build: {
-          chunkSizeWarningLimit: 1111,
+    '/ru': {
+      lang: 'ru-RU',
+      title: 'Азат Ш.',
+    },
+  },
+  theme: {
+    name: 'azat-io-theme',
+  },
+  open: true,
+  public: path.resolve(__dirname, 'public'),
+  pagePatterns:
+    process.env.NODE_ENV === 'production'
+      ? ['**/*.md', '!index.md']
+      : ['**/*.md'],
+  alias: {
+    '~': __dirname,
+  },
+  clientConfigFile: path.resolve(__dirname, 'client'),
+  shouldPrefetch: (file: string) =>
+    !(
+      file.includes('mermaid') ||
+      file.includes('flag-') ||
+      file.includes('world-map')
+    ),
+  plugins: [
+    shikiPlugin({
+      theme,
+    }),
+    cleanUrlsPlugin(),
+    copyCodePlugin(),
+    sitemapPlugin({
+      hostname: 'https://azat.io',
+    }),
+    mermaidPlugin(),
+    postsPlugin(),
+    umamiPlugin({
+      id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
+      src: 'https://analytics.azat.io/umami.js',
+    }),
+    seoPlugin(),
+    themeDataPlugin({
+      themeData: {
+        locales: {
+          '/': en,
+          '/ru': ru,
         },
-        css: {
-          postcss: {
-            plugins: [
-              postcssOklabFunction({
-                subFeatures: {
-                  displayP3: false,
-                },
-              }),
-              postcss100vhFix,
-              autoprefixer,
-            ],
-          },
-        },
-        plugins: [
-          svgLoader({
-            svgo: false,
-          }),
-        ],
       },
     }),
-  })
-})()
+  ],
+  extendsMarkdown: md => {
+    md.use(mdImageLazyLoading)
+    md.use(mdImageSize)
+  },
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        chunkSizeWarningLimit: 1111,
+      },
+      css: {
+        postcss: {
+          plugins: [
+            postcssOklabFunction({
+              subFeatures: {
+                displayP3: false,
+              },
+            }),
+            postcss100vhFix,
+            autoprefixer,
+          ],
+        },
+      },
+      plugins: [
+        svgLoader({
+          svgo: false,
+        }),
+      ],
+    },
+  }),
+})

@@ -1,11 +1,11 @@
-import type { Post } from '../typings/index.d'
+import type { Post } from '../typings/index.d.js'
 import type { ComputedRef } from 'vue'
 
 import { usePageLang, usePageData } from '@vuepress/client'
 import { posts } from '@temp/posts/data'
 import { ref, computed } from 'vue'
 
-import { getLanguage } from '../shared'
+import { getLanguage } from '../shared/index.js'
 
 let postsMap = ref(posts)
 
