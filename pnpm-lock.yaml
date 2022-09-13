@@ -54,7 +54,8 @@ importers:
       vue-router: 4.1.5
       vue-tsc: 0.40.13
       vue3-click-away: 1.2.4
-      vuepress-remove-html-extension: workspace:*
+      vuepress-plugin-open-graph: workspace:1.0.0
+      vuepress-plugin-remove-html-extension: workspace:1.0.0
       vuepress-vite: 2.0.0-beta.51
     dependencies:
       '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.16
@@ -85,7 +86,8 @@ importers:
       vue: 3.2.39
       vue-router: 4.1.5_vue@3.2.39
       vue3-click-away: 1.2.4
-      vuepress-remove-html-extension: link:plugins/remove-html-extension
+      vuepress-plugin-open-graph: link:plugins/open-graph
+      vuepress-plugin-remove-html-extension: link:plugins/remove-html-extension
       vuepress-vite: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
     devDependencies:
       '@logux/eslint-config': 47.2.0_vnf3lxnh2hriqoyjreevx5yqwq
@@ -110,6 +112,15 @@ importers:
       stylelint: 14.11.0
       stylelint-config-html: 1.1.0_35nbotopgds64plu275w6fpq24
       vue-tsc: 0.40.13_typescript@4.8.3
+
+  plugins/open-graph:
+    specifiers:
+      '@vuepress/core': 2.0.0-beta.51
+      rimraf: 3.0.2
+    dependencies:
+      '@vuepress/core': 2.0.0-beta.51
+    devDependencies:
+      rimraf: 3.0.2
 
   plugins/remove-html-extension:
     specifiers:

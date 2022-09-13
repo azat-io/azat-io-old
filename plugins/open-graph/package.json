@@ -1,6 +1,6 @@
 {
-  "name": "vuepress-plugin-remove-html-extension",
-  "description": "VuePress plugin for generating clean urls",
+  "name": "vuepress-plugin-open-graph",
+  "description": "VuePress plugin for generating open graph meta tags",
   "version": "1.0.0",
   "type": "module",
   "keywords": [
@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/azat-io/azat-io.git",
-    "directory": "plugins/remove-html-extension"
+    "directory": "plugins/open-graph"
   },
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",

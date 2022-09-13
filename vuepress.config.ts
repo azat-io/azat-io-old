@@ -1,7 +1,8 @@
-import { removeHtmlExtensionPlugin } from 'vuepress-remove-html-extension'
+import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
+import { openGraphPlugin } from 'vuepress-plugin-open-graph'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defineUserConfig } from '@vuepress/cli'
@@ -17,7 +18,6 @@ import { sitemapPlugin } from './plugins/sitemap/index.js'
 import { mermaidPlugin } from './plugins/mermaid/index.js'
 import { postsPlugin } from './plugins/posts/index.js'
 import { umamiPlugin } from './plugins/umami/index.js'
-import { seoPlugin } from './plugins/seo/index.js'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
 
@@ -123,7 +123,11 @@ export default defineUserConfig({
       id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
       src: 'https://analytics.azat.io/umami.js',
     }),
-    seoPlugin(),
+    openGraphPlugin({
+      host: 'https://azat.io',
+      twitterCard: 'summary',
+      twitterSite: '@azat_io',
+    }),
     themeDataPlugin({
       themeData: {
         locales: {
