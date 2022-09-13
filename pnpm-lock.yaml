@@ -1,112 +1,124 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@csstools/postcss-oklab-function': 1.1.1
-  '@logux/eslint-config': 47.2.0
-  '@logux/stylelint-config': 0.12.0
-  '@size-limit/file': 8.1.0
-  '@types/markdown-it': 12.2.3
-  '@types/mermaid': 8.2.9
-  '@types/node': 18.7.16
-  '@types/rss': 0.0.29
-  '@typescript-eslint/eslint-plugin': 5.36.2
-  '@typescript-eslint/parser': 5.36.2
-  '@vuepress/bundler-vite': 2.0.0-beta.51
-  '@vuepress/cli': 2.0.0-beta.51
-  '@vuepress/client': 2.0.0-beta.51
-  '@vuepress/core': 2.0.0-beta.51
-  '@vuepress/plugin-shiki': 2.0.0-beta.51
-  '@vuepress/plugin-theme-data': 2.0.0-beta.51
-  '@vuepress/utils': 2.0.0-beta.51
-  autoprefixer: 10.4.9
-  chokidar: 3.5.3
-  eslint: 8.23.1
-  eslint-config-standard: 17.0.0
-  eslint-plugin-import: 2.26.0
-  eslint-plugin-n: 15.2.5
-  eslint-plugin-prefer-let: 3.0.1
-  eslint-plugin-promise: 6.0.1
-  eslint-plugin-vue: 9.4.0
-  iso-639-1: 2.1.15
-  jsonc-parser: 3.2.0
-  markdown-it-image-lazy-loading: 1.2.0
-  markdown-it-imsize: 2.0.1
-  mermaid: 9.1.6
-  nano-staged: 0.8.0
-  postcss: 8.4.16
-  postcss-100vh-fix: 1.0.2
-  postcss-html: 1.5.0
-  reading-time: 1.5.0
-  rss: 1.2.2
-  shiki: 0.10.1
-  simple-git-hooks: 2.8.0
-  sitemap: 7.1.1
-  size-limit: 8.1.0
-  stylelint: 14.11.0
-  stylelint-config-html: 1.1.0
-  tsm: 2.2.2
-  typescript: 4.8.3
-  vite-svg-loader: 3.6.0
-  vue: 3.2.39
-  vue-router: 4.1.5
-  vue-tsc: 0.40.13
-  vue3-click-away: 1.2.4
-  vuepress-vite: 2.0.0-beta.51
+importers:
 
-dependencies:
-  '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.16
-  '@types/markdown-it': 12.2.3
-  '@vuepress/bundler-vite': 2.0.0-beta.51
-  '@vuepress/cli': 2.0.0-beta.51
-  '@vuepress/client': 2.0.0-beta.51
-  '@vuepress/core': 2.0.0-beta.51
-  '@vuepress/plugin-shiki': 2.0.0-beta.51
-  '@vuepress/plugin-theme-data': 2.0.0-beta.51
-  '@vuepress/utils': 2.0.0-beta.51
-  autoprefixer: 10.4.9_postcss@8.4.16
-  chokidar: 3.5.3
-  iso-639-1: 2.1.15
-  jsonc-parser: 3.2.0
-  markdown-it-image-lazy-loading: 1.2.0
-  markdown-it-imsize: 2.0.1
-  mermaid: 9.1.6
-  postcss: 8.4.16
-  postcss-100vh-fix: 1.0.2_postcss@8.4.16
-  reading-time: 1.5.0
-  rss: 1.2.2
-  shiki: 0.10.1
-  sitemap: 7.1.1
-  tsm: 2.2.2
-  typescript: 4.8.3
-  vite-svg-loader: 3.6.0
-  vue: 3.2.39
-  vue-router: 4.1.5_vue@3.2.39
-  vue3-click-away: 1.2.4
-  vuepress-vite: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
+  .:
+    specifiers:
+      '@csstools/postcss-oklab-function': 1.1.1
+      '@logux/eslint-config': 47.2.0
+      '@logux/stylelint-config': 0.12.0
+      '@size-limit/file': 8.1.0
+      '@types/markdown-it': 12.2.3
+      '@types/mermaid': 8.2.9
+      '@types/node': 18.7.16
+      '@types/rss': 0.0.29
+      '@typescript-eslint/eslint-plugin': 5.36.2
+      '@typescript-eslint/parser': 5.36.2
+      '@vuepress/bundler-vite': 2.0.0-beta.51
+      '@vuepress/cli': 2.0.0-beta.51
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      '@vuepress/plugin-shiki': 2.0.0-beta.51
+      '@vuepress/plugin-theme-data': 2.0.0-beta.51
+      '@vuepress/utils': 2.0.0-beta.51
+      autoprefixer: 10.4.9
+      chokidar: 3.5.3
+      eslint: 8.23.1
+      eslint-config-standard: 17.0.0
+      eslint-plugin-import: 2.26.0
+      eslint-plugin-n: 15.2.5
+      eslint-plugin-prefer-let: 3.0.1
+      eslint-plugin-promise: 6.0.1
+      eslint-plugin-vue: 9.4.0
+      iso-639-1: 2.1.15
+      jsonc-parser: 3.2.0
+      markdown-it-image-lazy-loading: 1.2.0
+      markdown-it-imsize: 2.0.1
+      mermaid: 9.1.6
+      nano-staged: 0.8.0
+      postcss: 8.4.16
+      postcss-100vh-fix: 1.0.2
+      postcss-html: 1.5.0
+      reading-time: 1.5.0
+      rss: 1.2.2
+      shiki: 0.10.1
+      simple-git-hooks: 2.8.0
+      sitemap: 7.1.1
+      size-limit: 8.1.0
+      stylelint: 14.11.0
+      stylelint-config-html: 1.1.0
+      tsm: 2.2.2
+      typescript: 4.8.3
+      vite-svg-loader: 3.6.0
+      vue: 3.2.39
+      vue-router: 4.1.5
+      vue-tsc: 0.40.13
+      vue3-click-away: 1.2.4
+      vuepress-remove-html-extension: workspace:*
+      vuepress-vite: 2.0.0-beta.51
+    dependencies:
+      '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.16
+      '@types/markdown-it': 12.2.3
+      '@vuepress/bundler-vite': 2.0.0-beta.51
+      '@vuepress/cli': 2.0.0-beta.51
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      '@vuepress/plugin-shiki': 2.0.0-beta.51
+      '@vuepress/plugin-theme-data': 2.0.0-beta.51
+      '@vuepress/utils': 2.0.0-beta.51
+      autoprefixer: 10.4.9_postcss@8.4.16
+      chokidar: 3.5.3
+      iso-639-1: 2.1.15
+      jsonc-parser: 3.2.0
+      markdown-it-image-lazy-loading: 1.2.0
+      markdown-it-imsize: 2.0.1
+      mermaid: 9.1.6
+      postcss: 8.4.16
+      postcss-100vh-fix: 1.0.2_postcss@8.4.16
+      reading-time: 1.5.0
+      rss: 1.2.2
+      shiki: 0.10.1
+      sitemap: 7.1.1
+      tsm: 2.2.2
+      typescript: 4.8.3
+      vite-svg-loader: 3.6.0
+      vue: 3.2.39
+      vue-router: 4.1.5_vue@3.2.39
+      vue3-click-away: 1.2.4
+      vuepress-remove-html-extension: link:plugins/remove-html-extension
+      vuepress-vite: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
+    devDependencies:
+      '@logux/eslint-config': 47.2.0_vnf3lxnh2hriqoyjreevx5yqwq
+      '@logux/stylelint-config': 0.12.0_stylelint@14.11.0
+      '@size-limit/file': 8.1.0_size-limit@8.1.0
+      '@types/mermaid': 8.2.9
+      '@types/node': 18.7.16
+      '@types/rss': 0.0.29
+      '@typescript-eslint/eslint-plugin': 5.36.2_wxqvmnl3i4rbvz4ixyoiufmx3e
+      '@typescript-eslint/parser': 5.36.2_irgkl5vooow2ydyo6aokmferha
+      eslint: 8.23.1
+      eslint-config-standard: 17.0.0_4nulviyjkaspo7v2xlghuwxbf4
+      eslint-plugin-import: 2.26.0_bgdmkk372fjuptfjwugrzcrhfe
+      eslint-plugin-n: 15.2.5_eslint@8.23.1
+      eslint-plugin-prefer-let: 3.0.1
+      eslint-plugin-promise: 6.0.1_eslint@8.23.1
+      eslint-plugin-vue: 9.4.0_eslint@8.23.1
+      nano-staged: 0.8.0
+      postcss-html: 1.5.0
+      simple-git-hooks: 2.8.0
+      size-limit: 8.1.0
+      stylelint: 14.11.0
+      stylelint-config-html: 1.1.0_35nbotopgds64plu275w6fpq24
+      vue-tsc: 0.40.13_typescript@4.8.3
 
-devDependencies:
-  '@logux/eslint-config': 47.2.0_vnf3lxnh2hriqoyjreevx5yqwq
-  '@logux/stylelint-config': 0.12.0_stylelint@14.11.0
-  '@size-limit/file': 8.1.0_size-limit@8.1.0
-  '@types/mermaid': 8.2.9
-  '@types/node': 18.7.16
-  '@types/rss': 0.0.29
-  '@typescript-eslint/eslint-plugin': 5.36.2_wxqvmnl3i4rbvz4ixyoiufmx3e
-  '@typescript-eslint/parser': 5.36.2_irgkl5vooow2ydyo6aokmferha
-  eslint: 8.23.1
-  eslint-config-standard: 17.0.0_4nulviyjkaspo7v2xlghuwxbf4
-  eslint-plugin-import: 2.26.0_bgdmkk372fjuptfjwugrzcrhfe
-  eslint-plugin-n: 15.2.5_eslint@8.23.1
-  eslint-plugin-prefer-let: 3.0.1
-  eslint-plugin-promise: 6.0.1_eslint@8.23.1
-  eslint-plugin-vue: 9.4.0_eslint@8.23.1
-  nano-staged: 0.8.0
-  postcss-html: 1.5.0
-  simple-git-hooks: 2.8.0
-  size-limit: 8.1.0
-  stylelint: 14.11.0
-  stylelint-config-html: 1.1.0_35nbotopgds64plu275w6fpq24
-  vue-tsc: 0.40.13_typescript@4.8.3
+  plugins/remove-html-extension:
+    specifiers:
+      '@vuepress/core': 2.0.0-beta.51
+      rimraf: 3.0.2
+    dependencies:
+      '@vuepress/core': 2.0.0-beta.51
+    devDependencies:
+      rimraf: 3.0.2
 
 packages:
 
@@ -1333,6 +1345,7 @@ packages:
 
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+    requiresBuild: true
     dev: false
 
   /commander/7.2.0:

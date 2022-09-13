@@ -1,3 +1,4 @@
+import { removeHtmlExtensionPlugin } from 'vuepress-remove-html-extension'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
@@ -11,7 +12,6 @@ import svgLoader from 'vite-svg-loader'
 import { path } from '@vuepress/utils'
 import { loadTheme } from 'shiki'
 
-import { cleanUrlsPlugin } from './plugins/clean-urls/index.js'
 import { copyCodePlugin } from './plugins/copy-code/index.js'
 import { sitemapPlugin } from './plugins/sitemap/index.js'
 import { mermaidPlugin } from './plugins/mermaid/index.js'
@@ -112,7 +112,7 @@ export default defineUserConfig({
     shikiPlugin({
       theme,
     }),
-    cleanUrlsPlugin(),
+    removeHtmlExtensionPlugin(),
     copyCodePlugin(),
     sitemapPlugin({
       hostname: 'https://azat.io',

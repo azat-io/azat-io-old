@@ -1,7 +1,7 @@
 import type { PluginFunction } from '@vuepress/core'
 
-export let cleanUrlsPlugin = (): PluginFunction => () => ({
-  name: 'vuepress-clean-urls',
+export let removeHtmlExtensionPlugin = (): PluginFunction => () => ({
+  name: 'vuepress-remove-html-extension',
   extendsPage: page => {
     let { path, frontmatter = {} } = page
     if (frontmatter.permalink) return
