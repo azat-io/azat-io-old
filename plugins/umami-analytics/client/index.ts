@@ -5,7 +5,9 @@ declare let __UMAMI_SRC__: string
 
 export default defineClientConfig({
   enhance() {
-    if (__VUEPRESS_SSR__) return
+    if (__VUEPRESS_SSR__) {
+      return
+    }
     let scriptTag = document.createElement('script')
     scriptTag.async = true
     scriptTag.src = __UMAMI_SRC__

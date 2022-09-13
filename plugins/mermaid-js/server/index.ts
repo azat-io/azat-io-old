@@ -1,11 +1,13 @@
 import type { PluginFunction } from '@vuepress/core'
 import type MarkdownIt from 'markdown-it'
 
-import { path, hash } from '@vuepress/utils'
+import { getDirname, path, hash } from '@vuepress/utils'
 
-export let mermaidPlugin = (): PluginFunction => () => ({
-  name: 'vuepress-mermaid',
-  clientConfigFile: path.resolve(__dirname, '../client/index.ts'),
+let __dirname = getDirname(import.meta.url)
+
+export let mermaidJsPlugin = (): PluginFunction => () => ({
+  name: 'vuepress-plugin-mermaid-js',
+  clientConfigFile: path.resolve(__dirname, '../client/index.js'),
   extendsMarkdown: (md: MarkdownIt) => {
     md.use((markdownIt): void => {
       let originFence = markdownIt.renderer.rules.fence?.bind(

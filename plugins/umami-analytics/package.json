@@ -1,13 +1,11 @@
 {
-  "name": "vuepress-plugin-open-graph",
-  "description": "VuePress plugin for generating open graph meta tags",
+  "name": "vuepress-plugin-umami-analytics",
+  "description": "VuePress plugin for using Umami analytics",
   "version": "1.0.0",
   "type": "module",
   "keywords": [
-    "headers",
-    "meta",
-    "open-graph",
-    "seo",
+    "analytics",
+    "umami",
     "vuepress",
     "vuepress2",
     "vuepress-plugin"
@@ -35,9 +33,12 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/core": "2.0.0-beta.51"
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/utils": "2.0.0-beta.51"
   },
   "devDependencies": {
+    "@types/node": "18.7.16",
     "rimraf": "3.0.2"
   }
 }

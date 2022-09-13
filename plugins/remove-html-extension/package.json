@@ -17,6 +17,9 @@
   },
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
+  },
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "pnpm run clean && tsc -b"

@@ -1,13 +1,14 @@
 {
-  "name": "vuepress-plugin-open-graph",
-  "description": "VuePress plugin for generating open graph meta tags",
+  "name": "vuepress-plugin-mermaid-js",
+  "description": "VuePress plugin for using Mermaid",
   "version": "1.0.0",
   "type": "module",
   "keywords": [
-    "headers",
-    "meta",
-    "open-graph",
-    "seo",
+    "diagram",
+    "flowchart",
+    "markdown",
+    "mermaid",
+    "sequence",
     "vuepress",
     "vuepress2",
     "vuepress-plugin"
@@ -15,7 +16,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/azat-io/azat-io.git",
-    "directory": "plugins/open-graph"
+    "directory": "plugins/mermaid-js"
   },
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
@@ -35,9 +36,15 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/core": "2.0.0-beta.51"
+    "@types/mermaid": "8.2.9",
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/utils": "2.0.0-beta.51",
+    "markdown-it": "13.0.1",
+    "mermaid": "9.1.6"
   },
   "devDependencies": {
+    "@types/node": "18.7.16",
     "rimraf": "3.0.2"
   }
 }
