@@ -44,7 +44,6 @@
     "mermaid": "9.1.6"
   },
   "devDependencies": {
-    "@types/node": "18.7.16",
     "rimraf": "3.0.2"
   }
 }

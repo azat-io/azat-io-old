@@ -10,7 +10,6 @@ importers:
       '@size-limit/file': 8.1.0
       '@types/markdown-it': 12.2.3
       '@types/mermaid': 8.2.9
-      '@types/node': 18.7.17
       '@types/rss': 0.0.29
       '@typescript-eslint/eslint-plugin': 5.37.0
       '@typescript-eslint/parser': 5.37.0
@@ -96,7 +95,6 @@ importers:
       '@logux/stylelint-config': 0.12.0_stylelint@14.11.0
       '@size-limit/file': 8.1.0_size-limit@8.1.0
       '@types/mermaid': 8.2.9
-      '@types/node': 18.7.17
       '@types/rss': 0.0.29
       '@typescript-eslint/eslint-plugin': 5.37.0_22c5fnooleyfkzrkkgdmel5kmi
       '@typescript-eslint/parser': 5.37.0_irgkl5vooow2ydyo6aokmferha
@@ -118,7 +116,6 @@ importers:
   plugins/mermaid-js:
     specifiers:
       '@types/mermaid': 8.2.9
-      '@types/node': 18.7.16
       '@vuepress/client': 2.0.0-beta.51
       '@vuepress/core': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
@@ -133,7 +130,6 @@ importers:
       markdown-it: 13.0.1
       mermaid: 9.1.6
     devDependencies:
-      '@types/node': 18.7.16
       rimraf: 3.0.2
 
   plugins/open-graph:
@@ -156,7 +152,6 @@ importers:
 
   plugins/umami-analytics:
     specifiers:
-      '@types/node': 18.7.16
       '@vuepress/client': 2.0.0-beta.51
       '@vuepress/core': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
@@ -166,7 +161,6 @@ importers:
       '@vuepress/core': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
     devDependencies:
-      '@types/node': 18.7.16
       rimraf: 3.0.2
 
 packages:
@@ -492,12 +486,9 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node/18.7.16:
-    resolution: {integrity: sha512-EQHhixfu+mkqHMZl1R2Ovuvn47PUw18azMJOTwSZr9/fhzHNGXAJ0ma0dayRVchprpCj0Kc1K1xKoWaATWF1qg==}
-    dev: true
-
   /@types/node/18.7.17:
     resolution: {integrity: sha512-0UyfUnt02zIuqp7yC8RYtDkp/vo8bFaQ13KkSEvUAohPOAlnVNbj5Fi3fgPSuwzakS+EvvnnZ4x9y7i6ASaSPQ==}
+    dev: false
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "types": ["node", "@vuepress/client/types"],
     "forceConsistentCasingInFileNames": true,
+    "types": ["@vuepress/client/types"],
     "importsNotUsedAsValues": "error",
     "moduleResolution": "nodenext",
     "preserveValueImports": true,

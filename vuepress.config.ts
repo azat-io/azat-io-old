@@ -7,12 +7,12 @@ import { openGraphPlugin } from 'vuepress-plugin-open-graph'
 import { mermaidJsPlugin } from 'vuepress-plugin-mermaid-js'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from '@vuepress/cli'
 import postcss100vhFix from 'postcss-100vh-fix'
 import mdImageSize from 'markdown-it-imsize'
 import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
-import { path } from '@vuepress/utils'
 import { loadTheme } from 'shiki'
 
 import { copyCodePlugin } from './plugins/copy-code/index.js'
@@ -20,6 +20,8 @@ import { sitemapPlugin } from './plugins/sitemap/index.js'
 import { postsPlugin } from './plugins/posts/index.js'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
+
+let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
 

@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "types": ["@vuepress/client/types", "node"],
+    "types": ["@vuepress/client/types"],
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./",
