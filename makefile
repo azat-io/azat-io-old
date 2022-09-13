@@ -7,10 +7,12 @@ clean:
 #install: @ Install all dependencies required by project
 install:
 	pnpm install
+	${MAKE} build_packages
 	pnpm exec simple-git-hooks
 
 install_prod:
 	pnpm install --frozen-lockfile --prod --ignore-scripts
+	${MAKE} build_packages
 
 install_theme:
 	pnpm exec tsm scripts/get-theme.ts
@@ -26,6 +28,10 @@ start:
 #build: @ Build production assets
 build: clean
 	pnpm exec vuepress build content --dest dist
+
+#build: @ Build local packages
+build_packages:
+	pnpm --filter="./plugins/**" -r --stream build
 
 test_types:
 	pnpm exec vue-tsc --noEmit --pretty
