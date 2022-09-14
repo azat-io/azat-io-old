@@ -1,13 +1,11 @@
 {
-  "name": "vuepress-plugin-open-graph",
-  "description": "VuePress plugin for generating open graph meta tags",
+  "name": "vuepress-plugin-posts",
+  "description": "VuePress plugin for blogging",
   "version": "0.1.0",
   "type": "module",
   "keywords": [
-    "headers",
-    "meta",
-    "open-graph",
-    "seo",
+    "blog",
+    "posts",
     "vuepress",
     "vuepress2",
     "vuepress-plugin"
@@ -15,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/azat-io/azat-io.git",
-    "directory": "plugins/open-graph"
+    "directory": "plugins/posts"
   },
   "author": "Azat S. <to@azat.io>",
   "license": "MIT",
@@ -24,7 +22,7 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "pnpm run clean && tsc -b",
+    "build": "pnpm run clean && tsc -b && cp ./posts-shim.d.ts ./dist/",
     "prepare": "pnpm run build"
   },
   "files": [
@@ -32,11 +30,16 @@
   ],
   "main": "./dist/index.js",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./client": "./dist/client/index.js"
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/core": "2.0.0-beta.51"
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "chokidar": "3.5.3",
+    "iso-639-1": "2.1.15",
+    "reading-time": "1.5.0"
   },
   "devDependencies": {
     "rimraf": "3.0.2"

@@ -8,6 +8,7 @@ This repository contains few plugins for VuePress v2:
 
 - [vuepress-plugin-mermaid-js](https://github.com/azat-io/azat-io/tree/main/plugins/mermaid-js): Plugin for using Mermaid.js
 - [vuepress-plugin-open-graph](https://github.com/azat-io/azat-io/tree/main/plugins/open-graph): Plugin for generating open graph meta tags
+- [vuepress-plugin-posts](https://github.com/azat-io/azat-io/tree/main/plugins/posts): Plugin for ....
 - [vuepress-plugin-remove-html-extension](https://github.com/azat-io/azat-io/tree/main/plugins/remove-html-extension): Plugin for generating clean urls
 - [vuepress-plugin-umami-analytics](https://github.com/azat-io/azat-io/tree/main/plugins/umami-analytics): Plugin for using Umami analytics
 

@@ -19,7 +19,7 @@ install_theme:
 
 #update: @ Update project dependencies
 update:
-	pnpm update --interactive --latest
+	pnpm update --recursive --interactive --latest
 
 #start: @ Start development server
 start:

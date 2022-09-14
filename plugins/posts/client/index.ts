@@ -1,4 +1,3 @@
-import type { Post } from '../typings/index.d.js'
 import type { ComputedRef } from 'vue'
 
 import { usePageLang, usePageData } from '@vuepress/client'
@@ -7,7 +6,20 @@ import { ref, computed } from 'vue'
 
 import { getLanguage } from '../shared/index.js'
 
-let postsMap = ref(posts)
+export interface Post {
+  availableLanguages: {
+    language: string
+    path: string
+  }[]
+  formattedDate: string
+  date: string
+  language: string
+  path: string
+  readingTime: number
+  title: string
+}
+
+let postsMap = ref<Post[]>(posts)
 
 export let usePosts = (): ComputedRef<Post[]> => {
   let lang = usePageLang()

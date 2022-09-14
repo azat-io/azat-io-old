@@ -1,11 +1,13 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "types": ["@vuepress/client/types"],
     "declaration": true,
-    "rootDir": "./",
     "outDir": "./dist",
+    "module": "esnext",
+    "rootDir": "./",
     "noEmit": false
   },
-  "include": ["./**/*"],
+  "include": ["./"],
   "exclude": ["./dist"]
 }

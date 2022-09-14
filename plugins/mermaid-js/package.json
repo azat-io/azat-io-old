@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-mermaid-js",
   "description": "VuePress plugin for using Mermaid",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
   "keywords": [
     "diagram",
@@ -25,7 +25,8 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "pnpm run clean && tsc -b"
+    "build": "pnpm run clean && tsc -b",
+    "prepare": "pnpm run build"
   },
   "files": [
     "dist"
@@ -41,7 +42,7 @@
     "@vuepress/core": "2.0.0-beta.51",
     "@vuepress/utils": "2.0.0-beta.51",
     "markdown-it": "13.0.1",
-    "mermaid": "9.1.6"
+    "mermaid": "9.1.7"
   },
   "devDependencies": {
     "rimraf": "3.0.2"

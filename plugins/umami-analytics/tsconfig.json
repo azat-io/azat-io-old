@@ -7,5 +7,6 @@
     "outDir": "./dist",
     "noEmit": false
   },
-  "include": ["./"]
+  "include": ["./**/*"],
+  "exclude": ["./dist"]
 }

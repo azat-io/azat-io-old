@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-umami-analytics",
   "description": "VuePress plugin for using Umami analytics",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "module",
   "keywords": [
     "analytics",
@@ -22,7 +22,8 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
-    "build": "pnpm run clean && tsc -b"
+    "build": "pnpm run clean && tsc -b",
+    "prepare": "pnpm run build"
   },
   "files": [
     "dist"

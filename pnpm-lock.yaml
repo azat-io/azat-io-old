@@ -9,7 +9,6 @@ importers:
       '@logux/stylelint-config': 0.12.0
       '@size-limit/file': 8.1.0
       '@types/markdown-it': 12.2.3
-      '@types/mermaid': 8.2.9
       '@types/rss': 0.0.29
       '@typescript-eslint/eslint-plugin': 5.37.0
       '@typescript-eslint/parser': 5.37.0
@@ -21,7 +20,6 @@ importers:
       '@vuepress/plugin-theme-data': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       autoprefixer: 10.4.10
-      chokidar: 3.5.3
       eslint: 8.23.1
       eslint-config-standard: 17.0.0
       eslint-plugin-import: 2.26.0
@@ -29,16 +27,13 @@ importers:
       eslint-plugin-prefer-let: 3.0.1
       eslint-plugin-promise: 6.0.1
       eslint-plugin-vue: 9.4.0
-      iso-639-1: 2.1.15
       jsonc-parser: 3.2.0
       markdown-it-image-lazy-loading: 1.2.0
       markdown-it-imsize: 2.0.1
-      mermaid: 9.1.6
       nano-staged: 0.8.0
       postcss: 8.4.16
       postcss-100vh-fix: 1.0.2
       postcss-html: 1.5.0
-      reading-time: 1.5.0
       shiki: 0.10.1
       simple-git-hooks: 2.8.0
       sitemap: 7.1.1
@@ -52,10 +47,11 @@ importers:
       vue-router: 4.1.5
       vue-tsc: 0.40.13
       vue3-click-away: 1.2.4
-      vuepress-plugin-mermaid-js: workspace:1.0.0
-      vuepress-plugin-open-graph: workspace:1.0.0
-      vuepress-plugin-remove-html-extension: workspace:1.0.0
-      vuepress-plugin-umami-analytics: workspace:1.0.0
+      vuepress-plugin-mermaid-js: workspace:*
+      vuepress-plugin-open-graph: workspace:*
+      vuepress-plugin-posts: workspace:*
+      vuepress-plugin-remove-html-extension: workspace:*
+      vuepress-plugin-umami-analytics: workspace:*
       vuepress-vite: 2.0.0-beta.51
     dependencies:
       '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.16
@@ -68,15 +64,11 @@ importers:
       '@vuepress/plugin-theme-data': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       autoprefixer: 10.4.10_postcss@8.4.16
-      chokidar: 3.5.3
-      iso-639-1: 2.1.15
       jsonc-parser: 3.2.0
       markdown-it-image-lazy-loading: 1.2.0
       markdown-it-imsize: 2.0.1
-      mermaid: 9.1.6
       postcss: 8.4.16
       postcss-100vh-fix: 1.0.2_postcss@8.4.16
-      reading-time: 1.5.0
       shiki: 0.10.1
       sitemap: 7.1.1
       tsm: 2.2.2
@@ -87,6 +79,7 @@ importers:
       vue3-click-away: 1.2.4
       vuepress-plugin-mermaid-js: link:plugins/mermaid-js
       vuepress-plugin-open-graph: link:plugins/open-graph
+      vuepress-plugin-posts: link:plugins/posts
       vuepress-plugin-remove-html-extension: link:plugins/remove-html-extension
       vuepress-plugin-umami-analytics: link:plugins/umami-analytics
       vuepress-vite: 2.0.0-beta.51_7i62w7p625cuklq36af6cl57wi
@@ -94,7 +87,6 @@ importers:
       '@logux/eslint-config': 47.2.0_vnf3lxnh2hriqoyjreevx5yqwq
       '@logux/stylelint-config': 0.12.0_stylelint@14.11.0
       '@size-limit/file': 8.1.0_size-limit@8.1.0
-      '@types/mermaid': 8.2.9
       '@types/rss': 0.0.29
       '@typescript-eslint/eslint-plugin': 5.37.0_22c5fnooleyfkzrkkgdmel5kmi
       '@typescript-eslint/parser': 5.37.0_irgkl5vooow2ydyo6aokmferha
@@ -120,7 +112,7 @@ importers:
       '@vuepress/core': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       markdown-it: 13.0.1
-      mermaid: 9.1.6
+      mermaid: 9.1.7
       rimraf: 3.0.2
     dependencies:
       '@types/mermaid': 8.2.9
@@ -128,7 +120,7 @@ importers:
       '@vuepress/core': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       markdown-it: 13.0.1
-      mermaid: 9.1.6
+      mermaid: 9.1.7
     devDependencies:
       rimraf: 3.0.2
 
@@ -138,6 +130,23 @@ importers:
       rimraf: 3.0.2
     dependencies:
       '@vuepress/core': 2.0.0-beta.51
+    devDependencies:
+      rimraf: 3.0.2
+
+  plugins/posts:
+    specifiers:
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      chokidar: 3.5.3
+      iso-639-1: 2.1.15
+      reading-time: 1.5.0
+      rimraf: 3.0.2
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      chokidar: 3.5.3
+      iso-639-1: 2.1.15
+      reading-time: 1.5.0
     devDependencies:
       rimraf: 3.0.2
 
@@ -473,6 +482,7 @@ packages:
 
   /@types/mermaid/8.2.9:
     resolution: {integrity: sha512-f1i8fNoVFVJXedk+R7GcEk4KoOWzWAU3CzFqlVw1qWKktfsataBERezCz1pOdKy8Ec02ZdPQXGM7NU2lPHABYQ==}
+    dev: false
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
@@ -505,7 +515,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 18.7.17
+      '@types/node': 17.0.45
     dev: false
 
   /@types/web-bluetooth/0.0.15:
@@ -853,7 +863,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.51
       '@vuepress/utils': 2.0.0-beta.51
       markdown-it: 13.0.1
-      markdown-it-anchor: 8.6.4_ea7kj7wzjkld5jo2noyjqxi764
+      markdown-it-anchor: 8.6.5_ea7kj7wzjkld5jo2noyjqxi764
       markdown-it-emoji: 2.0.2
       mdurl: 1.0.1
     transitivePeerDependencies:
@@ -1151,7 +1161,7 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.4
       es-abstract: 1.20.2
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
       is-string: 1.0.7
     dev: true
 
@@ -1274,7 +1284,7 @@ packages:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
       function-bind: 1.1.1
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
     dev: true
 
   /callsites/3.1.0:
@@ -1388,7 +1398,6 @@ packages:
 
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
-    requiresBuild: true
     dev: false
 
   /commander/7.2.0:
@@ -2073,8 +2082,8 @@ packages:
       domelementtype: 2.3.0
     dev: true
 
-  /dompurify/2.3.10:
-    resolution: {integrity: sha512-o7Fg/AgC7p/XpKjf/+RC3Ok6k4St5F7Q6q6+Nnm3p2zGWioAY6dh0CbbuwOhH2UcSzKsdniE/YnE2/92JcsA+g==}
+  /dompurify/2.4.0:
+    resolution: {integrity: sha512-Be9tbQMZds4a3C6xTmz68NlMfeONA//4dOavl/1rNw50E+/QO0KVpbcU0PcaW0nsQxurXls9ZocqFxk8R2mWEA==}
     dev: false
 
   /domutils/2.8.0:
@@ -2135,13 +2144,13 @@ packages:
       es-to-primitive: 1.2.1
       function-bind: 1.1.1
       function.prototype.name: 1.1.5
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
       get-symbol-description: 1.0.0
       has: 1.0.3
       has-property-descriptors: 1.0.0
       has-symbols: 1.0.3
       internal-slot: 1.0.3
-      is-callable: 1.2.4
+      is-callable: 1.2.5
       is-negative-zero: 2.0.2
       is-regex: 1.1.4
       is-shared-array-buffer: 1.0.2
@@ -2166,7 +2175,7 @@ packages:
     resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==}
     engines: {node: '>= 0.4'}
     dependencies:
-      is-callable: 1.2.4
+      is-callable: 1.2.5
       is-date-object: 1.0.5
       is-symbol: 1.0.4
     dev: true
@@ -3032,8 +3041,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
-  /get-intrinsic/1.1.2:
-    resolution: {integrity: sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==}
+  /get-intrinsic/1.1.3:
+    resolution: {integrity: sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==}
     dependencies:
       function-bind: 1.1.1
       has: 1.0.3
@@ -3050,7 +3059,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
     dev: true
 
   /glob-parent/5.1.2:
@@ -3173,7 +3182,7 @@ packages:
   /has-property-descriptors/1.0.0:
     resolution: {integrity: sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==}
     dependencies:
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
     dev: true
 
   /has-symbols/1.0.3:
@@ -3303,7 +3312,7 @@ packages:
     resolution: {integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==}
     engines: {node: '>= 0.4'}
     dependencies:
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
       has: 1.0.3
       side-channel: 1.0.4
     dev: true
@@ -3337,8 +3346,8 @@ packages:
       has-tostringtag: 1.0.0
     dev: true
 
-  /is-callable/1.2.4:
-    resolution: {integrity: sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==}
+  /is-callable/1.2.5:
+    resolution: {integrity: sha512-ZIWRujF6MvYGkEuHMYtFRkL2wAtFw89EHfKlXrkPkjQZZRWeh9L1q3SV13NIfHnqxugjLvAOkEHx9mb1zcMnEw==}
     engines: {node: '>= 0.4'}
     dev: true
 
@@ -3609,8 +3618,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /markdown-it-anchor/8.6.4_ea7kj7wzjkld5jo2noyjqxi764:
-    resolution: {integrity: sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==}
+  /markdown-it-anchor/8.6.5_ea7kj7wzjkld5jo2noyjqxi764:
+    resolution: {integrity: sha512-PI1qEHHkTNWT+X6Ip9w+paonfIQ+QZP9sCeMYi47oqhH+EsW8CrJ8J7CzV19QVOj6il8ATGbK2nTECj22ZHGvQ==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
@@ -3690,14 +3699,14 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /mermaid/9.1.6:
-    resolution: {integrity: sha512-oBuQk7s55wQgEgH/AK0GYY8U0kBqOIGK9QlJL+VYxh+1kZQtU9tNwoy0gWCfBJDaFIRdfpc/fm9PagaIXg6XFQ==}
+  /mermaid/9.1.7:
+    resolution: {integrity: sha512-MRVHXy5FLjnUQUG7YS3UN9jEN6FXCJbFCXVGJQjVIbiR6Vhw0j/6pLIjqsiah9xoHmQU6DEaKOvB3S1g/1nBPA==}
     dependencies:
       '@braintree/sanitize-url': 6.0.0
       d3: 7.6.1
       dagre: 0.8.5
       dagre-d3: 0.6.4
-      dompurify: 2.3.10
+      dompurify: 2.4.0
       graphlib: 2.1.8
       khroma: 2.0.0
       moment-mini: 2.24.0
@@ -4284,7 +4293,7 @@ packages:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.1.2
+      get-intrinsic: 1.1.3
       object-inspect: 1.12.2
     dev: true
 
