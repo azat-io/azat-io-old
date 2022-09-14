@@ -2,7 +2,7 @@ import { defineClientConfig } from '@vuepress/client'
 import { onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-import copyIcon from '~/assets/copy.svg?raw'
+import { copyIcon } from './copy-icon.js'
 
 import './index.css'
 

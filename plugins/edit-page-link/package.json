@@ -1,0 +1,47 @@
+{
+  "name": "vuepress-plugin-edit-page-link",
+  "description": "VuePress plugin for getting edit page link",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "edit-link",
+    "git",
+    "repository",
+    "vuepress",
+    "vuepress2",
+    "vuepress-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azat-io/azat-io.git",
+    "directory": "plugins/edit-page-link"
+  },
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "pnpm run clean && tsc -b",
+    "prepare": "pnpm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/utils": "2.0.0-beta.51",
+    "execa": "6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.18",
+    "rimraf": "3.0.2"
+  }
+}

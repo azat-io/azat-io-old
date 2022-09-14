@@ -1,10 +1,13 @@
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
+import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
 import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
+import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
 import { openGraphPlugin } from 'vuepress-plugin-open-graph'
 import { mermaidJsPlugin } from 'vuepress-plugin-mermaid-js'
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { postsPlugin } from 'vuepress-plugin-posts'
@@ -16,8 +19,6 @@ import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 
-import { copyCodePlugin } from './plugins/copy-code/index.js'
-import { sitemapPlugin } from './plugins/sitemap/index.js'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
 
@@ -115,7 +116,8 @@ export default defineUserConfig({
       theme,
     }),
     removeHtmlExtensionPlugin(),
-    copyCodePlugin(),
+    copyCodeButtonPlugin(),
+    editPageLinkPlugin(),
     sitemapPlugin({
       hostname: 'https://azat.io',
     }),

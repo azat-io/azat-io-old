@@ -24,8 +24,8 @@ export let umamiAnalyticsPlugin =
       ...plugin,
       clientConfigFile: path.resolve(__dirname, '../client/index.js'),
       define: {
-        __UMAMI_ID__: id,
-        __UMAMI_SRC__: src,
+        __UMAMI_ANALYTICS_ID__: id,
+        __UMAMI_ANALYTICS_SRC__: src,
       },
     }
   }

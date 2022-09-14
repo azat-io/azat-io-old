@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { usePosts } from '~/plugins/posts/client/index.js'
+import { usePosts } from 'vuepress-plugin-posts/client'
+
 import Container from '~/components/container.vue'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
