@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Host: azat.io
-Sitemap: https://azat.io/sitemap.xml

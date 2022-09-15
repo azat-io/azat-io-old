@@ -2,12 +2,6 @@ declare const __VUEPRESS_SSR__: boolean
 
 declare const __VUE_HMR_RUNTIME__: Record<string, unknown>
 
-declare module '@temp/posts/data' {
-  import type { Post } from '~/plugins/posts/typings/index.d.ts'
-
-  export let posts: Post[]
-}
-
 declare module '~/data/celebrities.json' {
   import type { Celebrity } from './celebrity.d.js'
 

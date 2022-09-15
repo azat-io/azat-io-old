@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["@vuepress/client/types"],
+    "declaration": true,
+    "rootDir": "./",
+    "outDir": "./dist",
+    "noEmit": false
+  },
+  "include": ["./**/*"],
+  "exclude": ["./dist"]
+}

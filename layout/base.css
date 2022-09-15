@@ -150,33 +150,6 @@ p {
   border-radius: var(--size-xs);
 }
 
-[class*='language-'] {
-  position: relative;
-}
-
-[class*='language-'] > span.copy {
-  position: absolute;
-  top: var(--size-m);
-  right: var(--size-m);
-  z-index: 1;
-  width: var(--size-m);
-  height: var(--size-m);
-  cursor: pointer;
-  mask-image: url('~/assets/copy.svg');
-  background: var(--color-code);
-  border-radius: 4px;
-  opacity: 0%;
-  transition: opacity 0.4s;
-}
-
-[class*='language-']:hover > span.copy {
-  opacity: 100%;
-}
-
-[class*='language-'] > span.copy.copied {
-  background: var(--color-brand);
-}
-
 @media (min-width: 480px) {
   pre {
     padding: var(--size-m);

@@ -1,16 +1,15 @@
 <script lang="ts" setup>
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
+import { useEditPageLink } from 'vuepress-plugin-edit-page-link/client'
 import { usePageFrontmatter, usePageLang } from '@vuepress/client'
+import { usePost } from 'vuepress-plugin-posts/client'
 import { computed } from 'vue'
 
-import { usePost } from '~/plugins/posts/client/index.js'
 import Container from '~/components/container.vue'
 import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 
-let lang = usePageLang()
-let post = usePost()
 let pageFrontmatter = usePageFrontmatter<{
   title: string
   date: string
@@ -19,6 +18,9 @@ let pageFrontmatter = usePageFrontmatter<{
     webp: string
   }
 }>()
+let editPageLink = useEditPageLink()
+let lang = usePageLang()
+let post = usePost()
 let t = useThemeLocaleData<{
   'also-translated': string
   'edit-this-page': string
@@ -88,7 +90,7 @@ let coffeeCups = computed(() =>
       <Content />
     </article>
     <a
-      :href="`https://github.com/azat-io/azat-io/edit/main/content${post.current.path}.md`"
+      :href="editPageLink"
       :class="$style['edit-link']"
       target="_blank"
       rel="noreferrer"

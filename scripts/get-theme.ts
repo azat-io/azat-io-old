@@ -1,17 +1,14 @@
 import type { ParseError } from 'jsonc-parser'
 
 import { parse as jsoncParse } from 'jsonc-parser'
+import { getDirname, path } from '@vuepress/utils'
 import { writeFileSync, mkdir } from 'fs'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
 import https from 'https'
+
+let __dirname = getDirname(import.meta.url)
 
 let themeUrl =
   'https://github.com/jdinhify/vscode-theme-gruvbox/blob/main/themes/gruvbox-dark-hard.json'
-
-let __filename = fileURLToPath(import.meta.url)
-
-let __dirname = dirname(__filename)
 
 export let get = async (
   url: string,
@@ -78,11 +75,11 @@ try {
 
 let contentObj = parseJson(content)
 
-mkdir(join(__dirname, '../theme'), { recursive: true }, error => {
+mkdir(path.join(__dirname, '../theme'), { recursive: true }, error => {
   if (error) throw error
 })
 
 writeFileSync(
-  join(__dirname, '../layout/gruvbox.json'),
+  path.join(__dirname, '../layout/gruvbox.json'),
   JSON.stringify(contentObj, null, 2),
 )

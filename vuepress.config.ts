@@ -1,25 +1,27 @@
+import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
+import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
+import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
+import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
+import { openGraphPlugin } from 'vuepress-plugin-open-graph'
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { postsPlugin } from 'vuepress-plugin-posts'
+import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from '@vuepress/cli'
 import postcss100vhFix from 'postcss-100vh-fix'
 import mdImageSize from 'markdown-it-imsize'
 import autoprefixer from 'autoprefixer'
 import svgLoader from 'vite-svg-loader'
-import { path } from '@vuepress/utils'
 import { loadTheme } from 'shiki'
 
-import { cleanUrlsPlugin } from './plugins/clean-urls/index.js'
-import { copyCodePlugin } from './plugins/copy-code/index.js'
-import { sitemapPlugin } from './plugins/sitemap/index.js'
-import { mermaidPlugin } from './plugins/mermaid/index.js'
-import { postsPlugin } from './plugins/posts/index.js'
-import { umamiPlugin } from './plugins/umami/index.js'
-import { seoPlugin } from './plugins/seo/index.js'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
+
+let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
 
@@ -112,18 +114,45 @@ export default defineUserConfig({
     shikiPlugin({
       theme,
     }),
-    cleanUrlsPlugin(),
-    copyCodePlugin(),
+    removeHtmlExtensionPlugin(),
+    copyCodeButtonPlugin(),
+    editPageLinkPlugin(),
     sitemapPlugin({
       hostname: 'https://azat.io',
     }),
-    mermaidPlugin(),
-    postsPlugin(),
-    umamiPlugin({
-      id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
-      src: 'https://analytics.azat.io/umami.js',
+    mermaidWrapperPlugin({
+      themeVariables: {
+        darkMode: true,
+        fontFamily: 'Stem, sans-serif',
+        fontSize: '15px',
+
+        noteBkgColor: 'var(--color-brand)',
+        noteTextColor: 'var(--color-primary)',
+        noteBorderColor: 'var(--color-brand-hover)',
+
+        lineColor: 'var(--color-text)',
+        textColor: 'var(--color-text)',
+
+        nodeBorder: 'var(--color-brand-hover)',
+        nodeTextColor: 'var(--color-primary)',
+
+        mainBkg: 'var(--color-brand)',
+
+        clusterBkg: 'var(--color-tertiary)',
+        clusterBorder: 'var(--color-secondary)',
+
+        actorBorder: 'var(--color-brand-hover)',
+        labelBoxBorderColor: 'var(--color-text)',
+        loopTextColor: 'var(--color-text)',
+      },
     }),
-    seoPlugin(),
+    postsPlugin(),
+    openGraphPlugin({
+      host: 'https://azat.io',
+      defaultImage: '/assets/hero-preview.png',
+      twitterCard: 'summary',
+      twitterSite: '@azat_io',
+    }),
     themeDataPlugin({
       themeData: {
         locales: {
@@ -141,6 +170,30 @@ export default defineUserConfig({
     viteOptions: {
       build: {
         chunkSizeWarningLimit: 1111,
+      },
+      server: {
+        watch: {
+          ignored: [
+            '!**/node_modules/vuepress-plugin-copy-code-button/**',
+            '!**/node_modules/vuepress-plugin-edit-page-link/**',
+            '!**/node_modules/vuepress-plugin-mermaid-wrapper/**',
+            '!**/node_modules/vuepress-plugin-open-graph/**',
+            '!**/node_modules/vuepress-plugin-posts/**',
+            '!**/node_modules/vuepress-plugin-remove-html-extension/**',
+            '!**/node_modules/vuepress-plugin-umami-analytics/**',
+          ],
+        },
+      },
+      optimizeDeps: {
+        exclude: [
+          'vuepress-plugin-copy-code-button',
+          'vuepress-plugin-edit-page-link',
+          'vuepress-plugin-mermaid-wrapper',
+          'vuepress-plugin-open-graph',
+          'vuepress-plugin-posts',
+          'vuepress-plugin-remove-html-extension',
+          'vuepress-plugin-umami-analytics',
+        ],
       },
       css: {
         postcss: {

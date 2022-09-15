@@ -1,0 +1,48 @@
+{
+  "name": "vuepress-plugin-copy-code-button",
+  "description": "VuePress plugin for adding copy code button and label with the name of the language",
+  "version": "0.1.0",
+  "type": "module",
+  "keywords": [
+    "clipboard",
+    "clipboard-copy",
+    "code",
+    "copy",
+    "copy-code",
+    "vuepress",
+    "vuepress2",
+    "vuepress-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azat-io/azat-io.git",
+    "directory": "plugins/copy-code-button"
+  },
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
+  },
+  "scripts": {
+    "start": "tsc -b --watch",
+    "clean": "rimraf ./dist",
+    "build": "tsc -b && cp ./client/index.css ./dist/client/",
+    "prepare": "pnpm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@vuepress/client": "2.0.0-beta.51",
+    "@vuepress/core": "2.0.0-beta.51",
+    "@vuepress/utils": "2.0.0-beta.51"
+  },
+  "devDependencies": {
+    "rimraf": "3.0.2"
+  }
+}
