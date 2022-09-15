@@ -21,8 +21,9 @@
     "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
   },
   "scripts": {
+    "start": "tsc -b --watch",
     "clean": "rimraf ./dist",
-    "build": "pnpm run clean && tsc -b && cp ./posts-shim.d.ts ./dist/",
+    "build": "pnpm run clean && tsc -b",
     "prepare": "pnpm run build"
   },
   "files": [
