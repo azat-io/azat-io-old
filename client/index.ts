@@ -10,6 +10,7 @@ import '~/layout/colors.css'
 import '~/layout/sizes.css'
 import '~/layout/fonts.css'
 import '~/layout/base.css'
+import '~/layout/code.css'
 
 export default defineClientConfig({
   layouts: {

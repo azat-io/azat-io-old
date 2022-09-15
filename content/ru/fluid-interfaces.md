@@ -5,7 +5,7 @@ date: 2022-08-18
 hero:
   avif: /assets/fluid-interfaces.avif
   webp: /assets/fluid-interfaces.webp
-preview: /assets/fluid-interfaces-preview.png
+image: /assets/fluid-interfaces-preview.png
 ---
 
 Охаё, как говорится.

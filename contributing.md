@@ -6,6 +6,8 @@ Thank you for investing your time in contributing to my project!
 
 This repository contains few plugins for VuePress v2:
 
+- [vuepress-plugin-copy-code-button](https://github.com/azat-io/azat-io/tree/main/plugins/copy-code-button): Plugin for ...
+- [vuepress-plugin-edit-page-link](https://github.com/azat-io/azat-io/tree/main/plugins/edit-page-link): Plugin for ...
 - [vuepress-plugin-mermaid-js](https://github.com/azat-io/azat-io/tree/main/plugins/mermaid-js): Plugin for using Mermaid.js
 - [vuepress-plugin-open-graph](https://github.com/azat-io/azat-io/tree/main/plugins/open-graph): Plugin for generating open graph meta tags
 - [vuepress-plugin-posts](https://github.com/azat-io/azat-io/tree/main/plugins/posts): Plugin for ....
@@ -49,3 +51,5 @@ make install
 ```
 make start
 ```
+
+Happy hacking! 🦥

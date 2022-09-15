@@ -31,7 +31,7 @@ let preparePosts = async (app: App): Promise<void> => {
         day: 'numeric',
         month: 'long',
         year: 'numeric',
-      }).format(new Date(frontmatter.date!)),
+      }).format(new Date(frontmatter.date ?? Date.now())),
       readingTime: Math.ceil(readingTime(content).minutes),
       language: getLanguage(lang),
       title: frontmatter.title!,

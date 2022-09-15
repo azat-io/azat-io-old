@@ -149,6 +149,7 @@ export default defineUserConfig({
     postsPlugin(),
     openGraphPlugin({
       host: 'https://azat.io',
+      defaultImage: '/assets/hero-preview.png',
       twitterCard: 'summary',
       twitterSite: '@azat_io',
     }),

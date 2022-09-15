@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-open-graph.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-open-graph.svg)
 
-VuePress plugin for generating open graph meta tags.
+VuePress plugin for generating open graph meta tags to improve SEO.
 
 ## Installation
 
@@ -23,13 +23,64 @@ import { openGraphPlugin } from 'vuepress-plugin-open-graph'
 export default {
   plugins: [
     openGraphPlugin({
-      host: 'https://azat.io',
-      twitterCard: 'summary',
-      twitterSite: '@azat_io',
+      /* options */
     }),
   ],
 }
 ```
+
+That's all. Just use frontmatter options in your Markdown files:
+
+```md
+---
+title: Post title
+description: Post description
+date: Post publish date
+image: URL to post preview
+---
+```
+
+## Options
+
+### host
+
+- Type: `string`
+
+- Required: `true`
+
+- Details:
+
+  The domain name where the current site is deployed, the plugin needs this option to work.
+
+### defaultImage
+
+- Type: `string`
+
+- Required: `false`
+
+- Details:
+
+  Link to default open graph image. This image will be used unless otherwise specified.
+
+### twitterCard
+
+- Type: `'summary' | 'summary_large_image'`
+
+- Required: `false`
+
+- Details:
+
+  Twitter card type for a beautiful visual display of the tweet with post link. [Read more](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards).
+
+### twitterSite
+
+- Type: `string`
+
+- Required: `false`
+
+- Details:
+
+  Twitter username of your website.
 
 ## Contribution
 

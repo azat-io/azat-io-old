@@ -2,12 +2,14 @@ import type { Plugin } from '@vuepress/core'
 
 interface OpenGraphPluginOptions {
   host: string
+  defaultImage?: string
   twitterCard?: 'summary' | 'summary_large_image'
   twitterSite?: string
 }
 
 export let openGraphPlugin =
   ({
+    defaultImage,
     twitterCard = 'summary',
     twitterSite,
     host,
@@ -40,16 +42,13 @@ export let openGraphPlugin =
         'meta',
         { property: 'og:url', content: `${host}${page.path}` },
       ])
-      if (page.frontmatter.preview) {
+      if (page.frontmatter.image) {
         head.push([
           'meta',
-          { property: 'og:image', content: page.frontmatter.preview as string },
+          { property: 'og:image', content: page.frontmatter.image as string },
         ])
-      } else {
-        head.push([
-          'meta',
-          { property: 'og:image', content: '/assets/hero-preview.png' },
-        ])
+      } else if (defaultImage) {
+        head.push(['meta', { property: 'og:image', content: defaultImage }])
       }
       if (page.title) {
         head.push(['meta', { name: 'twitter:title', content: page.title }])
@@ -63,12 +62,12 @@ export let openGraphPlugin =
           },
         ])
       }
-      if (page.frontmatter.preview) {
+      if (page.frontmatter.image) {
         head.push([
           'meta',
           {
             name: 'twitter:image',
-            content: page.frontmatter.preview as string,
+            content: page.frontmatter.image as string,
           },
         ])
       } else {
