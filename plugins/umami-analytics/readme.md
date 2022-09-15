@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-umami-analytics.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-umami-analytics.svg)
 
-VuePress plugin for generating Umami analytics script.
+VuePress plugin for injecting [Umami](https://umami.is) analytics script into your app code. Umami is a self-hosted, privacy-friendly alternative to Google Analytics.
 
 ## Installation
 
@@ -23,17 +23,36 @@ import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 export default {
   plugins: [
     umamiAnalyticsPlugin({
-      id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
-      src: 'https://umami.example.com/umami.js',
+      /* options */
     }),
   ],
 }
 ```
 
+## Options
+
+### id
+
+- Type: `string`
+
+- Required: `true`
+
+- Details:
+
+  Add website to Umami analytics and get parameters from tracking code. Put data-website-id here.
+
+### src
+
+- Type: `string`
+
+- Required: `true`
+
+- Details:
+
+  Link to Umami analytics script.
+
+![Umami tracking code](https://user-images.githubusercontent.com/5698350/190417132-fcedc6cb-636d-4634-a682-837a6f56c797.png)
+
 ## Contribution
 
-See [Contributing Guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).
-
-## License
-
-MIT
+See [Contribution guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).

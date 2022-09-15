@@ -18,13 +18,9 @@
     "noEmit": true,
     "paths": {
       "~/components/*": ["./components/*"],
-      "~/plugins/*": ["./plugins/*"],
       "~/typings/*": ["./typings/*"],
       "~/assets/*": ["./assets/*"],
-      "~/stores/*": ["./stores/*"],
-      "~/icons/*": ["./icons/*"],
-      "~/pages/*": ["./pages/*"],
-      "~/lib/*": ["./lib/*"]
+      "~/pages/*": ["./pages/*"]
     }
   },
   "include": ["**/*.ts", "**/*.vue"],

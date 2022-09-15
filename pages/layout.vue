@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
+import { useEditPageLink } from 'vuepress-plugin-edit-page-link/client'
 import { usePageFrontmatter, usePageLang } from '@vuepress/client'
 import { usePost } from 'vuepress-plugin-posts/client'
 import { computed } from 'vue'
 
-import { useEditPageLink } from '~/plugins/edit-page-link/client/index.js'
 import Container from '~/components/container.vue'
 import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'

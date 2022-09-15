@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-remove-html-extension.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-remove-html-extension.svg)
 
-VuePress plugin for generating clean urls.
+VuePress plugin for generating clean urls without `.html` extension.
 
 ## Installation
 
@@ -25,10 +25,10 @@ export default {
 }
 ```
 
+### Netlify
+
+If you are using [Netlify](https://netlify.com) to deploy your website, open "Site settings", "Build and deploy" tab. In the "Asset optimization" section, check the "Pretty URLs" checkbox.
+
 ## Contribution
 
-See [Contributing Guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).
-
-## License
-
-MIT
+See [Contribution guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).

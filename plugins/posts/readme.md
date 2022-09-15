@@ -27,8 +27,4 @@ export default {
 
 ## Contribution
 
-See [Contributing Guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).
-
-## License
-
-MIT
+See [Contribution guide](https://github.com/azat-io/azat-io/blob/main/contributing.md).

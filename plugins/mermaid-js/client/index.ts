@@ -4,6 +4,10 @@ import type { Mermaid } from 'mermaid'
 import { defineComponent, onMounted, nextTick, ref, h } from 'vue'
 import { defineClientConfig } from '@vuepress/client'
 
+declare let __MERMAID_JS_THEME_VARIABLES__: {
+  [key: string]: string | boolean
+}
+
 let MermaidComponent = defineComponent({
   name: 'Mermaid',
   props: {
@@ -31,30 +35,7 @@ let MermaidComponent = defineComponent({
       let code = decodeURIComponent(props.code)
 
       initialize({
-        themeVariables: {
-          darkMode: true,
-          fontFamily: 'Stem, sans-serif',
-          fontSize: '15px',
-
-          noteBkgColor: 'var(--color-brand)',
-          noteTextColor: 'var(--color-primary)',
-          noteBorderColor: 'var(--color-brand-hover)',
-
-          lineColor: 'var(--color-text)',
-          textColor: 'var(--color-text)',
-
-          nodeBorder: 'var(--color-brand-hover)',
-          nodeTextColor: 'var(--color-primary)',
-
-          mainBkg: 'var(--color-brand)',
-
-          clusterBkg: 'var(--color-tertiary)',
-          clusterBorder: 'var(--color-secondary)',
-
-          actorBorder: 'var(--color-brand-hover)',
-          labelBoxBorderColor: 'var(--color-text)',
-          loopTextColor: 'var(--color-text)',
-        },
+        themeVariables: __MERMAID_JS_THEME_VARIABLES__,
         startOnLoad: false,
       })
 

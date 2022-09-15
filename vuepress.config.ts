@@ -1,6 +1,5 @@
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
-import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
@@ -121,12 +120,33 @@ export default defineUserConfig({
     sitemapPlugin({
       hostname: 'https://azat.io',
     }),
-    mermaidJsPlugin(),
-    postsPlugin(),
-    umamiAnalyticsPlugin({
-      id: 'b198bd05-a70f-4a22-a46e-43908060c5a7',
-      src: 'https://analytics.azat.io/umami.js',
+    mermaidJsPlugin({
+      themeVariables: {
+        darkMode: true,
+        fontFamily: 'Stem, sans-serif',
+        fontSize: '15px',
+
+        noteBkgColor: 'var(--color-brand)',
+        noteTextColor: 'var(--color-primary)',
+        noteBorderColor: 'var(--color-brand-hover)',
+
+        lineColor: 'var(--color-text)',
+        textColor: 'var(--color-text)',
+
+        nodeBorder: 'var(--color-brand-hover)',
+        nodeTextColor: 'var(--color-primary)',
+
+        mainBkg: 'var(--color-brand)',
+
+        clusterBkg: 'var(--color-tertiary)',
+        clusterBorder: 'var(--color-secondary)',
+
+        actorBorder: 'var(--color-brand-hover)',
+        labelBoxBorderColor: 'var(--color-text)',
+        loopTextColor: 'var(--color-text)',
+      },
     }),
+    postsPlugin(),
     openGraphPlugin({
       host: 'https://azat.io',
       twitterCard: 'summary',
