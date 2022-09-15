@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-copy-code-button",
-  "description": "VuePress plugin for making copy code button",
+  "description": "VuePress plugin for adding copy code button and label with the name of the language",
   "version": "0.1.0",
   "type": "module",
   "keywords": [

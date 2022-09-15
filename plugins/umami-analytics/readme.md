@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-umami-analytics.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-umami-analytics.svg)
 
-VuePress plugin for injecting [Umami](https://umami.is) analytics script into your app code. Umami is a self-hosted, privacy-friendly alternative to Google Analytics.
+VuePress v2 plugin for injecting [Umami](https://umami.is) analytics script into your app code. Umami is a self-hosted, privacy-friendly alternative to Google Analytics.
 
 ## Installation
 

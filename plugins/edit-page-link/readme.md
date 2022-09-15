@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-edit-page-link.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-edit-page-link.svg)
 
-VuePress plugin for getting edit page in repository link. In order to use this plugin, your project must be a git repository with a remote "origin" added.
+VuePress v2 plugin for getting edit page in repository link. In order to use this plugin, your project must be a git repository with a remote "origin" added.
 
 ## Installation
 

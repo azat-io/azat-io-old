@@ -6,23 +6,32 @@ import { copyIcon } from './copy-icon.js'
 
 import './index.css'
 
-let languages = {
+let languages: {
+  [key: string]: string
+} = {
   bash: 'Bash',
   css: 'CSS',
   graphql: 'GraphQL',
   html: 'HTML',
+  javascript: 'JavaScript',
   js: 'JavaScript',
+  jsx: 'JavaScript',
   json: 'JSON',
+  less: 'Less',
   md: 'Markdown',
   markdown: 'Markdown',
   postcss: 'CSS',
+  rb: 'Ruby',
+  ruby: 'Ruby',
+  scss: 'SCSS',
+  svelte: 'Svelte',
   ts: 'TypeScript',
+  tsx: 'TypeScript',
+  typescript: 'TypeScript',
   vue: 'Vue',
   yaml: 'YAML',
   yml: 'YAML',
 }
-
-type Language = keyof typeof languages
 
 export default defineClientConfig({
   setup: () => {
@@ -46,10 +55,8 @@ export default defineClientConfig({
           codeElement.appendChild(copyElement)
 
           let languageElement = document.createElement('span')
-          let languageExtension = codeElement.classList[0].split(
-            '-',
-          )[1] as Language
-          let language = languages[languageExtension]
+          let languageExtension = codeElement.classList[0].split('-')[1]
+          let language = languages[languageExtension] || ''
           languageElement.classList.add('code-language')
           languageElement.innerText = language
           codeElement.appendChild(languageElement)

@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-remove-html-extension.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-remove-html-extension.svg)
 
-VuePress plugin for generating clean urls without `.html` extension.
+VuePress v2 plugin for generating clean urls without `.html` extension.
 
 ## Installation
 

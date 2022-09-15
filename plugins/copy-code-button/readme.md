@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-copy-code-button.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-copy-code-button.svg)
 
-VuePress plugin that adds a copy code button and an icon with the name of the code language used in your code block.
+VuePress v2 plugin for adding a copy code button and a label with the name of the code language used in your code block.
 
 ## Installation
 

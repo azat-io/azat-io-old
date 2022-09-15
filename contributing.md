@@ -6,11 +6,11 @@ Thank you for investing your time in contributing to my project!
 
 This repository contains few plugins for VuePress v2:
 
-- [vuepress-plugin-copy-code-button](https://github.com/azat-io/azat-io/tree/main/plugins/copy-code-button): Plugin for ...
-- [vuepress-plugin-edit-page-link](https://github.com/azat-io/azat-io/tree/main/plugins/edit-page-link): Plugin for ...
+- [vuepress-plugin-copy-code-button](https://github.com/azat-io/azat-io/tree/main/plugins/copy-code-button): Plugin for adding copy code button and label with the name of the language
+- [vuepress-plugin-edit-page-link](https://github.com/azat-io/azat-io/tree/main/plugins/edit-page-link): Plugin for getting edit page in repository link
 - [vuepress-plugin-mermaid-js](https://github.com/azat-io/azat-io/tree/main/plugins/mermaid-js): Plugin for using Mermaid.js
 - [vuepress-plugin-open-graph](https://github.com/azat-io/azat-io/tree/main/plugins/open-graph): Plugin for generating open graph meta tags
-- [vuepress-plugin-posts](https://github.com/azat-io/azat-io/tree/main/plugins/posts): Plugin for ....
+- [vuepress-plugin-posts](https://github.com/azat-io/azat-io/tree/main/plugins/posts): Plugin for blogging
 - [vuepress-plugin-remove-html-extension](https://github.com/azat-io/azat-io/tree/main/plugins/remove-html-extension): Plugin for generating clean urls
 - [vuepress-plugin-umami-analytics](https://github.com/azat-io/azat-io/tree/main/plugins/umami-analytics): Plugin for using Umami analytics
 

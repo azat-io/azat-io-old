@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-open-graph.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-open-graph.svg)
 
-VuePress plugin for generating open graph meta tags to improve SEO.
+VuePress v2 plugin for generating open graph meta tags to improve SEO.
 
 ## Installation
 

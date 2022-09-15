@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-mermaid-js.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-mermaid-js.svg)
 
-VuePress plugin provides a global component wrapping [Mermaid](https://mermaid-js.github.io/mermaid/). Mermaid is a JavaScript library which lets you create diagrams and visualizations using text and code.
+VuePress v2 plugin provides a global component wrapping [Mermaid](https://mermaid-js.github.io/mermaid). Mermaid is a JavaScript library which lets you create diagrams and visualizations using text and code.
 
 ## Installation
 

@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/npm/v/vuepress-plugin-posts.svg)
 ![Downloads](https://img.shields.io/npm/dm/vuepress-plugin-posts.svg)
 
-VuePress plugin for blogging.
+VuePress v2 plugin for blogging.
 
 ## Installation
 

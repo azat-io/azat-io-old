@@ -47,7 +47,7 @@ let preparePosts = async (app: App): Promise<void> => {
 }
 
 export let postsPlugin = (): PluginFunction => () => ({
-  name: 'vuepress-posts',
+  name: 'vuepress-plugin-posts',
   onPrepared: async app => {
     await preparePosts(app)
   },
