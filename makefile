@@ -21,7 +21,7 @@ update:
 
 #start: @ Start development server
 start:
-	pnpm exec vuepress dev content | pnpm --parallel --stream start
+	pnpm --parallel --stream start | pnpm exec vuepress dev content
 
 #build: @ Build production assets
 build: clean

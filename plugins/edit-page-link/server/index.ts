@@ -29,6 +29,7 @@ let { stdout: gitBranchStdout } = await execa('git', [
   'branch',
   '--show-current',
 ])
+
 let last = (arr: string[]): string => arr[arr.length - 1]
 let branch = last(gitBranchStdout.split('/'))
 
@@ -38,6 +39,7 @@ export let editPageLinkPlugin = (): PluginFunction => app => {
     .replace(process.cwd(), '')
     .replace(/^\//g, '')
     .replace(/\/$/g, '')
+
   return {
     name: 'vuepress-plugin-edit-page-link',
     define: {

@@ -150,6 +150,30 @@ export default defineUserConfig({
       build: {
         chunkSizeWarningLimit: 1111,
       },
+      server: {
+        watch: {
+          ignored: [
+            '!**/node_modules/vuepress-plugin-copy-code-button/**',
+            '!**/node_modules/vuepress-plugin-edit-page-link/**',
+            '!**/node_modules/vuepress-plugin-mermaid-js/**',
+            '!**/node_modules/vuepress-plugin-open-graph/**',
+            '!**/node_modules/vuepress-plugin-posts/**',
+            '!**/node_modules/vuepress-plugin-remove-html-extension/**',
+            '!**/node_modules/vuepress-plugin-umami-analytics/**',
+          ],
+        },
+      },
+      optimizeDeps: {
+        exclude: [
+          'vuepress-plugin-copy-code-button',
+          'vuepress-plugin-edit-page-link',
+          'vuepress-plugin-mermaid-js',
+          'vuepress-plugin-open-graph',
+          'vuepress-plugin-posts',
+          'vuepress-plugin-remove-html-extension',
+          'vuepress-plugin-umami-analytics',
+        ],
+      },
       css: {
         postcss: {
           plugins: [
