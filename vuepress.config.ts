@@ -1,11 +1,11 @@
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
+import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
 import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
 import { openGraphPlugin } from 'vuepress-plugin-open-graph'
-import { mermaidJsPlugin } from 'vuepress-plugin-mermaid-js'
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
@@ -120,7 +120,7 @@ export default defineUserConfig({
     sitemapPlugin({
       hostname: 'https://azat.io',
     }),
-    mermaidJsPlugin({
+    mermaidWrapperPlugin({
       themeVariables: {
         darkMode: true,
         fontFamily: 'Stem, sans-serif',
@@ -176,7 +176,7 @@ export default defineUserConfig({
           ignored: [
             '!**/node_modules/vuepress-plugin-copy-code-button/**',
             '!**/node_modules/vuepress-plugin-edit-page-link/**',
-            '!**/node_modules/vuepress-plugin-mermaid-js/**',
+            '!**/node_modules/vuepress-plugin-mermaid-wrapper/**',
             '!**/node_modules/vuepress-plugin-open-graph/**',
             '!**/node_modules/vuepress-plugin-posts/**',
             '!**/node_modules/vuepress-plugin-remove-html-extension/**',
@@ -188,7 +188,7 @@ export default defineUserConfig({
         exclude: [
           'vuepress-plugin-copy-code-button',
           'vuepress-plugin-edit-page-link',
-          'vuepress-plugin-mermaid-js',
+          'vuepress-plugin-mermaid-wrapper',
           'vuepress-plugin-open-graph',
           'vuepress-plugin-posts',
           'vuepress-plugin-remove-html-extension',

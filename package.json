@@ -34,7 +34,7 @@
     "vue3-click-away": "1.2.4",
     "vuepress-plugin-copy-code-button": "workspace:*",
     "vuepress-plugin-edit-page-link": "workspace:*",
-    "vuepress-plugin-mermaid-js": "workspace:*",
+    "vuepress-plugin-mermaid-wrapper": "workspace:*",
     "vuepress-plugin-open-graph": "workspace:*",
     "vuepress-plugin-posts": "workspace:*",
     "vuepress-plugin-remove-html-extension": "workspace:*",

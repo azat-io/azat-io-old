@@ -4,7 +4,7 @@ import type { Mermaid } from 'mermaid'
 import { defineComponent, onMounted, nextTick, ref, h } from 'vue'
 import { defineClientConfig } from '@vuepress/client'
 
-declare let __MERMAID_JS_THEME_VARIABLES__: {
+declare let __MERMAID_WRAPPER_THEME_VARIABLES__: {
   [key: string]: string | boolean
 }
 
@@ -35,7 +35,7 @@ let MermaidComponent = defineComponent({
       let code = decodeURIComponent(props.code)
 
       initialize({
-        themeVariables: __MERMAID_JS_THEME_VARIABLES__,
+        themeVariables: __MERMAID_WRAPPER_THEME_VARIABLES__,
         startOnLoad: false,
       })
 

@@ -5,16 +5,16 @@ import { getDirname, path, hash } from '@vuepress/utils'
 
 let __dirname = getDirname(import.meta.url)
 
-interface MermaidJsPluginOptions {
+interface MermaidWrapperPluginOptions {
   themeVariables?: {
     [key: string]: string | boolean
   }
 }
 
-export let mermaidJsPlugin =
-  ({ themeVariables = {} }: MermaidJsPluginOptions): Plugin =>
+export let mermaidWrapperPlugin =
+  ({ themeVariables = {} }: MermaidWrapperPluginOptions): Plugin =>
   () => ({
-    name: 'vuepress-plugin-mermaid-js',
+    name: 'vuepress-plugin-mermaid-wrapper',
     clientConfigFile: path.resolve(__dirname, '../client/index.js'),
     extendsMarkdown: (md: MarkdownIt) => {
       md.use((markdownIt): void => {
@@ -40,6 +40,6 @@ export let mermaidJsPlugin =
       })
     },
     define: {
-      __MERMAID_JS_THEME_VARIABLES__: themeVariables,
+      __MERMAID_WRAPPER_THEME_VARIABLES__: themeVariables,
     },
   })
