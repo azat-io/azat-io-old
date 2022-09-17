@@ -1,6 +1,7 @@
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
 import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
 import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
+import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
 import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
@@ -145,6 +146,10 @@ export default defineUserConfig({
         labelBoxBorderColor: 'var(--color-text)',
         loopTextColor: 'var(--color-text)',
       },
+    }),
+    umamiAnalyticsPlugin({
+      id: 'bc33d6e7-534e-4498-970f-492801e3da34',
+      src: 'https://analytics.azat.io/umami.js',
     }),
     postsPlugin(),
     openGraphPlugin({
