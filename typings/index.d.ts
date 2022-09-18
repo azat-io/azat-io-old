@@ -2,11 +2,11 @@ declare const __VUEPRESS_SSR__: boolean
 
 declare const __VUE_HMR_RUNTIME__: Record<string, unknown>
 
-declare module '~/data/celebrities.json' {
-  import type { Celebrity } from './celebrity.d.js'
+declare module '~/data/artists.json' {
+  import type { Artist } from './artist.d.js'
 
-  let celebrities: Celebrity[]
-  export default celebrities
+  let artists: Artist[]
+  export default artists
 }
 
 declare module '~/data/countries.json' {

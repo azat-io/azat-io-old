@@ -1,4 +1,4 @@
-export interface Celebrity {
+export interface Artist {
   name: string
   description: string
   born: string

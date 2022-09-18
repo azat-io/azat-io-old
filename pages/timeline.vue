@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import type { Celebrity } from '~/typings/celebrity.d.js'
+import type { Artist } from '~/typings/artist.js'
 import Container from '~/components/container.vue'
-import celebrities from '~/data/celebrities.json'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+import artists from '~/data/artists.json'
 
 let today = new Date()
 let dateOfBirth = new Date('1992-02-16')
 let healthyLifeExpectancy = 60.7
 let lifeExpectancyAtBirth = 68.2
-let celebrityList = celebrities as unknown as Celebrity[]
+let artistsList = artists as unknown as Artist[]
 
 let getWeeksBetweenDates = (firstDate: Date, secondDate: Date): number => {
   let isLeapYear = (year: number) => new Date(year, 1, 29).getDate() === 29
@@ -35,7 +35,7 @@ let formatDate = (date: string): string =>
     month: 'long',
     year: 'numeric',
   }).format(new Date(date!))
-let celebritiesData = celebrityList
+let celebritiesData = artistsList
   .map(({ born, died, ...data }) => ({
     born: formatDate(born),
     died: formatDate(died),
