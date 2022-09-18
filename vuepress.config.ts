@@ -150,7 +150,7 @@ export default defineUserConfig({
       },
     }),
     umamiAnalyticsPlugin({
-      id: 'bc33d6e7-534e-4498-970f-492801e3da34',
+      id: 'd593c064-b5a3-4191-893a-becacf05f3f9',
       src: 'https://analytics.azat.io/umami.js',
     }),
     postsPlugin(),
