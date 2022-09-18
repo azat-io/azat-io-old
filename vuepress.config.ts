@@ -107,9 +107,11 @@ export default defineUserConfig({
   clientConfigFile: path.resolve(__dirname, 'client'),
   shouldPrefetch: (file: string) =>
     !(
+      file.includes('travel-map') ||
+      file.includes('world-map') ||
+      file.includes('timeline') ||
       file.includes('mermaid') ||
-      file.includes('flag-') ||
-      file.includes('world-map')
+      file.includes('flag-')
     ),
   plugins: [
     shikiPlugin({

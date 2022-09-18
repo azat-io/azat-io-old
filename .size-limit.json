@@ -9,9 +9,11 @@
     "name": "All prefetched scripts",
     "path": [
       "dist/assets/*.js",
+      "!dist/assets/travel-map.*.js",
+      "!dist/assets/world-map.*.js",
+      "!dist/assets/timeline.*.js",
       "!dist/assets/mermaid.*.js",
-      "!dist/assets/flag-*.js",
-      "!dist/assets/world-map.*.js"
+      "!dist/assets/flag-*.js"
     ],
     "limit": "60 kB",
     "brotli": true
