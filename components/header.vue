@@ -137,7 +137,9 @@ watchEffect(() => {
   min-width: 320px;
   padding: var(--size-s);
   background: var(--color-primary);
-  border-bottom: 1px solid var(--color-tertiary);
+  border-color: var(--color-tertiary);
+  border-style: solid;
+  border-width: 0 0 1px;
   transition-duration: 250ms;
   transition-property: background, border-color;
 }
