@@ -105,6 +105,7 @@ let totalTime = animeList.reduce(
 
 .image {
   height: auto;
+  filter: sepia(0.6) saturate(2);
 }
 
 .name {
