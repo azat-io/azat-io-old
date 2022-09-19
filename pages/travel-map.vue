@@ -12,7 +12,7 @@ let countryList = countries as unknown as CountryType[]
 
 <template>
   <Header />
-  <Container>
+  <Container size="l">
     <h1 :class="$style.title">Travel map</h1>
     <Suspense>
       <WorldMap

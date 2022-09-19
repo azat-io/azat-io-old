@@ -2,6 +2,13 @@ declare const __VUEPRESS_SSR__: boolean
 
 declare const __VUE_HMR_RUNTIME__: Record<string, unknown>
 
+declare module '~/data/anime.json' {
+  import type { Anime } from './anime.d.js'
+
+  let animeList: Anime[]
+  export default animeList
+}
+
 declare module '~/data/artists.json' {
   import type { Artist } from './artist.d.js'
 
