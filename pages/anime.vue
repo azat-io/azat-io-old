@@ -53,19 +53,28 @@ let totalTime = animeList.reduce(
         :key="name"
         :class="$style.element"
       >
-        <img
-          :class="$style.image"
-          :src="image"
-          :alt="name"
-          width="225"
-          height="319"
-        />
-        <div>
-          <span :class="$style.name" v-text="name" />
-          <span :class="$style['origin-name']" v-text="originName" />
-          <span :class="$style.data" v-text="`Genres: ${genres.join(', ')}`" />
-          <span :class="$style.data" v-text="`Duration: ${time}`" />
-          <span :class="$style.data" v-text="`Year: ${year}`" />
+        <picture>
+          <source type="image/avif" :srcSet="image.avif" />
+          <img
+            :class="$style.image"
+            :src="image.webp"
+            :alt="name"
+            width="460"
+            height="630"
+            draggable="false"
+          />
+        </picture>
+        <div :class="$style.info">
+          <div>
+            <span :class="$style.name" v-text="name" />
+            <span :class="$style['origin-name']" v-text="originName" />
+            <span
+              :class="$style.data"
+              v-text="`Genres: ${genres.join(', ')}`"
+            />
+            <span :class="$style.data" v-text="`Duration: ${time}`" />
+            <span :class="$style.data" v-text="`Year: ${year}`" />
+          </div>
           <div :class="$style.stars">
             <StarIcon
               v-for="star in 10"
@@ -97,15 +106,19 @@ let totalTime = animeList.reduce(
 
 .element {
   display: grid;
-
-  /* prettier-ignore */
-  grid-template-columns: clamp(5.5rem, 5.0875rem + 1.375vw, 6.1875rem) minmax(0, 1fr);
+  grid-template-columns: clamp(7.25rem, 6.65rem + 2vw, 8.25rem) 1fr;
   grid-gap: var(--size-m);
 }
 
 .image {
   height: auto;
   filter: sepia(0.6) saturate(2);
+}
+
+.info {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .name {
@@ -123,7 +136,7 @@ let totalTime = animeList.reduce(
   margin-bottom: var(--size-xs);
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
-  color: var(--color-text);
+  color: var(--color-text-secondary);
 }
 
 .data {
@@ -135,13 +148,14 @@ let totalTime = animeList.reduce(
 
 .stars {
   display: grid;
-  grid-template-columns: repeat(10, var(--size-s));
+  grid-template-columns: repeat(10, var(--size-xs));
   grid-gap: var(--size-xxs);
+  padding-bottom: var(--size-s);
 }
 
 .star {
-  width: var(--size-s);
-  height: var(--size-s);
+  width: var(--size-xs);
+  height: var(--size-xs);
 }
 
 .star-active {
@@ -153,13 +167,31 @@ let totalTime = animeList.reduce(
   margin-top: var(--size-xl);
 }
 
+@media (min-width: 360px) {
+  .stars {
+    display: grid;
+    grid-template-columns: repeat(10, var(--size-s));
+  }
+
+  .star {
+    width: var(--size-s);
+    height: var(--size-s);
+  }
+}
+
 @media (min-width: 960px) {
   .list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 960px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1520px) {
   .list {
     grid-template-columns: repeat(3, 1fr);
   }

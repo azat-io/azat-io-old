@@ -2,158 +2,31 @@
   {
     "name": "Neon Genesis Evangelion",
     "originName": "Shinseiki Evangelion",
-    "image": "/assets/anime/neon-genesis-evangelion.webp",
-    "genres": ["apocalyptic", "mecha", "psychological"],
+    "image": {
+      "avif": "/assets/anime/neon-genesis-evangelion.avif",
+      "webp": "/assets/anime/neon-genesis-evangelion.webp"
+    },
+    "genres": [
+      "action",
+      "drama",
+      "mecha",
+      "mystery",
+      "psychological",
+      "sci-fi"
+    ],
     "year": 1995,
     "duration": 24,
     "episodes": 26,
     "score": 10
   },
   {
-    "name": "Welcome to the NHK",
-    "originName": "NHK ni Youkoso!",
-    "image": "/assets/anime/welcome-to-nhk.webp",
-    "genres": ["comedy", "psychological", "slice-of-life"],
-    "year": 2006,
-    "duration": 24,
-    "episodes": 24,
-    "score": 9
-  },
-  {
-    "name": "Rumbling Hearts",
-    "originName": "Kimi ga Nozomu Eien",
-    "image": "/assets/anime/rumbling-hearts.webp",
-    "genres": ["romance", "drama"],
-    "year": 2003,
-    "duration": 23,
-    "episodes": 14,
-    "score": 10
-  },
-  {
-    "name": "When the Cicadas Cry",
-    "originName": "Higurashi no Naku Koro ni",
-    "image": "/assets/anime/when-the-cicadas-cry.webp",
-    "genres": ["mystery", "horror", "psychological"],
-    "year": 2006,
-    "duration": 24,
-    "episodes": 26,
-    "score": 9
-  },
-  {
-    "name": "Paranoia Agent",
-    "originName": "Mousou Dairinin",
-    "image": "/assets/anime/paranoia-agent.webp",
-    "genres": ["mystery", "psychological"],
-    "year": 2004,
-    "duration": 24,
-    "episodes": 13,
-    "score": 6
-  },
-  {
-    "name": "Elfen Lied",
-    "originName": "Elfen Lied",
-    "image": "/assets/anime/elfen-lied.webp",
-    "genres": ["fantasy", "psychological", "drama", "horror"],
-    "year": 2004,
-    "duration": 25,
-    "episodes": 13,
-    "score": 7
-  },
-  {
-    "name": "Spice and Wolf",
-    "originName": "Ookami to Koushinryou",
-    "image": "/assets/anime/spice-and-wolf.webp",
-    "genres": ["adventure", "fantasy", "romance"],
-    "year": 2008,
-    "duration": 24,
-    "episodes": 13,
-    "score": 8
-  },
-  {
-    "name": "Mushi-Shi",
-    "originName": "Mushishi",
-    "image": "/assets/anime/mushi-shi.webp",
-    "genres": ["adventure", "fantasy", "mystery"],
-    "year": 2005,
-    "duration": 25,
-    "episodes": 26,
-    "score": 7
-  },
-  {
-    "name": "Black Butler",
-    "originName": "Kuroshitsuji",
-    "image": "/assets/anime/black-butler.webp",
-    "genres": ["mystery", "drama", "comedy"],
-    "year": 2008,
-    "duration": 24,
-    "episodes": 24,
-    "score": 6
-  },
-  {
-    "name": "Black Butler 2",
-    "originName": "Kuroshitsuji 2",
-    "image": "/assets/anime/black-butler-2.webp",
-    "genres": ["mystery", "drama", "comedy"],
-    "year": 2010,
-    "duration": 24,
-    "episodes": 12,
-    "score": 5
-  },
-  {
-    "name": "Charcoal Feather Federation",
-    "originName": "Haibane Renmei",
-    "image": "/assets/anime/charcoal-feather-federation.webp",
-    "genres": ["fantasy", "mystery", "drama"],
-    "year": 2002,
-    "duration": 24,
-    "episodes": 13,
-    "score": 8
-  },
-  {
-    "name": "Sky",
-    "originName": "Sola",
-    "image": "/assets/anime/sky.webp",
-    "genres": ["drama", "romance", "slice-of-life"],
-    "year": 2007,
-    "duration": 24,
-    "episodes": 13,
-    "score": 6
-  },
-  {
-    "name": "Fullmetal Alchemist",
-    "originName": "Hagane no Renkinjutsushi",
-    "image": "/assets/anime/fullmetal-alchemist.webp",
-    "genres": ["action", "adventure", "drama"],
-    "year": 2003,
-    "duration": 24,
-    "episodes": 51,
-    "score": 7
-  },
-  {
-    "name": "The Girl Who Leapt Through Time",
-    "originName": "Toki wo Kakeru Shoujo",
-    "image": "/assets/anime/the-girl-who-leapt-through-time.webp",
-    "genres": ["drama", "romance"],
-    "year": 2006,
-    "duration": 99,
-    "episodes": 1,
-    "score": 6
-  },
-  {
-    "name": "The Melancholy of Haruhi Suzumiya",
-    "originName": "Suzumiya Haruhi no Yuuutsu",
-    "image": "/assets/anime/the-melancholy-of-haruhi-suzumiya.webp",
-    "genres": ["comedy", "slice-of-life"],
-    "year": 2006,
-    "duration": 23,
-    "episodes": 14,
-    "score": 7
-  },
-  {
     "name": "Howl’s Moving Castle",
     "originName": "Howl no Ugoku Shiro",
-    "image": "/assets/anime/howl-s-moving-castle.webp",
-    "genres": ["adventure", "drama", "fantasy"],
+    "image": {
+      "avif": "/assets/anime/howl-s-moving-castle.avif",
+      "webp": "/assets/anime/howl-s-moving-castle.webp"
+    },
+    "genres": ["adventure", "drama", "fantasy", "romance"],
     "year": 2004,
     "duration": 119,
     "episodes": 1,
@@ -162,37 +35,265 @@
   {
     "name": "Spirited Away",
     "originName": "Sen to Chihiro no Kamikakushi",
-    "image": "/assets/anime/spirited-away.webp",
-    "genres": ["adventure", "mystery", "drama"],
+    "image": {
+      "avif": "/assets/anime/spirited-away.avif",
+      "webp": "/assets/anime/spirited-away.webp"
+    },
+    "genres": ["adventure", "drama", "fantasy", "romance", "supernatural"],
     "year": 2001,
     "duration": 124,
     "episodes": 1,
     "score": 8
   },
   {
+    "name": "Elfen Lied",
+    "originName": "Elfen Lied",
+    "image": {
+      "avif": "/assets/anime/elfen-lied.avif",
+      "webp": "/assets/anime/elfen-lied.webp"
+    },
+    "genres": [
+      "action",
+      "drama",
+      "ecchi",
+      "horror",
+      "psychological",
+      "romance",
+      "supernatural"
+    ],
+    "year": 2004,
+    "duration": 25,
+    "episodes": 13,
+    "score": 7
+  },
+  {
+    "name": "Welcome to the NHK",
+    "originName": "NHK ni Youkoso!",
+    "image": {
+      "avif": "/assets/anime/welcome-to-nhk.avif",
+      "webp": "/assets/anime/welcome-to-nhk.webp"
+    },
+    "genres": ["comedy", "drama", "psychological", "romance", "slice-of-life"],
+    "year": 2006,
+    "duration": 24,
+    "episodes": 24,
+    "score": 9
+  },
+  {
+    "name": "Rumbling Hearts",
+    "originName": "Kimi ga Nozomu Eien",
+    "image": {
+      "avif": "/assets/anime/rumbling-hearts.avif",
+      "webp": "/assets/anime/rumbling-hearts.webp"
+    },
+    "genres": ["drama", "romance", "slice-of-life"],
+    "year": 2003,
+    "duration": 23,
+    "episodes": 14,
+    "score": 10
+  },
+  {
+    "name": "Spice and Wolf",
+    "originName": "Ookami to Koushinryou",
+    "image": {
+      "avif": "/assets/anime/spice-and-wolf.avif",
+      "webp": "/assets/anime/spice-and-wolf.webp"
+    },
+    "genres": ["adventure", "fantasy", "romance"],
+    "year": 2008,
+    "duration": 24,
+    "episodes": 13,
+    "score": 8
+  },
+  {
+    "name": "When the Cicadas Cry",
+    "originName": "Higurashi no Naku Koro ni",
+    "image": {
+      "avif": "/assets/anime/when-the-cicadas-cry.avif",
+      "webp": "/assets/anime/when-the-cicadas-cry.webp"
+    },
+    "genres": [
+      "horror",
+      "mystery",
+      "psychological",
+      "supernatural",
+      "thriller"
+    ],
+    "year": 2006,
+    "duration": 24,
+    "episodes": 26,
+    "score": 9
+  },
+  {
+    "name": "Black Butler",
+    "originName": "Kuroshitsuji",
+    "image": {
+      "avif": "/assets/anime/black-butler.avif",
+      "webp": "/assets/anime/black-butler.webp"
+    },
+    "genres": ["action", "comedy", "fantasy", "mystery", "supernatural"],
+    "year": 2008,
+    "duration": 24,
+    "episodes": 24,
+    "score": 6
+  },
+  {
+    "name": "Black Butler 2",
+    "originName": "Kuroshitsuji 2",
+    "image": {
+      "avif": "/assets/anime/black-butler-2.avif",
+      "webp": "/assets/anime/black-butler-2.webp"
+    },
+    "genres": ["action", "comedy", "fantasy", "mystery", "supernatural"],
+    "year": 2010,
+    "duration": 24,
+    "episodes": 12,
+    "score": 5
+  },
+  {
+    "name": "Charcoal Feather Federation",
+    "originName": "Haibane Renmei",
+    "image": {
+      "avif": "/assets/anime/charcoal-feather-federation.avif",
+      "webp": "/assets/anime/charcoal-feather-federation.webp"
+    },
+    "genres": ["drama", "fantasy", "mystery", "psychological", "slice-of-life"],
+    "year": 2002,
+    "duration": 24,
+    "episodes": 13,
+    "score": 8
+  },
+  {
+    "name": "Paranoia Agent",
+    "originName": "Mousou Dairinin",
+    "image": {
+      "avif": "/assets/anime/paranoia-agent.avif",
+      "webp": "/assets/anime/paranoia-agent.webp"
+    },
+    "genres": ["drama", "mystery", "psychological", "supernatural", "thriller"],
+    "year": 2004,
+    "duration": 24,
+    "episodes": 13,
+    "score": 6
+  },
+  {
+    "name": "Mushi-Shi",
+    "originName": "Mushishi",
+    "image": {
+      "avif": "/assets/anime/mushi-shi.avif",
+      "webp": "/assets/anime/mushi-shi.webp"
+    },
+    "genres": [
+      "adventure",
+      "fantasy",
+      "mystery",
+      "psychological",
+      "slice-of-life",
+      "supernatural"
+    ],
+    "year": 2005,
+    "duration": 25,
+    "episodes": 26,
+    "score": 7
+  },
+  {
+    "name": "Charcoal Feather Federation",
+    "originName": "Haibane Renmei",
+    "image": {
+      "avif": "/assets/anime/charcoal-feather-federation.avif",
+      "webp": "/assets/anime/charcoal-feather-federation.webp"
+    },
+    "genres": ["drama", "fantasy", "mystery", "psychological", "slice-of-life"],
+    "year": 2002,
+    "duration": 24,
+    "episodes": 13,
+    "score": 8
+  },
+  {
+    "name": "Fullmetal Alchemist",
+    "originName": "Hagane no Renkinjutsushi",
+    "image": {
+      "avif": "/assets/anime/fullmetal-alchemist.avif",
+      "webp": "/assets/anime/fullmetal-alchemist.webp"
+    },
+    "genres": ["action", "adventure", "drama", "fantasy"],
+    "year": 2003,
+    "duration": 24,
+    "episodes": 51,
+    "score": 7
+  },
+  {
+    "name": "Sky",
+    "originName": "Sola",
+    "image": {
+      "avif": "/assets/anime/sky.avif",
+      "webp": "/assets/anime/sky.webp"
+    },
+    "genres": ["drama", "romance", "slice-of-life", "supernatural"],
+    "year": 2007,
+    "duration": 24,
+    "episodes": 13,
+    "score": 6
+  },
+  {
+    "name": "The Girl Who Leapt Through Time",
+    "originName": "Toki wo Kakeru Shoujo",
+    "image": {
+      "avif": "/assets/anime/the-girl-who-leapt-through-time.avif",
+      "webp": "/assets/anime/the-girl-who-leapt-through-time.webp"
+    },
+    "genres": ["drama", "romance", "sci-fi"],
+    "year": 2006,
+    "duration": 99,
+    "episodes": 1,
+    "score": 6
+  },
+  {
+    "name": "The Melancholy of Haruhi Suzumiya",
+    "originName": "Suzumiya Haruhi no Yuuutsu",
+    "image": {
+      "avif": "/assets/anime/the-melancholy-of-haruhi-suzumiya.avif",
+      "webp": "/assets/anime/the-melancholy-of-haruhi-suzumiya.webp"
+    },
+    "genres": ["comedy", "mystery", "sci-fi", "slice-of-life", "supernatural"],
+    "year": 2006,
+    "duration": 23,
+    "episodes": 14,
+    "score": 7
+  },
+  {
+    "name": "La Maison en Petits Cubes",
+    "originName": "Tsumiki no Ie",
+    "image": {
+      "avif": "/assets/anime/la-maison-en-petits-cubes.avif",
+      "webp": "/assets/anime/la-maison-en-petits-cubes.webp"
+    },
+    "genres": ["drama"],
+    "year": 2008,
+    "duration": 12,
+    "episodes": 1,
+    "score": 7
+  },
+  {
     "name": "My Neighbor Totoro",
     "originName": "Tonari no Totoro",
-    "image": "/assets/anime/my-neighbor-totoro.webp",
-    "genres": ["adventure", "mystery"],
+    "image": {
+      "avif": "/assets/anime/my-neighbor-totoro.avif",
+      "webp": "/assets/anime/my-neighbor-totoro.webp"
+    },
+    "genres": ["adventure", "fantasy", "slice-of-life", "supernatural"],
     "year": 1988,
     "duration": 86,
     "episodes": 1,
     "score": 7
   },
   {
-    "name": "Kiki's Delivery Service",
-    "originName": "Majo no Takkyuubin",
-    "image": "/assets/anime/kiki-s-delivery-service.webp",
-    "genres": ["adventure", "comedy", "fantasy"],
-    "year": 1989,
-    "duration": 103,
-    "episodes": 1,
-    "score": 7
-  },
-  {
     "name": "5 Centimeters Per Second",
     "originName": "Byousoku 5 Centimeter",
-    "image": "/assets/anime/5-centimeters-per-second.webp",
+    "image": {
+      "avif": "/assets/anime/5-centimeters-per-second.avif",
+      "webp": "/assets/anime/5-centimeters-per-second.webp"
+    },
     "genres": ["drama", "romance", "slice-of-life"],
     "year": 2007,
     "duration": 22,
@@ -202,7 +303,10 @@
   {
     "name": "Grave of the Fireflies",
     "originName": "Hotaru no Haka",
-    "image": "/assets/anime/grave-of-the-fireflies.webp",
+    "image": {
+      "avif": "/assets/anime/grave-of-the-fireflies.avif",
+      "webp": "/assets/anime/grave-of-the-fireflies.webp"
+    },
     "genres": ["drama"],
     "year": 1988,
     "duration": 88,
@@ -210,20 +314,13 @@
     "score": 8
   },
   {
-    "name": "Weathering with You",
-    "originName": "Tenki no Ko",
-    "image": "/assets/anime/weathering-with-you.webp",
-    "genres": ["drama", "fantasy", "romance"],
-    "year": 2019,
-    "duration": 112,
-    "episodes": 1,
-    "score": 7
-  },
-  {
     "name": "Attack on Titan",
     "originName": "Shingeki no Kyojin",
-    "image": "/assets/anime/attack-on-titan.webp",
-    "genres": ["drama", "apocalyptic", "fantasy"],
+    "image": {
+      "avif": "/assets/anime/attack-on-titan.avif",
+      "webp": "/assets/anime/attack-on-titan.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2013,
     "duration": 24,
     "episodes": 25,
@@ -232,8 +329,11 @@
   {
     "name": "Attack on Titan 2",
     "originName": "Shingeki no Kyojin 2",
-    "image": "/assets/anime/attack-on-titan-2.webp",
-    "genres": ["drama", "apocalyptic", "fantasy"],
+    "image": {
+      "avif": "/assets/anime/attack-on-titan-2.avif",
+      "webp": "/assets/anime/attack-on-titan-2.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2017,
     "duration": 24,
     "episodes": 12,
@@ -242,28 +342,63 @@
   {
     "name": "Attack on Titan 3",
     "originName": "Shingeki no Kyojin 3",
-    "image": "/assets/anime/attack-on-titan-3.webp",
-    "genres": ["drama", "apocalyptic", "fantasy"],
+    "image": {
+      "avif": "/assets/anime/attack-on-titan-3.avif",
+      "webp": "/assets/anime/attack-on-titan-3.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2018,
     "duration": 23,
     "episodes": 22,
     "score": 8
   },
   {
+    "name": "Weathering with You",
+    "originName": "Tenki no Ko",
+    "image": {
+      "avif": "/assets/anime/weathering-with-you.avif",
+      "webp": "/assets/anime/weathering-with-you.webp"
+    },
+    "genres": ["drama", "romance", "slice-of-life", "supernatural"],
+    "year": 2019,
+    "duration": 112,
+    "episodes": 1,
+    "score": 7
+  },
+  {
+    "name": "Kiki's Delivery Service",
+    "originName": "Majo no Takkyuubin",
+    "image": {
+      "avif": "/assets/anime/kiki-s-delivery-service.avif",
+      "webp": "/assets/anime/kiki-s-delivery-service.webp"
+    },
+    "genres": ["adventure", "comedy", "drama", "fantasy", "slice-of-life"],
+    "year": 1989,
+    "duration": 103,
+    "episodes": 1,
+    "score": 7
+  },
+  {
     "name": "Dororo",
     "originName": "Dororo",
-    "image": "/assets/anime/dororo.webp",
-    "genres": ["adventure", "drama"],
+    "image": {
+      "avif": "/assets/anime/dororo.avif",
+      "webp": "/assets/anime/dororo.webp"
+    },
+    "genres": ["action", "adventure", "drama", "supernatural"],
     "year": 2019,
     "duration": 24,
     "episodes": 24,
     "score": 8
   },
   {
-    "name": "Demon Slayer: Kimetsu no Yaiba",
+    "name": "Demon Slayer",
     "originName": "Kimetsu no Yaiba",
-    "image": "/assets/anime/demon-slayer-kimetsu-no-yaiba.webp",
-    "genres": ["fantasy", "mystery"],
+    "image": {
+      "avif": "/assets/anime/demon-slayer.avif",
+      "webp": "/assets/anime/demon-slayer.webp"
+    },
+    "genres": ["action", "adventure", "drama", "fantasy", "supernatural"],
     "year": 2019,
     "duration": 23,
     "episodes": 26,
@@ -272,8 +407,18 @@
   {
     "name": "Demon Slayer: Mugen Train",
     "originName": "Kimetsu no Yaiba: Mugen Ressha-hen",
-    "image": "/assets/anime/demon-slayer-mugen-train.webp",
-    "genres": ["fantasy", "mystery"],
+    "image": {
+      "avif": "/assets/anime/demon-slayer-mugen-train.avif",
+      "webp": "/assets/anime/demon-slayer-mugen-train.webp"
+    },
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "fantasy",
+      "mystery",
+      "supernatural"
+    ],
     "year": 2020,
     "duration": 116,
     "episodes": 1,
@@ -282,8 +427,11 @@
   {
     "name": "Demon Slayer: Entertainment District Arc",
     "originName": "Kimetsu no Yaiba: Yuukaku-hen",
-    "image": "/assets/anime/demon-slayer-entertainment-district-arc.webp",
-    "genres": ["fantasy", "mystery"],
+    "image": {
+      "avif": "/assets/anime/demon-slayer-entertainment-district-arc.avif",
+      "webp": "/assets/anime/demon-slayer-entertainment-district-arc.webp"
+    },
+    "genres": ["action", "adventure", "drama", "fantasy", "supernatural"],
     "year": 2021,
     "duration": 26,
     "episodes": 11,
@@ -292,8 +440,11 @@
   {
     "name": "Psycho-Pass",
     "originName": "Psycho-Pass",
-    "image": "/assets/anime/psycho-pass.webp",
-    "genres": ["action", "cyberpunk"],
+    "image": {
+      "avif": "/assets/anime/psycho-pass.avif",
+      "webp": "/assets/anime/psycho-pass.webp"
+    },
+    "genres": ["action", "psychological", "sci-fi", "thriller"],
     "year": 2012,
     "duration": 23,
     "episodes": 22,
@@ -302,8 +453,11 @@
   {
     "name": "Death Note",
     "originName": "Death Note",
-    "image": "/assets/anime/death-note.webp",
-    "genres": ["action"],
+    "image": {
+      "avif": "/assets/anime/death-note.avif",
+      "webp": "/assets/anime/death-note.webp"
+    },
+    "genres": ["mystery", "psychological", "supernatural", "thriller"],
     "year": 2006,
     "duration": 23,
     "episodes": 37,
@@ -312,28 +466,24 @@
   {
     "name": "Parasyte: The Maxim",
     "originName": "Kiseijuu: Sei no Kakuritsu",
-    "image": "/assets/anime/parasyte-the-maxim.webp",
-    "genres": ["action", "horror"],
+    "image": {
+      "avif": "/assets/anime/parasyte-the-maxim.avif",
+      "webp": "/assets/anime/parasyte-the-maxim.webp"
+    },
+    "genres": ["action", "drama", "horror", "psychological", "sci-fi"],
     "year": 2014,
     "duration": 23,
     "episodes": 24,
     "score": 10
   },
   {
-    "name": "La Maison en Petits Cubes",
-    "originName": "Tsumiki no Ie",
-    "image": "/assets/anime/la-maison-en-petits-cubes.webp",
-    "genres": ["drama"],
-    "year": 2008,
-    "duration": 12,
-    "episodes": 1,
-    "score": 7
-  },
-  {
     "name": "Made in Abyss",
     "originName": "Made in Abyss",
-    "image": "/assets/anime/made-in-abyss.webp",
-    "genres": ["adventure", "fantasy", "drama"],
+    "image": {
+      "avif": "/assets/anime/made-in-abyss.avif",
+      "webp": "/assets/anime/made-in-abyss.webp"
+    },
+    "genres": ["adventure", "drama", "fantasy", "horror", "mystery", "sci-fi"],
     "year": 2017,
     "duration": 25,
     "episodes": 13,
@@ -342,8 +492,20 @@
   {
     "name": "Made in Abyss: Dawn of the Deep Soul",
     "originName": "Made in Abyss: Fukaki Tamashii no Reimei",
-    "image": "/assets/anime/made-in-abyss-dawn-of-the-deep-soul.webp",
-    "genres": ["adventure", "fantasy", "drama"],
+    "image": {
+      "avif": "/assets/anime/made-in-abyss-dawn-of-the-deep-soul.avif",
+      "webp": "/assets/anime/made-in-abyss-dawn-of-the-deep-soul.webp"
+    },
+    "genres": [
+      "action",
+      "adventure",
+      "drama",
+      "fantasy",
+      "horror",
+      "mystery",
+      "psychological",
+      "sci-fi"
+    ],
     "year": 2000,
     "duration": 105,
     "episodes": 1,

@@ -5,6 +5,7 @@
   --color-brand-hover: oklch(75% 0.15 83);
   --color-brand-overlay: oklch(83% 0.15 83 / 20%);
   --color-text: oklch(98% 0.05 97.5);
+  --color-text-secondary: oklch(80% 0.05 97.5);
   --color-primary: oklch(22% 0 0);
   --color-secondary: oklch(23% 0 0);
   --color-tertiary: oklch(24% 0 0);
