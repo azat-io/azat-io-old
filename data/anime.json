@@ -510,5 +510,18 @@
     "duration": 92,
     "episodes": 1,
     "score": 8
+  },
+  {
+    "name": "Paprika",
+    "originName": "Paprika",
+    "image": {
+      "avif": "/assets/anime/paprika.avif",
+      "webp": "/assets/anime/paprika.webp"
+    },
+    "genres": ["fantasy", "mystery", "psychological", "sci-fi", "thriller"],
+    "year": 2006,
+    "duration": 90,
+    "episodes": 1,
+    "score": 7
   }
 ]
