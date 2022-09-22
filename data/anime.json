@@ -510,5 +510,18 @@
     "duration": 105,
     "episodes": 1,
     "score": 10
+  },
+  {
+    "name": "Tokyo Godfathers",
+    "originName": "Tokyo Godfathers",
+    "image": {
+      "avif": "/assets/anime/tokyo-godfathers.avif",
+      "webp": "/assets/anime/tokyo-godfathers.webp"
+    },
+    "genres": ["comedy", "drama"],
+    "year": 2003,
+    "duration": 92,
+    "episodes": 1,
+    "score": 8
   }
 ]
