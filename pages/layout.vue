@@ -9,6 +9,7 @@ import Container from '~/components/container.vue'
 import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+import Tag from '~/components/tag.vue'
 
 let pageFrontmatter = usePageFrontmatter<{
   title: string
@@ -76,14 +77,13 @@ let coffeeCups = computed(() =>
         v-text="t['also-translated']"
       />
       <div :class="$style['available-languages-list']">
-        <RouterLink
+        <Tag
           v-for="{ path, language } in post.current.availableLanguages"
           :key="language"
-          :class="$style.tag"
           :to="path"
         >
           {{ language }}
-        </RouterLink>
+        </Tag>
       </div>
     </div>
     <article :class="$style.article">
@@ -181,26 +181,6 @@ let coffeeCups = computed(() =>
   font-size: var(--font-size-xs);
   font-weight: normal;
   line-height: var(--line-height-xs);
-}
-
-.tag {
-  padding: 0 var(--size-xs);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  color: var(--color-primary);
-  white-space: nowrap;
-  background: var(--color-brand);
-  border-radius: var(--size-s);
-  transition: all 300ms;
-}
-
-.tag:hover {
-  background: var(--color-brand-hover);
-}
-
-.tag:focus-visible {
-  background: var(--color-brand-hover);
-  box-shadow: 0 0 0 2px var(--color-brand);
 }
 
 .article {
