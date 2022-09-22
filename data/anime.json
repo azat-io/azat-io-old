@@ -197,19 +197,6 @@
     "score": 7
   },
   {
-    "name": "Charcoal Feather Federation",
-    "originName": "Haibane Renmei",
-    "image": {
-      "avif": "/assets/anime/charcoal-feather-federation.avif",
-      "webp": "/assets/anime/charcoal-feather-federation.webp"
-    },
-    "genres": ["drama", "fantasy", "mystery", "psychological", "slice-of-life"],
-    "year": 2002,
-    "duration": 24,
-    "episodes": 13,
-    "score": 8
-  },
-  {
     "name": "Fullmetal Alchemist",
     "originName": "Hagane no Renkinjutsushi",
     "image": {

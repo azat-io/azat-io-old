@@ -31,11 +31,15 @@ if (props.onClick) {
 
 <style module>
 .tag {
+  display: inline-block;
   padding: 0 var(--size-xs);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
   white-space: nowrap;
+  user-select: none;
+  border: none;
   border-radius: var(--size-s);
+  outline: none;
   transition: all 300ms;
 }
 
@@ -44,11 +48,13 @@ if (props.onClick) {
   background: var(--color-brand);
 }
 
-.active:hover {
-  background: var(--color-brand-hover);
+a.active:hover,
+button.active:hover {
+  box-shadow: 0 0 0 2px var(--color-brand);
 }
 
-.active:focus-visible {
+a.active:focus-visible,
+button.active:focus-visible {
   background: var(--color-brand-hover);
   box-shadow: 0 0 0 2px var(--color-brand);
 }
@@ -58,11 +64,13 @@ if (props.onClick) {
   background: var(--color-text);
 }
 
-.disabled:hover {
-  background: var(--color-text-secondary);
+a.disabled:hover,
+button.disabled:hover {
+  box-shadow: 0 0 0 2px var(--color-text-secondary);
 }
 
-.disabled:focus-visible {
+a.disabled:focus-visible,
+button.disabled:focus-visible {
   background: var(--color-text-secondary);
   box-shadow: 0 0 0 2px var(--color-text-secondary);
 }
