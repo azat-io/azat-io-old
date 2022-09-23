@@ -523,5 +523,18 @@
     "duration": 90,
     "episodes": 1,
     "score": 7
+  },
+  {
+    "name": "Giovanni's Island",
+    "originName": "Giovanni no Shima",
+    "image": {
+      "avif": "/assets/anime/giovanni-s-island.avif",
+      "webp": "/assets/anime/giovanni-s-island.webp"
+    },
+    "genres": ["drama"],
+    "year": 2014,
+    "duration": 102,
+    "episodes": 1,
+    "score": 9
   }
 ]
