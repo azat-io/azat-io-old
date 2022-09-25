@@ -13,6 +13,11 @@
   },
   "next-post": "Next post",
   "previous-post": "Previous post",
+  "sort": "Sort",
+  "sort-by-duration": "Sort by duration",
+  "sort-by-name": "Sort by name",
+  "sort-by-score": "Sort by score",
+  "sort-by-year": "Sort by year",
   "subtitle": "of reinventing the wheel",
   "title": "Manual"
 }

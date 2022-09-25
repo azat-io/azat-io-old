@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 import { computed, ref } from 'vue'
 
 import type { Anime, Genre } from '~/typings/anime.js'
 import Container from '~/components/container.vue'
+import SortDownIcon from '~/assets/sort-down.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+import Select from '~/components/select.vue'
 import StarIcon from '~/assets/star.svg'
 import Tag from '~/components/tag.vue'
 import anime from '~/data/anime.json'
@@ -13,7 +16,24 @@ type FormattedAnime = Anime & {
   time: string
 }
 
+type SortFunctionName =
+  | 'sort-by-duration'
+  | 'sort-by-name'
+  | 'sort-by-score'
+  | 'sort-by-year'
+
+let t = useThemeLocaleData<
+  {
+    sort: string
+  } & {
+    // eslint-disable-next-line no-unused-vars
+    [_key in SortFunctionName]: string
+  }
+>()
+
 let selectedGenres = ref<Genre[]>([])
+
+let selectedSorting = ref(null)
 
 let timeConvert = (totalMinutes: number): string => {
   let hours = totalMinutes / 60
@@ -47,13 +67,33 @@ let animeGenres = Array.from(
     .values(),
 ).sort((a, b) => a.localeCompare(b))
 
+let sortFunc: {
+  [key: string]: (_list: FormattedAnime[]) => FormattedAnime[]
+} = {
+  sortByName: list => [...list].sort((a, b) => a.name.localeCompare(b.name)),
+  sortByScore: list => [...list].sort((a, b) => b.score - a.score),
+  sortByDuration: list =>
+    [...list].sort((a, b) => a.episodes * a.duration - b.episodes * b.duration),
+  sortByYear: list => [...list].sort((a, b) => b.year - a.year),
+}
+
+let toLocaleCase = (string: string): string =>
+  string.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`)
+
+let sortSelectOptions = Object.keys(sortFunc).map(sortFunctionName => ({
+  label: t.value[toLocaleCase(sortFunctionName) as SortFunctionName],
+  value: sortFunctionName,
+}))
+
 let totalTime = formattedAnimeList.reduce(
   (accumulator, { duration, episodes }) => accumulator + duration * episodes,
   0,
 )
 
 let animeList = computed(() => {
-  return formattedAnimeList.reduce<FormattedAnime[]>(
+  let identity = <T extends unknown>(x: T): T => x
+  let sort = selectedSorting.value ? sortFunc[selectedSorting.value] : identity
+  return sort(formattedAnimeList).reduce<FormattedAnime[]>(
     (accumulator, currentAnime) => {
       if (
         Array.from(selectedGenres.value).every(genre =>
@@ -73,25 +113,34 @@ let animeList = computed(() => {
   <Header />
   <Container size="l">
     <h1 :class="$style.title">Anime</h1>
-    <div :class="$style.genres">
-      <Tag
-        v-for="genre in animeGenres"
-        :key="genre"
-        :type="selectedGenres.includes(genre) ? 'active' : 'disabled'"
-        :on-click="
-          () => {
-            if (selectedGenres.includes(genre)) {
-              selectedGenres = selectedGenres.filter(
-                currentGenre => currentGenre !== genre,
-              )
-            } else {
-              selectedGenres = [...selectedGenres, genre]
+    <div :class="$style.options">
+      <Select
+        v-model="selectedSorting"
+        :options="sortSelectOptions"
+        :empty-label="t.sort"
+        icon-position="left"
+        :icon="SortDownIcon"
+      />
+      <div :class="$style.genres">
+        <Tag
+          v-for="genre in animeGenres"
+          :key="genre"
+          :type="selectedGenres.includes(genre) ? 'active' : 'disabled'"
+          :on-click="
+            () => {
+              if (selectedGenres.includes(genre)) {
+                selectedGenres = selectedGenres.filter(
+                  currentGenre => currentGenre !== genre,
+                )
+              } else {
+                selectedGenres = [...selectedGenres, genre]
+              }
             }
-          }
-        "
-      >
-        {{ genre }}
-      </Tag>
+          "
+        >
+          {{ genre }}
+        </Tag>
+      </div>
     </div>
     <div :class="$style.list">
       <template v-if="animeList.length > 0">
@@ -153,6 +202,12 @@ let animeList = computed(() => {
 <style module>
 .title {
   margin-top: 0;
+}
+
+.options {
+  display: grid;
+  grid-gap: var(--size-m);
+  align-items: start;
 }
 
 .genres {

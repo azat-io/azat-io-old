@@ -64,6 +64,7 @@ let model = computed({
   padding: var(--size-xs) var(--size-s);
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
+  color: var(--color-text);
   background: var(--color-inverse);
   border: 1px solid var(--color-tertiary);
   border-radius: var(--size-s);
