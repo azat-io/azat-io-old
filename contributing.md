@@ -32,7 +32,7 @@ For example, you want to translate into Chinese an article that is located at `c
 
 If you want to run the project locally, please follow these steps:
 
-1. Install Node.js v18 and pnpm
+1. Install Node.js v18 and pnpm (I recommend to use [asdf](https://asdf-vm.com))
 
 2. Clone repo:
 
