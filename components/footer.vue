@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 
-import TwitterIcon from '~/assets/twitter.svg'
-import GithubIcon from '~/assets/github.svg'
-import Heart from '~/assets/heart.svg'
+import TwitterIcon from '~/icons/twitter.svg'
+import GithubIcon from '~/icons/github.svg'
+import Heart from '~/icons/heart.svg'
 
 let t = useThemeLocaleData<{
   'made-with': string

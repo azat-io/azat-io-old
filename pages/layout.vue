@@ -5,8 +5,8 @@ import { usePageFrontmatter, usePageLang } from '@vuepress/client'
 import { usePost } from 'vuepress-plugin-posts/client'
 import { computed } from 'vue'
 
+import CoffeeCupIcon from '~/icons/coffee-cup.svg'
 import Container from '~/components/container.vue'
-import CoffeeIcon from '~/assets/coffee.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 import Tag from '~/components/tag.vue'
@@ -53,10 +53,13 @@ let coffeeCups = computed(() =>
     <div :class="$style.info">
       <span :class="$style['info-text']" v-text="post.current.formattedDate" />
       <span :class="$style['info-text']">
-        <CoffeeIcon
+        <CoffeeCupIcon
           v-for="n in coffeeCups"
           :key="n"
-          :class="{ [$style['last-cup']]: n === coffeeCups }"
+          :class="{
+            [$style.cup]: true,
+            [$style['last-cup']]: n === coffeeCups,
+          }"
         />
         {{
           post.current.readingTime &&
@@ -148,10 +151,16 @@ let coffeeCups = computed(() =>
 
 .info-text {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
   white-space: nowrap;
+}
+
+.cup {
+  width: var(--size-s);
+  height: var(--size-s);
+  margin-right: calc(var(--size-xxs) / 2);
 }
 
 .last-cup {

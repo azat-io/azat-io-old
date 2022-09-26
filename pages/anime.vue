@@ -4,11 +4,11 @@ import { computed, ref } from 'vue'
 
 import type { Anime, Genre } from '~/typings/anime.js'
 import Container from '~/components/container.vue'
-import SortDownIcon from '~/assets/sort-down.svg'
+import SortDownIcon from '~/icons/sort-down.svg'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 import Select from '~/components/select.vue'
-import StarIcon from '~/assets/star.svg'
+import StarIcon from '~/icons/star.svg'
 import Tag from '~/components/tag.vue'
 import anime from '~/data/anime.json'
 

@@ -4,7 +4,7 @@ import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
 import { directive as vClickAway } from 'vue3-click-away'
 import { watchEffect, shallowRef, ref } from 'vue'
 
-import LanguageIcon from '~/assets/language.svg'
+import LanguageIcon from '~/icons/language.svg'
 import Country from '~/components/country.vue'
 import Logo from '~/assets/logo.svg'
 

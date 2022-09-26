@@ -3,7 +3,7 @@ import type { DefineComponent } from 'vue'
 
 import { computed } from 'vue'
 
-import NavArrowDownIcon from '~/assets/nav-arrow-down.svg'
+import NavArrowDownIcon from '~/icons/nav-arrow-down.svg'
 
 interface Props {
   icon?: DefineComponent

@@ -20,7 +20,8 @@
       "~/components/*": ["./components/*"],
       "~/typings/*": ["./typings/*"],
       "~/assets/*": ["./assets/*"],
-      "~/pages/*": ["./pages/*"]
+      "~/pages/*": ["./pages/*"],
+      "~/icons/*": ["./icons/*"]
     }
   },
   "include": ["**/*.ts", "**/*.vue"],
