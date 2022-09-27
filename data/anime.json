@@ -536,5 +536,18 @@
     "duration": 102,
     "episodes": 1,
     "score": 9
+  },
+  {
+    "name": "Cowboy Bebop",
+    "originName": "Cowboy Bebop",
+    "image": {
+      "avif": "/assets/anime/cowboy-bebop.avif",
+      "webp": "/assets/anime/cowboy-bebop.webp"
+    },
+    "genres": ["action", "adventure", "drama", "sci-fi"],
+    "year": 1998,
+    "duration": 24,
+    "episodes": 26,
+    "score": 8
   }
 ]
