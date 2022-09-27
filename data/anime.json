@@ -138,11 +138,11 @@
     "score": 6
   },
   {
-    "name": "Black Butler 2",
-    "originName": "Kuroshitsuji 2",
+    "name": "Black Butler II",
+    "originName": "Kuroshitsuji II",
     "image": {
-      "avif": "/assets/anime/black-butler-2.avif",
-      "webp": "/assets/anime/black-butler-2.webp"
+      "avif": "/assets/anime/black-butler-ii.avif",
+      "webp": "/assets/anime/black-butler-ii.webp"
     },
     "genres": ["action", "comedy", "fantasy", "mystery", "supernatural"],
     "year": 2010,
@@ -336,8 +336,21 @@
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2018,
     "duration": 23,
-    "episodes": 22,
-    "score": 8
+    "episodes": 12,
+    "score": 9
+  },
+  {
+    "name": "Attack on Titan 3 Part 2",
+    "originName": "Shingeki no Kyojin 3 Part 2",
+    "image": {
+      "avif": "/assets/anime/attack-on-titan-3-part-2.avif",
+      "webp": "/assets/anime/attack-on-titan-3-part-2.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
+    "year": 2019,
+    "duration": 23,
+    "episodes": 10,
+    "score": 9
   },
   {
     "name": "Weathering with You",
