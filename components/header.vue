@@ -136,8 +136,8 @@ watchEffect(() => {
   justify-content: space-between;
   min-width: 320px;
   padding: var(--size-s);
-  background: var(--color-primary);
-  border-color: var(--color-tertiary);
+  background: var(--color-background-primary);
+  border-color: var(--color-border-primary);
   border-style: solid;
   border-width: 0 0 1px;
   transition-duration: 250ms;
@@ -161,7 +161,7 @@ watchEffect(() => {
   font-size: var(--font-size-l);
   font-weight: 700;
   line-height: var(--line-height-l);
-  color: var(--color-text);
+  color: var(--color-content-primary);
   white-space: nowrap;
 }
 
@@ -171,7 +171,7 @@ watchEffect(() => {
 
 .logo {
   height: calc(var(--size-m) - var(--size-xxs));
-  color: var(--color-brand);
+  color: var(--color-content-brand);
 }
 
 .item {
@@ -180,7 +180,7 @@ watchEffect(() => {
   align-items: center;
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  color: var(--color-text);
+  color: var(--color-content-primary);
   cursor: pointer;
   background: transparent;
   border: none;
@@ -191,12 +191,12 @@ watchEffect(() => {
 }
 
 .item:hover {
-  color: var(--color-brand);
+  color: var(--color-content-brand);
 }
 
 .item:focus-visible {
-  background: var(--color-brand-overlay);
-  box-shadow: 0 0 0 2px var(--color-brand);
+  background: var(--color-background-overlay);
+  box-shadow: 0 0 0 2px var(--color-border-brand);
 }
 
 .icon {
@@ -210,8 +210,8 @@ watchEffect(() => {
   right: var(--size-m);
   display: grid;
   grid-template-columns: 1fr;
-  background: var(--color-primary);
-  border: 1px solid var(--color-tertiary);
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-primary);
   border-radius: 0 0 var(--size-xs) var(--size-xs);
   transform-origin: top center;
 }

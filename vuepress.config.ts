@@ -129,24 +129,24 @@ export default defineUserConfig({
         fontFamily: 'Stem, sans-serif',
         fontSize: '15px',
 
-        noteBkgColor: 'var(--color-brand)',
-        noteTextColor: 'var(--color-primary)',
-        noteBorderColor: 'var(--color-brand-hover)',
+        noteBkgColor: 'var(--color-background-brand)',
+        noteTextColor: 'var(--color-content-inverted)',
+        noteBorderColor: 'var(--color-background-brand-hover)',
 
-        lineColor: 'var(--color-text)',
-        textColor: 'var(--color-text)',
+        lineColor: 'var(--color-background-inverted)',
+        textColor: 'var(--color-content-primary)',
 
-        nodeBorder: 'var(--color-brand-hover)',
-        nodeTextColor: 'var(--color-primary)',
+        nodeBorder: 'var(--color-background-brand-hover)',
+        nodeTextColor: 'var(--color-content-inverted)',
 
-        mainBkg: 'var(--color-brand)',
+        mainBkg: 'var(--color-background-brand)',
 
-        clusterBkg: 'var(--color-tertiary)',
-        clusterBorder: 'var(--color-secondary)',
+        clusterBkg: 'var(--color-background-secondary)',
+        clusterBorder: 'var(--color-border-primary)',
 
-        actorBorder: 'var(--color-brand-hover)',
-        labelBoxBorderColor: 'var(--color-text)',
-        loopTextColor: 'var(--color-text)',
+        actorBorder: 'var(--color-background-brand-hover)',
+        labelBoxBorderColor: 'var(--color-background-inverted)',
+        loopTextColor: 'var(--color-content-primary)',
       },
     }),
     umamiAnalyticsPlugin({

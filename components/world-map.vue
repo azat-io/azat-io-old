@@ -13,7 +13,7 @@ onMounted(() => {
   props.countries.forEach(country => {
     let element = document.getElementById(country)
     if (element) {
-      element.style.fill = 'var(--color-brand)'
+      element.style.fill = 'var(--color-background-brand)'
     }
   })
 })
@@ -32,14 +32,10 @@ onMounted(() => {
 
 <style>
 .land {
-  fill: var(--color-text);
+  fill: var(--color-background-inverted);
   fill-opacity: 100%;
-  stroke: var(--color-primary);
+  stroke: var(--color-background-primary);
   stroke-opacity: 100%;
   stroke-width: 0.5;
-}
-
-.visited-land {
-  fill: var(--color-brand);
 }
 </style>

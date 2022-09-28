@@ -173,8 +173,8 @@ let coffeeCups = computed(() =>
   grid-gap: var(--size-xs);
   padding: var(--size-s);
   margin-top: var(--size-m);
-  background: var(--color-inverse);
-  border: 1px solid var(--color-tertiary);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--size-s);
 }
 

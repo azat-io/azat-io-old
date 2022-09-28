@@ -67,7 +67,7 @@ let t = useThemeLocaleData<{
   font-size: var(--font-size-xxxxxl);
   font-weight: bold;
   line-height: var(--line-height-xxxxxl);
-  color: var(--color-text);
+  color: var(--color-content-primary);
   text-shadow: 1px 2px lch(12% 0 0 / 30%);
 }
 

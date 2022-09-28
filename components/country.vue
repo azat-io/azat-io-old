@@ -72,13 +72,13 @@ if (props.code === 'ae') {
 .name {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  color: var(--color-brand);
+  color: var(--color-content-brand);
 }
 
 .origin-name {
   display: block;
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
-  color: var(--color-text);
+  color: var(--color-content-primary);
 }
 </style>

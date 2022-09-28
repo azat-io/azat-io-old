@@ -1,15 +1,23 @@
 :root {
   color-scheme: dark;
 
-  --color-brand: oklch(83% 0.15 83);
-  --color-brand-hover: oklch(75% 0.15 83);
-  --color-brand-overlay: oklch(83% 0.15 83 / 20%);
-  --color-text: oklch(98% 0.05 97.5);
-  --color-text-secondary: oklch(80% 0.05 97.5);
-  --color-primary: oklch(22% 0 0);
-  --color-secondary: oklch(23% 0 0);
-  --color-tertiary: oklch(24% 0 0);
-  --color-inverse: oklch(21% 0 0);
-  --color-code-background: oklch(21% 0 0);
-  --color-code-text: oklch(92% 0.05 97.5);
+  /* Background */
+  --color-background-brand: oklch(83% 0.15 83);
+  --color-background-brand-hover: oklch(79% 0.15 83);
+  --color-background-primary: oklch(22% 0 0);
+  --color-background-secondary: oklch(21% 0 0);
+  --color-background-overlay: oklch(83% 0.15 83 / 20%);
+  --color-background-inverted: oklch(98% 0.05 97.5);
+  --color-background-inverted-hover: oklch(92% 0.05 97.5);
+
+  /* Content */
+  --color-content-brand: oklch(83% 0.15 83);
+  --color-content-primary: oklch(98% 0.05 97.5);
+  --color-content-secondary: oklch(92% 0.05 97.5);
+  --color-content-tertiary: oklch(80% 0.05 97.5);
+  --color-content-inverted: oklch(22% 0 0);
+
+  /* Border */
+  --color-border-brand: oklch(83% 0.15 83);
+  --color-border-primary: oklch(24% 0 0);
 }

@@ -1,5 +1,5 @@
 ::selection {
-  color: var(--color-primary);
+  color: var(--color-content-inverted);
   background-color: oklch(83% 0.15 83 / 99%);
 }
 
@@ -16,9 +16,9 @@ body {
   margin: 0;
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
-  color: var(--color-text);
+  color: var(--color-content-primary);
   letter-spacing: 0.5px;
-  background: var(--color-primary);
+  background: var(--color-background-primary);
 }
 
 button {
@@ -42,7 +42,7 @@ button:not(:disabled) {
 h1 {
   font-size: var(--font-size-xxxl);
   line-height: var(--line-height-xxxl);
-  color: var(--color-brand);
+  color: var(--color-content-brand);
 }
 
 h2 {
@@ -63,7 +63,7 @@ h4 {
 
 a {
   padding-inline: 2px;
-  color: var(--color-brand);
+  color: var(--color-content-brand);
   text-decoration: none;
   border-radius: var(--size-xxs);
   outline: none;
@@ -71,13 +71,13 @@ a {
 }
 
 a:focus-visible {
-  background: var(--color-brand-overlay);
-  box-shadow: 0 0 0 2px var(--color-brand);
+  background: var(--color-background-overlay);
+  box-shadow: 0 0 0 2px var(--color-border-brand);
 }
 
 a:hover {
   text-decoration: none;
-  background: var(--color-brand-overlay);
+  background: var(--color-background-overlay);
   transition: background 200ms;
 }
 
@@ -129,7 +129,7 @@ code {
   font-family: 'Martian Mono', monospace;
   font-size: 0.7rem;
   line-height: 1.5rem;
-  background: var(--color-code-background) !important;
+  background: var(--color-background-secondary) !important;
 }
 
 pre {
@@ -144,9 +144,9 @@ p {
 :not(pre) > code {
   padding: var(--size-xs) var(--size-xxs);
   font-size: var(--font-size-xxs);
-  color: var(--color-code-text);
-  background: var(--color-inverse);
-  border: 1px solid var(--color-tertiary);
+  color: var(--color-content-secondary);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--size-xs);
 }
 

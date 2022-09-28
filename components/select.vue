@@ -64,9 +64,9 @@ let model = computed({
   padding: var(--size-xs) var(--size-s);
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  color: var(--color-text);
-  background: var(--color-inverse);
-  border: 1px solid var(--color-tertiary);
+  color: var(--color-content-primary);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
   border-radius: var(--size-s);
   outline: none;
 }
@@ -76,7 +76,7 @@ let model = computed({
 }
 
 .select:active {
-  box-shadow: 0 0 0 1px var(--color-brand);
+  box-shadow: 0 0 0 1px var(--color-border-brand);
 }
 
 .select-left {

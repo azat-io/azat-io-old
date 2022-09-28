@@ -54,6 +54,6 @@ let posts = usePosts()
   display: block;
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
-  color: var(--color-text);
+  color: var(--color-content-primary);
 }
 </style>

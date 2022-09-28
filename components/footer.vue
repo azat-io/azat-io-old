@@ -54,7 +54,7 @@ let socialIcons = [
   justify-content: center;
   height: var(--footer-height);
   padding: var(--size-m) var(--size-s) var(--size-xl);
-  border-top: 1px solid var(--color-tertiary);
+  border-top: 1px solid var(--color-border-primary);
 }
 
 .disclaimer {
@@ -69,11 +69,11 @@ let socialIcons = [
 .icon-link {
   display: flex;
   padding: 0;
-  color: var(--color-text);
+  color: var(--color-content-primary);
 }
 
 .icon-link:hover {
-  color: var(--color-brand);
+  color: var(--color-content-brand);
   background: transparent;
   transition: color 200ms;
 }

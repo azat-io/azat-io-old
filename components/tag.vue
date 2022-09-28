@@ -40,38 +40,39 @@ if (props.onClick) {
   border: none;
   border-radius: var(--size-s);
   outline: none;
-  transition: all 300ms;
 }
 
 .active {
-  color: var(--color-primary);
-  background: var(--color-brand);
+  color: var(--color-content-inverted);
+  background: var(--color-background-brand);
 }
 
 a.active:hover,
 button.active:hover {
-  box-shadow: 0 0 0 2px var(--color-brand);
+  background: var(--color-background-brand-hover);
+  transition: background 300ms;
 }
 
 a.active:focus-visible,
 button.active:focus-visible {
-  background: var(--color-brand-hover);
-  box-shadow: 0 0 0 2px var(--color-brand);
+  background: var(--color-background-brand-hover);
+  transition: background 300ms;
 }
 
 .disabled {
-  color: var(--color-primary);
-  background: var(--color-text);
+  color: var(--color-content-inverted);
+  background: var(--color-background-inverted);
 }
 
 a.disabled:hover,
 button.disabled:hover {
-  box-shadow: 0 0 0 2px var(--color-text-secondary);
+  background: var(--color-background-inverted-hover);
+  transition: background 300ms;
 }
 
 a.disabled:focus-visible,
 button.disabled:focus-visible {
-  background: var(--color-text-secondary);
-  box-shadow: 0 0 0 2px var(--color-text-secondary);
+  background: var(--color-background-inverted-hover);
+  transition: background 300ms;
 }
 </style>

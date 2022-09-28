@@ -2,10 +2,10 @@
   --copy-code-plugin-font-size: var(--font-size-xxs);
   --copy-code-plugin-line-height: var(--line-height-xxs);
   --copy-code-plugin-icon-size: var(--size-m);
-  --copy-code-plugin-icon-color: var(--color-text);
-  --copy-code-plugin-button-hover-color: var(--color-tertiary);
-  --copy-code-plugin-button-focus-color: var(--color-brand-overlay);
-  --copy-code-plugin-shadow-color: var(--color-brand);
+  --copy-code-plugin-icon-color: var(--color-content-primary);
+  --copy-code-plugin-button-hover-color: var(--color-background-primary);
+  --copy-code-plugin-button-focus-color: var(--color-background-overlay);
+  --copy-code-plugin-shadow-color: var(--color-border-brand);
   --copy-code-title-margin: var(--size-m);
   --copy-code-button-margin: var(--size-s);
 }

@@ -247,7 +247,7 @@ let animeList = computed(() => {
   overflow: hidden;
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
-  color: var(--color-brand);
+  color: var(--color-content-brand);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -257,7 +257,7 @@ let animeList = computed(() => {
   margin-bottom: var(--size-xs);
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
-  color: var(--color-text-secondary);
+  color: var(--color-content-tertiary);
 }
 
 .data {
@@ -280,7 +280,7 @@ let animeList = computed(() => {
 }
 
 .star-active {
-  fill: var(--color-text);
+  fill: var(--color-content-primary);
 }
 
 .total {

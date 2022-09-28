@@ -136,11 +136,11 @@ let celebritiesData = artistsList
 }
 
 .hale-example {
-  background: var(--color-text);
+  background: var(--color-background-inverted);
 }
 
 .leb-example {
-  background: var(--color-text);
+  background: var(--color-background-inverted);
   opacity: 80%;
 }
 
@@ -150,7 +150,7 @@ let celebritiesData = artistsList
   justify-content: center;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
-  color: var(--color-primary);
+  color: var(--color-content-inverted);
   background: oklch(73.11% 0.182 51.69);
 }
 
@@ -164,7 +164,7 @@ let celebritiesData = artistsList
 
 .element {
   position: relative;
-  background: var(--color-text);
+  background: var(--color-background-inverted);
   border-radius: 1px;
   opacity: 80%;
 }
@@ -181,7 +181,7 @@ let celebritiesData = artistsList
 }
 
 .passed {
-  background: var(--color-brand);
+  background: var(--color-background-brand);
 }
 
 .healthy {
@@ -201,7 +201,7 @@ let celebritiesData = artistsList
   margin-right: -50%;
   font-size: 0.35rem;
   line-height: var(--line-height-xxs);
-  color: var(--color-primary);
+  color: var(--color-content-inverted);
   content: counter(celebrity);
   transform: translate(-50%, -50%);
 }
@@ -233,7 +233,7 @@ let celebritiesData = artistsList
   padding: 0 var(--size-xs);
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
-  color: var(--color-primary);
+  color: var(--color-content-inverted);
   background: oklch(73.11% 0.182 51.69);
   border-radius: var(--size-xxs);
 }
