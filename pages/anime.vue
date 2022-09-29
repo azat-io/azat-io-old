@@ -207,7 +207,6 @@ let animeList = computed(() => {
 .options {
   display: grid;
   grid-gap: var(--size-m);
-  align-items: start;
 }
 
 .genres {

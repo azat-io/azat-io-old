@@ -127,9 +127,7 @@ watchEffect(() => {
 <style module>
 .header {
   position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
+  inset: 0 0 auto 0;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -175,9 +173,10 @@ watchEffect(() => {
 }
 
 .item {
-  display: flex;
-  column-gap: var(--size-xs);
-  align-items: center;
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-gap: var(--size-xs);
+  place-items: center;
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
   color: var(--color-content-primary);
@@ -222,12 +221,6 @@ watchEffect(() => {
 
 .locale-list-leave {
   animation: grow-up 250ms ease-in-out forwards;
-}
-
-.locale-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
 }
 
 .locale-item:hover {

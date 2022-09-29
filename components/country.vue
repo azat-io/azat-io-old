@@ -61,7 +61,7 @@ if (props.code === 'ae') {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--size-s);
-  align-items: center;
+  place-items: center left;
 }
 
 .icon {

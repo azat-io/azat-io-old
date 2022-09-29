@@ -9,6 +9,7 @@
 
 html {
   font-family: Stem, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
