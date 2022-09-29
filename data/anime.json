@@ -337,7 +337,7 @@
     "year": 2018,
     "duration": 23,
     "episodes": 12,
-    "score": 9
+    "score": 10
   },
   {
     "name": "Attack on Titan 3 Part 2",
@@ -350,7 +350,20 @@
     "year": 2019,
     "duration": 23,
     "episodes": 10,
-    "score": 9
+    "score": 10
+  },
+  {
+    "name": "Attack on Titan: The Final Season",
+    "originName": "Shingeki no Kyojin: The Final Season",
+    "image": {
+      "avif": "/assets/anime/attack-on-titan-the-final-season.avif",
+      "webp": "/assets/anime/attack-on-titan-the-final-season.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
+    "year": 2020,
+    "duration": 23,
+    "episodes": 16,
+    "score": 10
   },
   {
     "name": "Weathering with You",
