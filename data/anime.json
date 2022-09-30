@@ -366,6 +366,19 @@
     "score": 10
   },
   {
+    "name": "Attack on Titan: The Final Season Part 2",
+    "originName": "Shingeki no Kyojin: The Final Season Part 2",
+    "image": {
+      "avif": "/assets/anime/attack-on-titan-the-final-season-part-2.avif",
+      "webp": "/assets/anime/attack-on-titan-the-final-season-part-2.webp"
+    },
+    "genres": ["action", "drama", "fantasy", "mystery"],
+    "year": 2022,
+    "duration": 23,
+    "episodes": 12,
+    "score": 10
+  },
+  {
     "name": "Weathering with You",
     "originName": "Tenki no Ko",
     "image": {
