@@ -538,6 +538,19 @@
     "score": 10
   },
   {
+    "name": "Made in Abyss: The Golden City of the Scorching Sun",
+    "originName": "Made in Abyss: Retsujitsu no Ougonkyou",
+    "image": {
+      "avif": "/assets/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.avif",
+      "webp": "/assets/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.webp"
+    },
+    "genres": ["adventure", "drama", "fantasy", "horror", "mystery", "sci-fi"],
+    "year": 2022,
+    "duration": 24,
+    "episodes": 12,
+    "score": 8
+  },
+  {
     "name": "Tokyo Godfathers",
     "originName": "Tokyo Godfathers",
     "image": {
