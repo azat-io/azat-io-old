@@ -20,11 +20,15 @@ Add plugin to your VuePress config:
 ```js
 import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 
+let isProd = process.env.NODE_ENV === 'production'
+
 export default {
   plugins: [
-    umamiAnalyticsPlugin({
-      /* options */
-    }),
+    isProd
+      ? umamiAnalyticsPlugin({
+          /* options */
+        })
+      : [],
   ],
 }
 ```

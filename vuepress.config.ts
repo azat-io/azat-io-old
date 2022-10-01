@@ -22,6 +22,7 @@ import { loadTheme } from 'shiki'
 import en from './locales/en.json'
 import ru from './locales/ru.json'
 
+let isProd = process.env.NODE_ENV === 'production'
 let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
@@ -149,10 +150,6 @@ export default defineUserConfig({
         loopTextColor: 'var(--color-content-primary)',
       },
     }),
-    umamiAnalyticsPlugin({
-      id: 'effe2886-cd9d-46cd-9c95-e9dbad667822',
-      src: 'https://analytics.azat.io/umami.js',
-    }),
     postsPlugin(),
     openGraphPlugin({
       host: 'https://azat.io',
@@ -168,6 +165,12 @@ export default defineUserConfig({
         },
       },
     }),
+    isProd
+      ? umamiAnalyticsPlugin({
+          id: 'effe2886-cd9d-46cd-9c95-e9dbad667822',
+          src: 'https://analytics.azat.io/umami.js',
+        })
+      : [],
   ],
   extendsMarkdown: md => {
     md.use(mdImageLazyLoading)
