@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { usePosts } from 'vuepress-plugin-posts/client'
+import { onBeforeMount, onBeforeUnmount } from 'vue'
 
 import Container from '~/components/container.vue'
 import Header from '~/components/header.vue'
@@ -7,6 +8,14 @@ import Footer from '~/components/footer.vue'
 import Hero from '~/components/hero.vue'
 
 let posts = usePosts()
+
+onBeforeMount(() => {
+  document.documentElement.classList.add('no-scroll')
+})
+
+onBeforeUnmount(() => {
+  document.documentElement.classList.remove('no-scroll')
+})
 </script>
 
 <template>

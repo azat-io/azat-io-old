@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.no-scroll {
+  scroll-behavior: initial;
+}
+
 body {
   min-width: 320px;
   margin: 0;
