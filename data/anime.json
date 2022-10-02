@@ -601,5 +601,18 @@
     "duration": 24,
     "episodes": 26,
     "score": 8
+  },
+  {
+    "name": "Cyberpunk: Edgerunners",
+    "originName": "Cyberpunk: Edgerunners",
+    "image": {
+      "avif": "/assets/anime/cyberpunk-edgerunners.avif",
+      "webp": "/assets/anime/cyberpunk-edgerunners.webp"
+    },
+    "genres": ["action", "drama", "psychological", "sci-fi"],
+    "year": 2022,
+    "duration": 25,
+    "episodes": 10,
+    "score": 9
   }
 ]
