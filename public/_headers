@@ -1,3 +1,6 @@
+/*
+  content-security-policy: default-src 'self' cloudfront.net *.cloudfront.net; script-src 'self' analytics.azat.io; style-src 'self' 'unsafe-inline'; connect-src 'self' analytics.azat.io
+
 /assets/*
   cache-control: max-age=31536000
   cache-control: immutable
