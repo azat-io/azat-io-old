@@ -1,4 +1,5 @@
 import { removeHtmlExtensionPlugin } from 'vuepress-plugin-remove-html-extension'
+import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links'
 import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
 import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
 import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
@@ -119,6 +120,10 @@ export default defineUserConfig({
       theme,
     }),
     removeHtmlExtensionPlugin(),
+    activeHeaderLinksPlugin({
+      headerLinkSelector: '.header-anchor',
+      offset: 64,
+    }),
     copyCodeButtonPlugin(),
     editPageLinkPlugin(),
     sitemapPlugin({

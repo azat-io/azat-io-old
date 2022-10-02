@@ -66,6 +66,15 @@ h4 {
   line-height: var(--line-height-l);
 }
 
+h1:focus-visible,
+h2:focus-visible,
+h3:focus-visible,
+h4:focus-visible,
+h5:focus-visible,
+h6:focus-visible {
+  outline: none;
+}
+
 a {
   padding-inline: 2px;
   color: var(--color-content-brand);
