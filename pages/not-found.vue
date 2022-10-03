@@ -1,16 +1,17 @@
 <template>
   <main :class="$style.main">
-    <h1>404</h1>
-    <p>Page not found. Back to <a href="/">home</a>.</p>
+    <div>
+      <h1>404</h1>
+      <p>Page not found. Back to <a href="/">home</a>.</p>
+    </div>
   </main>
 </template>
 
 <style module>
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   height: 100vh;
+  text-align: center;
 }
 </style>

@@ -30,13 +30,13 @@ let countryList = countries as unknown as CountryType[]
 
 <style module>
 .title {
-  margin-top: 0;
+  margin-block: 0;
 }
 
 .list {
   display: grid;
   grid-gap: var(--size-s);
-  margin-top: var(--size-xxl);
+  margin-block-start: var(--size-xxl);
 }
 
 @media (min-width: 540px) {

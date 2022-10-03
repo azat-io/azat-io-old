@@ -80,7 +80,7 @@ let model = computed({
 }
 
 .select-left {
-  padding-left: calc(var(--size-s) * 2 + var(--size-xs));
+  padding-inline-start: calc(var(--size-s) * 2 + var(--size-xs));
 }
 
 .icon {

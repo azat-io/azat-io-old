@@ -84,11 +84,13 @@ watchEffect(() => {
 <template>
   <header
     ref="header"
-    :class="{
-      [$style.header]: true,
-      [$style.transparent]: props.transparent && onTop && !localePopupOpen,
-      [$style.fixed]: props.transparent,
-    }"
+    :class="[
+      [$style.header],
+      {
+        [$style.transparent]: props.transparent && onTop && !localePopupOpen,
+        [$style.fixed]: props.transparent,
+      },
+    ]"
   >
     <RouterLink :class="$style.title" :to="route === '/' ? '/en' : route">
       <Logo :class="$style.logo" />
@@ -135,16 +137,14 @@ watchEffect(() => {
   min-width: 320px;
   padding: var(--size-s);
   background: var(--color-background-primary);
-  border-color: var(--color-border-primary);
-  border-style: solid;
-  border-width: 0 0 1px;
+  box-shadow: 0 1px 1px var(--color-border-primary);
   transition-duration: 250ms;
-  transition-property: background, border-color;
+  transition-property: background, box-shadow;
 }
 
 .transparent {
   background: transparent;
-  border-color: transparent;
+  box-shadow: none;
   transition-delay: 250ms;
 }
 
@@ -232,11 +232,11 @@ watchEffect(() => {
 }
 
 .locale-item:first-child .country {
-  margin-top: var(--size-s);
+  margin-block-start: var(--size-s);
 }
 
 .locale-item:last-child .country {
-  margin-bottom: var(--size-s);
+  margin-block-end: var(--size-s);
 }
 
 @keyframes grow-down {

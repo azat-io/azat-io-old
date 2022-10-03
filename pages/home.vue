@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 <style module>
 .link {
   display: inline-block;
-  padding: 0;
+  padding-inline: 0;
   margin-bottom: var(--size-xxs);
   background: none;
 }
@@ -49,11 +49,11 @@ onBeforeUnmount(() => {
 .posts {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--size-l);
+  gap: var(--size-l);
 }
 
 .title {
-  margin: 0;
+  margin-block: 0;
   font-size: var(--font-size-m);
   font-weight: normal;
   line-height: var(--line-height-m);

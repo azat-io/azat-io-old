@@ -18,11 +18,9 @@ let props = withDefaults(defineProps<Props>(), {
 
 <style module>
 .container {
-  width: 100vw;
-  min-width: 320px;
-  max-width: 1280px;
+  width: clamp(320px, 100vw, 1280px);
   padding: var(--size-l) var(--size-s);
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 @media (min-width: 480px) {

@@ -95,9 +95,13 @@ a:hover {
   transition: background 200ms;
 }
 
-ul {
+ul,
+ol {
   padding-left: var(--size-s);
-  list-style: square;
+}
+
+ul li::marker {
+  content: '✝ ';
 }
 
 img {
@@ -106,12 +110,14 @@ img {
 
 img[alt$='>'] {
   float: right;
-  margin: 0 0 var(--size-m) var(--size-m);
+  margin-block-end: var(--size-m);
+  margin-inline-start: var(--size-m);
 }
 
 img[alt$='<'] {
   float: left;
-  margin: 0 var(--size-m) var(--size-m) 0;
+  margin-block-end: var(--size-m);
+  margin-inline-end: var(--size-m);
 }
 
 #app {
@@ -120,7 +126,7 @@ img[alt$='<'] {
 
 .header-anchor {
   float: left;
-  margin-left: -0.87em;
+  margin-inline-start: -0.87em;
   opacity: 0%;
   transition: opacity 0.3s;
 }

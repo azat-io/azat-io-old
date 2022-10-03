@@ -201,7 +201,7 @@ let animeList = computed(() => {
 
 <style module>
 .title {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .options {
@@ -212,8 +212,7 @@ let animeList = computed(() => {
 .genres {
   display: flex;
   flex-wrap: wrap;
-  row-gap: var(--size-xs);
-  column-gap: var(--size-xxs);
+  gap: var(--size-xs) var(--size-xxs);
 }
 
 .list {
@@ -226,7 +225,7 @@ let animeList = computed(() => {
 .element {
   display: grid;
   grid-template-columns: clamp(7.25rem, 6.65rem + 2vw, 8.25rem) 1fr;
-  grid-gap: var(--size-m);
+  gap: var(--size-m);
 }
 
 .image {

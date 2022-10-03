@@ -139,14 +139,14 @@ let coffeeCups = computed(() =>
 }
 
 .title {
-  margin-bottom: var(--size-xs);
+  margin-block-end: var(--size-xs);
 }
 
 .info {
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-xs) var(--size-l);
-  margin: var(--size-s) 0 var(--size-m);
+  margin-block: var(--size-s) var(--size-m);
 }
 
 .info-text {
@@ -160,11 +160,11 @@ let coffeeCups = computed(() =>
 .cup {
   width: var(--size-s);
   height: var(--size-s);
-  margin-right: calc(var(--size-xxs) / 2);
+  margin-inline-end: calc(var(--size-xxs) / 2);
 }
 
 .last-cup {
-  margin-right: var(--size-xs);
+  margin-inline-end: var(--size-xs);
 }
 
 .available-languages {
@@ -172,7 +172,7 @@ let coffeeCups = computed(() =>
   grid-template-columns: 1fr;
   grid-gap: var(--size-xs);
   padding: var(--size-s);
-  margin-top: var(--size-m);
+  margin-block-start: var(--size-m);
   background: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
   border-radius: var(--size-s);
@@ -186,19 +186,19 @@ let coffeeCups = computed(() =>
 }
 
 .available-languages-title {
-  margin: 0;
+  margin-block: 0;
   font-size: var(--font-size-xs);
   font-weight: normal;
   line-height: var(--line-height-xs);
 }
 
 .article {
-  margin-top: var(--size-xl);
+  margin-block-start: var(--size-xl);
 }
 
 .edit-link {
   display: inline-block;
-  margin-top: var(--size-m);
+  margin-block-start: var(--size-m);
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
 }
@@ -207,18 +207,18 @@ let coffeeCups = computed(() =>
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--size-s);
-  margin-top: var(--size-m);
+  margin-block-start: var(--size-m);
 }
 
 .post-title {
-  margin: 0 0 var(--size-xxs);
+  margin-block-end: var(--size-xxs);
   font-size: var(--font-size-s);
   font-weight: normal;
   line-height: var(--line-height-s);
 }
 
 .post-link {
-  padding: 0;
+  padding-inline: 0;
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
 }

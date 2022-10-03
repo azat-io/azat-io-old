@@ -55,12 +55,11 @@ let t = useThemeLocaleData<{
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-right: -50%;
   transform: translateX(-50%);
 }
 
 .header-title {
-  margin: 0 0 var(--size-xs);
+  margin-block-end: var(--size-xs);
   font-size: var(--font-size-xxxxxl);
   font-weight: bold;
   line-height: var(--line-height-xxxxxl);
@@ -69,7 +68,7 @@ let t = useThemeLocaleData<{
 }
 
 .header-subtitle {
-  margin: 0;
+  margin-block: 0;
   font-size: var(--font-size-xxxxl);
   font-weight: normal;
   line-height: var(--line-height-xxxxl);

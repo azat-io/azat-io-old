@@ -114,7 +114,7 @@ let celebritiesData = artistsList
 
 <style module>
 .title {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .examples {

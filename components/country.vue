@@ -66,7 +66,7 @@ if (props.code === 'ae') {
 
 .icon {
   width: 48px;
-  margin-top: var(--size-xxs);
+  margin-block-start: var(--size-xxs);
 }
 
 .name {

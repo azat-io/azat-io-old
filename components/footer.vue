@@ -54,7 +54,7 @@ let socialIcons = [
   justify-content: center;
   height: var(--footer-height);
   padding: var(--size-m) var(--size-s) var(--size-xl);
-  border-top: 1px solid var(--color-border-primary);
+  border-block-start: solid var(--color-border-primary);
 }
 
 .disclaimer {
@@ -63,12 +63,12 @@ let socialIcons = [
 
 .social-icons {
   display: flex;
-  column-gap: var(--size-s);
+  gap: var(--size-s);
 }
 
 .icon-link {
   display: flex;
-  padding: 0;
+  padding-inline: 0;
   color: var(--color-content-primary);
 }
 
@@ -91,7 +91,7 @@ let socialIcons = [
 
   .disclaimer {
     display: flex;
-    column-gap: var(--size-xxs);
+    gap: var(--size-xxs);
     align-items: center;
     font-size: 0.85rem;
     line-height: 0.85rem;

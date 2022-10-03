@@ -32,7 +32,7 @@ if (props.onClick) {
 <style module>
 .tag {
   display: inline-block;
-  padding: 0 var(--size-xs);
+  padding-inline: var(--size-xs);
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
   white-space: nowrap;
