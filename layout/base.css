@@ -51,7 +51,8 @@ h1 {
 }
 
 h2 {
-  margin-top: var(--size-xxl);
+  padding-block-start: var(--size-xxxl);
+  margin-block-start: calc(0px - var(--size-xxl));
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
 }

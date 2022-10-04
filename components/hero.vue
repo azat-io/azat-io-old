@@ -68,6 +68,7 @@ let t = useThemeLocaleData<{
 }
 
 .header-subtitle {
+  padding-block: 0;
   margin-block: 0;
   font-size: var(--font-size-xxxxl);
   font-weight: normal;
