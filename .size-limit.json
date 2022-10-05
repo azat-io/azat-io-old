@@ -15,7 +15,7 @@
       "!dist/assets/mermaid.*.js",
       "!dist/assets/flag-*.js"
     ],
-    "limit": "60 kB",
+    "limit": "80 kB",
     "brotli": true
   },
   {

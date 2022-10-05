@@ -144,6 +144,7 @@ export default defineUserConfig({
 
         nodeBorder: 'var(--color-background-brand-hover)',
         nodeTextColor: 'var(--color-content-inverted)',
+        edgeLabelBackground: 'var(--color-background-inverted)',
 
         mainBkg: 'var(--color-background-brand)',
 
