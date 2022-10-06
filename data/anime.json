@@ -614,5 +614,18 @@
     "duration": 25,
     "episodes": 10,
     "score": 9
+  },
+  {
+    "name": "Odd Taxi",
+    "originName": "Odd Taxi",
+    "image": {
+      "avif": "/assets/anime/odd-taxi.avif",
+      "webp": "/assets/anime/odd-taxi.webp"
+    },
+    "genres": ["drama", "mystery", "psychological"],
+    "year": 2021,
+    "duration": 23,
+    "episodes": 13,
+    "score": 10
   }
 ]
