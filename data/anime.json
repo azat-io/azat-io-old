@@ -627,5 +627,18 @@
     "duration": 23,
     "episodes": 13,
     "score": 10
+  },
+  {
+    "name": "Girls' Last Tour",
+    "originName": "Shoujo Shuumatsu Ryokou",
+    "image": {
+      "avif": "/assets/anime/girls-last-tour.avif",
+      "webp": "/assets/anime/girls-last-tour.webp"
+    },
+    "genres": ["adventure", "sci-fi", "slice-of-life"],
+    "year": 2017,
+    "duration": 23,
+    "episodes": 12,
+    "score": 7
   }
 ]
