@@ -4,7 +4,6 @@ import { copyCodeButtonPlugin } from 'vuepress-plugin-copy-code-button'
 import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
 import { umamiAnalyticsPlugin } from 'vuepress-plugin-umami-analytics'
 import { editPageLinkPlugin } from 'vuepress-plugin-edit-page-link'
-import postcssOklabFunction from '@csstools/postcss-oklab-function'
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import { themeDataPlugin } from '@vuepress/plugin-theme-data'
 import { openGraphPlugin } from 'vuepress-plugin-open-graph'
@@ -14,9 +13,8 @@ import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { postsPlugin } from 'vuepress-plugin-posts'
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from '@vuepress/cli'
-import postcss100vhFix from 'postcss-100vh-fix'
 import mdImageSize from 'markdown-it-imsize'
-import autoprefixer from 'autoprefixer'
+import postcssrc from 'postcss-load-config'
 import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 
@@ -27,6 +25,8 @@ let isProd = process.env.NODE_ENV === 'production'
 let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
+
+let postcssPlugins = (await postcssrc()).plugins
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -213,15 +213,7 @@ export default defineUserConfig({
       },
       css: {
         postcss: {
-          plugins: [
-            postcssOklabFunction({
-              subFeatures: {
-                displayP3: false,
-              },
-            }),
-            postcss100vhFix,
-            autoprefixer,
-          ],
+          plugins: postcssPlugins,
         },
       },
       plugins: [

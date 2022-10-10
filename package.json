@@ -25,6 +25,7 @@
     "markdown-it-imsize": "2.0.1",
     "postcss": "8.4.17",
     "postcss-100vh-fix": "1.0.2",
+    "postcss-load-config": "4.0.1",
     "shiki": "0.10.1",
     "sitemap": "7.1.1",
     "tsm": "2.2.2",

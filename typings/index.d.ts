@@ -23,20 +23,6 @@ declare module '~/data/countries.json' {
   export default countries
 }
 
-declare module '@csstools/postcss-oklab-function' {
-  import type { PluginCreator } from 'postcss'
-
-  let plugin: PluginCreator
-  export default plugin
-}
-
-declare module 'postcss-100vh-fix' {
-  import type { PluginCreator } from 'postcss'
-
-  let plugin: PluginCreator
-  export default plugin
-}
-
 declare module 'markdown-it-image-lazy-loading' {
   import type { PluginSimple } from 'markdown-it'
 
