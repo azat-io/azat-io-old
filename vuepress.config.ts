@@ -26,7 +26,7 @@ let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
 
-let postcssPlugins = (await postcssrc()).plugins
+let postcss = await postcssrc()
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -212,9 +212,7 @@ export default defineUserConfig({
         ],
       },
       css: {
-        postcss: {
-          plugins: postcssPlugins,
-        },
+        postcss,
       },
       plugins: [
         svgLoader({
