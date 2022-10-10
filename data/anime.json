@@ -640,5 +640,18 @@
     "duration": 23,
     "episodes": 12,
     "score": 7
+  },
+  {
+    "name": "Godzilla: Singular Point",
+    "originName": "Godzilla: Singular Point",
+    "image": {
+      "avif": "/assets/anime/godzilla-singular-point.avif",
+      "webp": "/assets/anime/godzilla-singular-point.webp"
+    },
+    "genres": ["action", "mecha", "mystery", "sci-fi"],
+    "year": 2021,
+    "duration": 23,
+    "episodes": 13,
+    "score": 7
   }
 ]
