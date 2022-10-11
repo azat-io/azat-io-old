@@ -653,5 +653,18 @@
     "duration": 23,
     "episodes": 13,
     "score": 7
+  },
+  {
+    "name": "A Silent Voice",
+    "originName": "Koe no Katachi",
+    "image": {
+      "avif": "/assets/anime/a-silent-voice.avif",
+      "webp": "/assets/anime/a-silent-voice.webp"
+    },
+    "genres": ["drama", "romance", "slice-of-life"],
+    "year": 2016,
+    "duration": 130,
+    "episodes": 1,
+    "score": 8
   }
 ]
