@@ -303,16 +303,4 @@ let animeList = computed(() => {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media (min-width: 960px) {
-  .list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1520px) {
-  .list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 </style>

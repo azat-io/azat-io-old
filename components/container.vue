@@ -18,34 +18,22 @@ let props = withDefaults(defineProps<Props>(), {
 
 <style module>
 .container {
-  width: clamp(320px, 100vw, 1280px);
+  width: min(840px, 100vw);
   padding: var(--size-l) var(--size-s);
   margin-inline: auto;
+}
+
+.size-m {
+  width: min(840px, 100vw);
+}
+
+.size-l {
+  width: min(1020px, 100vw);
 }
 
 @media (min-width: 480px) {
   .container {
     padding: var(--size-xl) var(--size-m);
-  }
-}
-
-@media (min-width: 800px) {
-  .size-m {
-    width: calc(100vw - 240px);
-  }
-
-  .size-l {
-    width: calc(100vw - 120px);
-  }
-}
-
-@media (min-width: 1200px) {
-  .size-m {
-    width: calc(100vw - 560px);
-  }
-
-  .size-l {
-    width: calc(100vw - 320px);
   }
 }
 </style>

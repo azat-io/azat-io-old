@@ -30,7 +30,7 @@ let countryList = countries as unknown as CountryType[]
 
 <style module>
 .title {
-  margin-block: 0;
+  margin-block-start: 0;
 }
 
 .list {
