@@ -666,5 +666,18 @@
     "duration": 130,
     "episodes": 1,
     "score": 8
+  },
+  {
+    "name": "Prison School",
+    "originName": "Kangoku Gakuen",
+    "image": {
+      "avif": "/assets/anime/prison-school.avif",
+      "webp": "/assets/anime/prison-school.webp"
+    },
+    "genres": ["comedy", "ecchi"],
+    "year": 2015,
+    "duration": 24,
+    "episodes": 12,
+    "score": 9
   }
 ]
