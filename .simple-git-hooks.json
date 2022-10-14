@@ -1,3 +1,4 @@
 {
-  "pre-commit": "pnpm exec nano-staged nano-staged.json"
+  "pre-commit": "pnpm exec nano-staged nano-staged.json",
+  "commit-msg": "pnpm exec commitlint -e \"$@\""
 }

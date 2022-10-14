@@ -48,6 +48,8 @@
     "vuepress-vite": "2.0.0-beta.51"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
     "@logux/eslint-config": "47.2.0",
     "@logux/stylelint-config": "0.12.0",
     "@size-limit/file": "8.1.0",
