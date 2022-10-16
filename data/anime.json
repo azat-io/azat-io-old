@@ -679,5 +679,18 @@
     "duration": 24,
     "episodes": 12,
     "score": 9
+  },
+  {
+    "name": "One-Punch Man",
+    "originName": "One Punch Man",
+    "image": {
+      "avif": "/assets/anime/one-punch-man.avif",
+      "webp": "/assets/anime/one-punch-man.webp"
+    },
+    "genres": ["action", "comedy", "sci-fi", "supernatural"],
+    "year": 2015,
+    "duration": 24,
+    "episodes": 12,
+    "score": 9
   }
 ]
