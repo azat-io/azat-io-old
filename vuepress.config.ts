@@ -185,7 +185,7 @@ export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
       build: {
-        chunkSizeWarningLimit: 1111,
+        chunkSizeWarningLimit: 1200,
       },
       server: {
         watch: {
