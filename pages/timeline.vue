@@ -1,15 +1,16 @@
 <script lang="ts" setup>
+import { onMounted, computed, ref } from 'vue'
+
 import type { Artist } from '~/typings/artist.js'
 import Container from '~/components/container.vue'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
-import artists from '~/data/artists.json'
 
+let artists = ref<Artist[]>([])
 let today = new Date()
 let dateOfBirth = new Date('1992-02-16')
 let healthyLifeExpectancy = 60.7
 let lifeExpectancyAtBirth = 68.2
-let artistsList = artists as unknown as Artist[]
 
 let getWeeksBetweenDates = (firstDate: Date, secondDate: Date): number => {
   let isLeapYear = (year: number) => new Date(year, 1, 29).getDate() === 29
@@ -28,6 +29,13 @@ let getWeeksBetweenDates = (firstDate: Date, secondDate: Date): number => {
   return age * 52 + ageRemainderInWeeks
 }
 
+onMounted(async () => {
+  if (!__VUEPRESS_SSR__) {
+    artists.value = (await import('~/data/artists.json'))
+      .default as unknown as Artist[]
+  }
+})
+
 let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 let formatDate = (date: string): string =>
   new Intl.DateTimeFormat('en-US', {
@@ -35,14 +43,17 @@ let formatDate = (date: string): string =>
     month: 'long',
     year: 'numeric',
   }).format(new Date(date!))
-let celebritiesData = artistsList
-  .map(({ born, died, ...data }) => ({
-    born: formatDate(born),
-    died: formatDate(died),
-    livedWeeks: getWeeksBetweenDates(new Date(born), new Date(died)),
-    ...data,
-  }))
-  .sort((a, b) => a.livedWeeks - b.livedWeeks)
+
+let celebritiesData = computed(() =>
+  artists.value
+    .map(({ born, died, ...data }) => ({
+      born: formatDate(born),
+      died: formatDate(died),
+      livedWeeks: getWeeksBetweenDates(new Date(born), new Date(died)),
+      ...data,
+    }))
+    .sort((a, b) => a.livedWeeks - b.livedWeeks),
+)
 </script>
 
 <template>
