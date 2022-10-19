@@ -1,13 +1,21 @@
 <script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+
 import type { Country as CountryType } from '~/typings/country.d.js'
 import Container from '~/components/container.vue'
 import WorldMap from '~/components/world-map.vue'
 import Country from '~/components/country.vue'
-import countries from '~/data/countries.json'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
 
-let countryList = countries as unknown as CountryType[]
+let countries = ref<CountryType[]>([])
+
+onMounted(async () => {
+  if (!__VUEPRESS_SSR__) {
+    countries.value = (await import('~/data/countries.json'))
+      .default as unknown as CountryType[]
+  }
+})
 </script>
 
 <template>
@@ -15,12 +23,10 @@ let countryList = countries as unknown as CountryType[]
   <Container size="l">
     <h1 :class="$style.title">Travel map</h1>
     <Suspense>
-      <WorldMap
-        :countries="countryList.map(({ code }) => code.toUpperCase())"
-      />
+      <WorldMap :countries="countries.map(({ code }) => code.toUpperCase())" />
     </Suspense>
     <div :class="$style.list">
-      <Suspense v-for="(country, index) in countryList" :key="index">
+      <Suspense v-for="(country, index) in countries" :key="index">
         <Country v-bind="country" />
       </Suspense>
     </div>
