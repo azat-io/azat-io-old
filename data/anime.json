@@ -705,5 +705,18 @@
     "duration": 23,
     "episodes": 12,
     "score": 8
+  },
+  {
+    "name": "Tekkonkinkreet",
+    "originName": "Tekkon Kinkreet",
+    "image": {
+      "avif": "/assets/anime/tekkonkinkreet.avif",
+      "webp": "/assets/anime/tekkonkinkreet.webp"
+    },
+    "genres": ["action", "psychological", "supernatural"],
+    "year": 2006,
+    "duration": 111,
+    "episodes": 1,
+    "score": 10
   }
 ]
