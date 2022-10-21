@@ -1,4 +1,4 @@
-name: Test
+name: test
 
 on:
   pull_request:
@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2
 
-      - name: Set outputs
+      - name: set outputs
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: Start build notfication
+      - name: start build notfication
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT }}
@@ -27,23 +27,23 @@ jobs:
 
             ${{ github.workflow }}
 
-            By: ${{ github.actor }}
-            Branch: ${{ github.ref }}
-            Commit: ${{ github.event.head_commit.message }}
-            SHA: ${{ steps.vars.outputs.sha_short }}
+            by: ${{ github.actor }}
+            branch: ${{ github.ref }}
+            commit: ${{ github.event.head_commit.message }}
+            sha: ${{ steps.vars.outputs.sha_short }}
 
-            <a href="${{ github.event.head_commit.url }}">Link</a>
+            <a href="${{ github.event.head_commit.url }}">link</a>
 
-      - name: Install tools from asdf config
+      - name: install tools from asdf config
         uses: ai/asdf-cache-action@v1
 
-      - name: Install dependencies
+      - name: install dependencies
         run: make install
 
-      - name: Test
+      - name: test
         run: make test
 
-      - name: Finish build notfication
+      - name: finish build notfication
         uses: appleboy/telegram-action@master
         if: always()
         with:
@@ -56,9 +56,9 @@ jobs:
 
             ${{ github.workflow }}
 
-            By: ${{ github.actor }}
-            Branch: ${{ github.ref }}
-            Commit: ${{ github.event.head_commit.message }}
-            SHA: ${{ steps.vars.outputs.sha_short }}
+            by: ${{ github.actor }}
+            branch: ${{ github.ref }}
+            commit: ${{ github.event.head_commit.message }}
+            sha: ${{ steps.vars.outputs.sha_short }}
 
-            <a href="${{ github.event.head_commit.url }}">Link</a>
+            <a href="${{ github.event.head_commit.url }}">link</a>
