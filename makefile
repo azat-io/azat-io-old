@@ -9,6 +9,8 @@ install:
 	pnpm install --frozen-lockfile
 	pnpm exec simple-git-hooks
 
+i: install
+
 install_prod:
 	pnpm install --frozen-lockfile --prod
 
@@ -18,6 +20,8 @@ install_theme:
 #update: @ Update project dependencies
 update:
 	pnpm update --recursive --interactive --latest
+
+up: update
 
 #start: @ Start development server
 start:
@@ -40,13 +44,15 @@ lint_css:
 lint_es:
 	pnpm exec eslint "**/*.{vue,ts}"
 
+lint: lint_css lint_es
+
 test_size: build
 	pnpm exec size-limit
 
 #test: @ Run all tests
 test: test_types lint test_size
 
-lint: lint_css lint_es
+t: test
 
 #help: @ Show help for Makefile targets
 help:
