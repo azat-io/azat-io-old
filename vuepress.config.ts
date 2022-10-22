@@ -14,7 +14,6 @@ import { postsPlugin } from 'vuepress-plugin-posts'
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from '@vuepress/cli'
 import mdImageSize from 'markdown-it-imsize'
-import postcssrc from 'postcss-load-config'
 import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 
@@ -25,8 +24,6 @@ let isProd = process.env.NODE_ENV === 'production'
 let __dirname = getDirname(import.meta.url)
 
 let theme = await loadTheme(path.resolve(__dirname, 'layout/gruvbox.json'))
-
-let postcss = await postcssrc()
 
 export default defineUserConfig({
   lang: 'en-US',
@@ -210,9 +207,6 @@ export default defineUserConfig({
           'vuepress-plugin-remove-html-extension',
           'vuepress-plugin-umami-analytics',
         ],
-      },
-      css: {
-        postcss,
       },
       plugins: [
         svgLoader({
