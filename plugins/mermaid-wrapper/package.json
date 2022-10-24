@@ -38,11 +38,11 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.51",
-    "@vuepress/core": "2.0.0-beta.51",
-    "@vuepress/utils": "2.0.0-beta.51",
+    "@vuepress/client": "2.0.0-beta.53",
+    "@vuepress/core": "2.0.0-beta.53",
+    "@vuepress/utils": "2.0.0-beta.53",
     "markdown-it": "13.0.1",
-    "mermaid": "9.2.0-rc7"
+    "mermaid": "9.2.0-rc9"
   },
   "devDependencies": {
     "rimraf": "3.0.2"
