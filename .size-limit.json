@@ -2,7 +2,7 @@
   {
     "name": "Main script",
     "path": ["dist/assets/app.*.js"],
-    "limit": "40 kB",
+    "limit": "50 kB",
     "brotli": true
   },
   {
