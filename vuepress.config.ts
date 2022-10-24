@@ -212,6 +212,19 @@ export default defineUserConfig({
         svgLoader({
           svgo: false,
         }),
+        {
+          name: 'vite:terser',
+          config: () => ({
+            build: {
+              minify: 'terser',
+              terserOptions: {
+                format: {
+                  comments: false,
+                },
+              },
+            },
+          }),
+        },
       ],
     },
   }),
