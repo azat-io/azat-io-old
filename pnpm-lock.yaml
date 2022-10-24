@@ -46,7 +46,7 @@ importers:
       typescript: 4.8.4
       vite-svg-loader: 3.6.0
       vue: 3.2.41
-      vue-router: 4.1.5
+      vue-router: 4.1.6
       vue-tsc: 1.0.9
       vue3-click-away: 1.2.4
       vuepress-plugin-copy-code-button: workspace:*
@@ -81,7 +81,7 @@ importers:
       typescript: 4.8.4
       vite-svg-loader: 3.6.0
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
       vue3-click-away: 1.2.4
       vuepress-plugin-copy-code-button: link:plugins/copy-code-button
       vuepress-plugin-edit-page-link: link:plugins/edit-page-link
@@ -130,14 +130,14 @@ importers:
 
   plugins/edit-page-link:
     specifiers:
-      '@types/node': 18.11.3
+      '@types/node': 18.11.4
       '@vuepress/client': 2.0.0-beta.52
       '@vuepress/core': 2.0.0-beta.52
       '@vuepress/utils': 2.0.0-beta.52
       execa: 6.1.0
       rimraf: 3.0.2
     dependencies:
-      '@types/node': 18.11.3
+      '@types/node': 18.11.4
       '@vuepress/client': 2.0.0-beta.52
       '@vuepress/core': 2.0.0-beta.52
       '@vuepress/utils': 2.0.0-beta.52
@@ -706,7 +706,7 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 18.11.3
+      '@types/node': 18.11.4
     dev: false
 
   /@types/hash-sum/1.0.0:
@@ -758,8 +758,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node/18.11.3:
-    resolution: {integrity: sha512-fNjDQzzOsZeKZu5NATgXUPsaFaTxeRgFXoosrHivTl8RGeV733OLawXsGfEk9a8/tySyZUyiZ6E8LcjPFZ2y1A==}
+  /@types/node/18.11.4:
+    resolution: {integrity: sha512-BxcJpBu8D3kv/GZkx/gSMz6VnTJREBj/4lbzYOQueUOELkt8WrO6zAcSPmp9uRPEW/d+lUO8QK0W2xnS1hEU0A==}
     dev: false
 
   /@types/normalize-package-data/2.4.1:
@@ -773,7 +773,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 18.11.3
+      '@types/node': 17.0.45
     dev: false
 
   /@types/semver/7.3.12:
@@ -1058,7 +1058,7 @@ packages:
       rollup: 2.79.1
       vite: 3.1.8
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
     transitivePeerDependencies:
       - less
       - sass
@@ -1135,7 +1135,7 @@ packages:
       '@vuepress/utils': 2.0.0-beta.52
       ts-debounce: 4.0.0
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1208,7 +1208,7 @@ packages:
       '@vuepress/core': 2.0.0-beta.52
       '@vuepress/utils': 2.0.0-beta.52
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1286,7 +1286,7 @@ packages:
       '@vueuse/core': 9.3.1_vue@3.2.41
       sass: 1.55.0
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
     transitivePeerDependencies:
       - '@vue/composition-api'
       - supports-color
@@ -5678,6 +5678,15 @@ packages:
       vue: 3.2.41
     dev: false
 
+  /vue-router/4.1.6_vue@3.2.41:
+    resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.4.5
+      vue: 3.2.41
+    dev: false
+
   /vue-template-compiler/2.7.13:
     resolution: {integrity: sha512-jYM6TClwDS9YqP48gYrtAtaOhRKkbYmbzE+Q51gX5YDr777n7tNI/IZk4QV4l/PjQPNh/FVa/E92sh/RqKMrog==}
     dependencies:
@@ -5733,7 +5742,7 @@ packages:
       fflate: 0.7.4
       ora: 6.1.2
       vue: 3.2.41
-      vue-router: 4.1.5_vue@3.2.41
+      vue-router: 4.1.6_vue@3.2.41
     transitivePeerDependencies:
       - supports-color
     dev: false
