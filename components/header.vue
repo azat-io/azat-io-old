@@ -1,7 +1,12 @@
 <script lang="ts" setup>
+import {
+  useSiteLocaleData,
+  useRouteLocale,
+  usePageLang,
+} from '@vuepress/client'
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
-import { useSiteLocaleData, useRouteLocale } from '@vuepress/client'
 import { directive as vClickAway } from 'vue3-click-away'
+import { usePost } from 'vuepress-plugin-posts/client'
 import { watchEffect, shallowRef, ref } from 'vue'
 
 import LanguageIcon from '~/icons/language.svg'
@@ -16,8 +21,10 @@ let props = withDefaults(defineProps<Props>(), {
   transparent: false,
 })
 
-let header = shallowRef<HTMLElement>()
 let languageButton = shallowRef<HTMLElement>()
+let header = shallowRef<HTMLElement>()
+let lang = usePageLang()
+let post = usePost()
 
 let data = useSiteLocaleData()
 let route = useRouteLocale()
@@ -58,18 +65,24 @@ let onScroll = () => {
 }
 
 watchEffect(() => {
+  let getLocalePath = (locale: string): string =>
+    post.value.current?.language === lang.value.substring(0, 2)
+      ? post.value.current?.availableLanguages.find(
+          ({ languageCode }) => languageCode === locale,
+        )?.path ?? post.value.current.path
+      : `/${locale}`
   locales.value = [
     {
       code: 'us',
       name: t.value.languages.en,
       originName: 'English',
-      path: '/en',
+      path: getLocalePath('en'),
     },
     {
       code: 'ru',
       name: t.value.languages.ru,
       originName: 'Русский',
-      path: '/ru',
+      path: getLocalePath('ru'),
     },
   ]
 })

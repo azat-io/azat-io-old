@@ -23,10 +23,17 @@ let preparePosts = async (app: App): Promise<void> => {
           ({ slug: currentSlug, path: currentPath }) =>
             currentSlug === slug && path !== currentPath,
         )
-        .map(({ path: languagePagePath, htmlFilePathRelative }) => ({
-          language: ISO6391.getNativeName(getLanguage(htmlFilePathRelative)),
-          path: languagePagePath,
-        })),
+        .map(
+          ({
+            path: languagePagePath,
+            lang: languageFullCode,
+            htmlFilePathRelative,
+          }) => ({
+            language: ISO6391.getNativeName(getLanguage(htmlFilePathRelative)),
+            languageCode: getLanguage(languageFullCode),
+            path: languagePagePath,
+          }),
+        ),
       formattedDate: new Intl.DateTimeFormat(lang, {
         day: 'numeric',
         month: 'long',
@@ -36,6 +43,7 @@ let preparePosts = async (app: App): Promise<void> => {
       language: getLanguage(lang),
       title: frontmatter.title!,
       date: frontmatter.date!,
+      languageCode: lang,
       path,
     }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
