@@ -33,7 +33,7 @@ let t = useThemeLocaleData<{
 }>()
 
 let coffeeCups = computed(() =>
-  Math.ceil((post.value.current.readingTime ?? 0) / 5),
+  Math.ceil((post.value.current?.readingTime ?? 0) / 5),
 )
 </script>
 
@@ -51,7 +51,7 @@ let coffeeCups = computed(() =>
   <Container>
     <h1 :class="$style.title" v-text="pageFrontmatter.title" />
     <div :class="$style.info">
-      <span :class="$style['info-text']" v-text="post.current.formattedDate" />
+      <span :class="$style['info-text']" v-text="post.current?.formattedDate" />
       <span :class="$style['info-text']">
         <CoffeeCupIcon
           v-for="n in coffeeCups"
@@ -62,7 +62,7 @@ let coffeeCups = computed(() =>
           }"
         />
         {{
-          post.current.readingTime &&
+          post.current?.readingTime &&
           `${post.current.readingTime} ${
             t['minutes-to-read'][
               new Intl.PluralRules(lang).select(post.current.readingTime)
@@ -72,7 +72,7 @@ let coffeeCups = computed(() =>
       </span>
     </div>
     <div
-      v-if="post.current.availableLanguages.length"
+      v-if="post.current?.availableLanguages.length"
       :class="$style['available-languages']"
     >
       <h4

@@ -8,15 +8,17 @@ import { getLanguage } from '../shared/index.js'
 
 export interface Post {
   availableLanguages: {
+    languageCode: string
     language: string
     path: string
   }[]
   formattedDate: string
-  date: string
-  language: string
-  path: string
+  languageCode: string
   readingTime: number
+  language: string
   title: string
+  date: string
+  path: string
 }
 
 let postsMap = ref<Post[]>(posts)
@@ -32,9 +34,9 @@ export let usePosts = (): ComputedRef<Post[]> => {
 }
 
 export let usePost = (): ComputedRef<{
-  current: Post
-  previous: Post | undefined
-  next: Post | undefined
+  current?: Post
+  previous?: Post | undefined
+  next?: Post | undefined
 }> => {
   let page = usePageData()
   let postList = usePosts()
