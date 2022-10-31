@@ -42,7 +42,7 @@
     "@vuepress/core": "2.0.0-beta.53",
     "@vuepress/utils": "2.0.0-beta.53",
     "markdown-it": "13.0.1",
-    "mermaid": "9.2.0-rc9"
+    "mermaid": "9.2.0"
   },
   "devDependencies": {
     "rimraf": "3.0.2"
