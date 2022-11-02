@@ -12,7 +12,7 @@ Website loading speed is an important ranking factor in search results and a fac
 
 It is logical, if the user gets mad before he can see the list of products in the online store, who will feel better from this?
 
-There is an opinion that the reaction speed of the average person varies in the range of 200-250 milliseconds. There is even a rather amusing [reaction rate test](<(https://humanbenchmark.com/tests/reactiontime)>) that confirms this.
+There is an opinion that the reaction speed of the average person varies in the range of 200-250 milliseconds. There is even a rather amusing [reaction rate test](https://humanbenchmark.com/tests/reactiontime) that confirms this.
 
 Thus, we can assume that everything that fits into 250 milliseconds is perceived by a person as “instantly”. A few hundred milliseconds is “fast enough”. This is approximately the value that you should strive for if we are talking about page loading speed.
 
