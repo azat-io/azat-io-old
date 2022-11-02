@@ -106,6 +106,19 @@
     "score": 8
   },
   {
+    "name": "Spice and Wolf II",
+    "originName": "Ookami to Koushinryou II",
+    "image": {
+      "avif": "/assets/anime/spice-and-wolf-ii.avif",
+      "webp": "/assets/anime/spice-and-wolf-ii.webp"
+    },
+    "genres": ["adventure", "fantasy", "romance"],
+    "year": 2009,
+    "duration": 24,
+    "episodes": 12,
+    "score": 7
+  },
+  {
     "name": "When the Cicadas Cry",
     "originName": "Higurashi no Naku Koro ni",
     "image": {
