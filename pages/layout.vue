@@ -81,7 +81,7 @@ let coffeeCups = computed(() =>
       v-if="post.current?.availableLanguages.length"
       :class="$style['available-languages']"
     >
-      <h4
+      <p
         :class="$style['available-languages-title']"
         v-text="t['also-translated']"
       />
@@ -113,13 +113,13 @@ let coffeeCups = computed(() =>
       }"
     >
       <div v-if="post.previous" :class="$style['post-previous']">
-        <h5 :class="$style['post-title']" v-text="t['previous-post']" />
+        <p :class="$style['post-title']" v-text="t['previous-post']" />
         <RouterLink :class="$style['post-link']" :to="post.previous.path">
           {{ post.previous.title }}
         </RouterLink>
       </div>
       <div v-if="post.next" :class="$style['post-next']">
-        <h5 :class="$style['post-title']" v-text="t['next-post']" />
+        <p :class="$style['post-title']" v-text="t['next-post']" />
         <RouterLink :class="$style['post-link']" :to="post.next.path">
           {{ post.next.title }}
         </RouterLink>
