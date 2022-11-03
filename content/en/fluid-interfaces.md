@@ -3,9 +3,9 @@ title: Fluid interfaces
 description: Using the CSS сlamp() Function to create fluid interfaces
 date: 2022-08-18
 hero:
-  avif: /assets/fluid-interfaces.avif
-  webp: /assets/fluid-interfaces.webp
-image: /assets/fluid-interfaces-preview.png
+  avif: /posts/fluid-interfaces.avif
+  webp: /posts/fluid-interfaces.webp
+image: /posts/fluid-interfaces-preview.png
 ---
 
 Ohayo, as they say!
@@ -88,7 +88,7 @@ But perhaps the most efficient way is the clamp() function, which is designed to
 
 All that remains for us is to find the preferred value for the font size. To do this, we will need to perform several non-trivial operations.
 
-![clamp function graph](/assets/fluid-interfaces-01.webp)
+![clamp function graph](/posts/fluid-interfaces-01.webp)
 
 So, we have a coordinate plane, the X-axis is the width of the browser window, and the Y-axis is the CSS property values. We need to find the point where the graph of the function intersects the Y-axis. As we remember from the boring geometry lessons at school, it is done according to the angular coefficient.
 
@@ -106,7 +106,7 @@ The preferred font size value would be the Y-intercept + (slope \* 100)vw.
 
 ## PostCSS plugin
 
-![postcss-responsive >](/assets/fluid-interfaces-02.webp =176x220)
+![postcss-responsive >](/posts/fluid-interfaces-02.webp =176x220)
 
 All this math seems to be unnecessarily tedious, especially when it comes to developing a large web application or an entire design system. Therefore, for the audience's titillation, I filed the corresponding plugin [postcss-responsive](https://github.com/azat-io/postcss-responsive).
 

@@ -73,7 +73,7 @@ export let openGraphPlugin =
       } else {
         head.push([
           'meta',
-          { name: 'twitter:image', content: '/assets/hero-preview.png' },
+          { name: 'twitter:image', content: '/hero-preview.png' },
         ])
       }
       head.push(['meta', { name: 'twitter:card', content: twitterCard }])

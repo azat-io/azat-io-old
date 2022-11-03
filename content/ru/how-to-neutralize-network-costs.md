@@ -3,9 +3,9 @@ title: Нейтрализуем издержки сетей
 description: Как уменьшить влияние сетей на скорость загрузки сайтов
 date: 2022-10-05
 hero:
-  avif: /assets/how-to-neutralize-network-costs.avif
-  webp: /assets/how-to-neutralize-network-costs.webp
-image: /assets/how-to-neutralize-network-costs-preview.png
+  avif: /posts/how-to-neutralize-network-costs.avif
+  webp: /posts/how-to-neutralize-network-costs.webp
+image: /posts/how-to-neutralize-network-costs-preview.png
 ---
 
 Скорость загрузки сайта – важный фактор ранжирования в поисковой выдаче и фактор восприятия его пользователем. Считается, что время загрузки сайта напрямую влияет на его конверсию.
@@ -148,7 +148,7 @@ Cumulative Layout Shift – смещение макета из-за асинхр
 
 Для уменьшения объёмов передаваемых данных следует использовать различные алгоритмы сжатия данных, такие как Brotli и Gzip.
 
-**![Принцип работы CDN](/assets/how-to-neutralize-network-costs-01.webp)**
+**![Принцип работы CDN](/posts/how-to-neutralize-network-costs-01.webp)**
 
 Важно не забывать, что чем дальше анон находится от сервера, тем дольше идёт его запрос. Проблема эта вытекает из того, что при использовании TCP/IP задержки зависят от количества маршрутов между клиентом и сервером. Эту проблему решают сервисы доставки содержимого (CDN). Это географически распределённые сервера, которые обслуживают статику. Отсюда следует, что размещение контента на нескольких серваках сокращает сетевой маршрут передачи данных.
 

@@ -3,8 +3,8 @@
     "name": "Neon Genesis Evangelion",
     "originName": "Shinseiki Evangelion",
     "image": {
-      "avif": "/assets/anime/neon-genesis-evangelion.avif",
-      "webp": "/assets/anime/neon-genesis-evangelion.webp"
+      "avif": "/anime/neon-genesis-evangelion.avif",
+      "webp": "/anime/neon-genesis-evangelion.webp"
     },
     "genres": [
       "action",
@@ -23,8 +23,8 @@
     "name": "Howl’s Moving Castle",
     "originName": "Howl no Ugoku Shiro",
     "image": {
-      "avif": "/assets/anime/howl-s-moving-castle.avif",
-      "webp": "/assets/anime/howl-s-moving-castle.webp"
+      "avif": "/anime/howl-s-moving-castle.avif",
+      "webp": "/anime/howl-s-moving-castle.webp"
     },
     "genres": ["adventure", "drama", "fantasy", "romance"],
     "year": 2004,
@@ -36,8 +36,8 @@
     "name": "Spirited Away",
     "originName": "Sen to Chihiro no Kamikakushi",
     "image": {
-      "avif": "/assets/anime/spirited-away.avif",
-      "webp": "/assets/anime/spirited-away.webp"
+      "avif": "/anime/spirited-away.avif",
+      "webp": "/anime/spirited-away.webp"
     },
     "genres": ["adventure", "drama", "fantasy", "romance", "supernatural"],
     "year": 2001,
@@ -49,8 +49,8 @@
     "name": "Elfen Lied",
     "originName": "Elfen Lied",
     "image": {
-      "avif": "/assets/anime/elfen-lied.avif",
-      "webp": "/assets/anime/elfen-lied.webp"
+      "avif": "/anime/elfen-lied.avif",
+      "webp": "/anime/elfen-lied.webp"
     },
     "genres": [
       "action",
@@ -70,8 +70,8 @@
     "name": "Welcome to the NHK",
     "originName": "NHK ni Youkoso!",
     "image": {
-      "avif": "/assets/anime/welcome-to-nhk.avif",
-      "webp": "/assets/anime/welcome-to-nhk.webp"
+      "avif": "/anime/welcome-to-nhk.avif",
+      "webp": "/anime/welcome-to-nhk.webp"
     },
     "genres": ["comedy", "drama", "psychological", "romance", "slice-of-life"],
     "year": 2006,
@@ -83,8 +83,8 @@
     "name": "Rumbling Hearts",
     "originName": "Kimi ga Nozomu Eien",
     "image": {
-      "avif": "/assets/anime/rumbling-hearts.avif",
-      "webp": "/assets/anime/rumbling-hearts.webp"
+      "avif": "/anime/rumbling-hearts.avif",
+      "webp": "/anime/rumbling-hearts.webp"
     },
     "genres": ["drama", "romance", "slice-of-life"],
     "year": 2003,
@@ -96,8 +96,8 @@
     "name": "Spice and Wolf",
     "originName": "Ookami to Koushinryou",
     "image": {
-      "avif": "/assets/anime/spice-and-wolf.avif",
-      "webp": "/assets/anime/spice-and-wolf.webp"
+      "avif": "/anime/spice-and-wolf.avif",
+      "webp": "/anime/spice-and-wolf.webp"
     },
     "genres": ["adventure", "fantasy", "romance"],
     "year": 2008,
@@ -109,8 +109,8 @@
     "name": "Spice and Wolf II",
     "originName": "Ookami to Koushinryou II",
     "image": {
-      "avif": "/assets/anime/spice-and-wolf-ii.avif",
-      "webp": "/assets/anime/spice-and-wolf-ii.webp"
+      "avif": "/anime/spice-and-wolf-ii.avif",
+      "webp": "/anime/spice-and-wolf-ii.webp"
     },
     "genres": ["adventure", "fantasy", "romance"],
     "year": 2009,
@@ -122,8 +122,8 @@
     "name": "When the Cicadas Cry",
     "originName": "Higurashi no Naku Koro ni",
     "image": {
-      "avif": "/assets/anime/when-the-cicadas-cry.avif",
-      "webp": "/assets/anime/when-the-cicadas-cry.webp"
+      "avif": "/anime/when-the-cicadas-cry.avif",
+      "webp": "/anime/when-the-cicadas-cry.webp"
     },
     "genres": [
       "horror",
@@ -141,8 +141,8 @@
     "name": "Black Butler",
     "originName": "Kuroshitsuji",
     "image": {
-      "avif": "/assets/anime/black-butler.avif",
-      "webp": "/assets/anime/black-butler.webp"
+      "avif": "/anime/black-butler.avif",
+      "webp": "/anime/black-butler.webp"
     },
     "genres": ["action", "comedy", "fantasy", "mystery", "supernatural"],
     "year": 2008,
@@ -154,8 +154,8 @@
     "name": "Black Butler II",
     "originName": "Kuroshitsuji II",
     "image": {
-      "avif": "/assets/anime/black-butler-ii.avif",
-      "webp": "/assets/anime/black-butler-ii.webp"
+      "avif": "/anime/black-butler-ii.avif",
+      "webp": "/anime/black-butler-ii.webp"
     },
     "genres": ["action", "comedy", "fantasy", "mystery", "supernatural"],
     "year": 2010,
@@ -167,8 +167,8 @@
     "name": "Charcoal Feather Federation",
     "originName": "Haibane Renmei",
     "image": {
-      "avif": "/assets/anime/charcoal-feather-federation.avif",
-      "webp": "/assets/anime/charcoal-feather-federation.webp"
+      "avif": "/anime/charcoal-feather-federation.avif",
+      "webp": "/anime/charcoal-feather-federation.webp"
     },
     "genres": ["drama", "fantasy", "mystery", "psychological", "slice-of-life"],
     "year": 2002,
@@ -180,8 +180,8 @@
     "name": "Paranoia Agent",
     "originName": "Mousou Dairinin",
     "image": {
-      "avif": "/assets/anime/paranoia-agent.avif",
-      "webp": "/assets/anime/paranoia-agent.webp"
+      "avif": "/anime/paranoia-agent.avif",
+      "webp": "/anime/paranoia-agent.webp"
     },
     "genres": ["drama", "mystery", "psychological", "supernatural", "thriller"],
     "year": 2004,
@@ -193,8 +193,8 @@
     "name": "Mushi-Shi",
     "originName": "Mushishi",
     "image": {
-      "avif": "/assets/anime/mushi-shi.avif",
-      "webp": "/assets/anime/mushi-shi.webp"
+      "avif": "/anime/mushi-shi.avif",
+      "webp": "/anime/mushi-shi.webp"
     },
     "genres": [
       "adventure",
@@ -213,8 +213,8 @@
     "name": "Fullmetal Alchemist",
     "originName": "Hagane no Renkinjutsushi",
     "image": {
-      "avif": "/assets/anime/fullmetal-alchemist.avif",
-      "webp": "/assets/anime/fullmetal-alchemist.webp"
+      "avif": "/anime/fullmetal-alchemist.avif",
+      "webp": "/anime/fullmetal-alchemist.webp"
     },
     "genres": ["action", "adventure", "drama", "fantasy"],
     "year": 2003,
@@ -226,8 +226,8 @@
     "name": "Sky",
     "originName": "Sola",
     "image": {
-      "avif": "/assets/anime/sky.avif",
-      "webp": "/assets/anime/sky.webp"
+      "avif": "/anime/sky.avif",
+      "webp": "/anime/sky.webp"
     },
     "genres": ["drama", "romance", "slice-of-life", "supernatural"],
     "year": 2007,
@@ -239,8 +239,8 @@
     "name": "The Girl Who Leapt Through Time",
     "originName": "Toki wo Kakeru Shoujo",
     "image": {
-      "avif": "/assets/anime/the-girl-who-leapt-through-time.avif",
-      "webp": "/assets/anime/the-girl-who-leapt-through-time.webp"
+      "avif": "/anime/the-girl-who-leapt-through-time.avif",
+      "webp": "/anime/the-girl-who-leapt-through-time.webp"
     },
     "genres": ["drama", "romance", "sci-fi"],
     "year": 2006,
@@ -252,8 +252,8 @@
     "name": "The Melancholy of Haruhi Suzumiya",
     "originName": "Suzumiya Haruhi no Yuuutsu",
     "image": {
-      "avif": "/assets/anime/the-melancholy-of-haruhi-suzumiya.avif",
-      "webp": "/assets/anime/the-melancholy-of-haruhi-suzumiya.webp"
+      "avif": "/anime/the-melancholy-of-haruhi-suzumiya.avif",
+      "webp": "/anime/the-melancholy-of-haruhi-suzumiya.webp"
     },
     "genres": ["comedy", "mystery", "sci-fi", "slice-of-life", "supernatural"],
     "year": 2006,
@@ -265,8 +265,8 @@
     "name": "La Maison en Petits Cubes",
     "originName": "Tsumiki no Ie",
     "image": {
-      "avif": "/assets/anime/la-maison-en-petits-cubes.avif",
-      "webp": "/assets/anime/la-maison-en-petits-cubes.webp"
+      "avif": "/anime/la-maison-en-petits-cubes.avif",
+      "webp": "/anime/la-maison-en-petits-cubes.webp"
     },
     "genres": ["drama"],
     "year": 2008,
@@ -278,8 +278,8 @@
     "name": "My Neighbor Totoro",
     "originName": "Tonari no Totoro",
     "image": {
-      "avif": "/assets/anime/my-neighbor-totoro.avif",
-      "webp": "/assets/anime/my-neighbor-totoro.webp"
+      "avif": "/anime/my-neighbor-totoro.avif",
+      "webp": "/anime/my-neighbor-totoro.webp"
     },
     "genres": ["adventure", "fantasy", "slice-of-life", "supernatural"],
     "year": 1988,
@@ -291,8 +291,8 @@
     "name": "5 Centimeters Per Second",
     "originName": "Byousoku 5 Centimeter",
     "image": {
-      "avif": "/assets/anime/5-centimeters-per-second.avif",
-      "webp": "/assets/anime/5-centimeters-per-second.webp"
+      "avif": "/anime/5-centimeters-per-second.avif",
+      "webp": "/anime/5-centimeters-per-second.webp"
     },
     "genres": ["drama", "romance", "slice-of-life"],
     "year": 2007,
@@ -304,8 +304,8 @@
     "name": "Grave of the Fireflies",
     "originName": "Hotaru no Haka",
     "image": {
-      "avif": "/assets/anime/grave-of-the-fireflies.avif",
-      "webp": "/assets/anime/grave-of-the-fireflies.webp"
+      "avif": "/anime/grave-of-the-fireflies.avif",
+      "webp": "/anime/grave-of-the-fireflies.webp"
     },
     "genres": ["drama"],
     "year": 1988,
@@ -317,8 +317,8 @@
     "name": "Attack on Titan",
     "originName": "Shingeki no Kyojin",
     "image": {
-      "avif": "/assets/anime/attack-on-titan.avif",
-      "webp": "/assets/anime/attack-on-titan.webp"
+      "avif": "/anime/attack-on-titan.avif",
+      "webp": "/anime/attack-on-titan.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2013,
@@ -330,8 +330,8 @@
     "name": "Attack on Titan 2",
     "originName": "Shingeki no Kyojin 2",
     "image": {
-      "avif": "/assets/anime/attack-on-titan-2.avif",
-      "webp": "/assets/anime/attack-on-titan-2.webp"
+      "avif": "/anime/attack-on-titan-2.avif",
+      "webp": "/anime/attack-on-titan-2.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2017,
@@ -343,8 +343,8 @@
     "name": "Attack on Titan 3",
     "originName": "Shingeki no Kyojin 3",
     "image": {
-      "avif": "/assets/anime/attack-on-titan-3.avif",
-      "webp": "/assets/anime/attack-on-titan-3.webp"
+      "avif": "/anime/attack-on-titan-3.avif",
+      "webp": "/anime/attack-on-titan-3.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2018,
@@ -356,8 +356,8 @@
     "name": "Attack on Titan 3 Part 2",
     "originName": "Shingeki no Kyojin 3 Part 2",
     "image": {
-      "avif": "/assets/anime/attack-on-titan-3-part-2.avif",
-      "webp": "/assets/anime/attack-on-titan-3-part-2.webp"
+      "avif": "/anime/attack-on-titan-3-part-2.avif",
+      "webp": "/anime/attack-on-titan-3-part-2.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2019,
@@ -369,8 +369,8 @@
     "name": "Attack on Titan: The Final Season",
     "originName": "Shingeki no Kyojin: The Final Season",
     "image": {
-      "avif": "/assets/anime/attack-on-titan-the-final-season.avif",
-      "webp": "/assets/anime/attack-on-titan-the-final-season.webp"
+      "avif": "/anime/attack-on-titan-the-final-season.avif",
+      "webp": "/anime/attack-on-titan-the-final-season.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2020,
@@ -382,8 +382,8 @@
     "name": "Attack on Titan: The Final Season Part 2",
     "originName": "Shingeki no Kyojin: The Final Season Part 2",
     "image": {
-      "avif": "/assets/anime/attack-on-titan-the-final-season-part-2.avif",
-      "webp": "/assets/anime/attack-on-titan-the-final-season-part-2.webp"
+      "avif": "/anime/attack-on-titan-the-final-season-part-2.avif",
+      "webp": "/anime/attack-on-titan-the-final-season-part-2.webp"
     },
     "genres": ["action", "drama", "fantasy", "mystery"],
     "year": 2022,
@@ -395,8 +395,8 @@
     "name": "Weathering with You",
     "originName": "Tenki no Ko",
     "image": {
-      "avif": "/assets/anime/weathering-with-you.avif",
-      "webp": "/assets/anime/weathering-with-you.webp"
+      "avif": "/anime/weathering-with-you.avif",
+      "webp": "/anime/weathering-with-you.webp"
     },
     "genres": ["drama", "romance", "slice-of-life", "supernatural"],
     "year": 2019,
@@ -408,8 +408,8 @@
     "name": "Kiki's Delivery Service",
     "originName": "Majo no Takkyuubin",
     "image": {
-      "avif": "/assets/anime/kiki-s-delivery-service.avif",
-      "webp": "/assets/anime/kiki-s-delivery-service.webp"
+      "avif": "/anime/kiki-s-delivery-service.avif",
+      "webp": "/anime/kiki-s-delivery-service.webp"
     },
     "genres": ["adventure", "comedy", "drama", "fantasy", "slice-of-life"],
     "year": 1989,
@@ -421,8 +421,8 @@
     "name": "Dororo",
     "originName": "Dororo",
     "image": {
-      "avif": "/assets/anime/dororo.avif",
-      "webp": "/assets/anime/dororo.webp"
+      "avif": "/anime/dororo.avif",
+      "webp": "/anime/dororo.webp"
     },
     "genres": ["action", "adventure", "drama", "supernatural"],
     "year": 2019,
@@ -434,8 +434,8 @@
     "name": "Demon Slayer",
     "originName": "Kimetsu no Yaiba",
     "image": {
-      "avif": "/assets/anime/demon-slayer.avif",
-      "webp": "/assets/anime/demon-slayer.webp"
+      "avif": "/anime/demon-slayer.avif",
+      "webp": "/anime/demon-slayer.webp"
     },
     "genres": ["action", "adventure", "drama", "fantasy", "supernatural"],
     "year": 2019,
@@ -447,8 +447,8 @@
     "name": "Demon Slayer: Mugen Train",
     "originName": "Kimetsu no Yaiba: Mugen Ressha-hen",
     "image": {
-      "avif": "/assets/anime/demon-slayer-mugen-train.avif",
-      "webp": "/assets/anime/demon-slayer-mugen-train.webp"
+      "avif": "/anime/demon-slayer-mugen-train.avif",
+      "webp": "/anime/demon-slayer-mugen-train.webp"
     },
     "genres": [
       "action",
@@ -467,8 +467,8 @@
     "name": "Demon Slayer: Entertainment District Arc",
     "originName": "Kimetsu no Yaiba: Yuukaku-hen",
     "image": {
-      "avif": "/assets/anime/demon-slayer-entertainment-district-arc.avif",
-      "webp": "/assets/anime/demon-slayer-entertainment-district-arc.webp"
+      "avif": "/anime/demon-slayer-entertainment-district-arc.avif",
+      "webp": "/anime/demon-slayer-entertainment-district-arc.webp"
     },
     "genres": ["action", "adventure", "drama", "fantasy", "supernatural"],
     "year": 2021,
@@ -480,8 +480,8 @@
     "name": "Psycho-Pass",
     "originName": "Psycho-Pass",
     "image": {
-      "avif": "/assets/anime/psycho-pass.avif",
-      "webp": "/assets/anime/psycho-pass.webp"
+      "avif": "/anime/psycho-pass.avif",
+      "webp": "/anime/psycho-pass.webp"
     },
     "genres": ["action", "psychological", "sci-fi", "thriller"],
     "year": 2012,
@@ -493,8 +493,8 @@
     "name": "Death Note",
     "originName": "Death Note",
     "image": {
-      "avif": "/assets/anime/death-note.avif",
-      "webp": "/assets/anime/death-note.webp"
+      "avif": "/anime/death-note.avif",
+      "webp": "/anime/death-note.webp"
     },
     "genres": ["mystery", "psychological", "supernatural", "thriller"],
     "year": 2006,
@@ -506,8 +506,8 @@
     "name": "Parasyte: The Maxim",
     "originName": "Kiseijuu: Sei no Kakuritsu",
     "image": {
-      "avif": "/assets/anime/parasyte-the-maxim.avif",
-      "webp": "/assets/anime/parasyte-the-maxim.webp"
+      "avif": "/anime/parasyte-the-maxim.avif",
+      "webp": "/anime/parasyte-the-maxim.webp"
     },
     "genres": ["action", "drama", "horror", "psychological", "sci-fi"],
     "year": 2014,
@@ -519,8 +519,8 @@
     "name": "Made in Abyss",
     "originName": "Made in Abyss",
     "image": {
-      "avif": "/assets/anime/made-in-abyss.avif",
-      "webp": "/assets/anime/made-in-abyss.webp"
+      "avif": "/anime/made-in-abyss.avif",
+      "webp": "/anime/made-in-abyss.webp"
     },
     "genres": ["adventure", "drama", "fantasy", "horror", "mystery", "sci-fi"],
     "year": 2017,
@@ -532,8 +532,8 @@
     "name": "Made in Abyss: Dawn of the Deep Soul",
     "originName": "Made in Abyss: Fukaki Tamashii no Reimei",
     "image": {
-      "avif": "/assets/anime/made-in-abyss-dawn-of-the-deep-soul.avif",
-      "webp": "/assets/anime/made-in-abyss-dawn-of-the-deep-soul.webp"
+      "avif": "/anime/made-in-abyss-dawn-of-the-deep-soul.avif",
+      "webp": "/anime/made-in-abyss-dawn-of-the-deep-soul.webp"
     },
     "genres": [
       "action",
@@ -554,8 +554,8 @@
     "name": "Made in Abyss: The Golden City of the Scorching Sun",
     "originName": "Made in Abyss: Retsujitsu no Ougonkyou",
     "image": {
-      "avif": "/assets/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.avif",
-      "webp": "/assets/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.webp"
+      "avif": "/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.avif",
+      "webp": "/anime/made-in-abyss-the-golden-city-of-the-scorching-sun.webp"
     },
     "genres": ["adventure", "drama", "fantasy", "horror", "mystery", "sci-fi"],
     "year": 2022,
@@ -567,8 +567,8 @@
     "name": "Tokyo Godfathers",
     "originName": "Tokyo Godfathers",
     "image": {
-      "avif": "/assets/anime/tokyo-godfathers.avif",
-      "webp": "/assets/anime/tokyo-godfathers.webp"
+      "avif": "/anime/tokyo-godfathers.avif",
+      "webp": "/anime/tokyo-godfathers.webp"
     },
     "genres": ["comedy", "drama"],
     "year": 2003,
@@ -580,8 +580,8 @@
     "name": "Paprika",
     "originName": "Paprika",
     "image": {
-      "avif": "/assets/anime/paprika.avif",
-      "webp": "/assets/anime/paprika.webp"
+      "avif": "/anime/paprika.avif",
+      "webp": "/anime/paprika.webp"
     },
     "genres": ["fantasy", "mystery", "psychological", "sci-fi", "thriller"],
     "year": 2006,
@@ -593,8 +593,8 @@
     "name": "Giovanni's Island",
     "originName": "Giovanni no Shima",
     "image": {
-      "avif": "/assets/anime/giovanni-s-island.avif",
-      "webp": "/assets/anime/giovanni-s-island.webp"
+      "avif": "/anime/giovanni-s-island.avif",
+      "webp": "/anime/giovanni-s-island.webp"
     },
     "genres": ["drama"],
     "year": 2014,
@@ -606,8 +606,8 @@
     "name": "Cowboy Bebop",
     "originName": "Cowboy Bebop",
     "image": {
-      "avif": "/assets/anime/cowboy-bebop.avif",
-      "webp": "/assets/anime/cowboy-bebop.webp"
+      "avif": "/anime/cowboy-bebop.avif",
+      "webp": "/anime/cowboy-bebop.webp"
     },
     "genres": ["action", "adventure", "drama", "sci-fi"],
     "year": 1998,
@@ -619,8 +619,8 @@
     "name": "Cyberpunk: Edgerunners",
     "originName": "Cyberpunk: Edgerunners",
     "image": {
-      "avif": "/assets/anime/cyberpunk-edgerunners.avif",
-      "webp": "/assets/anime/cyberpunk-edgerunners.webp"
+      "avif": "/anime/cyberpunk-edgerunners.avif",
+      "webp": "/anime/cyberpunk-edgerunners.webp"
     },
     "genres": ["action", "drama", "psychological", "sci-fi"],
     "year": 2022,
@@ -632,8 +632,8 @@
     "name": "Odd Taxi",
     "originName": "Odd Taxi",
     "image": {
-      "avif": "/assets/anime/odd-taxi.avif",
-      "webp": "/assets/anime/odd-taxi.webp"
+      "avif": "/anime/odd-taxi.avif",
+      "webp": "/anime/odd-taxi.webp"
     },
     "genres": ["drama", "mystery", "psychological"],
     "year": 2021,
@@ -645,8 +645,8 @@
     "name": "Girls' Last Tour",
     "originName": "Shoujo Shuumatsu Ryokou",
     "image": {
-      "avif": "/assets/anime/girls-last-tour.avif",
-      "webp": "/assets/anime/girls-last-tour.webp"
+      "avif": "/anime/girls-last-tour.avif",
+      "webp": "/anime/girls-last-tour.webp"
     },
     "genres": ["adventure", "sci-fi", "slice-of-life"],
     "year": 2017,
@@ -658,8 +658,8 @@
     "name": "Godzilla: Singular Point",
     "originName": "Godzilla: Singular Point",
     "image": {
-      "avif": "/assets/anime/godzilla-singular-point.avif",
-      "webp": "/assets/anime/godzilla-singular-point.webp"
+      "avif": "/anime/godzilla-singular-point.avif",
+      "webp": "/anime/godzilla-singular-point.webp"
     },
     "genres": ["action", "mecha", "mystery", "sci-fi"],
     "year": 2021,
@@ -671,8 +671,8 @@
     "name": "A Silent Voice",
     "originName": "Koe no Katachi",
     "image": {
-      "avif": "/assets/anime/a-silent-voice.avif",
-      "webp": "/assets/anime/a-silent-voice.webp"
+      "avif": "/anime/a-silent-voice.avif",
+      "webp": "/anime/a-silent-voice.webp"
     },
     "genres": ["drama", "romance", "slice-of-life"],
     "year": 2016,
@@ -684,8 +684,8 @@
     "name": "Prison School",
     "originName": "Kangoku Gakuen",
     "image": {
-      "avif": "/assets/anime/prison-school.avif",
-      "webp": "/assets/anime/prison-school.webp"
+      "avif": "/anime/prison-school.avif",
+      "webp": "/anime/prison-school.webp"
     },
     "genres": ["comedy", "ecchi"],
     "year": 2015,
@@ -697,8 +697,8 @@
     "name": "One-Punch Man",
     "originName": "One Punch Man",
     "image": {
-      "avif": "/assets/anime/one-punch-man.avif",
-      "webp": "/assets/anime/one-punch-man.webp"
+      "avif": "/anime/one-punch-man.avif",
+      "webp": "/anime/one-punch-man.webp"
     },
     "genres": ["action", "comedy", "sci-fi", "supernatural"],
     "year": 2015,
@@ -710,8 +710,8 @@
     "name": "One-Punch Man 2",
     "originName": "One Punch Man 2",
     "image": {
-      "avif": "/assets/anime/one-punch-man-2.avif",
-      "webp": "/assets/anime/one-punch-man-2.webp"
+      "avif": "/anime/one-punch-man-2.avif",
+      "webp": "/anime/one-punch-man-2.webp"
     },
     "genres": ["action", "comedy", "sci-fi", "supernatural"],
     "year": 2019,
@@ -723,8 +723,8 @@
     "name": "Tekkonkinkreet",
     "originName": "Tekkon Kinkreet",
     "image": {
-      "avif": "/assets/anime/tekkonkinkreet.avif",
-      "webp": "/assets/anime/tekkonkinkreet.webp"
+      "avif": "/anime/tekkonkinkreet.avif",
+      "webp": "/anime/tekkonkinkreet.webp"
     },
     "genres": ["action", "psychological", "supernatural"],
     "year": 2006,

@@ -13,12 +13,12 @@ let t = useThemeLocaleData<{
   <div :class="$style.hero">
     <img
       :class="[$style.content, $style.image]"
-      src="/assets/hero.webp"
+      src="/hero.webp"
       alt="Azat S."
     />
     <video
       :class="[$style.content, $style.video]"
-      poster="/assets/hero.webp"
+      poster="/hero.webp"
       :width="1280"
       :height="720"
       tabindex="-1"
@@ -27,8 +27,8 @@ let t = useThemeLocaleData<{
       muted
       loop
     >
-      <source src="/assets/hero.mp4" type="video/mp4" />
-      <img src="/assets/hero.webp" alt="Azat S." />
+      <source src="/hero.mp4" type="video/mp4" />
+      <img src="/hero.webp" alt="Azat S." />
     </video>
     <div :class="$style.paranja" />
     <div :class="$style.greeting">

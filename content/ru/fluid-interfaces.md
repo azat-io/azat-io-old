@@ -3,9 +3,9 @@ title: Резиновые интерфейсы
 description: Используем CSS-функцию clamp() для создания резиновых интерфейсов
 date: 2022-08-18
 hero:
-  avif: /assets/fluid-interfaces.avif
-  webp: /assets/fluid-interfaces.webp
-image: /assets/fluid-interfaces-preview.png
+  avif: /posts/fluid-interfaces.avif
+  webp: /posts/fluid-interfaces.webp
+image: /posts/fluid-interfaces-preview.png
 ---
 
 Охаё, как говорится.
@@ -90,7 +90,7 @@ image: /assets/fluid-interfaces-preview.png
 
 Всё, что нам остаётся - это найти предпочитаемое значение размера шрифта. Для этого нам будет необходимо выполнить ряд возможно нетривиальных операций.
 
-![График функции clamp](/assets/fluid-interfaces-01.webp)
+![График функции clamp](/posts/fluid-interfaces-01.webp)
 
 Итак, у нас есть координатная плоскость, по оси X расположены величины ширины окна браузера, а по оси Y значения CSS свойств. Нам нужно найти точку, в которой график функции пересекает ось ординат. Как мы помним из занудных уроков геометрии в школе, делается по угловому коэффициенту.
 
@@ -108,7 +108,7 @@ image: /assets/fluid-interfaces-preview.png
 
 ## PostCSS плагин
 
-![postcss-responsive >](/assets/fluid-interfaces-02.webp =176x220)
+![postcss-responsive >](/posts/fluid-interfaces-02.webp =176x220)
 
 Вся эта математика кажется излишне утомительной, особенно если речь идёт о разработке большого веб-приложения или целой дизайн-системы. Посему на потеху публике я запилил соответствующий плагин [postcss-responsive](https://github.com/azat-io/postcss-responsive).
 
