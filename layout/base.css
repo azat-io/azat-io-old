@@ -27,7 +27,7 @@ body {
 }
 
 button {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 button,
