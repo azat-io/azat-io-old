@@ -47,6 +47,8 @@ let coffeeCups = computed(() =>
           :class="$style.image"
           :src="pageFrontmatter.hero.webp"
           :alt="pageFrontmatter.title"
+          width="1512"
+          height="720"
           draggable="false"
         />
       </picture>
