@@ -39,15 +39,19 @@ let coffeeCups = computed(() =>
 
 <template>
   <Header />
-  <picture v-if="pageFrontmatter.hero" :class="$style.hero">
-    <source type="image/avif" :srcSet="pageFrontmatter.hero.avif" />
-    <img
-      :class="$style['hero-image']"
-      :src="pageFrontmatter.hero.webp"
-      :alt="pageFrontmatter.title"
-      draggable="false"
-    />
-  </picture>
+  <div :class="$style.hero">
+    <Container :class="$style.container">
+      <picture v-if="pageFrontmatter.hero">
+        <source type="image/avif" :srcSet="pageFrontmatter.hero.avif" />
+        <img
+          :class="$style.image"
+          :src="pageFrontmatter.hero.webp"
+          :alt="pageFrontmatter.title"
+          draggable="false"
+        />
+      </picture>
+    </Container>
+  </div>
   <Container>
     <h1 :class="$style.title" v-text="pageFrontmatter.title" />
     <div :class="$style.info">
@@ -125,17 +129,19 @@ let coffeeCups = computed(() =>
 
 <style module>
 .hero {
-  display: block;
-  height: clamp(20rem, 17rem + 10vw, 25rem);
-  user-select: none;
-  background: oklch(76.69% 0.016 90);
+  background: oklch(75.7% 0.016 77.04);
 }
 
-.hero-image {
-  object-fit: cover;
-  object-position: center center;
+.container {
+  display: flex;
+  min-height: clamp(11.5625rem, 0.3226rem + 47.957vw, 25.5rem);
+  padding: 0;
+}
+
+.image {
   width: 100%;
   height: 100%;
+  user-select: none;
 }
 
 .title {
