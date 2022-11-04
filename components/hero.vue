@@ -18,18 +18,24 @@ let t = useThemeLocaleData<{
     />
     <video
       :class="[$style.content, $style.video]"
-      poster="/hero.webp"
-      :width="1280"
-      :height="720"
+      poster="/hero-poster.webp"
+      width="1280"
+      height="720"
       tabindex="-1"
       playsinline
       autoplay
       muted
       loop
     >
-      <source src="/hero.mp4" type="video/mp4" />
-      <img src="/hero.webp" alt="Azat S." />
+      <source src="/hero.av1.mp4" type="video/mp4; codecs=av01.0.05M.08,opus" />
+      <source src="/hero.hevc.mp4" type="video/mp4; codecs=hvc1" />
+      <source
+        src="/hero.h264.mp4"
+        type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"
+      />
+      <img src="/hero-poster.webp" loading="lazy" alt="Azat S." />
     </video>
+
     <div :class="$style.paranja" />
     <div :class="$style.greeting">
       <Container>

@@ -17,7 +17,19 @@
   cache-control: max-age=31536000
   cache-control: immutable
 
-/hero.mp4
+/hero.av1.mp4
+  cache-control: max-age=31536000
+  cache-control: immutable
+
+/hero.h264.mp4
+  cache-control: max-age=31536000
+  cache-control: immutable
+
+/hero.hevc.mp4
+  cache-control: max-age=31536000
+  cache-control: immutable
+
+/hero-poster.webp
   cache-control: max-age=31536000
   cache-control: immutable
 
