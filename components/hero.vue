@@ -48,7 +48,7 @@ let t = useThemeLocaleData<{
 .paranja {
   position: absolute;
   inset: 0;
-  background: oklch(12% 0 0 / 40%);
+  background: oklch(12% 0 0 / 60%);
 }
 
 .greeting {
