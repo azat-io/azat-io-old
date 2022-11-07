@@ -1,10 +1,8 @@
 import { defineClientConfig } from '@vuepress/client'
+import { defineAsyncComponent } from 'vue'
 
-import TravelMap from '~/pages/travel-map.vue'
 import NotFound from '~/pages/not-found.vue'
-import Timeline from '~/pages/timeline.vue'
 import Layout from '~/pages/layout.vue'
-import Anime from '~/pages/anime.vue'
 import Root from '~/pages/root.vue'
 import Home from '~/pages/home.vue'
 import '~/layout/colors.css'
@@ -18,9 +16,9 @@ export default defineClientConfig({
     NotFound,
     Layout,
 
-    'travel-map': TravelMap,
-    timeline: Timeline,
-    anime: Anime,
+    'travel-map': defineAsyncComponent(() => import('~/pages/travel-map.vue')),
+    timeline: defineAsyncComponent(() => import('~/pages/timeline.vue')),
+    anime: defineAsyncComponent(() => import('~/pages/anime.vue')),
     root: Root,
     home: Home,
   },
