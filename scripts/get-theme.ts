@@ -27,11 +27,7 @@ export let get = async (
           let rawData = ''
           res.on('data', chunk => (rawData += chunk))
           res.on('end', () => {
-            try {
-              resolve(rawData)
-            } catch (e) {
-              reject(new Error('Get failed'))
-            }
+            resolve(rawData)
           })
         } else if (encoding === 'binary') {
           let data: Uint8Array[] = []
