@@ -35,6 +35,10 @@ build: clean
 build_packages:
 	pnpm --filter="./plugins/**" -r --stream build
 
+#release: @ Publish local packages new version
+release:
+	pnpm exec bumpp package.json plugins/*/package.json --execute="pnpm exec standard-version --infile changelog.md --same-file --skip.bump --skip.commit --skip.tag && git add changelog.md" --commit "build: publish v%s" --no-push --tag --all
+
 test_types:
 	pnpm exec vue-tsc --noEmit --pretty
 
