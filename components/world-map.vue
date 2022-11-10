@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
 
-let WorldMapSvg = (await import('~/assets/world-map.svg')).default
+import WorldMapSvg from '~/assets/world-map.svg'
 
 interface Props {
   countries: string[]

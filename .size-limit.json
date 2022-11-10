@@ -10,12 +10,11 @@
     "path": [
       "dist/assets/*.js",
       "!dist/assets/travel-map.*.js",
-      "!dist/assets/world-map.*.js",
       "!dist/assets/timeline.*.js",
       "!dist/assets/mermaid.*.js",
       "!dist/assets/flag-*.js"
     ],
-    "limit": "70 kB",
+    "limit": "80 kB",
     "brotli": true
   },
   {

@@ -107,7 +107,6 @@ export default defineUserConfig({
   shouldPrefetch: (file: string) =>
     !(
       file.includes('travel-map') ||
-      file.includes('world-map') ||
       file.includes('timeline') ||
       file.includes('mermaid') ||
       file.includes('flag-')
