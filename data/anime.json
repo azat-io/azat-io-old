@@ -731,5 +731,24 @@
     "duration": 111,
     "episodes": 1,
     "score": 10
+  },
+  {
+    "name": "To Your Eternity",
+    "originName": "Fumetsu no Anata e",
+    "image": {
+      "avif": "/anime/to-your-eternity.avif",
+      "webp": "/anime/to-your-eternity.webp"
+    },
+    "genres": [
+      "adventure",
+      "drama",
+      "fantasy",
+      "psychological",
+      "supernatural"
+    ],
+    "year": 2021,
+    "duration": 25,
+    "episodes": 20,
+    "score": 9
   }
 ]
