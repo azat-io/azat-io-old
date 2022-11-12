@@ -63,7 +63,6 @@ importers:
       vuepress-vite: 2.0.0-beta.53
     dependencies:
       '@csstools/postcss-oklab-function': 1.1.1_postcss@8.4.18
-      '@types/markdown-it': 12.2.3
       '@vuepress/bundler-vite': 2.0.0-beta.53_terser@5.15.1
       '@vuepress/cli': 2.0.0-beta.53
       '@vuepress/client': 2.0.0-beta.53
@@ -102,6 +101,7 @@ importers:
       '@logux/eslint-config': 48.0.0_dsxb4lkkc5vubet4radsoore4m
       '@logux/stylelint-config': 0.12.0_stylelint@14.14.1
       '@size-limit/file': 8.1.0_size-limit@8.1.0
+      '@types/markdown-it': 12.2.3
       '@typescript-eslint/eslint-plugin': 5.42.1_2udltptbznfmezdozpdoa2aemq
       '@typescript-eslint/parser': 5.42.1_rmayb2veg2btbq6mbmnyivgasy
       bumpp: 8.2.1
@@ -744,7 +744,6 @@ packages:
 
   /@types/linkify-it/3.0.2:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
-    dev: false
 
   /@types/markdown-it-emoji/2.0.2:
     resolution: {integrity: sha512-2ln8Wjbcj/0oRi/6VnuMeWEHHuK8uapFttvcLmDIe1GKCsFBLOLBX+D+xhDa9oWOQV0IpvxwrSfKKssAqqroog==}
@@ -757,11 +756,9 @@ packages:
     dependencies:
       '@types/linkify-it': 3.0.2
       '@types/mdurl': 1.0.2
-    dev: false
 
   /@types/mdurl/1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
-    dev: false
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
