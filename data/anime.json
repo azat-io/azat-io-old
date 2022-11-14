@@ -750,5 +750,25 @@
     "duration": 25,
     "episodes": 20,
     "score": 9
+  },
+  {
+    "name": "The Promised Neverland",
+    "originName": "Yakusoku no Neverland",
+    "image": {
+      "avif": "/anime/the-promised-neverland.avif",
+      "webp": "/anime/the-promised-neverland.webp"
+    },
+    "genres": [
+      "drama",
+      "fantasy",
+      "horror",
+      "mystery",
+      "psychological",
+      "thriller"
+    ],
+    "year": 2019,
+    "duration": 22,
+    "episodes": 12,
+    "score": 10
   }
 ]
