@@ -770,5 +770,18 @@
     "duration": 22,
     "episodes": 12,
     "score": 10
+  },
+  {
+    "name": "The Promised Neverland 2",
+    "originName": "Yakusoku no Neverland 2",
+    "image": {
+      "avif": "/anime/the-promised-neverland-2.avif",
+      "webp": "/anime/the-promised-neverland-2.webp"
+    },
+    "genres": ["action", "adventure", "drama", "fantasy", "horror"],
+    "year": 2021,
+    "duration": 22,
+    "episodes": 11,
+    "score": 7
   }
 ]
