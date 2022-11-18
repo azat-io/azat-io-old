@@ -783,5 +783,18 @@
     "duration": 22,
     "episodes": 11,
     "score": 7
+  },
+  {
+    "name": "Erased",
+    "originName": "Boku dake ga Inai Machi",
+    "image": {
+      "avif": "/anime/erased.avif",
+      "webp": "/anime/erased.webp"
+    },
+    "genres": ["drama", "mystery", "psychological", "supernatural", "thriller"],
+    "year": 2016,
+    "duration": 23,
+    "episodes": 12,
+    "score": 8
   }
 ]
