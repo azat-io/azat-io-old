@@ -815,5 +815,24 @@
     "duration": 24,
     "episodes": 12,
     "score": 8
+  },
+  {
+    "name": "Mob Psycho 100 II",
+    "originName": "Mob Psycho 100 II",
+    "image": {
+      "avif": "/anime/mob-psycho-100-ii.avif",
+      "webp": "/anime/mob-psycho-100-ii.webp"
+    },
+    "genres": [
+      "action",
+      "comedy",
+      "psychological",
+      "slice-of-life",
+      "supernatural"
+    ],
+    "year": 2019,
+    "duration": 24,
+    "episodes": 13,
+    "score": 7
   }
 ]
