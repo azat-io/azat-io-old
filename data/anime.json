@@ -834,5 +834,18 @@
     "duration": 24,
     "episodes": 13,
     "score": 7
+  },
+  {
+    "name": "Spy × Family",
+    "originName": "Spy × Family",
+    "image": {
+      "avif": "/anime/spy-family.avif",
+      "webp": "/anime/spy-family.webp"
+    },
+    "genres": ["action", "comedy", "slice-of-life", "supernatural"],
+    "year": 2022,
+    "duration": 24,
+    "episodes": 12,
+    "score": 8
   }
 ]
