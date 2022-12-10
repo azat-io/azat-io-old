@@ -21,6 +21,17 @@ install_theme:
 update:
 	pnpm update --recursive --interactive --latest
 
+update_vuepress:
+	pnpm add --workspace-root @vuepress/bundler-vite@next @vuepress/cli@next @vuepress/client@next @vuepress/core@next @vuepress/plugin-active-header-links@next @vuepress/plugin-shiki@next @vuepress/plugin-theme-data@next @vuepress/utils@next vuepress-vite@next
+	pnpm add --workspace-root vuepress-plugin-sitemap2@next
+	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-copy-code-button
+	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-edit-page-link
+	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-mermaid-wrapper
+	pnpm add @vuepress/core@next --filter vuepress-plugin-open-graph
+	pnpm add @vuepress/client@next @vuepress/core@next --filter vuepress-plugin-posts
+	pnpm add @vuepress/core@next --filter vuepress-plugin-remove-html-extension
+	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-umami-analytics
+
 up: update
 
 #start: @ Start development server
