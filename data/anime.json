@@ -836,6 +836,25 @@
     "score": 7
   },
   {
+    "name": "Mob Psycho 100 III",
+    "originName": "Mob Psycho 100 III",
+    "image": {
+      "avif": "/anime/mob-psycho-100-iii.avif",
+      "webp": "/anime/mob-psycho-100-iii.webp"
+    },
+    "genres": [
+      "action",
+      "comedy",
+      "psychological",
+      "slice-of-life",
+      "supernatural"
+    ],
+    "year": 2022,
+    "duration": 24,
+    "episodes": 12,
+    "score": 7
+  },
+  {
     "name": "Spy × Family",
     "originName": "Spy × Family",
     "image": {
