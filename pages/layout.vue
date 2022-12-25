@@ -233,7 +233,7 @@ let coffeeCups = computed(() =>
   line-height: var(--line-height-s);
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   .available-languages {
     grid-template-columns: auto 1fr;
     grid-gap: var(--size-s);
@@ -241,7 +241,7 @@ let coffeeCups = computed(() =>
   }
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
   .post-list {
     grid-template-columns: 1fr 1fr;
   }

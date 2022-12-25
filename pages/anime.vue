@@ -286,7 +286,7 @@ let animeList = computed(() => {
   margin-top: var(--size-xl);
 }
 
-@media (min-width: 360px) {
+@media (width >= 360px) {
   .stars {
     display: grid;
     grid-template-columns: repeat(10, var(--size-s));
@@ -298,7 +298,7 @@ let animeList = computed(() => {
   }
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   .list {
     grid-template-columns: repeat(2, 1fr);
   }

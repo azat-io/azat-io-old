@@ -280,7 +280,7 @@ watchEffect(() => {
   }
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   .header {
     padding: var(--size-s) var(--size-m);
   }

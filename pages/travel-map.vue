@@ -35,14 +35,14 @@ let countryList = countries as unknown as CountryType[]
   margin-block-start: var(--size-xxl);
 }
 
-@media (min-width: 540px) {
+@media (width >= 540px) {
   .list {
     grid-template-rows: repeat(7, 1fr);
     grid-auto-flow: column;
   }
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   .list {
     grid-template-rows: repeat(5, 1fr);
     grid-auto-flow: column;

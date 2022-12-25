@@ -31,7 +31,7 @@ let props = withDefaults(defineProps<Props>(), {
   width: min(1020px, 100vw);
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   .container {
     padding: var(--size-xl) var(--size-m);
   }

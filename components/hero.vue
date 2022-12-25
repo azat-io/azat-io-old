@@ -100,7 +100,7 @@ let t = useThemeLocaleData<{
   display: none;
 }
 
-@media (min-width: 720px) {
+@media (width >= 720px) {
   .image {
     display: none;
   }
@@ -110,7 +110,7 @@ let t = useThemeLocaleData<{
   }
 }
 
-@media (min-width: 1400px) {
+@media (width >= 1400px) {
   .content {
     max-height: 640px;
   }

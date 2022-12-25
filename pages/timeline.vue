@@ -255,7 +255,7 @@ let celebritiesData = computed(() =>
   line-height: var(--line-height-s);
 }
 
-@media (min-width: 720px) {
+@media (width >= 720px) {
   .examples {
     grid-template-columns: 1fr 1fr;
   }

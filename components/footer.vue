@@ -83,7 +83,7 @@ let socialIcons = [
   height: var(--size-l);
 }
 
-@media (min-width: 480px) {
+@media (width >= 480px) {
   .footer {
     justify-content: space-between;
     padding: var(--size-m) var(--size-m) var(--size-xl);
