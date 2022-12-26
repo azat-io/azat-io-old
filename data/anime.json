@@ -866,5 +866,18 @@
     "duration": 24,
     "episodes": 12,
     "score": 8
+  },
+  {
+    "name": "Spy × Family Part 2",
+    "originName": "Spy × Family Part 2",
+    "image": {
+      "avif": "/anime/spy-family-part-2.avif",
+      "webp": "/anime/spy-family-part-2.webp"
+    },
+    "genres": ["action", "comedy", "slice-of-life", "supernatural"],
+    "year": 2022,
+    "duration": 24,
+    "episodes": 13,
+    "score": 7
   }
 ]
