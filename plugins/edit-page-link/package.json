@@ -37,10 +37,10 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@types/node": "18.11.17",
-    "@vuepress/client": "2.0.0-beta.59",
-    "@vuepress/core": "2.0.0-beta.59",
-    "@vuepress/utils": "2.0.0-beta.59",
+    "@types/node": "18.11.18",
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/core": "2.0.0-beta.60",
+    "@vuepress/utils": "2.0.0-beta.60",
     "execa": "6.1.0"
   },
   "devDependencies": {

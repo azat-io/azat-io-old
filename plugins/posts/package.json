@@ -36,8 +36,8 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.59",
-    "@vuepress/core": "2.0.0-beta.59",
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/core": "2.0.0-beta.60",
     "chokidar": "3.5.3",
     "iso-639-1": "2.1.15",
     "reading-time": "1.5.0"

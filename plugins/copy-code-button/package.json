@@ -38,9 +38,9 @@
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.59",
-    "@vuepress/core": "2.0.0-beta.59",
-    "@vuepress/utils": "2.0.0-beta.59"
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/core": "2.0.0-beta.60",
+    "@vuepress/utils": "2.0.0-beta.60"
   },
   "devDependencies": {
     "rimraf": "3.0.2"
