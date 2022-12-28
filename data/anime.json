@@ -879,5 +879,18 @@
     "duration": 24,
     "episodes": 13,
     "score": 7
+  },
+  {
+    "name": "Chainsaw Man",
+    "originName": "Chainsaw Man",
+    "image": {
+      "avif": "/anime/chainsaw-man.avif",
+      "webp": "/anime/chainsaw-man.webp"
+    },
+    "genres": ["action", "comedy", "drama", "horror", "supernatural"],
+    "year": 2022,
+    "duration": 24,
+    "episodes": 12,
+    "score": 9
   }
 ]
