@@ -892,5 +892,18 @@
     "duration": 24,
     "episodes": 12,
     "score": 9
+  },
+  {
+    "name": "Mushoku Tensei: Jobless Reincarnation",
+    "originName": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+    "image": {
+      "avif": "/anime/mushoku-tensei-jobless-reincarnation.avif",
+      "webp": "/anime/mushoku-tensei-jobless-reincarnation.webp"
+    },
+    "genres": ["adventure", "drama", "ecchi", "fantasy"],
+    "year": 2021,
+    "duration": 23,
+    "episodes": 11,
+    "score": 7
   }
 ]
