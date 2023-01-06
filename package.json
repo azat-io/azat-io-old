@@ -39,13 +39,13 @@
     "vuepress-plugin-open-graph": "workspace:*",
     "vuepress-plugin-posts": "workspace:*",
     "vuepress-plugin-remove-html-extension": "workspace:*",
-    "vuepress-plugin-sitemap2": "2.0.0-beta.149",
+    "vuepress-plugin-sitemap2": "2.0.0-beta.151",
     "vuepress-plugin-umami-analytics": "workspace:*",
     "vuepress-vite": "2.0.0-beta.60"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.3.0",
-    "@commitlint/config-conventional": "17.3.0",
+    "@commitlint/cli": "17.4.0",
+    "@commitlint/config-conventional": "17.4.0",
     "@logux/eslint-config": "48.0.0",
     "@logux/stylelint-config": "0.13.0",
     "@size-limit/file": "8.1.0",
@@ -67,6 +67,6 @@
     "standard-version": "9.5.0",
     "stylelint": "14.16.1",
     "stylelint-config-html": "1.1.0",
-    "vue-tsc": "1.0.19"
+    "vue-tsc": "1.0.22"
   }
 }
