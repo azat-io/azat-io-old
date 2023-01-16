@@ -918,5 +918,18 @@
     "duration": 23,
     "episodes": 12,
     "score": 6
+  },
+  {
+    "name": "In This Corner of the World",
+    "originName": "Kono Sekai no Katasumi ni",
+    "image": {
+      "avif": "/anime/in-this-corner-of-the-world.avif",
+      "webp": "/anime/in-this-corner-of-the-world.webp"
+    },
+    "genres": ["drama", "slice-of-life"],
+    "year": 2016,
+    "duration": 130,
+    "episodes": 1,
+    "score": 6
   }
 ]
