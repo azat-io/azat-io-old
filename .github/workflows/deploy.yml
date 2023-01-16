@@ -17,7 +17,7 @@ jobs:
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: start build notfication
+      - name: start build notification
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT }}
@@ -62,7 +62,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
-      - name: finish build notfication
+      - name: finish build notification
         uses: appleboy/telegram-action@master
         if: always()
         with:

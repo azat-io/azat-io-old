@@ -15,7 +15,7 @@ jobs:
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: start build notfication
+      - name: start build notification
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT }}
@@ -43,7 +43,7 @@ jobs:
       - name: test
         run: make test
 
-      - name: finish build notfication
+      - name: finish build notification
         uses: appleboy/telegram-action@master
         if: always()
         with:
