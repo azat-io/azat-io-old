@@ -61,7 +61,7 @@ export default defineClientConfig({
           navigator.userAgent,
         )
 
-    let genenrateButton = (): void => {
+    let generateButton = (): void => {
       let selector = 'div[class*="language-"]'
       setTimeout(() => {
         let codeElements = document.querySelectorAll<HTMLElement>(selector)
@@ -89,7 +89,7 @@ export default defineClientConfig({
 
     onMounted(() => {
       if (!isMobile) {
-        genenrateButton()
+        generateButton()
       }
     })
 
@@ -97,7 +97,7 @@ export default defineClientConfig({
       () => route.path,
       () => {
         if (!isMobile) {
-          genenrateButton()
+          generateButton()
         }
       },
     )
