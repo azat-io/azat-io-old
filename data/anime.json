@@ -931,5 +931,18 @@
     "duration": 130,
     "episodes": 1,
     "score": 6
+  },
+  {
+    "name": "Terror in Resonance",
+    "originName": "Zankyou no Terror",
+    "image": {
+      "avif": "/anime/terror-in-resonance.avif",
+      "webp": "/anime/terror-in-resonance.webp"
+    },
+    "genres": ["drama", "mystery", "psychological", "thriller"],
+    "year": 2014,
+    "duration": 22,
+    "episodes": 11,
+    "score": 7
   }
 ]
