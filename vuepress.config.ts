@@ -11,6 +11,7 @@ import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { postsPlugin } from 'vuepress-plugin-posts'
+import lightningcss from 'vite-plugin-lightningcss'
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from '@vuepress/cli'
 import mdImageSize from 'markdown-it-imsize'
@@ -208,6 +209,7 @@ export default defineUserConfig({
         ],
       },
       plugins: [
+        lightningcss(),
         svgLoader({
           svgo: false,
         }),
