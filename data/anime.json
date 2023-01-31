@@ -944,5 +944,18 @@
     "duration": 22,
     "episodes": 11,
     "score": 7
+  },
+  {
+    "name": "Summer Time Rendering",
+    "originName": "Summer Time Render",
+    "image": {
+      "avif": "/anime/summer-time-rendering.avif",
+      "webp": "/anime/summer-time-rendering.webp"
+    },
+    "genres": ["action", "drama", "mystery", "supernatural", "thriller"],
+    "year": 2022,
+    "duration": 23,
+    "episodes": 25,
+    "score": 7
   }
 ]
