@@ -63,5 +63,10 @@
     "name": "Armenia",
     "originName": "Հայաստան",
     "code": "am"
+  },
+  {
+    "name": "Turkey",
+    "originName": "Türkiye",
+    "code": "tr"
   }
 ]

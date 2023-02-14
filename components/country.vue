@@ -35,6 +35,8 @@ if (props.code === 'ae') {
   icon = (await import(`~/assets/flag-ps.svg`)).default
 } else if (props.code === 'ru') {
   icon = FlagRuIcon
+} else if (props.code === 'tr') {
+  icon = (await import(`~/assets/flag-tr.svg`)).default
 } else if (props.code === 'ua') {
   icon = (await import(`~/assets/flag-ua.svg`)).default
 } else if (props.code === 'ug') {
