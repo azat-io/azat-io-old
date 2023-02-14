@@ -45,6 +45,6 @@
     "mermaid": "9.2.1"
   },
   "devDependencies": {
-    "rimraf": "4.1.0"
+    "rimraf": "4.1.2"
   }
 }
