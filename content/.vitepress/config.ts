@@ -69,6 +69,14 @@ export default ({ mode }: ConfigEnv): UserConfig =>
           crossorigin: '',
         },
       ],
+      [
+        'script',
+        {
+          async: '',
+          src: 'https://analytics.azat.io/umami.js',
+          'data-website-id': 'effe2886-cd9d-46cd-9c95-e9dbad667822',
+        },
+      ],
     ],
 
     locales: {
