@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { watchEffect, shallowRef, computed, ref } from 'vue'
-import { directive as vClickAway } from 'vue3-click-away'
+import type { Directive } from 'vue'
+
+import { watchEffect, shallowRef, computed, onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 
 import LanguageIcon from '~/icons/language.svg'
@@ -27,19 +28,6 @@ let href = computed(() => site.value.locales[lang.value!].link)
 let t = computed<{ language: string; en: string; ru: string }>(
   () => theme.value.header,
 )
-
-// let lang = usePageLang()
-// let post = usePost()
-
-// let data = useSiteLocaleData()
-// let route = useRouteLocale()
-// let t = useThemeLocaleData<{
-//   language: string
-//   languages: {
-//     en: string
-//     ru: string
-//   }
-// }>()
 
 let locales = shallowRef<
   {
@@ -70,12 +58,6 @@ let onScroll = () => {
 }
 
 watchEffect(() => {
-  // let getLocalePath = (locale: string): string =>
-  //   post.value.current?.language === lang.value.substring(0, 2)
-  //     ? post.value.current?.availableLanguages.find(
-  //         ({ languageCode }) => languageCode === locale,
-  //       )?.path ?? post.value.current.path
-  //     : `/${locale}`
   locales.value = [
     {
       code: 'us',
@@ -92,10 +74,16 @@ watchEffect(() => {
   ]
 })
 
-watchEffect(() => {
-  if (props.transparent) {
-    document.addEventListener('scroll', onScroll)
-  }
+let vClickAway = ref<Directive>(() => () => {})
+
+onMounted(async () => {
+  vClickAway.value = (await import('vue3-click-away')).directive
+
+  watchEffect(() => {
+    if (props.transparent) {
+      document.addEventListener('scroll', onScroll)
+    }
+  })
 })
 </script>
 
