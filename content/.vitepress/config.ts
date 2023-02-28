@@ -15,6 +15,7 @@ let theme = await loadTheme(path.resolve(dirname, 'theme/layout/gruvbox.json'))
 
 export default ({ mode }: ConfigEnv): UserConfig =>
   defineConfigWithTheme({
+    appearance: false,
     cleanUrls: true,
     title: 'Azat S.',
 
