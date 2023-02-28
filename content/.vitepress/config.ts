@@ -88,8 +88,9 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             subtitle: 'of reinventing the wheel',
             title: 'Manual',
           },
-          layout: {
+          doc: {
             'also-translated': 'Also translated into:',
+            'edit-this-page': 'Edit this page',
             'next-post': 'Next post',
             'previous-post': 'Previous post',
             'minutes-to-read': {
@@ -118,8 +119,9 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             subtitle: 'по изобретению велосипедов',
             title: 'Руководство',
           },
-          layout: {
+          doc: {
             'also-translated': 'Также переведено на:',
+            'edit-this-page': 'Отредактировать эту страницу',
             'next-post': 'Следующая статья',
             'previous-post': 'Предыдущая статья',
             'minutes-to-read': {

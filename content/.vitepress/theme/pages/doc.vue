@@ -12,13 +12,19 @@ let post = usePost()
 
 let t = computed<{
   'also-translated': string
+  'edit-this-page': string
   'next-post': string
   'previous-post': string
   'minutes-to-read': { [key in Intl.LDMLPluralRule]: string }
-}>(() => theme.value.layout)
+}>(() => theme.value.doc)
+
+let editPageLink = computed(
+  () =>
+    `https://github.com/azat-io/azat-io/blob/main/content${post.value.current.path}.md`,
+)
 
 let coffeeCups = computed(() =>
-  Math.ceil((post.value.current?.readingTime ?? 0) / 5),
+  Math.ceil((post.value.current.readingTime ?? 0) / 5),
 )
 </script>
 
@@ -83,13 +89,13 @@ let coffeeCups = computed(() =>
     <article :class="$style.article">
       <Content />
     </article>
-    <!-- <a
+    <a
       :href="editPageLink"
       :class="$style['edit-link']"
       target="_blank"
       rel="noreferrer"
       v-text="t['edit-this-page']"
-    /> -->
+    />
     <div
       v-if="post.previous || post.next"
       :class="{
