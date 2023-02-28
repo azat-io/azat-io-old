@@ -1,5 +1,14 @@
 .DEFAULT_GOAL := help
 
+#start: @ Start development server
+start:
+	pnpm exec tsm ./content/.vitepress/data.ts
+	pnpm exec vitepress dev content --port 8080 --host --open
+
+#build: @ Build production assets
+build: clean
+	pnpm exec vitepress build content
+
 clean:
 	rm -Rf dist/
 	find . -name ".DS_Store" -delete
@@ -9,8 +18,6 @@ install:
 	pnpm install --frozen-lockfile
 	pnpm exec simple-git-hooks
 
-i: install
-
 install_prod:
 	pnpm install --frozen-lockfile --prod
 
@@ -19,28 +26,7 @@ install_theme:
 
 #update: @ Update project dependencies
 update:
-	pnpm update --recursive --interactive --latest
-
-update_vuepress:
-	pnpm add --workspace-root @vuepress/bundler-vite@next @vuepress/cli@next @vuepress/client@next @vuepress/core@next @vuepress/plugin-active-header-links@next @vuepress/plugin-shiki@next @vuepress/plugin-theme-data@next @vuepress/utils@next vuepress-vite@next
-	pnpm add --workspace-root vuepress-plugin-sitemap2@next
-	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-copy-code-button
-	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-edit-page-link
-	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-mermaid-wrapper
-	pnpm add @vuepress/core@next --filter vuepress-plugin-open-graph
-	pnpm add @vuepress/client@next @vuepress/core@next --filter vuepress-plugin-posts
-	pnpm add @vuepress/core@next --filter vuepress-plugin-remove-html-extension
-	pnpm add @vuepress/client@next @vuepress/core@next @vuepress/utils@next --filter vuepress-plugin-umami-analytics
-
-up: update
-
-#start: @ Start development server
-start:
-	pnpm exec vuepress dev content
-
-#build: @ Build production assets
-build: clean
-	pnpm exec vuepress build content --dest dist
+	pnpm update --interactive --latest
 
 #build: @ Build local packages
 build_packages:
@@ -55,10 +41,10 @@ test_types:
 	pnpm exec vue-tsc --noEmit --pretty
 
 lint_css:
-	pnpm exec stylelint "**/*.{vue,pcss,css}"
+	pnpm exec stylelint "content/.vitepress/**/*.{vue,css}"
 
 lint_es:
-	pnpm exec eslint "**/*.{vue,ts}"
+	pnpm exec eslint "content/.vitepress/**/*.{vue,ts}"
 
 lint: lint_css lint_es
 

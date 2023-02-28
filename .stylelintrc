@@ -1,7 +1,7 @@
 {
   "files": ["**/*.pcss", "**/*.css"],
   "extends": "@logux/stylelint-config",
-  "ignoreFiles": ["content/.vuepress/**/*", "dist/**/*"],
+  "ignoreFiles": ["dist/**/*"],
   "rules": {
     "property-no-unknown": [
       true,

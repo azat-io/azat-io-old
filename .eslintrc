@@ -31,18 +31,17 @@
     ],
     "@typescript-eslint/no-unused-vars": [
       "error",
-      {
-        "ignoreRestSiblings": true
-      }
+      { "argsIgnorePattern": "^_" }
     ],
     "no-irregular-whitespace": "off",
     "import/extensions": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "no-unused-vars": "off"
   },
   "overrides": [
     {
       "files": ["**/*.vue"],
-      "extends": ["@logux/eslint-config/ts", "plugin:vue/recommended"],
+      "extends": ["plugin:vue/recommended"],
       "plugins": ["import", "vue"],
       "rules": {
         "import/order": [
@@ -63,7 +62,6 @@
             "newlines-between": "always"
           }
         ],
-        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
         "vue/singleline-html-element-content-newline": "off",
         "vue/multi-word-component-names": "off",
         "vue/no-multiple-template-root": "off",
