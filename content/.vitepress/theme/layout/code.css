@@ -1,11 +1,64 @@
 :root {
-  --copy-code-plugin-font-size: var(--font-size-xxs);
-  --copy-code-plugin-line-height: var(--line-height-xxs);
-  --copy-code-plugin-icon-size: var(--size-m);
-  --copy-code-plugin-icon-color: var(--color-content-primary);
-  --copy-code-plugin-button-hover-color: var(--color-background-primary);
-  --copy-code-plugin-button-focus-color: var(--color-background-overlay);
-  --copy-code-plugin-shadow-color: var(--color-border-brand);
-  --copy-code-title-margin: var(--size-m);
-  --copy-code-button-margin: var(--size-s);
+  --icon-copy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(198,191,154,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2'/%3E%3C/svg%3E");
+  --icon-copied: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(198,191,154,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9 2 2 4-4'/%3E%3C/svg%3E");
+}
+
+[class*='language-'] {
+  position: relative;
+  overflow-x: auto;
+}
+
+[class*='language-'] .copy {
+  position: absolute;
+  top: var(--size-m);
+  right: var(--size-s);
+  z-index: 3;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: var(--color-background-primary);
+  background-image: var(--icon-copy);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  opacity: 0%;
+  transition: border-color 0.25s, background-color 0.25s, opacity 0.25s;
+}
+
+[class*='language-']:hover .copy,
+[class*='language-'] .copy:focus-visible {
+  opacity: 100%;
+}
+
+[class*='language-'] > button.copy.copied,
+[class*='language-'] > button.copy:hover.copied {
+  background-image: var(--icon-copied);
+  border-color: var(--color-border-secondary);
+}
+
+[class*='language-'] .copy:focus-visible {
+  background-color: var(--color-background-overlay);
+  box-shadow: 0 0 0 2px var(--color-border-brand);
+}
+
+[class*='language-'] > span.lang {
+  position: absolute;
+  top: var(--size-m);
+  right: var(--size-m);
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-content-tertiary);
+  transition: color 0.4s, opacity 0.4s;
+}
+
+[class*='language-']:hover > button.copy + span.lang,
+[class*='language-'] > button.copy:focus-visible + span.lang {
+  opacity: 0%;
 }

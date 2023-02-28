@@ -20,4 +20,5 @@
   /* Border */
   --color-border-brand: oklch(83% 0.15 83);
   --color-border-primary: oklch(24% 0 0);
+  --color-border-secondary: oklch(28% 0 0);
 }
