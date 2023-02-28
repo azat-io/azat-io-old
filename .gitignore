@@ -6,8 +6,8 @@ node_modules
 .vim/
 
 # VitePress
-.vitepress/cache/
-.vitepress/temp/
+content/.vitepress/cache/
+content/.vitepress/temp/
 
 # Build
 dist/

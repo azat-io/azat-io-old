@@ -7,6 +7,7 @@ start:
 
 #build: @ Build production assets
 build: clean
+	pnpm exec tsm ./content/.vitepress/data.ts
 	pnpm exec vitepress build content
 
 clean:
