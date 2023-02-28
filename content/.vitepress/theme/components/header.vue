@@ -41,6 +41,7 @@ let locales = shallowRef<
 let localePopupOpen = ref(false)
 
 let onTop = ref(true)
+let scrolled = ref(false)
 
 let toggleLocalePopup = () => {
   localePopupOpen.value = !localePopupOpen.value
@@ -53,11 +54,13 @@ let closeLocalePopup = (event: MouseEvent) => {
 }
 
 let onScroll = () => {
+  scrolled.value = true
   onTop.value =
     window?.scrollY < (header.value?.getBoundingClientRect().height ?? 0)
 }
 
 watchEffect(() => {
+  scrolled.value = false
   locales.value = [
     {
       code: 'us',
@@ -94,6 +97,7 @@ onMounted(async () => {
       [$style.header],
       {
         [$style.transparent]: props.transparent && onTop && !localePopupOpen,
+        [$style['on-top']]: props.transparent && onTop && scrolled,
         [$style.fixed]: props.transparent,
       },
     ]"
@@ -151,7 +155,12 @@ onMounted(async () => {
 .transparent {
   background: transparent;
   box-shadow: none;
+  transition-duration: 0ms;
+}
+
+.on-top {
   transition-delay: 250ms;
+  transition-duration: 250ms;
 }
 
 .fixed {
