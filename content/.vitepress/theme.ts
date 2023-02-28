@@ -76,6 +76,6 @@ let contentObj = parseJson(content)
 await fs.mkdir(path.join(dirname, '../theme'), { recursive: true })
 
 await fs.writeFile(
-  path.join(__dirname, '../layout/gruvbox.json'),
+  path.join(dirname, './theme/layout/gruvbox.json'),
   JSON.stringify(contentObj, null, 2),
 )

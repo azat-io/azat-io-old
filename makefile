@@ -22,20 +22,11 @@ install_prod:
 	pnpm install --frozen-lockfile --prod
 
 install_theme:
-	pnpm exec tsm scripts/get-theme.ts
+	pnpm exec tsm "content/.vitepress/theme.ts"
 
 #update: @ Update project dependencies
 update:
 	pnpm update --interactive --latest
-
-#build: @ Build local packages
-build_packages:
-	pnpm --filter="./plugins/**" -r --stream build
-
-#release: @ Publish local packages new version
-release: build_packages
-	pnpm exec bumpp package.json plugins/*/package.json --execute="pnpm exec standard-version --infile changelog.md --same-file --skip.bump --skip.commit --skip.tag && git add changelog.md" --commit "build: publish v%s" --tag --all
-	pnpm -r publish
 
 test_types:
 	pnpm exec vue-tsc --noEmit --pretty
@@ -48,13 +39,11 @@ lint_es:
 
 lint: lint_css lint_es
 
-test_size: build
+test_size:
 	pnpm exec size-limit
 
 #test: @ Run all tests
-test: test_types lint test_size
-
-t: test
+test: test_types lint build test_size
 
 #help: @ Show help for Makefile targets
 help:
