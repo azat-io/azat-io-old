@@ -18,6 +18,59 @@ export default ({ mode }: ConfigEnv): UserConfig =>
     cleanUrls: true,
     title: 'Azat S.',
 
+    head: [
+      [
+        'meta',
+        {
+          name: 'theme-color',
+          content: '#1b1b1b',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+          sizes: 'any',
+          href: '/favicon.ico',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/icon.svg',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'apple-touch-icon',
+          href: '/apple-touch-icon.png',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'preload',
+          href: '/fonts/stem-regular.woff2',
+          type: 'font/woff2',
+          as: 'font',
+          crossorigin: '',
+        },
+      ],
+      [
+        'link',
+        {
+          rel: 'preload',
+          href: '/fonts/stem-bold.woff2',
+          type: 'font/woff2',
+          as: 'font',
+          crossorigin: '',
+        },
+      ],
+    ],
+
     locales: {
       root: {
         label: 'English',
