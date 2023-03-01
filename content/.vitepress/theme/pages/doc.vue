@@ -4,11 +4,30 @@ import { computed } from 'vue'
 
 import CoffeeCupIcon from '~/icons/coffee-cup.svg'
 import Container from '~/components/container.vue'
-import { usePost } from '~/hooks/use-post.js'
+import { data as posts } from '~/posts.data.js'
+import type { Post } from '~/posts.data.js'
 import Tag from '~/components/tag.vue'
 
-let { frontmatter, lang, theme } = useData()
-let post = usePost()
+let { frontmatter, lang, theme, page } = useData()
+
+let languagePosts = computed<Post[]>(() =>
+  posts.filter(({ language }) => language === lang.value).reverse(),
+)
+
+let cleanPath = (path: string): string =>
+  path.replace(/^\//, '').replace(/\.md$/, '')
+
+let currentPostIndex = computed(() =>
+  languagePosts.value.findIndex(
+    ({ href }) => cleanPath(href) === cleanPath(page.value.relativePath),
+  ),
+)
+
+let post = computed(() => ({
+  current: languagePosts.value[currentPostIndex.value],
+  previous: languagePosts.value[currentPostIndex.value - 1],
+  next: languagePosts.value[currentPostIndex.value + 1],
+}))
 
 let t = computed<{
   'also-translated': string
@@ -20,7 +39,7 @@ let t = computed<{
 
 let editPageLink = computed(
   () =>
-    `https://github.com/azat-io/azat-io/blob/main/content${post.value.current.path}.md`,
+    `https://github.com/azat-io/azat-io/blob/main/content${post.value.current.href}.md`,
 )
 
 let coffeeCups = computed(() =>
@@ -47,7 +66,7 @@ let coffeeCups = computed(() =>
   <Container>
     <h1 :class="$style.title" v-text="frontmatter.title" />
     <div :class="$style.info">
-      <span :class="$style['info-text']" v-text="post.current?.formattedDate" />
+      <span :class="$style['info-text']" v-text="post.current?.date.string" />
       <span :class="$style['info-text']">
         <CoffeeCupIcon
           v-for="n in coffeeCups"
@@ -77,10 +96,10 @@ let coffeeCups = computed(() =>
       />
       <div :class="$style['available-languages-list']">
         <Tag
-          v-for="{ path, language, languageName } in post.current
+          v-for="{ href, language, languageName } in post.current
             .availableLanguages"
           :key="language"
-          :href="path"
+          :href="href"
         >
           {{ languageName }}
         </Tag>
@@ -105,13 +124,13 @@ let coffeeCups = computed(() =>
     >
       <div v-if="post.previous" :class="$style['post-previous']">
         <p :class="$style['post-title']" v-text="t['previous-post']" />
-        <a :class="$style['post-link']" :href="post.previous.path">
+        <a :class="$style['post-link']" :href="post.previous.href">
           {{ post.previous.title }}
         </a>
       </div>
       <div v-if="post.next" :class="$style['post-next']">
         <p :class="$style['post-title']" v-text="t['next-post']" />
-        <a :class="$style['post-link']" :href="post.next.path">
+        <a :class="$style['post-link']" :href="post.next.href">
           {{ post.next.title }}
         </a>
       </div>

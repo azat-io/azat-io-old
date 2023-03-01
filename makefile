@@ -2,12 +2,10 @@
 
 #start: @ Start development server
 start:
-	pnpm exec tsm ./content/.vitepress/data.ts
-	pnpm exec vitepress dev content --port 8080 --host --open
+	pnpm exec vitepress dev content --port 8080 --host --open --force
 
 #build: @ Build production assets
 build: clean
-	pnpm exec tsm ./content/.vitepress/data.ts
 	pnpm exec vitepress build content
 
 clean:

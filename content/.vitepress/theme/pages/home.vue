@@ -1,11 +1,16 @@
 <script lang="ts" setup>
-import { onBeforeMount, onBeforeUnmount } from 'vue'
+import { onBeforeMount, onBeforeUnmount, computed } from 'vue'
+import { useData } from 'vitepress'
 
 import Container from '~/components/container.vue'
-import { usePosts } from '~/hooks/use-posts.js'
+import { data as posts } from '~/posts.data.js'
 import Hero from '~/components/hero.vue'
 
-let posts = usePosts()
+let { lang } = useData()
+
+let languagePosts = computed(() =>
+  posts.filter(({ language }) => language === lang.value),
+)
 
 onBeforeMount(() => {
   document.documentElement.classList.add('no-scroll')
@@ -20,11 +25,11 @@ onBeforeUnmount(() => {
   <Hero />
   <Container>
     <div :class="$style.posts">
-      <div v-for="{ title, path, formattedDate } in posts" :key="title">
-        <a :href="path" :class="$style.link">
+      <div v-for="{ title, href, date } in languagePosts" :key="title">
+        <a :href="href" :class="$style.link">
           <h3 :class="$style.title" v-text="title" />
         </a>
-        <span :class="$style.date" v-text="formattedDate" />
+        <span :class="$style.date" v-text="date.string" />
       </div>
     </div>
   </Container>

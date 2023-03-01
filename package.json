@@ -23,7 +23,7 @@
     "vite": "^4.1.4",
     "vite-plugin-lightningcss": "^0.0.5",
     "vite-svg-loader": "^4.0.0",
-    "vitepress": "1.0.0-alpha.48",
+    "vitepress": "1.0.0-alpha.49",
     "vue": "^3.2.47",
     "vue3-click-away": "^1.2.4"
   },

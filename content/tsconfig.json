@@ -2,7 +2,7 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node16",
     "preserveValueImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -14,10 +14,7 @@
     "allowJs": true,
     "strict": true,
     "baseUrl": ".",
-    "noEmit": true,
-    "paths": {
-      "~/*": ["content/.vitepress/theme/*"]
-    }
+    "noEmit": true
   },
   "include": ["content/.vitepress/**/*"],
   "exclude": ["node_modules"]
