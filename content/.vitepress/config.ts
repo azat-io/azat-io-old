@@ -1,8 +1,10 @@
 import type { UserConfig } from 'vitepress'
 import type { ConfigEnv } from 'vite'
 
+import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import lightningcss from 'vite-plugin-lightningcss'
 import { defineConfigWithTheme } from 'vitepress'
+import mdImageSize from 'markdown-it-imsize'
 import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 import path from 'path'
@@ -148,6 +150,10 @@ export default ({ mode }: ConfigEnv): UserConfig =>
 
     markdown: {
       theme,
+      config: md => {
+        md.use(mdImageLazyLoading)
+        md.use(mdImageSize)
+      },
     },
 
     vite: {

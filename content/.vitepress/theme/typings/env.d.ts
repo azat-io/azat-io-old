@@ -12,9 +12,16 @@ declare module '*.vue' {
   export default component
 }
 
-declare module '~/temp/posts.json' {
-  import type { Post } from '../../data.js'
+declare module 'markdown-it-image-lazy-loading' {
+  import type { PluginSimple } from 'markdown-it'
 
-  let post: Post[]
-  return posts
+  let plugin: PluginSimple
+  export default plugin
+}
+
+declare module 'markdown-it-imsize' {
+  import type { PluginSimple } from 'markdown-it'
+
+  let plugin: PluginSimple
+  export default plugin
 }
