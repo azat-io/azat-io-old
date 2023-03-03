@@ -110,7 +110,7 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             },
           },
           footer: {
-            'made-with': 'Made with',
+            'pgp-info': 'Public PGP key to verify my signature',
           },
         },
       },
@@ -142,7 +142,7 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             },
           },
           footer: {
-            'made-with': 'Сделано с',
+            'pgp-info': 'Публичный PGP-ключ для проверки моей подписи',
           },
         },
       },

@@ -4,11 +4,11 @@ import { computed } from 'vue'
 
 import TwitterIcon from '~/icons/twitter.svg'
 import GithubIcon from '~/icons/github.svg'
-import Heart from '~/icons/heart.svg'
+import LockIcon from '~/icons/lock.svg'
 
 let { theme } = useData()
 
-let t = computed<{ 'made-with': string }>(() => theme.value.footer)
+let t = computed<{ 'pgp-info': string }>(() => theme.value.footer)
 
 let socialIcons = [
   {
@@ -26,10 +26,15 @@ let socialIcons = [
 
 <template>
   <footer :class="$style.footer">
-    <span :class="$style.disclaimer" aria-hidden="true">
-      {{ t['made-with'] }}
-      <Heart :class="$style.heart" />
-    </span>
+    <a
+      :class="[$style.pgp, $style['icon-link']]"
+      href="https://keybase.io/azat_io"
+      :title="t['pgp-info']"
+      target="_blank"
+    >
+      <LockIcon :class="[$style.icon, $style['lock-icon']]" />
+      PGP: D04D B9EC D3B3 B4FC
+    </a>
     <div :class="$style['social-icons']">
       <a
         v-for="{ name, icon, url } in socialIcons"
@@ -51,6 +56,8 @@ let socialIcons = [
   position: sticky;
   top: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: var(--size-m);
   align-items: center;
   justify-content: center;
   height: var(--footer-height);
@@ -58,8 +65,16 @@ let socialIcons = [
   border-block-start: solid var(--color-border-primary);
 }
 
-.disclaimer {
+.lock-icon {
   display: none;
+}
+
+.pgp {
+  display: flex;
+  gap: var(--size-xs);
+  align-items: flex-end;
+  font-size: var(--font-size-xs);
+  color: var(--color-content-primary);
 }
 
 .social-icons {
@@ -85,22 +100,14 @@ let socialIcons = [
 }
 
 @media (width >= 480px) {
+  .lock-icon {
+    display: block;
+  }
+
   .footer {
+    flex-direction: row;
     justify-content: space-between;
     padding: var(--size-m) var(--size-m) var(--size-xl);
-  }
-
-  .disclaimer {
-    display: flex;
-    gap: var(--size-xxs);
-    align-items: center;
-    font-size: 0.85rem;
-    line-height: 0.85rem;
-  }
-
-  .heart {
-    width: 16px;
-    color: oklch(65.97% 0.218 30.39);
   }
 }
 </style>
