@@ -94,7 +94,9 @@ let sortFunc: {
 }
 
 let sortSelectOptions = Object.keys(sortFunc).map(sortFunctionName => ({
-  label: sortFunctionName,
+  label: sortFunctionName
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/^./, string => string.toUpperCase()),
   value: sortFunctionName,
 }))
 
