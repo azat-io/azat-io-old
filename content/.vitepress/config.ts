@@ -156,6 +156,8 @@ export default ({ mode }: ConfigEnv): UserConfig =>
       },
     },
 
+    shouldPreload: (link: string): boolean => !link.includes('world-map'),
+
     vite: {
       resolve: {
         alias: {
