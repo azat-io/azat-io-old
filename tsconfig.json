@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    "types": ["@vuepress/client/types"],
     "importsNotUsedAsValues": "error",
     "moduleResolution": "nodenext",
     "preserveValueImports": true,
@@ -10,20 +9,16 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "module": "esnext",
-    "target": "es2020",
+    "target": "esnext",
     "jsx": "preserve",
     "allowJs": true,
     "strict": true,
     "baseUrl": ".",
     "noEmit": true,
     "paths": {
-      "~/components/*": ["./components/*"],
-      "~/typings/*": ["./typings/*"],
-      "~/assets/*": ["./assets/*"],
-      "~/pages/*": ["./pages/*"],
-      "~/icons/*": ["./icons/*"]
+      "~/*": ["content/.vitepress/theme/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.vue"],
+  "include": ["content/.vitepress/**/*"],
   "exclude": ["node_modules"]
 }

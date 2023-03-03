@@ -1,20 +1,14 @@
 [
   {
     "name": "Main script",
-    "path": ["dist/assets/app-*.js"],
-    "limit": "15 kB",
+    "path": ["dist/assets/app.*.js"],
+    "limit": "40 kB",
     "brotli": true
   },
   {
-    "name": "All prefetched scripts",
-    "path": [
-      "dist/assets/*.js",
-      "!dist/assets/travel-map-*.js",
-      "!dist/assets/timeline-*.js",
-      "!dist/assets/mermaid.core-*.js",
-      "!dist/assets/flag-*.js"
-    ],
-    "limit": "80 kB",
+    "name": "All scripts",
+    "path": ["dist/assets/*.js"],
+    "limit": "70 kB",
     "brotli": true
   },
   {

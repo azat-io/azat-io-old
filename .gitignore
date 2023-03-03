@@ -5,8 +5,9 @@ node_modules
 .vscode/
 .vim/
 
-# Vuepress
-content/.vuepress/
+# VitePress
+content/.vitepress/cache/
+content/.vitepress/temp/
 
 # Build
 dist/

@@ -71,15 +71,6 @@ If there are scripts on the page, then they can change the position of the eleme
 
 Parsing is a fairly large task, where there is at least one reflow and one redraw.
 
-```mermaid
-flowchart TD
-  NET(Network) --> TOK(Tokenizer)
-  TOK --> TRC(Tree construction)
-  SCE -- document.write --> TOK
-  TRC ---> DOM(DOM)
-  TRC --> SCE(Script execution)
-```
-
 Here we will not dig deep into how exactly the page is rendered, everything is in general terms. Ultimately, this is where our beautiful page will be displayed in the browser.
 
 ## How networking works
