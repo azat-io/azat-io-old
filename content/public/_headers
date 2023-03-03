@@ -1,5 +1,5 @@
 /*
-  content-security-policy: default-src 'self' cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-eval' analytics.azat.io; style-src 'self' 'unsafe-inline'; connect-src 'self' analytics.azat.io
+  content-security-policy: default-src 'self' cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-eval' 'unsafe-inline' analytics.azat.io; style-src 'self' 'unsafe-inline'; connect-src 'self' analytics.azat.io
 
 /anime/*
   cache-control: max-age=31536000
