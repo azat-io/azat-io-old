@@ -1,8 +1,20 @@
 <script lang="ts" setup>
-import type { DefineComponent } from 'vue'
-
-import FlagRuIcon from '~/assets/flag-ru.svg'
-import FlagUsIcon from '~/assets/flag-us.svg'
+import flagUnknown from '~/assets/flag-unknown.svg?url'
+import flagAE from '~/assets/flag-ae.svg?url'
+import flagAM from '~/assets/flag-am.svg?url'
+import flagAZ from '~/assets/flag-az.svg?url'
+import flagBY from '~/assets/flag-by.svg?url'
+import flagFR from '~/assets/flag-fr.svg?url'
+import flagGE from '~/assets/flag-ge.svg?url'
+import flagIL from '~/assets/flag-il.svg?url'
+import flagIN from '~/assets/flag-in.svg?url'
+import flagKE from '~/assets/flag-ke.svg?url'
+import flagPS from '~/assets/flag-ps.svg?url'
+import flagRU from '~/assets/flag-ru.svg?url'
+import flagTR from '~/assets/flag-tr.svg?url'
+import flagUA from '~/assets/flag-ua.svg?url'
+import flagUG from '~/assets/flag-ug.svg?url'
+import flagUS from '~/assets/flag-us.svg?url'
 
 interface Props {
   name: string
@@ -12,45 +24,32 @@ interface Props {
 
 let props = defineProps<Props>()
 
-let icon: DefineComponent
-if (props.code === 'ae') {
-  icon = (await import(`~/assets/flag-ae.svg`)).default
-} else if (props.code === 'am') {
-  icon = (await import(`~/assets/flag-am.svg`)).default
-} else if (props.code === 'az') {
-  icon = (await import(`~/assets/flag-az.svg`)).default
-} else if (props.code === 'by') {
-  icon = (await import(`~/assets/flag-by.svg`)).default
-} else if (props.code === 'fr') {
-  icon = (await import(`~/assets/flag-fr.svg`)).default
-} else if (props.code === 'ge') {
-  icon = (await import(`~/assets/flag-ge.svg`)).default
-} else if (props.code === 'il') {
-  icon = (await import(`~/assets/flag-il.svg`)).default
-} else if (props.code === 'in') {
-  icon = (await import(`~/assets/flag-in.svg`)).default
-} else if (props.code === 'ke') {
-  icon = (await import(`~/assets/flag-ke.svg`)).default
-} else if (props.code === 'ps') {
-  icon = (await import(`~/assets/flag-ps.svg`)).default
-} else if (props.code === 'ru') {
-  icon = FlagRuIcon
-} else if (props.code === 'tr') {
-  icon = (await import(`~/assets/flag-tr.svg`)).default
-} else if (props.code === 'ua') {
-  icon = (await import(`~/assets/flag-ua.svg`)).default
-} else if (props.code === 'ug') {
-  icon = (await import(`~/assets/flag-ug.svg`)).default
-} else if (props.code === 'us') {
-  icon = FlagUsIcon
-} else {
-  icon = (await import(`~/assets/flag-unknown.svg`)).default
+let flags: {
+  [key: string]: string
+} = {
+  ae: flagAE,
+  am: flagAM,
+  az: flagAZ,
+  by: flagBY,
+  fr: flagFR,
+  ge: flagGE,
+  il: flagIL,
+  in: flagIN,
+  ke: flagKE,
+  ps: flagPS,
+  ru: flagRU,
+  tr: flagTR,
+  ua: flagUA,
+  ug: flagUG,
+  us: flagUS,
 }
+
+let src: string | undefined = flags[props.code] ?? flagUnknown
 </script>
 
 <template>
   <div :class="$style.country">
-    <component :is="icon" :class="$style.icon" />
+    <img :src="src" :class="$style.icon" :alt="props.originName" />
     <div>
       <span :class="$style.name" v-text="props.name" />
       <span :class="$style['origin-name']" v-text="props.originName" />
