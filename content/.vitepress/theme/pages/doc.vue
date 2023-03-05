@@ -158,95 +158,88 @@ let coffeeCups = computed(() =>
 }
 
 .title {
-  margin-block-end: var(--size-xs);
+  margin-block-end: var(--space-xs);
 }
 
 .info {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--size-xs) var(--size-l);
-  margin-block: var(--size-s) var(--size-m);
+  gap: var(--space-xs) var(--space-l);
+  margin-block: var(--space-s) var(--space-m);
 }
 
 .info-text {
   display: flex;
-  align-items: flex-start;
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
+  align-items: end;
+  font: var(--font-xs);
+  line-height: 1;
   white-space: nowrap;
 }
 
 .cup {
-  width: var(--size-s);
-  height: var(--size-s);
-  margin-inline-end: calc(var(--size-xxs) / 2);
+  width: 16px;
+  height: 16px;
+  margin-inline-end: 2px;
 }
 
 .last-cup {
-  margin-inline-end: var(--size-xs);
+  margin-inline-end: var(--space-xs);
 }
 
 .available-languages {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--size-xs);
-  padding: var(--size-s);
-  margin-block-start: var(--size-m);
+  gap: var(--space-s);
+  padding: var(--space-m);
+  margin-block-start: var(--space-m);
   background: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
-  border-radius: var(--size-s);
+  border-radius: 16px;
 }
 
 .available-languages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--size-s) - var(--size-xxs)) var(--size-s);
+  gap: var(--space-2xs) var(--space-s);
   align-items: center;
 }
 
 .available-languages-title {
   margin-block: 0;
-  font-size: var(--font-size-xs);
+  font: var(--font-xs);
   font-weight: normal;
-  line-height: var(--line-height-xs);
 }
 
 .article {
-  margin-block-start: var(--size-xl);
+  margin-block-start: var(--space-l);
 }
 
 .edit-link {
   display: inline-block;
-  margin-block-start: var(--size-m);
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  margin-block-start: var(--space-m);
+  font: var(--font-s);
 }
 
 .post-list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--size-s);
-  margin-block-start: var(--size-m);
+  gap: var(--space-s);
+  margin-block-start: var(--space-m);
 }
 
 .post-title {
-  margin-block-end: var(--size-xxs);
-  font-size: var(--font-size-s);
-  font-weight: normal;
-  line-height: var(--line-height-s);
+  margin-block-end: var(--space-2xs);
+  font: var(--font-s);
 }
 
 .post-link {
   padding-inline: 0;
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font: var(--font-s);
 }
 
 @media (width >= 480px) {
   .available-languages {
     grid-template-columns: auto 1fr;
-    grid-gap: var(--size-s);
-    padding: var(--size-s) var(--size-m);
   }
 }
 

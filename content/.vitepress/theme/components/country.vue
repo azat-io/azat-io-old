@@ -50,7 +50,7 @@ let src: string | undefined = flags[props.code] ?? flagUnknown
 <template>
   <div :class="$style.country">
     <img :src="src" :class="$style.icon" :alt="props.originName" />
-    <div>
+    <div :class="$style.info">
       <span :class="$style.name" v-text="props.name" />
       <span :class="$style['origin-name']" v-text="props.originName" />
     </div>
@@ -61,25 +61,29 @@ let src: string | undefined = flags[props.code] ?? flagUnknown
 .country {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--size-s);
+  gap: var(--space-m);
   place-items: center left;
 }
 
 .icon {
   width: 48px;
-  margin-block-start: var(--size-xxs);
+  margin-block-start: 4px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .name {
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font: var(--font-s);
   color: var(--color-content-brand);
 }
 
 .origin-name {
   display: block;
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
+  font: var(--font-2xs);
   color: var(--color-content-primary);
 }
 </style>

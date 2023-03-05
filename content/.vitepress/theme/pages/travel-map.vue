@@ -39,8 +39,8 @@ let countries: CountryType[] = frontmatter.value.data
 
 .list {
   display: grid;
-  grid-gap: var(--size-s);
-  margin-block-start: var(--size-xxl);
+  gap: var(--space-s);
+  margin-block-start: var(--space-xl);
 }
 
 @media (width >= 540px) {

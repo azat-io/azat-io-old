@@ -57,11 +57,11 @@ let socialIcons = [
   top: 100vh;
   display: flex;
   flex-direction: column;
-  gap: var(--size-m);
+  gap: var(--space-m);
   align-items: center;
   justify-content: center;
   height: var(--footer-height);
-  padding: var(--size-m) var(--size-s) var(--size-xl);
+  padding: var(--space-m) var(--space-m) var(--space-xl);
   border-block-start: solid var(--color-border-primary);
 }
 
@@ -71,15 +71,15 @@ let socialIcons = [
 
 .pgp {
   display: flex;
-  gap: var(--size-xs);
+  gap: var(--space-2xs);
   align-items: flex-end;
-  font-size: var(--font-size-xs);
+  font: var(--font-xs);
   color: var(--color-content-primary);
 }
 
 .social-icons {
   display: flex;
-  gap: var(--size-s);
+  gap: var(--space-s);
 }
 
 .icon-link {
@@ -95,8 +95,8 @@ let socialIcons = [
 }
 
 .icon {
-  width: var(--size-l);
-  height: var(--size-l);
+  width: 30px;
+  height: 30px;
 }
 
 @media (width >= 480px) {
@@ -107,7 +107,6 @@ let socialIcons = [
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: var(--size-m) var(--size-m) var(--size-xl);
   }
 }
 </style>

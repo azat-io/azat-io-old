@@ -68,10 +68,8 @@ let t = computed<{
 }
 
 .header-title {
-  margin-block-end: var(--size-xs);
-  font-size: var(--font-size-xxxxxl);
-  font-weight: bold;
-  line-height: var(--line-height-xxxxxl);
+  margin-block-end: var(--space-xs);
+  font: var(--font-3xl);
   color: var(--color-content-primary);
   text-shadow: 1px 2px lch(12% 0 0 / 30%);
 }
@@ -79,17 +77,15 @@ let t = computed<{
 .header-subtitle {
   padding-block: 0;
   margin-block: 0;
-  font-size: var(--font-size-xxxxl);
+  font: var(--font-l);
   font-weight: normal;
-  line-height: var(--line-height-xxxxl);
+  line-height: 1;
 }
 
 .content {
   width: 100%;
   object-fit: cover;
-  height: 100%;
-  min-height: 320px;
-  max-height: 560px;
+  height: clamp(30rem, 21.875rem + 20.3125vw, 46.25rem);
   overflow: hidden;
   user-select: none;
   filter: sepia(0.3);
@@ -110,12 +106,6 @@ let t = computed<{
 
   .video {
     display: block;
-  }
-}
-
-@media (width >= 1400px) {
-  .content {
-    max-height: 640px;
   }
 }
 </style>

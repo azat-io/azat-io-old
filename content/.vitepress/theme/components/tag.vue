@@ -32,13 +32,12 @@ if (props.onClick) {
 <style module>
 .tag {
   display: inline-block;
-  padding-inline: var(--size-xs);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
+  padding-inline: var(--space-xs);
+  font: var(--font-xs);
   white-space: nowrap;
   user-select: none;
   border: none;
-  border-radius: var(--size-s);
+  border-radius: 16px;
   outline: none;
 }
 

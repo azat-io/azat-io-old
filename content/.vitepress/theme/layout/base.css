@@ -19,8 +19,7 @@ html.no-scroll {
 body {
   min-width: 320px;
   margin: 0;
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
+  font: var(--font-m);
   color: var(--color-content-primary);
   letter-spacing: 0.5px;
   background: var(--color-background-primary);
@@ -45,26 +44,17 @@ button:not(:disabled) {
 }
 
 h1 {
-  font-size: var(--font-size-xxxl);
-  line-height: var(--line-height-xxxl);
+  font: var(--font-2xl);
   color: var(--color-content-brand);
 }
 
 h2 {
-  padding-block-start: var(--size-xxxl);
-  margin-block-start: calc(0px - var(--size-xxl));
-  font-size: var(--font-size-xxl);
-  line-height: var(--line-height-xxl);
+  margin-block-start: var(--space-xl);
+  font: var(--font-xl);
 }
 
 h3 {
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-xl);
-}
-
-h4 {
-  font-size: var(--font-size-l);
-  line-height: var(--line-height-l);
+  font: var(--font-l);
 }
 
 h1:focus-visible,
@@ -80,7 +70,7 @@ a {
   padding-inline: 2px;
   color: var(--color-content-brand);
   text-decoration: none;
-  border-radius: var(--size-xxs);
+  border-radius: 4px;
   outline: none;
   transition: box-shadow 200ms;
 }
@@ -98,7 +88,7 @@ a:hover {
 
 ul,
 ol {
-  padding-left: var(--size-s);
+  padding-left: 24px;
 }
 
 ul li::marker {
@@ -111,14 +101,14 @@ img {
 
 img[alt$='>'] {
   float: right;
-  margin-block-end: var(--size-m);
-  margin-inline-start: var(--size-m);
+  margin-block-end: var(--space-m);
+  margin-inline-start: var(--space-m);
 }
 
 img[alt$='<'] {
   float: left;
-  margin-block-end: var(--size-m);
-  margin-inline-end: var(--size-m);
+  margin-block-end: var(--space-m);
+  margin-inline-end: var(--space-m);
 }
 
 #app {
@@ -148,35 +138,26 @@ pre,
 code {
   overflow: auto;
   font-family: 'Martian Mono', monospace;
-  font-size: 0.7rem;
-  line-height: 1.5rem;
+  font-size: clamp(0.6875rem, 0.6458rem + 0.1389vw, 0.8125rem);
+  line-height: 1.85;
   background: var(--color-background-secondary) !important;
 }
 
 pre {
-  padding: var(--size-s);
-  border-radius: var(--size-xs);
+  padding: var(--space-s);
+  border-radius: 8px;
 }
 
 p {
-  margin-block: var(--size-s);
+  margin-block: var(--space-m);
 }
 
 :not(pre) > code {
-  padding: var(--size-xs) var(--size-xxs);
-  font-size: var(--font-size-xxs);
+  padding: var(--space-xs) var(--space-2xs);
+  font: var(--font-xs);
+  font-family: 'Martian Mono', monospace;
   color: var(--color-content-secondary);
   background: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
-  border-radius: var(--size-xs);
-}
-
-@media (width >= 480px) {
-  pre {
-    padding: var(--size-m);
-  }
-
-  p {
-    margin-block: calc(var(--size-s) + var(--size-xxs));
-  }
+  border-radius: 8px;
 }

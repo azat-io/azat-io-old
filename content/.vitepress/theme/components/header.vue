@@ -145,7 +145,7 @@ onMounted(async () => {
   align-items: center;
   justify-content: space-between;
   min-width: 320px;
-  padding: var(--size-s);
+  padding: var(--space-m);
   background: var(--color-background-primary);
   box-shadow: 0 1px 1px var(--color-border-primary);
   transition-duration: 250ms;
@@ -171,9 +171,8 @@ onMounted(async () => {
   display: flex;
   column-gap: 0.75rem;
   align-items: center;
-  font-size: var(--font-size-l);
+  font: var(--font-m);
   font-weight: 700;
-  line-height: var(--line-height-l);
   color: var(--color-content-primary);
   white-space: nowrap;
 }
@@ -183,22 +182,21 @@ onMounted(async () => {
 }
 
 .logo {
-  height: calc(var(--size-m) - var(--size-xxs));
+  height: 24px;
   color: var(--color-content-brand);
 }
 
 .item {
   display: grid;
   grid-template-columns: 20px auto;
-  grid-gap: var(--size-xs);
+  gap: var(--space-xs);
   place-items: center;
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font: var(--font-s);
   color: var(--color-content-primary);
   cursor: pointer;
   background: transparent;
   border: none;
-  border-radius: var(--size-xxs);
+  border-radius: 4px;
   outline: none;
   transition-duration: 250ms;
   transition-property: background, box-shadow, color;
@@ -221,12 +219,12 @@ onMounted(async () => {
 .locale-list {
   position: absolute;
   top: 100%;
-  right: var(--size-m);
+  right: var(--space-s);
   display: grid;
   grid-template-columns: 1fr;
   background: var(--color-background-primary);
   border: 1px solid var(--color-border-primary);
-  border-radius: 0 0 var(--size-xs) var(--size-xs);
+  border-radius: 0 0 8px 8px;
   transform-origin: top center;
 }
 
@@ -243,15 +241,15 @@ onMounted(async () => {
 }
 
 .country {
-  padding: var(--size-xs) var(--size-m);
+  padding: var(--space-xs) var(--space-m);
 }
 
 .locale-item:first-child .country {
-  margin-block-start: var(--size-s);
+  margin-block-start: var(--space-s);
 }
 
 .locale-item:last-child .country {
-  margin-block-end: var(--size-s);
+  margin-block-end: var(--space-s);
 }
 
 @keyframes grow-down {
@@ -279,16 +277,6 @@ onMounted(async () => {
 
   100% {
     transform: scaleY(0);
-  }
-}
-
-@media (width >= 480px) {
-  .header {
-    padding: var(--size-s) var(--size-m);
-  }
-
-  .logo {
-    height: var(--size-m);
   }
 }
 </style>

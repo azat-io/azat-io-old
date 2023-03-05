@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 .link {
   display: inline-block;
   padding-inline: 0;
-  margin-bottom: var(--size-xxs);
+  margin-bottom: var(--space-2xs);
   background: none;
 }
 
@@ -50,20 +50,17 @@ onBeforeUnmount(() => {
 .posts {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--size-l);
+  gap: var(--space-l);
 }
 
 .title {
   margin-block: 0;
-  font-size: var(--font-size-m);
-  font-weight: normal;
-  line-height: var(--line-height-m);
+  font: var(--font-m);
 }
 
 .date {
   display: block;
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
+  font: var(--font-xs);
   color: var(--color-content-primary);
 }
 </style>

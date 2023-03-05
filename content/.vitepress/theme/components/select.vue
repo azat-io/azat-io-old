@@ -54,6 +54,10 @@ let model = computed({
 </template>
 
 <style module>
+:root {
+  --select-icon-size: 16px;
+}
+
 .wrapper {
   position: relative;
 }
@@ -61,13 +65,12 @@ let model = computed({
 .select {
   appearance: none;
   width: 100%;
-  padding: var(--size-xs) var(--size-s);
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  padding: var(--space-xs) var(--space-s);
+  font: var(--font-s);
   color: var(--color-content-primary);
   background: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
-  border-radius: var(--size-s);
+  border-radius: 8px;
   outline: none;
 }
 
@@ -80,22 +83,22 @@ let model = computed({
 }
 
 .select-left {
-  padding-inline-start: calc(var(--size-s) * 2 + var(--size-xs));
+  padding-inline-start: calc(var(--select-icon-size) + var(--space-m));
 }
 
 .icon {
   position: absolute;
   top: 50%;
-  width: var(--size-s);
-  height: var(--size-s);
+  width: var(--select-icon-size);
+  height: var(--select-icon-size);
   transform: translateY(-50%);
 }
 
 .icon-right {
-  right: var(--size-s);
+  right: var(--space-s);
 }
 
 .icon-left {
-  left: var(--size-s);
+  left: var(--space-s);
 }
 </style>

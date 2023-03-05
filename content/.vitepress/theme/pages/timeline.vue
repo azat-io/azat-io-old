@@ -53,10 +53,6 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
         <span :class="[$style.example, $style['leb-example']]" /> - Life
         expectancy at birth
       </p>
-      <p>
-        <span :class="[$style.example, $style['dead-example']]" v-text="4" />
-        - Celebrity death date
-      </p>
     </div>
     <div :class="$style.timeline">
       <div
@@ -81,8 +77,8 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 .examples {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--size-s);
-  margin-bottom: var(--size-xl);
+  gap: var(--space-s);
+  margin-bottom: var(--space-xl);
 }
 
 .examples p {
@@ -91,8 +87,8 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 
 .example {
   display: inline-block;
-  width: var(--size-s);
-  height: var(--size-s);
+  width: 16px;
+  height: 16px;
   border-radius: 2px;
 }
 
@@ -105,22 +101,12 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
   opacity: 80%;
 }
 
-.dead-example {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-  color: var(--color-content-inverted);
-  background: oklch(73.11% 0.182 51.69);
-}
-
 .timeline {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
   grid-auto-rows: 1fr;
-  grid-gap: 1px;
-  padding-right: var(--size-m);
+  gap: 1px;
+  padding-right: var(--space-m);
 }
 
 .element {
@@ -152,26 +138,15 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 .counter::after {
   position: absolute;
   top: 50%;
-  left: calc(100% + var(--size-xs));
-  font-size: 0.5rem;
-  line-height: var(--line-height-xxs);
+  left: calc(100% + var(--space-xs));
+  font: var(--font-xs);
   content: counter(year);
   transform: translateY(-50%);
 }
 
-.count {
-  padding: 0 var(--size-xs);
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
-  color: var(--color-content-inverted);
-  background: oklch(73.11% 0.182 51.69);
-  border-radius: var(--size-xxs);
-}
-
 .info {
-  margin-block: var(--size-xs);
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  margin-block: var(--space-xs);
+  font: var(--font-s);
 }
 
 @media (width >= 720px) {
@@ -180,15 +155,11 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
   }
 
   .timeline {
-    grid-gap: 3px;
+    gap: 3px;
   }
 
   .element {
     border-radius: 2px;
-  }
-
-  .counter::after {
-    font-size: var(--font-size-xxs);
   }
 }
 </style>

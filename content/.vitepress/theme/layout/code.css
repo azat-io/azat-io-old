@@ -10,8 +10,8 @@
 
 [class*='language-'] .copy {
   position: absolute;
-  top: var(--size-m);
-  right: var(--size-s);
+  top: var(--space-m);
+  right: var(--space-s);
   z-index: 3;
   display: block;
   align-items: center;
@@ -49,11 +49,10 @@
 
 [class*='language-'] > span.lang {
   position: absolute;
-  top: var(--size-m);
-  right: var(--size-m);
+  top: var(--space-m);
+  right: var(--space-m);
   z-index: 2;
-  font-size: 12px;
-  font-weight: 500;
+  font: var(--font-xs);
   color: var(--color-content-tertiary);
   transition: color 0.4s, opacity 0.4s;
 }
