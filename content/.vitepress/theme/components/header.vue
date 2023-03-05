@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Directive } from 'vue'
 
-import { watchEffect, shallowRef, computed, onMounted, ref } from 'vue'
+import { watchEffect, shallowRef, computed, onMounted, watch, ref } from 'vue'
 import { useData } from 'vitepress'
 
 import LanguageIcon from '~/icons/language.svg'
@@ -79,14 +79,23 @@ watchEffect(() => {
 
 let vClickAway = ref<Directive>(() => () => {})
 
+let updating = ref(false)
+
 onMounted(async () => {
   vClickAway.value = (await import('vue3-click-away')).directive
 
-  watchEffect(() => {
-    if (props.transparent) {
-      document.addEventListener('scroll', onScroll)
-    }
-  })
+  watch(
+    () => props.transparent,
+    () => {
+      if (props.transparent) {
+        document.addEventListener('scroll', onScroll)
+      }
+      updating.value = true
+      setTimeout(() => {
+        updating.value = false
+      }, 1000)
+    },
+  )
 })
 </script>
 
@@ -97,8 +106,8 @@ onMounted(async () => {
       [$style.header],
       {
         [$style.transparent]: props.transparent && onTop && !localePopupOpen,
-        [$style['on-top']]: props.transparent && onTop && scrolled,
         [$style.fixed]: props.transparent,
+        [$style.updating]: updating,
       },
     ]"
   >
@@ -148,23 +157,23 @@ onMounted(async () => {
   padding: var(--space-m);
   background: var(--color-background-primary);
   box-shadow: 0 1px 1px var(--color-border-primary);
-  transition-duration: 250ms;
   transition-property: background, box-shadow;
 }
 
 .transparent {
   background: transparent;
   box-shadow: none;
-  transition-duration: 0ms;
-}
-
-.on-top {
   transition-delay: 250ms;
   transition-duration: 250ms;
 }
 
 .fixed {
   position: fixed;
+}
+
+.updating {
+  transition-delay: 0ms;
+  transition-duration: 0ms;
 }
 
 .title {
