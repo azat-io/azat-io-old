@@ -3,8 +3,11 @@ import type { ConfigEnv } from 'vite'
 
 import mdImageLazyLoading from 'markdown-it-image-lazy-loading'
 import lightningcss from 'vite-plugin-lightningcss'
+import { resolve as resolvePath } from 'node:path'
 import { defineConfigWithTheme } from 'vitepress'
 import mdImageSize from 'markdown-it-imsize'
+import { createWriteStream } from 'node:fs'
+import { SitemapStream } from 'sitemap'
 import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 import path from 'path'
@@ -12,8 +15,13 @@ import path from 'path'
 import { getDirname } from './theme/utils/get-dirname.js'
 
 let dirname = getDirname(import.meta.url)
+let outDir = path.join(dirname, '/../../dist/')
 
 let theme = await loadTheme(path.resolve(dirname, 'theme/layout/gruvbox.json'))
+
+let hostname = 'https://azat.io/'
+
+let links: string[] = []
 
 export default ({ mode }: ConfigEnv): UserConfig =>
   defineConfigWithTheme({
@@ -182,5 +190,22 @@ export default ({ mode }: ConfigEnv): UserConfig =>
       ],
     },
 
-    outDir: `${dirname}/../../dist/`,
+    transformHtml: (_, id, { pageData }) => {
+      if (!/[\\/]404\.html$/.test(id)) {
+        links.push(pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'))
+      }
+    },
+
+    buildEnd: async () => {
+      let sitemap = new SitemapStream({
+        hostname,
+      })
+      let writeStream = createWriteStream(resolvePath(outDir, 'sitemap.xml'))
+      sitemap.pipe(writeStream)
+      links.forEach(link => sitemap.write(link))
+      sitemap.end()
+      await new Promise(resolve => writeStream.on('finish', resolve))
+    },
+
+    outDir,
   })
