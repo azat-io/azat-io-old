@@ -19,26 +19,26 @@
 }
 
 :root {
-  --font-3xl: 600 clamp(2.5rem, 1.8333rem + 2.2222vw, 4.5rem) / 1.1 'Stem',
+  --font-3xl: 600 clamp(2.5rem, 1.8333rem + 2.2222vi, 4.5rem) / 1.1 'Stem',
     sans-serif;
-  --font-2xl: 600 clamp(1.75rem, 1.5833rem + 0.5556vw, 2.25rem) / 1.25 'Stem',
+  --font-2xl: 600 clamp(1.75rem, 1.5833rem + 0.5556vi, 2.25rem) / 1.25 'Stem',
     sans-serif;
-  --font-xl: 600 clamp(1.5rem, 1.375rem + 0.4167vw, 1.875rem) /
-      clamp(2.5rem, 2.25rem + 0.8333vw, 3.25rem) 'Stem',
+  --font-xl: 600 clamp(1.5rem, 1.375rem + 0.4167vi, 1.875rem) /
+      clamp(2.5rem, 2.25rem + 0.8333vi, 3.25rem) 'Stem',
     sans-serif;
-  --font-l: 400 clamp(1.25rem, 1.1667rem + 0.2778vw, 1.5rem) /
-      clamp(2.125rem, 2rem + 0.4167vw, 2.5rem) 'Stem',
+  --font-l: 400 clamp(1.25rem, 1.1667rem + 0.2778vi, 1.5rem) /
+      clamp(2.125rem, 2rem + 0.4167vi, 2.5rem) 'Stem',
     sans-serif;
-  --font-m: 400 clamp(1rem, 0.9479rem + 0.1736vw, 1.1563rem) /
-      clamp(1.625rem, 1.5rem + 0.4167vw, 2rem) 'Stem',
+  --font-m: 400 clamp(1rem, 0.9479rem + 0.1736vi, 1.1563rem) /
+      clamp(1.625rem, 1.5rem + 0.4167vi, 2rem) 'Stem',
     sans-serif;
-  --font-s: 400 clamp(0.875rem, 0.8333rem + 0.1389vw, 1rem) /
-      clamp(1.5rem, 1.4167rem + 0.2778vw, 1.75rem) 'Stem',
+  --font-s: 400 clamp(0.875rem, 0.8333rem + 0.1389vi, 1rem) /
+      clamp(1.5rem, 1.4167rem + 0.2778vi, 1.75rem) 'Stem',
     sans-serif;
-  --font-xs: 400 clamp(0.75rem, 0.7083rem + 0.1389vw, 0.875rem) /
-      clamp(1.25rem, 1.1667rem + 0.2778vw, 1.5rem) 'Stem',
+  --font-xs: 400 clamp(0.75rem, 0.7083rem + 0.1389vi, 0.875rem) /
+      clamp(1.25rem, 1.1667rem + 0.2778vi, 1.5rem) 'Stem',
     sans-serif;
-  --font-2xs: 400 clamp(0.625rem, 0.5833rem + 0.1389vw, 0.75rem) /
-      clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem) 'Stem',
+  --font-2xs: 400 clamp(0.625rem, 0.5833rem + 0.1389vi, 0.75rem) /
+      clamp(1rem, 0.9167rem + 0.2778vi, 1.25rem) 'Stem',
     sans-serif;
 }

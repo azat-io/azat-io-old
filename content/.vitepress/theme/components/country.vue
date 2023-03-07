@@ -66,7 +66,7 @@ let src: string | undefined = flags[props.code] ?? flagUnknown
 }
 
 .icon {
-  width: 48px;
+  inline-size: 48px;
   margin-block-start: 4px;
 }
 

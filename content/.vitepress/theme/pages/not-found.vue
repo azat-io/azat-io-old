@@ -11,7 +11,7 @@
 .main {
   display: grid;
   place-items: center;
-  height: 100vh;
+  block-size: 100vb;
   text-align: center;
 }
 </style>

@@ -64,7 +64,7 @@ let model = computed({
 
 .select {
   appearance: none;
-  width: 100%;
+  inline-size: 100%;
   padding: var(--space-xs) var(--space-s);
   font: var(--font-s);
   color: var(--color-content-primary);
@@ -88,17 +88,17 @@ let model = computed({
 
 .icon {
   position: absolute;
-  top: 50%;
-  width: var(--select-icon-size);
-  height: var(--select-icon-size);
+  inset-block-start: 50%;
+  inline-size: var(--select-icon-size);
+  block-size: var(--select-icon-size);
   transform: translateY(-50%);
 }
 
 .icon-right {
-  right: var(--space-s);
+  inset-inline-end: var(--space-s);
 }
 
 .icon-left {
-  left: var(--space-s);
+  inset-inline-start: var(--space-s);
 }
 </style>

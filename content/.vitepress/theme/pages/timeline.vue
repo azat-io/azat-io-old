@@ -78,7 +78,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-s);
-  margin-bottom: var(--space-xl);
+  margin-block-end: var(--space-xl);
 }
 
 .examples p {
@@ -87,8 +87,8 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 
 .example {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  inline-size: 16px;
+  block-size: 16px;
   border-radius: 2px;
 }
 
@@ -106,7 +106,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
   grid-template-columns: repeat(52, 1fr);
   grid-auto-rows: 1fr;
   gap: 1px;
-  padding-right: var(--space-m);
+  padding-inline-end: var(--space-m);
 }
 
 .element {
@@ -122,8 +122,8 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 
 .element::before {
   display: block;
-  width: 100%;
-  padding-bottom: 100%;
+  inline-size: 100%;
+  padding-block-end: 100%;
   content: '';
 }
 
@@ -137,8 +137,8 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 
 .counter::after {
   position: absolute;
-  top: 50%;
-  left: calc(100% + var(--space-xs));
+  inset-block-start: 50%;
+  inset-inline-start: calc(100% + var(--space-xs));
   font: var(--font-xs);
   content: counter(year);
   transform: translateY(-50%);

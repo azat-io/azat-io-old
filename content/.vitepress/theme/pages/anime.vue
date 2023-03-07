@@ -223,7 +223,7 @@ let animeList = computed(() => {
   --block-height: calc(
     var(--origin-image-height) * var(--origin-image-coefficient)
   );
-  --star-size: clamp(1rem, 0.825rem + 0.25vw, 1.125rem);
+  --star-size: clamp(1rem, 0.825rem + 0.25vi, 1.125rem);
 }
 
 .title {
@@ -245,7 +245,7 @@ let animeList = computed(() => {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-m);
-  margin-top: var(--space-xl);
+  margin-block-start: var(--space-xl);
 }
 
 .element {
@@ -257,8 +257,8 @@ let animeList = computed(() => {
 }
 
 .image {
-  width: var(--block-width);
-  height: var(--block-height);
+  inline-size: var(--block-width);
+  block-size: var(--block-height);
   user-select: none;
   filter: sepia(0.6) saturate(2);
 }
@@ -267,7 +267,7 @@ let animeList = computed(() => {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: minmax(0, 1fr);
-  height: var(--block-height);
+  block-size: var(--block-height);
 }
 
 .name {
@@ -281,14 +281,14 @@ let animeList = computed(() => {
 
 .origin-name {
   display: block;
-  margin-bottom: var(--space-2xs);
+  margin-block-end: var(--space-2xs);
   font: var(--font-xs);
   color: var(--color-content-tertiary);
 }
 
 .data {
   display: block;
-  margin-bottom: var(--space-2xs);
+  margin-block-end: var(--space-2xs);
   font: var(--font-xs);
 }
 
@@ -299,8 +299,8 @@ let animeList = computed(() => {
 }
 
 .star {
-  width: var(--star-size);
-  height: var(--star-size);
+  inline-size: var(--star-size);
+  block-size: var(--star-size);
 }
 
 .star-active {
@@ -309,7 +309,7 @@ let animeList = computed(() => {
 
 .total {
   display: block;
-  margin-top: var(--space-xl);
+  margin-block-start: var(--space-xl);
 }
 
 @media (width >= 960px) {

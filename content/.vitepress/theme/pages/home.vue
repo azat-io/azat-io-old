@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 .link {
   display: inline-block;
   padding-inline: 0;
-  margin-bottom: var(--space-2xs);
+  margin-block-end: var(--space-2xs);
   background: none;
 }
 

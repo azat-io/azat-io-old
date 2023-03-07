@@ -153,7 +153,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 320px;
+  min-inline-size: 320px;
   padding: var(--space-m);
   background: var(--color-background-primary);
   box-shadow: 0 1px 1px var(--color-border-primary);
@@ -191,7 +191,7 @@ onMounted(async () => {
 }
 
 .logo {
-  height: 24px;
+  block-size: 24px;
   color: var(--color-content-brand);
 }
 
@@ -221,14 +221,14 @@ onMounted(async () => {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  inline-size: 20px;
+  block-size: 20px;
 }
 
 .locale-list {
   position: absolute;
-  top: 100%;
-  right: var(--space-s);
+  inset-block-start: 100%;
+  inset-inline-end: var(--space-s);
   display: grid;
   grid-template-columns: 1fr;
   background: var(--color-background-primary);

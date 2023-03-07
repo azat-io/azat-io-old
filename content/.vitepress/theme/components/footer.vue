@@ -54,13 +54,12 @@ let socialIcons = [
 <style module>
 .footer {
   position: sticky;
-  top: 100vh;
+  inset-block-start: 100vb;
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
   align-items: center;
   justify-content: center;
-  height: var(--footer-height);
   padding: var(--space-m) var(--space-m) var(--space-xl);
   border-block-start: solid var(--color-border-primary);
 }
@@ -72,7 +71,7 @@ let socialIcons = [
 .pgp {
   display: flex;
   gap: var(--space-2xs);
-  align-items: flex-end;
+  align-items: end;
   font: var(--font-xs);
   color: var(--color-content-primary);
 }
@@ -95,8 +94,8 @@ let socialIcons = [
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  inline-size: 30px;
+  block-size: 30px;
 }
 
 @media (width >= 480px) {

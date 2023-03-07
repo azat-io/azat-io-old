@@ -145,13 +145,13 @@ let coffeeCups = computed(() =>
 
 .container {
   display: flex;
-  min-height: clamp(11.5625rem, 0.3226rem + 47.957vw, 25.5rem);
+  min-block-size: clamp(11.5625rem, 0.3226rem + 47.957vi, 25.5rem);
   padding: 0;
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center bottom;
   user-select: none;
@@ -177,8 +177,8 @@ let coffeeCups = computed(() =>
 }
 
 .cup {
-  width: 16px;
-  height: 16px;
+  inline-size: 16px;
+  block-size: 16px;
   margin-inline-end: 2px;
 }
 

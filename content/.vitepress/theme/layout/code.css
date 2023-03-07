@@ -10,14 +10,13 @@
 
 [class*='language-'] .copy {
   position: absolute;
-  top: var(--space-m);
-  right: var(--space-s);
+  inset: var(--space-l) var(--space-m) auto auto;
   z-index: 3;
   display: block;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  inline-size: 40px;
+  block-size: 40px;
   cursor: pointer;
   background-color: var(--color-background-primary);
   background-image: var(--icon-copy);
@@ -49,8 +48,7 @@
 
 [class*='language-'] > span.lang {
   position: absolute;
-  top: var(--space-m);
-  right: var(--space-m);
+  inset: var(--space-l) var(--space-m) auto auto;
   z-index: 2;
   font: var(--font-xs);
   color: var(--color-content-tertiary);

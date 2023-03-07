@@ -17,7 +17,7 @@ html.no-scroll {
 }
 
 body {
-  min-width: 320px;
+  min-inline-size: 320px;
   margin: 0;
   font: var(--font-m);
   color: var(--color-content-primary);
@@ -88,7 +88,7 @@ a:hover {
 
 ul,
 ol {
-  padding-left: 24px;
+  padding-inline-start: 24px;
 }
 
 ul li::marker {
@@ -96,7 +96,7 @@ ul li::marker {
 }
 
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 img[alt$='>'] {
@@ -112,7 +112,7 @@ img[alt$='<'] {
 }
 
 #app {
-  min-height: 100vh;
+  min-block-size: 100vb;
 }
 
 .header-anchor {
@@ -138,7 +138,7 @@ pre,
 code {
   overflow: auto;
   font-family: 'Martian Mono', monospace;
-  font-size: clamp(0.6875rem, 0.6458rem + 0.1389vw, 0.8125rem);
+  font-size: clamp(0.6875rem, 0.6458rem + 0.1389vi, 0.8125rem);
   line-height: 1.85;
   background: var(--color-background-secondary) !important;
 }

@@ -38,7 +38,6 @@ let t = computed<{
       />
       <img src="/hero-poster.webp" loading="lazy" alt="Azat S." />
     </video>
-
     <div :class="$style.paranja" />
     <div :class="$style.greeting">
       <Container>
@@ -62,8 +61,8 @@ let t = computed<{
 
 .greeting {
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
   transform: translateX(-50%);
 }
 
@@ -83,9 +82,9 @@ let t = computed<{
 }
 
 .content {
-  width: 100%;
+  inline-size: 100%;
   object-fit: cover;
-  height: clamp(30rem, 21.875rem + 20.3125vw, 46.25rem);
+  block-size: clamp(30rem, 21.875rem + 20.3125vi, 46.25rem);
   overflow: hidden;
   user-select: none;
   filter: sepia(0.3);
