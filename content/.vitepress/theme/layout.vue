@@ -1,25 +1,22 @@
 <script lang="ts" setup>
-import { useRoute, useData } from 'vitepress'
-import { inject } from 'vue'
+import { useData } from 'vitepress'
 
 import TavelMap from '~/pages/travel-map.vue'
 import Header from '~/components/header.vue'
 import Footer from '~/components/footer.vue'
+import NotFound from '~/pages/not-found.vue'
 import Timeline from '~/pages/timeline.vue'
 import Anime from '~/pages/anime.vue'
 import Root from '~/pages/root.vue'
 import Home from '~/pages/home.vue'
 import Doc from '~/pages/doc.vue'
 
-let route = useRoute()
-let { frontmatter } = useData()
-
-let NotFound = inject('NotFound')
+let { frontmatter, page } = useData()
 </script>
 
 <template>
   <Header :transparent="frontmatter.layout === 'home'" />
-  <NotFound v-if="route.component === NotFound" />
+  <NotFound v-if="page.isNotFound" />
   <Root v-else-if="frontmatter.layout === 'root'" />
   <Home v-else-if="frontmatter.layout === 'home'" />
   <Anime v-else-if="frontmatter.layout === 'anime'" />
