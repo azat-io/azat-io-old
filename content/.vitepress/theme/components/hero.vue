@@ -70,7 +70,7 @@ let t = computed<{
   margin-block-end: var(--space-xs);
   font: var(--font-3xl);
   color: var(--color-content-primary);
-  text-shadow: 1px 2px lch(12% 0 0 / 30%);
+  text-shadow: 1px 2px lch(12% 0 0 / 0.3);
 }
 
 .header-subtitle {

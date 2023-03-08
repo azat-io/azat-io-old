@@ -98,7 +98,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 
 .leb-example {
   background: var(--color-background-inverted);
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .timeline {
@@ -113,7 +113,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
   position: relative;
   background: var(--color-background-inverted);
   border-radius: 1px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .element:nth-child(52n) {
@@ -132,7 +132,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 }
 
 .healthy {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .counter::after {

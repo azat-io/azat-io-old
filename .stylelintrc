@@ -2,19 +2,6 @@
   "files": ["**/*.pcss", "**/*.css"],
   "extends": "@logux/stylelint-config",
   "ignoreFiles": ["dist/**/*"],
-  "rules": {
-    "property-no-unknown": [
-      true,
-      {
-        "ignoreProperties": ["composes"]
-      }
-    ],
-    "function-disallowed-list": ["rgb", "rgba", "hsl", "hsla"],
-    "declaration-colon-newline-after": null,
-    "alpha-value-notation": "percentage",
-    "no-descending-specificity": null,
-    "string-quotes": "single"
-  },
   "overrides": [
     {
       "files": ["**/*.vue"],

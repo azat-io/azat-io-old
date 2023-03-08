@@ -33,9 +33,9 @@ onMounted(() => {
 <style>
 .land {
   fill: var(--color-background-inverted);
-  fill-opacity: 100%;
+  fill-opacity: 1;
   stroke: var(--color-background-primary);
-  stroke-opacity: 100%;
+  stroke-opacity: 1;
   stroke-width: 0.5;
 }
 </style>

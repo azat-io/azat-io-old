@@ -55,7 +55,7 @@ h2 {
 
 h3 {
   font: var(--font-l);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1:focus-visible,
@@ -92,6 +92,10 @@ ol {
   padding-inline-start: 24px;
 }
 
+ul li {
+  margin-block: var(--space-xs);
+}
+
 ul li::marker {
   content: '✝ ';
 }
@@ -119,20 +123,20 @@ img[alt$='<'] {
 .header-anchor {
   float: left;
   margin-inline-start: -0.87em;
-  opacity: 0%;
+  opacity: 0;
   transition: opacity 0.3s;
+}
+
+.header-anchor:focus-visible,
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor {
+  opacity: 1;
 }
 
 .header-anchor:hover:not(.header-anchor:focus-visible) {
   background: inherit;
-}
-
-h1:hover .header-anchor,
-h2:hover .header-anchor,
-h3:hover .header-anchor,
-h4:hover .header-anchor,
-.header-anchor:focus-visible {
-  opacity: 100%;
 }
 
 pre,
