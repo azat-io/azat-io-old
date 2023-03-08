@@ -55,6 +55,7 @@ h2 {
 
 h3 {
   font: var(--font-l);
+  font-weight: 600;
 }
 
 h1:focus-visible,
