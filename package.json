@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "repository": "azat-io/azat-io",
+  "homepage": "https://azat.io/",
   "author": "Azat S. <to@azat.io>",
   "engines": {
     "node": ">=19"
