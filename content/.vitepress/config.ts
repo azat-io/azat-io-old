@@ -104,7 +104,7 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             ru: 'Russian',
           },
           hero: {
-            subtitle: 'of reinventing the wheel',
+            subtitle: 'for reinventing the wheel',
             title: 'Manual',
           },
           doc: {

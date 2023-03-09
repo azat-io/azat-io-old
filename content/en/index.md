@@ -1,4 +1,4 @@
 ---
-title: Manual of reinventing the wheel
+title: Manual for reinventing the wheel
 layout: home
 ---
