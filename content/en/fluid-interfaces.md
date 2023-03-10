@@ -8,15 +8,11 @@ hero:
 image: /posts/fluid-interfaces-preview.png
 ---
 
-Ohayo, as they say!
+Modern web is a zoo of all kinds of devices on which a browser can be launched. Therefore, developers keep an eye on how the website looks on different mobile devices, tablets, and desktop computers.
 
-Today's web is a wild zoo of all kinds of devices on which you can run a browser. And, therefore, our site should look cheerfully both on different mobile phones and on tablets, laptops, desktop computers.
+Due to the small screens of mobile devices, it is necessary to reduce the font size and spacing on the page.
 
-Due to the small screen size of mobile devices, for example, it makes sense to change font sizes and all kinds of indents on the page down.
-
-Fortunately, there are a couple of ways to use CSS to set the font size, which would be fun to scale between different values ​​​​within a certain range of viewport width.
-
-As a rule, an average developer uses media expressions for these purposes. It looks something like this:
+The most common way to do this is through media queries. For example:
 
 ```css
 .button {
@@ -36,33 +32,36 @@ As a rule, an average developer uses media expressions for these purposes. It lo
 }
 ```
 
-But, I think, this method is dull, like the agrarian industry. First of all, it makes you sad because you have to write a lot of code, you can even say that you write CSS code twice in one file. It would also be fun to take into account intermediate values ​​for all paddings and sizes, that is, to make the button fluid.
+There are drawbacks to this method:
 
-So, for this example, let's say we want to set a font that spans between 480px and 1280px viewport sizes. The minimum font size will be `2.25rem`, the maximum font size will be `3rem`.
+- it requires writing a lot of code
+- it would be nice to take into account intermediate values for indents and make elements on the page truly flexible
 
-What are some ways to make it fun?
+Let's say the task is to set the font size, which will change in the range from 480 to 1280 pixels. The minimum size will be `2.25rem`, the maximum will be `3rem`.
+
+What are some ways to do this?
 
 ## calc() function
 
-This function is used to perform simple calculations in CSS, in conjunction with the `vw` unit (percentage of the total width of the viewport), this function becomes a powerful tool in responsive design. This func can help us in calculating the required font size in the range we need.
+This function is used for calculations in CSS. In combination with the `vw` unit (viewport width percentage), it becomes a powerful tool for creating fluid interfaces.
 
-First, let's define the difference between the maximum and minimum font sizes. In our example, this would be: `3rem - 2.25rem = 0.75rem`.
+Let's define the difference between the maximum and minimum font sizes. In our example, it will be: `3rem - 2.25rem = 0.75rem`.
 
-We will also determine the difference between the viewport values ​​by first converting their value to the `rem` unit (depends on the value of `<html>`, by default `16px`). We get the following value: `(1280 / 16) - (480 / 16) = 50`.
+We'll also define the difference between the viewport values, first converting them to `rem` units (depending on the value of `<html>`, by default `16px`). We get `(1280 / 16) - (480 / 16) = 50`.
 
-Thus, we got the following values:
+We have the following values:
 
 - Minimum font size: `2.25rem`
 - Maximum font size: `3rem`
 - Difference between maximum and minimum font sizes: `0.75rem`
 - Minimum viewport size: `30rem (480px)`
-- Difference between max and min viewport sizes: `50rem (800px)`
+- Difference between maximum and minimum viewport sizes: `50rem (800px)`
 
-The function we need should look like this:
+The necessary function looks like this:
 
 Minimum font size + Difference between maximum and minimum font sizes \* ((Viewport width - Minimum viewport size) / Difference between maximum and minimum viewport sizes).
 
-In total we get the following result:
+As a result, we get:
 
 ```css
 .foo {
@@ -82,21 +81,23 @@ In total we get the following result:
 }
 ```
 
+It has gotten better, but there is still too much code for now.
+
 ## clamp() functions
 
-But perhaps the most efficient way is the clamp() function, which is designed to set a value in the range between the specified lower and upper limits. Obviously, in our case, the boundaries will be the minimum and maximum dimensions of the viewport.
+The `clamp()` function is a more concise way to set a value within the range of minimum and maximum values of a CSS property.
 
-All that remains for us is to find the preferred value for the font size. To do this, we will need to perform several non-trivial operations.
+All that remains is to find the preferred font size value.
 
 ![clamp function graph](/posts/fluid-interfaces-01.webp)
 
-So, we have a coordinate plane, the X-axis is the width of the browser window, and the Y-axis is the CSS property values. We need to find the point where the graph of the function intersects the Y-axis. As we remember from the boring geometry lessons at school, it is done according to the angular coefficient.
+On the coordinate plane, the values of browser window width are shown on the X axis, and CSS properties are shown on the Y axis. Let's determine the point where the function intersects the Y-axis. To do this, we use the slope of the line.
 
-The slope, I recall, is the ratio of a change in the Y coordinate (two points) to a change in the X coordinate (two points). Coordinate change is the difference between the values ​​of the corresponding coordinate of the first and second points. Okay, let's go: the difference between the maximum and minimum font sizes is divided by the difference between the maximum and minimum viewport sizes (at the same time we convert the viewport sizes from px to rem for convenience): `(3 - 2.25) / ((1280 / 16) - ( 480 / 16)) = 0.015`
+The slope of the line is the ratio of the change in Y coordinate (between two points) to the change in X coordinate (between two points). Let's find the difference between the values that correspond to the coordinates of the first and second points. We will divide the difference between the maximum and minimum font sizes by the difference between the maximum and minimum viewport sizes (while also converting the viewport sizes from px to rem for convenience). The result is: `(3 - 2.25) / ((1280 / 16) - (480 / 16)) = 0.015`
 
-So, we found out that the slope is `0.015`. Now let's find the intersection along the Y-axis by the formula: the minimum viewport size, converted to a negative number, multiplied by the slope plus the minimum font size: `(0 - (480 / 16)) * 0.015 + 2.25 = 1.8`
+The slope of the line is `0.015`. Now let's find the Y-intercept using the formula: the negative of the minimum viewport size, multiplied by the slope of the line, plus the minimum font size: `(0 - (480 / 16)) * 0.015 + 2.25 = 1.8`
 
-The preferred font size value would be the Y-intercept + (slope \* 100)vw.
+The preferred font size value will be equal to the Y-intercept plus (slope of the line multiplied by 100)vi.
 
 ```css
 .foo {
@@ -108,15 +109,17 @@ The preferred font size value would be the Y-intercept + (slope \* 100)vw.
 
 ![postcss-responsive >](/posts/fluid-interfaces-02.webp =176x220)
 
-All this math seems to be unnecessarily tedious, especially when it comes to developing a large web application or an entire design system. Therefore, for the audience's titillation, I filed the corresponding plugin [postcss-responsive](https://github.com/azat-io/postcss-responsive).
+This mathematics seems tedious, especially when it comes to developing a large web application or an entire design system.
 
-To use fluid typography in your project, just install the PostCSS plugin:
+To simplify the task, I created a corresponding plugin, [postcss-responsive](https://github.com/azat-io/postcss-responsive).
+
+To use responsive typography in the project, it is sufficient to install the PostCSS plugin:
 
 ```sh
 pnpm add postcss-responsive
 ```
 
-Next, add it to our PostCSS config:
+Next, add plugin to PostCSS config:
 
 ```json
 {
@@ -129,7 +132,7 @@ Next, add it to our PostCSS config:
 }
 ```
 
-That's all. Now we can use the `responsive()` function in our styles, to which it is enough to pass two arguments: the minimum and maximum font sizes, and the PostCSS plugin will already calculate the preferred value:
+Now we can use the `responsive()` function in our styles by passing the minimum and maximum font sizes to it. The value will be calculated by the PostCSS plugin.
 
 ```postcss
 /* Input */
@@ -145,7 +148,7 @@ That's all. Now we can use the `responsive()` function in our styles, to which i
 }
 ```
 
-In fact, this plugin can be used not only when developing responsive typography, but also for all other CSS properties.
+This plugin will be useful not only for creating fluid typography, but also for working with other CSS properties.
 
 ```postcss
 .container {
@@ -158,4 +161,4 @@ In fact, this plugin can be used not only when developing responsive typography,
 }
 ```
 
-Thus, we can easily create truly fluid interfaces.
+Create fluid interfaces without media queries.
