@@ -150,6 +150,7 @@ code {
 
 pre {
   padding: var(--space-s);
+  border: 1px solid var(--color-border-primary);
   border-radius: 8px;
   outline-color: var(--color-border-brand);
 }
