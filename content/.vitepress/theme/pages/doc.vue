@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
+import TranslateBlock from '~/components/translate-block.vue'
 import CoffeeCupIcon from '~/icons/coffee-cup.svg'
 import Container from '~/components/container.vue'
 import { data as posts } from '~/posts.data.js'
@@ -108,6 +109,7 @@ let coffeeCups = computed(() =>
     <article :class="$style.article">
       <Content />
     </article>
+    <TranslateBlock />
     <a
       :href="editPageLink"
       :class="$style['edit-link']"
@@ -211,7 +213,7 @@ let coffeeCups = computed(() =>
 }
 
 .article {
-  margin-block-start: var(--space-l);
+  margin-block: var(--space-l);
 }
 
 .edit-link {
