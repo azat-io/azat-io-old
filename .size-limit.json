@@ -1,14 +1,18 @@
 [
   {
     "name": "Main script",
-    "path": ["dist/assets/app.*.js"],
+    "path": [
+      "dist/assets/chunks/framework.*.js",
+      "dist/assets/chunks/module.*.js",
+      "dist/assets/app.*.js"
+    ],
     "limit": "40 kB",
     "brotli": true
   },
   {
     "name": "All scripts",
-    "path": ["dist/assets/*.js"],
-    "limit": "70 kB",
+    "path": ["dist/assets/**/*.js"],
+    "limit": "120 kB",
     "brotli": true
   },
   {
