@@ -3,9 +3,13 @@ title: Резиновые интерфейсы
 description: Используем CSS-функцию clamp() для создания резиновых интерфейсов
 date: 2022-08-18
 hero:
-  avif: /posts/fluid-interfaces.avif
-  webp: /posts/fluid-interfaces.webp
-image: /posts/fluid-interfaces-preview.png
+  desktop:
+    avif: /posts/fluid-interfaces/cover-desktop.avif
+    webp: /posts/fluid-interfaces/cover-desktop.webp
+  mobile:
+    avif: /posts/fluid-interfaces/cover-mobile.avif
+    webp: /posts/fluid-interfaces/cover-mobile.webp
+image: /posts/fluid-interfaces/preview.png
 ---
 
 Современный веб — зоопарк всевозможных устройств, на которых можно запустить браузер. Поэтому разработчики следят за тем, как сайт выглядит на разных мобильных устройствах, планшетах и настольных компьютерах.
@@ -89,7 +93,7 @@ image: /posts/fluid-interfaces-preview.png
 
 Всё, что остаётся - это найти предпочитаемое значение размера шрифта.
 
-![График функции clamp](/posts/fluid-interfaces-01.webp)
+![График функции clamp](/posts/fluid-interfaces/image-01.webp)
 
 На координатной плоскости по оси X располагаются значения ширины окна браузера, а по оси Y - значения CSS свойств. Определим точку пересечения графика функции с осью ординат. Для этого используется угловой коэффициент.
 
@@ -107,7 +111,7 @@ image: /posts/fluid-interfaces-preview.png
 
 ## PostCSS плагин
 
-![postcss-responsive >](/posts/fluid-interfaces-02.webp =176x220)
+![postcss-responsive >](/posts/fluid-interfaces/image-02.webp =176x220)
 
 Эта математика кажется утомительной, особенно если речь идёт о разработке большого веб-приложения или целой дизайн-системы.
 

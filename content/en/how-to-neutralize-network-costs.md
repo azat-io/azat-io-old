@@ -3,9 +3,13 @@ title: How to neutralize network costs
 description: How to reduce the influence of networks on the speed of loading sites
 date: 2022-10-05
 hero:
-  avif: /posts/how-to-neutralize-network-costs.avif
-  webp: /posts/how-to-neutralize-network-costs.webp
-image: /posts/how-to-neutralize-network-costs-preview.png
+  desktop:
+    avif: /posts/how-to-neutralize-network-costs/cover-desktop.avif
+    webp: /posts/how-to-neutralize-network-costs/cover-desktop.webp
+  mobile:
+    avif: /posts/how-to-neutralize-network-costs/cover-mobile.avif
+    webp: /posts/how-to-neutralize-network-costs/cover-mobile.webp
+image: /posts/how-to-neutralize-network-costs/preview.png
 ---
 
 Website loading speed affects search engine ranking, user perception, and conversion rates.
@@ -129,7 +133,7 @@ For this reason, a web page with a size of 14 kB loads significantly faster than
 
 To reduce the volume of data, data compression algorithms such as Brotli and Gzip should be used.
 
-![How a CDN works](/posts/how-to-neutralize-network-costs-01.webp)
+![How a CDN works](/posts/how-to-neutralize-network-costs/image-01.webp)
 
 When using TCP/IP, delays are influenced by the number of routes between the client and the server. The further the user is from the server, the longer they wait for a response. Content delivery services - CDNs - solve the problem of delays. These are worldwide distributed servers that store static data.
 

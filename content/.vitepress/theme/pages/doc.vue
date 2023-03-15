@@ -51,13 +51,24 @@ let coffeeCups = computed(() =>
   <div :class="$style.hero">
     <Container :class="$style.container">
       <picture v-if="frontmatter.hero">
-        <source type="image/avif" :srcSet="frontmatter.hero.avif" />
+        <source
+          type="image/avif"
+          media="(max-width: 600px)"
+          :srcSet="frontmatter.hero.mobile.avif"
+        />
+        <source type="image/avif" :srcSet="frontmatter.hero.desktop.avif" />
+        <source
+          type="image/webp"
+          media="(max-width: 600px)"
+          :srcSet="frontmatter.hero.mobile.webp"
+        />
         <img
           :class="$style.image"
-          :src="frontmatter.hero.webp"
+          :srcSet="frontmatter.hero.desktop.webp"
+          sizes="(max-width: 600px), 800px"
           :alt="frontmatter.title"
-          width="1512"
-          height="720"
+          width="820"
+          height="410"
           draggable="false"
         />
       </picture>
@@ -140,13 +151,13 @@ let coffeeCups = computed(() =>
 
 <style module>
 .hero {
-  background: oklch(75.7% 0.016 77.04);
+  background: oklch(74.68% 0.014 78.24);
 }
 
 .container {
   display: flex;
-  min-block-size: clamp(11.5625rem, 0.3226rem + 47.957vi, 25.5rem);
-  padding: 0;
+  min-block-size: clamp(12.5rem, 8.125rem + 17.5vw, 25.625rem);
+  padding-block: 0;
 }
 
 .image {
@@ -254,6 +265,13 @@ let coffeeCups = computed(() =>
 
   .post-next {
     text-align: end;
+  }
+}
+
+@media (width <= 800px) {
+  .container {
+    width: 100vi;
+    padding: 0;
   }
 }
 </style>

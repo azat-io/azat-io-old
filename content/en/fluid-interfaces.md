@@ -3,9 +3,13 @@ title: Fluid interfaces
 description: Using the CSS сlamp() Function to create fluid interfaces
 date: 2022-08-18
 hero:
-  avif: /posts/fluid-interfaces.avif
-  webp: /posts/fluid-interfaces.webp
-image: /posts/fluid-interfaces-preview.png
+  desktop:
+    avif: /posts/fluid-interfaces/cover-desktop.avif
+    webp: /posts/fluid-interfaces/cover-desktop.webp
+  mobile:
+    avif: /posts/fluid-interfaces/cover-mobile.avif
+    webp: /posts/fluid-interfaces/cover-mobile.webp
+image: /posts/fluid-interfaces/preview.png
 ---
 
 Modern web is a zoo of all kinds of devices on which a browser can be launched. Therefore, developers keep an eye on how the website looks on different mobile devices, tablets, and desktop computers.
@@ -89,7 +93,7 @@ The `clamp()` function is a more concise way to set a value within the range of 
 
 All that remains is to find the preferred font size value.
 
-![clamp function graph](/posts/fluid-interfaces-01.webp)
+![clamp function graph](/posts/fluid-interfaces/image-01.webp)
 
 On the coordinate plane, the values of browser window width are shown on the X axis, and CSS properties are shown on the Y axis. Let's determine the point where the function intersects the Y-axis. To do this, we use the slope of the line.
 
@@ -107,7 +111,7 @@ The preferred font size value will be equal to the Y-intercept plus (slope of th
 
 ## PostCSS plugin
 
-![postcss-responsive >](/posts/fluid-interfaces-02.webp =176x220)
+![postcss-responsive >](/posts/fluid-interfaces/image-02.webp =176x220)
 
 This mathematics seems tedious, especially when it comes to developing a large web application or an entire design system.
 
