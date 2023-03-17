@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
+import UiTypography from '~/ui/typography.vue'
 import IconTwitter from '~/icons/twitter.vue'
 import IconGithub from '~/icons/github.vue'
 import IconLock from '~/icons/lock.vue'
@@ -39,7 +40,9 @@ export default {
       target="_blank"
     >
       <icon-lock :class="[$style.icon, $style['lock-icon']]" />
-      PGP: D04D B9EC D3B3 B4FC
+      <ui-typography color="primary" size="xs">
+        PGP: D04D B9EC D3B3 B4FC
+      </ui-typography>
     </a>
     <div :class="$style['social-icons']">
       <a
@@ -78,8 +81,6 @@ export default {
   display: flex;
   gap: var(--space-2xs);
   align-items: end;
-  font: var(--font-xs);
-  color: var(--color-content-primary);
 }
 
 .social-icons {

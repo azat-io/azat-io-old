@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 
 let today = new Date()
@@ -34,12 +35,14 @@ export default {
 
 <template>
   <ui-container>
-    <h1 :class="$style.title">Timeline</h1>
-    <p>
+    <ui-typography :class="$style.text" color="brand" size="2xl" as="h1" bold>
+      Timeline
+    </ui-typography>
+    <ui-typography :class="$style.text" color="primary" size="m">
       My lifetime visualization. Each cell represents one week. There are 52
       weeks in each row, which equals 1 year
-    </p>
-    <p>
+    </ui-typography>
+    <ui-typography color="primary" size="m">
       Life expectancy data based on
       <a
         href="https://cdn.who.int/media/docs/default-source/gho-documents/world-health-statistic-reports/worldhealthstatistics_2022.pdf"
@@ -48,18 +51,26 @@ export default {
       >
         World Health Organization monitoring
       </a>
-    </p>
-    <div :class="$style.examples">
-      <p><span :class="[$style.example, $style.passed]" /> - Past week</p>
-      <p>
-        <span :class="[$style.example, $style['hale-example']]" /> - Healthy
-        life expectancy
-      </p>
-      <p>
-        <span :class="[$style.example, $style['leb-example']]" /> - Life
-        expectancy at birth
-      </p>
-    </div>
+    </ui-typography>
+    <ul :class="$style.examples">
+      <li>
+        <ui-typography color="primary" size="m">
+          <span :class="[$style.example, $style.passed]" /> - Past week
+        </ui-typography>
+      </li>
+      <li>
+        <ui-typography color="primary" size="m">
+          <span :class="[$style.example, $style['hale-example']]" /> - Healthy
+          life expectancy
+        </ui-typography>
+      </li>
+      <li>
+        <ui-typography color="primary" size="m">
+          <span :class="[$style.example, $style['leb-example']]" /> - Life
+          expectancy at birth
+        </ui-typography>
+      </li>
+    </ul>
     <div :class="$style.timeline">
       <div
         v-for="index in Math.floor(lifeExpectancyAtBirth * 52)"
@@ -76,19 +87,21 @@ export default {
 </template>
 
 <style module>
-.title {
-  margin-block-start: 0;
+.text {
+  margin-block-end: var(--space-s);
 }
 
 .examples {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-s);
+  padding-inline-start: 0;
   margin-block-end: var(--space-xl);
+  list-style-type: none;
 }
 
-.examples p {
-  margin: 0;
+.examples li {
+  margin-block: 0;
 }
 
 .example {

@@ -4,6 +4,7 @@ import { computed } from 'vue'
 
 import IconCoffeeCup from '~/icons/coffee-cup.vue'
 import { data as posts } from '~/posts.data.js'
+import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 import type { Post } from '~/posts.data.js'
 import UiTag from '~/ui/tag.vue'
@@ -81,10 +82,14 @@ export default {
     </ui-container>
   </div>
   <ui-container>
-    <h1 :class="$style.title" v-text="frontmatter.title" />
+    <ui-typography :class="$style.title" color="brand" size="2xl" as="h1" bold>
+      {{ frontmatter.title }}
+    </ui-typography>
     <div :class="$style.info">
-      <span :class="$style['info-text']" v-text="post.current?.date.string" />
-      <span :class="$style['info-text']">
+      <ui-typography :class="$style['info-text']" color="primary" size="xs">
+        {{ post.current?.date.string }}
+      </ui-typography>
+      <ui-typography :class="$style['info-text']" color="primary" size="xs">
         <icon-coffee-cup
           v-for="n in coffeeCups"
           :key="n"
@@ -101,16 +106,15 @@ export default {
             ]
           }`
         }}
-      </span>
+      </ui-typography>
     </div>
     <div
       v-if="post.current?.availableLanguages.length"
       :class="$style['available-languages']"
     >
-      <p
-        :class="$style['available-languages-title']"
-        v-text="t['also-translated']"
-      />
+      <ui-typography color="primary" size="xs">
+        {{ t['also-translated'] }}
+      </ui-typography>
       <div :class="$style['available-languages-list']">
         <ui-tag
           v-for="{ href, language, languageName } in post.current
@@ -125,32 +129,36 @@ export default {
     <article :class="$style.article">
       <Content />
     </article>
-    <a
-      :href="editPageLink"
-      :class="$style['edit-link']"
-      target="_blank"
-      rel="noreferrer"
-      v-text="t['edit-this-page']"
-    />
-    <div
-      v-if="post.previous || post.next"
-      :class="{
-        [$style['post-list']]: true,
-        [$style['post-list-only-next']]: !post.previous,
-      }"
-    >
-      <div v-if="post.previous" :class="$style['post-previous']">
-        <p :class="$style['post-title']" v-text="t['previous-post']" />
-        <a :class="$style['post-link']" :href="post.previous.href">
-          {{ post.previous.title }}
-        </a>
+    <ui-typography color="primary" size="s">
+      <a
+        :href="editPageLink"
+        :class="$style['post-link']"
+        target="_blank"
+        rel="noreferrer"
+        v-text="t['edit-this-page']"
+      />
+    </ui-typography>
+    <div v-if="post.previous || post.next" :class="$style['post-list']">
+      <div v-if="post.previous">
+        <ui-typography color="primary" size="s">
+          {{ t['previous-post'] }}
+        </ui-typography>
+        <ui-typography color="primary" size="s">
+          <a :class="$style['post-link']" :href="post.previous.href">
+            {{ post.previous.title }}
+          </a>
+        </ui-typography>
       </div>
       <div v-else />
       <div v-if="post.next" :class="$style['post-next']">
-        <p :class="$style['post-title']" v-text="t['next-post']" />
-        <a :class="$style['post-link']" :href="post.next.href">
-          {{ post.next.title }}
-        </a>
+        <ui-typography color="primary" size="s">
+          {{ t['next-post'] }}
+        </ui-typography>
+        <ui-typography color="primary" size="s">
+          <a :class="$style['post-link']" :href="post.next.href">
+            {{ post.next.title }}
+          </a>
+        </ui-typography>
       </div>
     </div>
   </ui-container>
@@ -176,7 +184,7 @@ export default {
 }
 
 .title {
-  margin-block-end: var(--space-xs);
+  margin-block: var(--space-l) var(--space-xs);
 }
 
 .info {
@@ -189,7 +197,6 @@ export default {
 .info-text {
   display: flex;
   align-items: end;
-  font: var(--font-xs);
   line-height: 1;
   white-space: nowrap;
 }
@@ -222,20 +229,8 @@ export default {
   align-items: center;
 }
 
-.available-languages-title {
-  margin-block: 0;
-  font: var(--font-xs);
-  font-weight: normal;
-}
-
 .article {
   margin-block: var(--space-l);
-}
-
-.edit-link {
-  display: inline-block;
-  margin-block-start: var(--space-m);
-  font: var(--font-s);
 }
 
 .post-list {
@@ -245,14 +240,8 @@ export default {
   margin-block-start: var(--space-m);
 }
 
-.post-title {
-  margin-block-end: var(--space-2xs);
-  font: var(--font-s);
-}
-
 .post-link {
   padding-inline: 0;
-  font: var(--font-s);
 }
 
 @media (width >= 480px) {

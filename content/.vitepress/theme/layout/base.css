@@ -96,10 +96,6 @@ ul li {
   margin-block: var(--space-xs);
 }
 
-ul li::marker {
-  content: '✝ ';
-}
-
 img {
   max-inline-size: 100%;
 }

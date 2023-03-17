@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 
 import IconSortDown from '~/icons/sort-down.vue'
+import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 import IconStar from '~/icons/star.vue'
 import UiSelect from '~/ui/select.vue'
@@ -132,7 +133,7 @@ export default {
 
 <template>
   <ui-container size="l">
-    <h1 :class="$style.title">Anime</h1>
+    <ui-typography color="brand" size="2xl" as="h1" bold>Anime</ui-typography>
     <div :class="$style.options">
       <ui-select
         v-model="selectedSorting"
@@ -162,59 +163,75 @@ export default {
         </ui-tag>
       </div>
     </div>
-    <div :class="$style.list">
-      <template v-if="animeList.length > 0">
-        <div
-          v-for="{
-            name,
-            originName,
-            image,
-            genres,
-            score,
-            year,
-            time,
-          } in animeList"
-          :key="name"
-          :class="$style.element"
-        >
-          <picture>
-            <source type="image/avif" :srcSet="image.avif" />
-            <img
-              :class="$style.image"
-              :src="image.webp"
-              :alt="name"
-              width="460"
-              height="630"
-              draggable="false"
-            />
-          </picture>
-          <div :class="$style.info">
+    <ul v-if="animeList.length > 0" :class="$style.list">
+      <li
+        v-for="{
+          name,
+          originName,
+          image,
+          genres,
+          score,
+          year,
+          time,
+        } in animeList"
+        :key="name"
+        :class="$style.element"
+      >
+        <picture>
+          <source type="image/avif" :srcSet="image.avif" />
+          <img
+            :class="$style.image"
+            :src="image.webp"
+            :alt="name"
+            width="460"
+            height="630"
+            draggable="false"
+          />
+        </picture>
+        <div :class="$style.info">
+          <div :class="$style.data">
             <div>
-              <span :class="$style.name" v-text="name" />
-              <span :class="$style['origin-name']" v-text="originName" />
-              <span
-                :class="$style.data"
-                v-text="`Genres: ${genres.join(', ')}`"
-              />
-              <span :class="$style.data" v-text="`Duration: ${time}`" />
-              <span :class="$style.data" v-text="`Year: ${year}`" />
+              <ui-typography color="brand" size="s" no-wrap>
+                {{ name }}
+              </ui-typography>
+              <ui-typography color="tertiary" size="xs">
+                {{ originName }}
+              </ui-typography>
             </div>
-            <div :class="$style.stars">
-              <icon-star
-                v-for="star in 10"
-                :key="star"
-                :class="{
-                  [$style.star]: true,
-                  [$style['star-active']]: star <= score,
-                }"
-              />
-            </div>
+            <ui-typography color="primary" size="xs">
+              {{ `Genres: ${genres.join(', ')}` }}
+            </ui-typography>
+            <ui-typography color="primary" size="xs">
+              {{ `Duration: ${time}` }}
+            </ui-typography>
+            <ui-typography color="primary" size="xs">
+              {{ `Year: ${year}` }}
+            </ui-typography>
+          </div>
+          <div :class="$style.stars">
+            <icon-star
+              v-for="star in 10"
+              :key="star"
+              :class="{
+                [$style.star]: true,
+                [$style['star-active']]: star <= score,
+              }"
+            />
           </div>
         </div>
-      </template>
-      <p v-else>No anime found.</p>
-    </div>
-    <span :class="$style.total" v-text="`Total: ${timeConvert(totalTime)}`" />
+      </li>
+    </ul>
+    <ui-typography
+      v-else
+      :class="$style['additional-data']"
+      color="primary"
+      size="m"
+    >
+      No anime found.
+    </ui-typography>
+    <ui-typography :class="$style['additional-data']" color="primary" size="m">
+      {{ `Total: ${timeConvert(totalTime)}` }}
+    </ui-typography>
   </ui-container>
 </template>
 
@@ -232,10 +249,6 @@ export default {
   --star-size: clamp(1rem, 0.825rem + 0.25vi, 1.125rem);
 }
 
-.title {
-  margin-block-start: 0;
-}
-
 .options {
   display: grid;
   gap: var(--space-l);
@@ -251,6 +264,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-m);
+  padding-inline-start: 0;
   margin-block-start: var(--space-xl);
 }
 
@@ -260,6 +274,7 @@ export default {
     var(--block-width)
     1fr;
   gap: var(--space-m);
+  margin-block: 0;
 }
 
 .image {
@@ -276,26 +291,10 @@ export default {
   block-size: var(--block-height);
 }
 
-.name {
-  display: block;
-  overflow: hidden;
-  font: var(--font-s);
-  color: var(--color-content-brand);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.origin-name {
-  display: block;
-  margin-block-end: var(--space-2xs);
-  font: var(--font-xs);
-  color: var(--color-content-tertiary);
-}
-
 .data {
-  display: block;
-  margin-block-end: var(--space-2xs);
-  font: var(--font-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
 }
 
 .stars {
@@ -313,9 +312,8 @@ export default {
   fill: var(--color-content-primary);
 }
 
-.total {
-  display: block;
-  margin-block-start: var(--space-xl);
+.additional-data {
+  margin-block-start: var(--space-l);
 }
 
 @media (width >= 960px) {

@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import UiTypography from '~/ui/typography.vue'
+</script>
+
 <script lang="ts">
 export default {
   name: 'PageNotFound',
@@ -7,8 +11,10 @@ export default {
 <template>
   <main :class="$style.main">
     <div>
-      <h1>404</h1>
-      <p>Page not found. Back to <a href="/">home</a>.</p>
+      <ui-typography color="brand" size="2xl" bold>404</ui-typography>
+      <ui-typography color="primary" size="m">
+        Page not found. Back to <a href="/">home</a>.
+      </ui-typography>
     </div>
   </main>
 </template>

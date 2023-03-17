@@ -5,7 +5,8 @@ import { watchEffect, shallowRef, computed, onMounted, watch, ref } from 'vue'
 import { useData } from 'vitepress'
 
 import IconLanguage from '~/icons/language.vue'
-import UiCountry from '~/ui/country.vue'
+import UiTypography from '~/ui/typography.vue'
+import UiFlag from '~/ui/flag.vue'
 import UiLogo from '~/ui/logo.vue'
 
 interface Props {
@@ -21,7 +22,7 @@ let header = shallowRef<HTMLElement>()
 
 let { site, theme } = useData()
 
-let name = computed(() => site.value.title)
+let title = computed(() => site.value.title)
 let lang = computed(() => site.value.localeIndex)
 let href = computed(() => site.value.locales[lang.value!].link)
 
@@ -119,7 +120,9 @@ export default {
   >
     <a :class="$style.title" :href="href === '/' ? '/en' : href">
       <ui-logo :class="$style.logo" />
-      {{ name }}
+      <ui-typography color="primary" size="m" bold>
+        {{ title }}
+      </ui-typography>
     </a>
     <button
       ref="languageButton"
@@ -134,19 +137,27 @@ export default {
       :enter-active-class="$style['locale-list-enter']"
       :leave-active-class="$style['locale-list-leave']"
     >
-      <div v-if="localePopupOpen" :class="$style['locale-list']">
-        <a
-          v-for="{ path, ...locale } in locales"
-          :key="path"
-          :class="$style['locale-item']"
-          :href="path"
-          @click="closeLocalePopup"
+      <ul v-if="localePopupOpen" :class="$style['locale-list']">
+        <li
+          v-for="{ path, code, name, originName } in locales"
+          :key="code"
+          :class="$style['locale-list-item']"
         >
-          <Suspense>
-            <ui-country :class="$style.country" v-bind="locale" />
-          </Suspense>
-        </a>
-      </div>
+          <a
+            :class="$style['locale-item']"
+            :href="path"
+            @click="closeLocalePopup"
+          >
+            <ui-flag :code="code" />
+            <div>
+              <ui-typography size="s" color="brand">{{ name }}</ui-typography>
+              <ui-typography size="2xs" color="primary">
+                {{ originName }}
+              </ui-typography>
+            </div>
+          </a>
+        </li>
+      </ul>
     </Transition>
   </header>
 </template>
@@ -184,11 +195,8 @@ export default {
 
 .title {
   display: flex;
-  column-gap: 0.75rem;
+  gap: 0.75rem;
   align-items: center;
-  font: var(--font-m);
-  font-weight: 700;
-  color: var(--color-content-primary);
   white-space: nowrap;
 }
 
@@ -237,10 +245,18 @@ export default {
   inset-inline-end: var(--space-s);
   display: grid;
   grid-template-columns: 1fr;
+  padding-block: var(--space-s);
+  padding-inline-start: 0;
+  margin-block: 0;
+  list-style-type: none;
   background: var(--color-background-primary);
   border: 1px solid var(--color-border-primary);
   border-radius: 0 0 8px 8px;
   transform-origin: top center;
+}
+
+.locale-list-item {
+  margin-block: 0;
 }
 
 .locale-list-enter {
@@ -251,20 +267,15 @@ export default {
   animation: grow-up 250ms ease-in-out forwards;
 }
 
+.locale-item {
+  display: flex;
+  gap: var(--space-m);
+  place-items: center;
+  padding: var(--space-xs) var(--space-l);
+}
+
 .locale-item:hover {
   background: inherit;
-}
-
-.country {
-  padding: var(--space-xs) var(--space-m);
-}
-
-.locale-item:first-child .country {
-  margin-block-start: var(--space-s);
-}
-
-.locale-item:last-child .country {
-  margin-block-end: var(--space-s);
 }
 
 @keyframes grow-down {

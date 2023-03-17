@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
+import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 import UiParanja from '~/ui/paranja.vue'
 
@@ -51,8 +52,10 @@ export default {
     <ui-paranja />
     <div :class="$style.greeting">
       <ui-container>
-        <h1 :class="$style['header-title']" v-text="t.title" />
-        <h2 :class="$style['header-subtitle']" v-text="t.subtitle" />
+        <h1 :class="$style.title" v-text="t.title" />
+        <ui-typography :class="$style.subtitle" color="primary" size="l">
+          {{ t.subtitle }}
+        </ui-typography>
       </ui-container>
     </div>
   </div>
@@ -70,18 +73,14 @@ export default {
   transform: translateX(-50%);
 }
 
-.header-title {
+.title {
   margin-block-end: var(--space-xs);
   font: var(--font-3xl);
   color: var(--color-content-primary);
   text-shadow: 1px 2px lch(12% 0 0 / 0.3);
 }
 
-.header-subtitle {
-  padding-block: 0;
-  margin-block: 0;
-  font: var(--font-l);
-  font-weight: normal;
+.subtitle {
   line-height: 1;
 }
 

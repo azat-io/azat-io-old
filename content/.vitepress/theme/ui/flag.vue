@@ -17,8 +17,6 @@ import flagUG from '~/assets/flag-ug.svg'
 import flagUS from '~/assets/flag-us.svg'
 
 interface Props {
-  name: string
-  originName: string
   code: string
 }
 
@@ -44,7 +42,7 @@ let flags: {
   us: flagUS,
 }
 
-let src: string | undefined = flags[props.code] ?? flagUnknown
+let src: string = flags[props.code] ?? flagUnknown
 </script>
 
 <script lang="ts">
@@ -54,42 +52,11 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.country">
-    <img :src="src" :class="$style.icon" :alt="props.originName" />
-    <div :class="$style.info">
-      <span :class="$style.name" v-text="props.name" />
-      <span :class="$style['origin-name']" v-text="props.originName" />
-    </div>
-  </div>
+  <img :src="src" :class="$style.flag" :alt="`Flag ${props.code}`" />
 </template>
 
 <style module>
-.country {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--space-m);
-  place-items: center left;
-}
-
-.icon {
+.flag {
   inline-size: 48px;
-  margin-block-start: 4px;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.name {
-  font: var(--font-s);
-  color: var(--color-content-brand);
-}
-
-.origin-name {
-  display: block;
-  font: var(--font-2xs);
-  color: var(--color-content-primary);
 }
 </style>

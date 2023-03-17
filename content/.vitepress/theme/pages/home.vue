@@ -3,6 +3,7 @@ import { onBeforeMount, onBeforeUnmount, computed } from 'vue'
 import { useData } from 'vitepress'
 
 import { data as posts } from '~/posts.data.js'
+import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 import UiBanner from '~/ui/banner.vue'
 
@@ -30,14 +31,22 @@ export default {
 <template>
   <ui-banner />
   <ui-container>
-    <div :class="$style.posts">
-      <div v-for="{ title, href, date } in languagePosts" :key="title">
+    <ul :class="$style.posts">
+      <li
+        v-for="{ title, href, date } in languagePosts"
+        :key="title"
+        :class="$style.post"
+      >
         <a :href="href" :class="$style.link">
-          <h3 :class="$style.title" v-text="title" />
+          <ui-typography color="brand" size="m" as="h3">
+            {{ title }}
+          </ui-typography>
         </a>
-        <span :class="$style.date" v-text="date.string" />
-      </div>
-    </div>
+        <ui-typography color="primary" size="xs">
+          {{ date.string }}
+        </ui-typography>
+      </li>
+    </ul>
   </ui-container>
 </template>
 
@@ -57,16 +66,12 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-l);
-}
-
-.title {
+  padding-inline-start: 0;
   margin-block: 0;
-  font: var(--font-m);
+  list-style-type: none;
 }
 
-.date {
-  display: block;
-  font: var(--font-xs);
-  color: var(--color-content-primary);
+.post {
+  margin-block: 0;
 }
 </style>
