@@ -138,7 +138,7 @@ export default {
         v-model="selectedSorting"
         :options="sortSelectOptions"
         empty-label="Sort"
-        icon-position="left"
+        icon-position="start"
         :icon="IconSortDown"
       />
       <div :class="$style.genres">

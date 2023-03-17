@@ -7,7 +7,7 @@ import IconNavArrowDown from '~/icons/nav-arrow-down.vue'
 
 interface Props {
   icon?: Component
-  iconPosition?: 'left' | 'right'
+  iconPosition?: 'start' | 'end'
   emptyLabel?: string
   options: {
     label: string
@@ -18,7 +18,7 @@ interface Props {
 
 let props = withDefaults(defineProps<Props>(), {
   icon: IconNavArrowDown,
-  iconPosition: 'right',
+  iconPosition: 'end',
   emptyLabel: '',
 })
 
@@ -101,11 +101,11 @@ export default {
   transform: translateY(-50%);
 }
 
-.icon-right {
+.icon-end {
   inset-inline-end: var(--space-s);
 }
 
-.icon-left {
+.icon-start {
   inset-inline-start: var(--space-s);
 }
 </style>
