@@ -8,11 +8,10 @@ import { defineConfigWithTheme } from 'vitepress'
 import mdImageSize from 'markdown-it-imsize'
 import { createWriteStream } from 'node:fs'
 import { SitemapStream } from 'sitemap'
-import svgLoader from 'vite-svg-loader'
 import { loadTheme } from 'shiki'
 import path from 'path'
 
-import { getDirname } from './theme/utils/get-dirname.js'
+import { getDirname } from './theme/lib/get-dirname.js'
 
 let dirname = getDirname(import.meta.url)
 let outDir = path.join(dirname, '/../../dist/')
@@ -103,9 +102,9 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             en: 'English',
             ru: 'Russian',
           },
-          hero: {
-            subtitle: 'for reinventing the wheel',
+          banner: {
             title: 'Manual',
+            subtitle: 'for reinventing the wheel',
           },
           doc: {
             'also-translated': 'Also translated into:',
@@ -134,9 +133,9 @@ export default ({ mode }: ConfigEnv): UserConfig =>
             en: 'Английский',
             ru: 'Русский',
           },
-          hero: {
-            subtitle: 'по изобретению велосипедов',
+          banner: {
             title: 'Руководство',
+            subtitle: 'по изобретению велосипедов',
           },
           doc: {
             'also-translated': 'Также переведено на:',
@@ -164,7 +163,12 @@ export default ({ mode }: ConfigEnv): UserConfig =>
       },
     },
 
-    shouldPreload: (link: string): boolean => !link.includes('world-map'),
+    shouldPreload: (link: string): boolean =>
+      !(
+        link.includes('travel-map') ||
+        link.includes('timeline') ||
+        link.includes('anime')
+      ),
 
     vite: {
       resolve: {
@@ -182,12 +186,7 @@ export default ({ mode }: ConfigEnv): UserConfig =>
               : '[hash:base64:4]',
         },
       },
-      plugins: [
-        lightningcss(),
-        svgLoader({
-          svgo: false,
-        }),
-      ],
+      plugins: [lightningcss()],
     },
 
     transformHtml: (_, id, { pageData }) => {

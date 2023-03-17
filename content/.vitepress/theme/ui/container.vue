@@ -10,6 +10,12 @@ let props = withDefaults(defineProps<Props>(), {
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'UiContainer',
+}
+</script>
+
 <template>
   <component :is="props.as" :class="[$style.container, $style[`size-${size}`]]">
     <slot />

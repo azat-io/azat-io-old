@@ -2,11 +2,11 @@
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 
-import Container from '~/components/container.vue'
-import SortDownIcon from '~/icons/sort-down.svg'
-import Select from '~/components/select.vue'
-import StarIcon from '~/icons/star.svg'
-import Tag from '~/components/tag.vue'
+import IconSortDown from '~/icons/sort-down.vue'
+import UiContainer from '~/ui/container.vue'
+import IconStar from '~/icons/star.vue'
+import UiSelect from '~/ui/select.vue'
+import UiTag from '~/ui/tag.vue'
 
 export type Genre =
   | 'action'
@@ -124,19 +124,25 @@ let animeList = computed(() => {
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'PageAnime',
+}
+</script>
+
 <template>
-  <Container size="l">
+  <ui-container size="l">
     <h1 :class="$style.title">Anime</h1>
     <div :class="$style.options">
-      <Select
+      <ui-select
         v-model="selectedSorting"
         :options="sortSelectOptions"
         empty-label="Sort"
         icon-position="left"
-        :icon="SortDownIcon"
+        :icon="IconSortDown"
       />
       <div :class="$style.genres">
-        <Tag
+        <ui-tag
           v-for="genre in animeGenres"
           :key="genre"
           :type="selectedGenres.includes(genre) ? 'active' : 'disabled'"
@@ -153,7 +159,7 @@ let animeList = computed(() => {
           "
         >
           {{ genre }}
-        </Tag>
+        </ui-tag>
       </div>
     </div>
     <div :class="$style.list">
@@ -194,7 +200,7 @@ let animeList = computed(() => {
               <span :class="$style.data" v-text="`Year: ${year}`" />
             </div>
             <div :class="$style.stars">
-              <StarIcon
+              <icon-star
                 v-for="star in 10"
                 :key="star"
                 :class="{
@@ -209,7 +215,7 @@ let animeList = computed(() => {
       <p v-else>No anime found.</p>
     </div>
     <span :class="$style.total" v-text="`Total: ${timeConvert(totalTime)}`" />
-  </Container>
+  </ui-container>
 </template>
 
 <style module>

@@ -1,27 +1,35 @@
 <script lang="ts" setup>
+import { defineAsyncComponent } from 'vue'
 import { useData } from 'vitepress'
 
-import TavelMap from '~/pages/travel-map.vue'
-import Header from '~/components/header.vue'
-import Footer from '~/components/footer.vue'
-import NotFound from '~/pages/not-found.vue'
-import Timeline from '~/pages/timeline.vue'
-import Anime from '~/pages/anime.vue'
-import Root from '~/pages/root.vue'
-import Home from '~/pages/home.vue'
-import Doc from '~/pages/doc.vue'
+import PageNotFound from '~/pages/not-found.vue'
+import PageRoot from '~/pages/root.vue'
+import PageHome from '~/pages/home.vue'
+import UiHeader from '~/ui/header.vue'
+import UiFooter from '~/ui/footer.vue'
+import PageDoc from '~/pages/doc.vue'
 
 let { frontmatter, page } = useData()
+
+let PageTravelMap = defineAsyncComponent(() => import('~/pages/travel-map.vue'))
+let PageTimeline = defineAsyncComponent(() => import('~/pages/timeline.vue'))
+let PageAnime = defineAsyncComponent(() => import('~/pages/anime.vue'))
+</script>
+
+<script lang="ts">
+export default {
+  name: 'AppLayout',
+}
 </script>
 
 <template>
-  <Header :transparent="frontmatter.layout === 'home'" />
-  <NotFound v-if="page.isNotFound" />
-  <Root v-else-if="frontmatter.layout === 'root'" />
-  <Home v-else-if="frontmatter.layout === 'home'" />
-  <Anime v-else-if="frontmatter.layout === 'anime'" />
-  <Timeline v-else-if="frontmatter.layout === 'timeline'" />
-  <TavelMap v-else-if="frontmatter.layout === 'travel-map'" />
-  <Doc v-else />
-  <Footer />
+  <ui-header :transparent="frontmatter.layout === 'home'" />
+  <page-not-found v-if="page.isNotFound" />
+  <page-root v-else-if="frontmatter.layout === 'root'" />
+  <page-home v-else-if="frontmatter.layout === 'home'" />
+  <page-anime v-else-if="frontmatter.layout === 'anime'" />
+  <page-timeline v-else-if="frontmatter.layout === 'timeline'" />
+  <page-travel-map v-else-if="frontmatter.layout === 'travel-map'" />
+  <page-doc v-else />
+  <ui-footer />
 </template>

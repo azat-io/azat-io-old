@@ -1,0 +1,18 @@
+<script lang="ts">
+export default {
+  name: 'IconNavArrowDown',
+}
+</script>
+
+<template>
+  <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+    <path
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1.5"
+      d="m6 9l6 6l6-6"
+    />
+  </svg>
+</template>

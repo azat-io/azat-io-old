@@ -2,26 +2,33 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
-import Container from '~/components/container.vue'
+import UiContainer from '~/ui/container.vue'
+import UiParanja from '~/ui/paranja.vue'
 
 let { theme } = useData()
 
 let t = computed<{
   subtitle: string
   title: string
-}>(() => theme.value.hero)
+}>(() => theme.value.banner)
+</script>
+
+<script lang="ts">
+export default {
+  name: 'UiBanner',
+}
 </script>
 
 <template>
-  <div :class="$style.hero">
+  <div :class="$style.banner">
     <img
       :class="[$style.content, $style.image]"
-      src="/hero.webp"
+      src="/banner.webp"
       alt="Azat S."
     />
     <video
       :class="[$style.content, $style.video]"
-      poster="/hero-poster.webp"
+      poster="/banner-poster.webp"
       width="1280"
       height="720"
       tabindex="-1"
@@ -30,33 +37,30 @@ let t = computed<{
       muted
       loop
     >
-      <source src="/hero.av1.mp4" type="video/mp4; codecs=av01.0.05M.08,opus" />
-      <source src="/hero.hevc.mp4" type="video/mp4; codecs=hvc1" />
       <source
-        src="/hero.h264.mp4"
+        src="/banner.av1.mp4"
+        type="video/mp4; codecs=av01.0.05M.08,opus"
+      />
+      <source src="/banner.hevc.mp4" type="video/mp4; codecs=hvc1" />
+      <source
+        src="/banner.h264.mp4"
         type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"
       />
-      <img src="/hero-poster.webp" loading="lazy" alt="Azat S." />
+      <img src="/banner-poster.webp" loading="lazy" alt="Azat S." />
     </video>
-    <div :class="$style.paranja" />
+    <ui-paranja />
     <div :class="$style.greeting">
-      <Container>
+      <ui-container>
         <h1 :class="$style['header-title']" v-text="t.title" />
         <h2 :class="$style['header-subtitle']" v-text="t.subtitle" />
-      </Container>
+      </ui-container>
     </div>
   </div>
 </template>
 
 <style module>
-.hero {
+.banner {
   position: relative;
-}
-
-.paranja {
-  position: absolute;
-  inset: 0;
-  background: oklch(12% 0 0 / 60%);
 }
 
 .greeting {

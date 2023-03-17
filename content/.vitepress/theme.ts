@@ -5,7 +5,7 @@ import fs from 'fs/promises'
 import https from 'https'
 import path from 'path'
 
-import { getDirname } from './theme/utils/get-dirname.js'
+import { getDirname } from './theme/lib/get-dirname.js'
 
 let dirname = getDirname(import.meta.url)
 

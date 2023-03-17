@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import flagUnknown from '~/assets/flag-unknown.svg?url'
-import flagAE from '~/assets/flag-ae.svg?url'
-import flagAM from '~/assets/flag-am.svg?url'
-import flagAZ from '~/assets/flag-az.svg?url'
-import flagBY from '~/assets/flag-by.svg?url'
-import flagFR from '~/assets/flag-fr.svg?url'
-import flagGE from '~/assets/flag-ge.svg?url'
-import flagIL from '~/assets/flag-il.svg?url'
-import flagIN from '~/assets/flag-in.svg?url'
-import flagKE from '~/assets/flag-ke.svg?url'
-import flagPS from '~/assets/flag-ps.svg?url'
-import flagRU from '~/assets/flag-ru.svg?url'
-import flagTR from '~/assets/flag-tr.svg?url'
-import flagUA from '~/assets/flag-ua.svg?url'
-import flagUG from '~/assets/flag-ug.svg?url'
-import flagUS from '~/assets/flag-us.svg?url'
+import flagUnknown from '~/assets/flag-unknown.svg'
+import flagAE from '~/assets/flag-ae.svg'
+import flagAM from '~/assets/flag-am.svg'
+import flagAZ from '~/assets/flag-az.svg'
+import flagBY from '~/assets/flag-by.svg'
+import flagFR from '~/assets/flag-fr.svg'
+import flagGE from '~/assets/flag-ge.svg'
+import flagIL from '~/assets/flag-il.svg'
+import flagIN from '~/assets/flag-in.svg'
+import flagKE from '~/assets/flag-ke.svg'
+import flagPS from '~/assets/flag-ps.svg'
+import flagRU from '~/assets/flag-ru.svg'
+import flagTR from '~/assets/flag-tr.svg'
+import flagUA from '~/assets/flag-ua.svg'
+import flagUG from '~/assets/flag-ug.svg'
+import flagUS from '~/assets/flag-us.svg'
 
 interface Props {
   name: string
@@ -45,6 +45,12 @@ let flags: {
 }
 
 let src: string | undefined = flags[props.code] ?? flagUnknown
+</script>
+
+<script lang="ts">
+export default {
+  name: 'UiCountry',
+}
 </script>
 
 <template>

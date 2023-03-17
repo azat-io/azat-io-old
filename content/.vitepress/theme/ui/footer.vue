@@ -2,9 +2,9 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
-import TwitterIcon from '~/icons/twitter.svg'
-import GithubIcon from '~/icons/github.svg'
-import LockIcon from '~/icons/lock.svg'
+import IconTwitter from '~/icons/twitter.vue'
+import IconGithub from '~/icons/github.vue'
+import IconLock from '~/icons/lock.vue'
 
 let { theme } = useData()
 
@@ -13,15 +13,21 @@ let t = computed<{ 'pgp-info': string }>(() => theme.value.footer)
 let socialIcons = [
   {
     name: 'Twitter',
-    icon: TwitterIcon,
+    icon: IconTwitter,
     url: 'https://twitter.com/azat_io',
   },
   {
     name: 'GitHub',
-    icon: GithubIcon,
+    icon: IconGithub,
     url: 'https://github.com/azat-io',
   },
 ]
+</script>
+
+<script lang="ts">
+export default {
+  name: 'UiFooter',
+}
 </script>
 
 <template>
@@ -32,7 +38,7 @@ let socialIcons = [
       :title="t['pgp-info']"
       target="_blank"
     >
-      <LockIcon :class="[$style.icon, $style['lock-icon']]" />
+      <icon-lock :class="[$style.icon, $style['lock-icon']]" />
       PGP: D04D B9EC D3B3 B4FC
     </a>
     <div :class="$style['social-icons']">

@@ -4,9 +4,9 @@ import type { Directive } from 'vue'
 import { watchEffect, shallowRef, computed, onMounted, watch, ref } from 'vue'
 import { useData } from 'vitepress'
 
-import LanguageIcon from '~/icons/language.svg'
-import Country from '~/components/country.vue'
-import Logo from '~/assets/logo.svg'
+import IconLanguage from '~/icons/language.vue'
+import UiCountry from '~/ui/country.vue'
+import UiLogo from '~/ui/logo.vue'
 
 interface Props {
   transparent?: boolean
@@ -99,6 +99,12 @@ onMounted(async () => {
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'UiHeader',
+}
+</script>
+
 <template>
   <header
     ref="header"
@@ -112,7 +118,7 @@ onMounted(async () => {
     ]"
   >
     <a :class="$style.title" :href="href === '/' ? '/en' : href">
-      <Logo :class="$style.logo" />
+      <ui-logo :class="$style.logo" />
       {{ name }}
     </a>
     <button
@@ -120,7 +126,7 @@ onMounted(async () => {
       :class="$style.item"
       @click="toggleLocalePopup"
     >
-      <LanguageIcon :class="$style.icon" />
+      <icon-language :class="$style.icon" />
       {{ t.language }}
     </button>
     <Transition
@@ -137,7 +143,7 @@ onMounted(async () => {
           @click="closeLocalePopup"
         >
           <Suspense>
-            <Country :class="$style.country" v-bind="locale" />
+            <ui-country :class="$style.country" v-bind="locale" />
           </Suspense>
         </a>
       </div>

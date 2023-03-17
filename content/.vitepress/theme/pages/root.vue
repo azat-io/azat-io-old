@@ -2,7 +2,7 @@
 import { useRouter } from 'vitepress'
 import { onMounted } from 'vue'
 
-import { checkUserLang } from '~/utils/check-user-lang.js'
+import { checkUserLang } from '~/lib/check-user-lang.js'
 
 let { go } = useRouter()
 
@@ -13,4 +13,10 @@ onMounted(() => {
     go('/en/')
   }
 })
+</script>
+
+<script lang="ts">
+export default {
+  name: 'PageRoot',
+}
 </script>

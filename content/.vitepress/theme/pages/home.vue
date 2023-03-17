@@ -2,9 +2,9 @@
 import { onBeforeMount, onBeforeUnmount, computed } from 'vue'
 import { useData } from 'vitepress'
 
-import Container from '~/components/container.vue'
 import { data as posts } from '~/posts.data.js'
-import Hero from '~/components/hero.vue'
+import UiContainer from '~/ui/container.vue'
+import UiBanner from '~/ui/banner.vue'
 
 let { lang } = useData()
 
@@ -21,9 +21,15 @@ onBeforeUnmount(() => {
 })
 </script>
 
+<script lang="ts">
+export default {
+  name: 'PageHome',
+}
+</script>
+
 <template>
-  <Hero />
-  <Container>
+  <ui-banner />
+  <ui-container>
     <div :class="$style.posts">
       <div v-for="{ title, href, date } in languagePosts" :key="title">
         <a :href="href" :class="$style.link">
@@ -32,7 +38,7 @@ onBeforeUnmount(() => {
         <span :class="$style.date" v-text="date.string" />
       </div>
     </div>
-  </Container>
+  </ui-container>
 </template>
 
 <style module>

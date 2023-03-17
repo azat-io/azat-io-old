@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { defineAsyncComponent } from 'vue'
 import { useData } from 'vitepress'
 
-import Container from '~/components/container.vue'
-import Country from '~/components/country.vue'
+import UiContainer from '~/ui/container.vue'
+import UiWorldMap from '~/ui/world-map.vue'
+import UiCountry from '~/ui/country.vue'
 
 interface CountryType {
   name: string
@@ -11,25 +11,27 @@ interface CountryType {
   code: string
 }
 
-const WorldMap = defineAsyncComponent(
-  () => import('~/components/world-map.vue'),
-)
-
 let { frontmatter } = useData()
 
 let countries: CountryType[] = frontmatter.value.data
 </script>
 
+<script lang="ts">
+export default {
+  name: 'PageTravelMap',
+}
+</script>
+
 <template>
-  <Container size="l">
+  <ui-container size="l">
     <h1 :class="$style.title">Travel map</h1>
-    <WorldMap :countries="countries.map(({ code }) => code.toUpperCase())" />
+    <ui-world-map :visited="countries.map(({ code }) => code)" />
     <div :class="$style.list">
       <Suspense v-for="(country, index) in countries" :key="index">
-        <Country v-bind="country" />
+        <ui-country v-bind="country" />
       </Suspense>
     </div>
-  </Container>
+  </ui-container>
 </template>
 
 <style module>

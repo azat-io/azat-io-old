@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { DefineComponent } from 'vue'
+import type { Component } from 'vue'
 
 import { computed } from 'vue'
 
-import NavArrowDownIcon from '~/icons/nav-arrow-down.svg'
+import IconNavArrowDown from '~/icons/nav-arrow-down.vue'
 
 interface Props {
-  icon?: DefineComponent
+  icon?: Component
   iconPosition?: 'left' | 'right'
   emptyLabel?: string
   options: {
@@ -17,8 +17,9 @@ interface Props {
 }
 
 let props = withDefaults(defineProps<Props>(), {
-  icon: NavArrowDownIcon,
+  icon: IconNavArrowDown,
   iconPosition: 'right',
+  emptyLabel: '',
 })
 
 let emit = defineEmits(['update:modelValue'])
@@ -27,6 +28,12 @@ let model = computed({
   get: () => props.modelValue,
   set: value => emit('update:modelValue', value),
 })
+</script>
+
+<script lang="ts">
+export default {
+  name: 'UiSelect',
+}
 </script>
 
 <template>

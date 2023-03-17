@@ -1,8 +1,6 @@
 declare module '*.svg' {
-  import type { DefineComponent } from 'vue'
-
-  let component: DefineComponent
-  export default component
+  let path: string
+  export default path
 }
 
 declare module '*.vue' {

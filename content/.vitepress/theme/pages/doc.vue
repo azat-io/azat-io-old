@@ -2,11 +2,11 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
-import CoffeeCupIcon from '~/icons/coffee-cup.svg'
-import Container from '~/components/container.vue'
+import IconCoffeeCup from '~/icons/coffee-cup.vue'
 import { data as posts } from '~/posts.data.js'
+import UiContainer from '~/ui/container.vue'
 import type { Post } from '~/posts.data.js'
-import Tag from '~/components/tag.vue'
+import UiTag from '~/ui/tag.vue'
 
 let { frontmatter, lang, theme, page } = useData()
 
@@ -47,9 +47,15 @@ let coffeeCups = computed(() =>
 )
 </script>
 
+<script lang="ts">
+export default {
+  name: 'PageDoc',
+}
+</script>
+
 <template>
   <div :class="$style.hero">
-    <Container :class="$style.container">
+    <ui-container :class="$style.container">
       <picture v-if="frontmatter.hero">
         <source
           type="image/avif"
@@ -72,14 +78,14 @@ let coffeeCups = computed(() =>
           draggable="false"
         />
       </picture>
-    </Container>
+    </ui-container>
   </div>
-  <Container>
+  <ui-container>
     <h1 :class="$style.title" v-text="frontmatter.title" />
     <div :class="$style.info">
       <span :class="$style['info-text']" v-text="post.current?.date.string" />
       <span :class="$style['info-text']">
-        <CoffeeCupIcon
+        <icon-coffee-cup
           v-for="n in coffeeCups"
           :key="n"
           :class="{
@@ -106,14 +112,14 @@ let coffeeCups = computed(() =>
         v-text="t['also-translated']"
       />
       <div :class="$style['available-languages-list']">
-        <Tag
+        <ui-tag
           v-for="{ href, language, languageName } in post.current
             .availableLanguages"
           :key="language"
           :href="href"
         >
           {{ languageName }}
-        </Tag>
+        </ui-tag>
       </div>
     </div>
     <article :class="$style.article">
@@ -139,6 +145,7 @@ let coffeeCups = computed(() =>
           {{ post.previous.title }}
         </a>
       </div>
+      <div v-else />
       <div v-if="post.next" :class="$style['post-next']">
         <p :class="$style['post-title']" v-text="t['next-post']" />
         <a :class="$style['post-link']" :href="post.next.href">
@@ -146,7 +153,7 @@ let coffeeCups = computed(() =>
         </a>
       </div>
     </div>
-  </Container>
+  </ui-container>
 </template>
 
 <style module>
@@ -257,10 +264,6 @@ let coffeeCups = computed(() =>
 @media (width >= 640px) {
   .post-list {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .post-list-only-next {
-    direction: rtl;
   }
 
   .post-next {

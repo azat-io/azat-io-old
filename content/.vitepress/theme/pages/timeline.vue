@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Container from '~/components/container.vue'
+import UiContainer from '~/ui/container.vue'
 
 let today = new Date()
 let dateOfBirth = new Date('1992-02-16')
@@ -26,8 +26,14 @@ let getWeeksBetweenDates = (firstDate: Date, secondDate: Date): number => {
 let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
 </script>
 
+<script lang="ts">
+export default {
+  name: 'PageTimeline',
+}
+</script>
+
 <template>
-  <Container>
+  <ui-container>
     <h1 :class="$style.title">Timeline</h1>
     <p>
       My lifetime visualization. Each cell represents one week. There are 52
@@ -66,7 +72,7 @@ let livedWeeks = getWeeksBetweenDates(dateOfBirth, today)
         }"
       />
     </div>
-  </Container>
+  </ui-container>
 </template>
 
 <style module>

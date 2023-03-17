@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: 'PageNotFound',
+}
+</script>
+
 <template>
   <main :class="$style.main">
     <div>

@@ -1,4 +1,4 @@
-import { getUserLang } from '~/utils/get-user-lang.js'
+import { getUserLang } from '~/lib/get-user-lang.js'
 
 export let checkUserLang = (language: string | string[]): boolean => {
   let userLang = getUserLang()

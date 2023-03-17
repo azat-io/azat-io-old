@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 interface Props {
   type?: 'active' | 'disabled'
-  onClick?: () => void
-  href?: string
+  href?: string | null
+  onClick?: (() => void) | null
 }
 
 let props = withDefaults(defineProps<Props>(), {
   type: 'active',
+  href: null,
+  onClick: null,
 })
 
 let componentType: string
@@ -16,6 +18,12 @@ if (props.onClick) {
   componentType = 'a'
 } else {
   componentType = 'div'
+}
+</script>
+
+<script lang="ts">
+export default {
+  name: 'UiTag',
 }
 </script>
 
