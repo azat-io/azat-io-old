@@ -154,7 +154,7 @@ export default {
 <style module>
 .header {
   position: sticky;
-  inset: 0 0 auto 0;
+  inset: 0 0 auto;
   z-index: 1;
   display: flex;
   align-items: center;

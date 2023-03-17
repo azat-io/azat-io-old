@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
-    "moduleResolution": "nodenext",
-    "preserveValueImports": true,
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "module": "esnext",
