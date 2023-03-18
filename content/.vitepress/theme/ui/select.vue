@@ -89,7 +89,7 @@ export default {
   box-shadow: 0 0 0 1px var(--color-border-brand);
 }
 
-.select-left {
+.select-start {
   padding-inline-start: calc(var(--select-icon-size) + var(--space-m));
 }
 
