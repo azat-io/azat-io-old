@@ -22,7 +22,13 @@ export default {
 
 <template>
   <div class="banner">
-    <img class="content image" src="/banner.webp" alt="Azat S." />
+    <img
+      class="content image"
+      src="/banner.webp"
+      width="1280"
+      height="720"
+      alt="Azat S."
+    />
     <video
       class="content video"
       poster="/banner-poster.webp"
@@ -43,7 +49,13 @@ export default {
         src="/banner.h264.mp4"
         type="video/mp4; codecs=avc1.4D401E,mp4a.40.2"
       />
-      <img src="/banner-poster.webp" loading="lazy" alt="Azat S." />
+      <img
+        src="/banner-poster.webp"
+        loading="lazy"
+        width="1280"
+        height="720"
+        alt="Azat S."
+      />
     </video>
     <ui-paranja />
     <div class="greeting">
