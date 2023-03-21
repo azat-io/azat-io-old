@@ -110,44 +110,36 @@ export default {
   <header
     ref="header"
     :class="[
-      [$style.header],
+      'header',
       {
-        [$style.transparent]: props.transparent && onTop && !localePopupOpen,
-        [$style.fixed]: props.transparent,
-        [$style.updating]: updating,
+        transparent: props.transparent && onTop && !localePopupOpen,
+        fixed: props.transparent,
+        updating: updating,
       },
     ]"
   >
-    <a :class="$style.title" :href="href === '/' ? '/en' : href">
-      <ui-logo :class="$style.logo" />
+    <a class="title" :href="href === '/' ? '/en' : href">
+      <ui-logo class="logo" />
       <ui-typography color="primary" size="m" bold>
         {{ title }}
       </ui-typography>
     </a>
-    <button
-      ref="languageButton"
-      :class="$style.item"
-      @click="toggleLocalePopup"
-    >
-      <icon-language :class="$style.icon" />
+    <button ref="languageButton" class="item" @click="toggleLocalePopup">
+      <icon-language class="icon" />
       {{ t.language }}
     </button>
     <Transition
       v-click-away="closeLocalePopup"
-      :enter-active-class="$style['locale-list-enter']"
-      :leave-active-class="$style['locale-list-leave']"
+      enter-active-class="locales-enter"
+      leave-active-class="locales-leave"
     >
-      <ul v-if="localePopupOpen" :class="$style['locale-list']">
+      <ul v-if="localePopupOpen" class="locales">
         <li
           v-for="{ path, code, name, originName } in locales"
           :key="code"
-          :class="$style['locale-list-item']"
+          class="locales-item"
         >
-          <a
-            :class="$style['locale-item']"
-            :href="path"
-            @click="closeLocalePopup"
-          >
+          <a class="locale" :href="path" @click="closeLocalePopup">
             <ui-flag :code="code" />
             <div>
               <ui-typography size="s" color="brand">{{ name }}</ui-typography>
@@ -162,7 +154,7 @@ export default {
   </header>
 </template>
 
-<style module>
+<style scoped>
 .header {
   position: sticky;
   inset: 0 0 auto;
@@ -239,7 +231,7 @@ export default {
   block-size: 20px;
 }
 
-.locale-list {
+.locales {
   position: absolute;
   inset-block-start: 100%;
   inset-inline-end: var(--space-s);
@@ -255,26 +247,26 @@ export default {
   transform-origin: top center;
 }
 
-.locale-list-item {
+.locales-item {
   margin-block: 0;
 }
 
-.locale-list-enter {
+.locales-enter {
   animation: grow-down 250ms ease-in-out forwards;
 }
 
-.locale-list-leave {
+.locales-leave {
   animation: grow-up 250ms ease-in-out forwards;
 }
 
-.locale-item {
+.locale {
   display: flex;
   gap: var(--space-m);
   place-items: center;
   padding: var(--space-xs) var(--space-l);
 }
 
-.locale-item:hover {
+.locale:hover {
   background: inherit;
 }
 

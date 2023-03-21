@@ -32,35 +32,35 @@ export default {
 </script>
 
 <template>
-  <footer :class="$style.footer">
+  <footer class="footer">
     <a
-      :class="[$style.pgp, $style['icon-link']]"
+      class="pgp icon-link"
       href="https://keybase.io/azat_io"
       :title="t['pgp-info']"
       target="_blank"
     >
-      <icon-lock :class="[$style.icon, $style['lock-icon']]" />
+      <icon-lock class="icon lock-icon" />
       <ui-typography color="primary" size="xs">
         PGP: D04D B9EC D3B3 B4FC
       </ui-typography>
     </a>
-    <div :class="$style['social-icons']">
+    <div class="social-icons">
       <a
         v-for="{ name, icon, url } in socialIcons"
         :key="name"
-        :class="$style['icon-link']"
+        class="icon-link"
         :href="url"
         target="_blank"
         rel="noreferrer"
         aria-label="Github"
       >
-        <component :is="icon" :class="$style.icon" />
+        <component :is="icon" class="icon" />
       </a>
     </div>
   </footer>
 </template>
 
-<style module>
+<style scoped>
 .footer {
   position: sticky;
   inset-block-start: 100vb;

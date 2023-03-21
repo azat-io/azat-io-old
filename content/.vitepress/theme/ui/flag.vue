@@ -52,10 +52,10 @@ export default {
 </script>
 
 <template>
-  <img :src="src" :class="$style.flag" :alt="`Flag ${props.code}`" />
+  <img :src="src" class="flag" :alt="`Flag ${props.code}`" />
 </template>
 
-<style module>
+<style scoped>
 .flag {
   inline-size: 48px;
 }

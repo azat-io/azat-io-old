@@ -7,6 +7,7 @@ import { data as posts } from '~/posts.data.js'
 import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
 import type { Post } from '~/posts.data.js'
+import UiHero from '~/ui/hero.vue'
 import UiTag from '~/ui/tag.vue'
 
 let { frontmatter, lang, theme, page } = useData()
@@ -55,48 +56,29 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.hero">
-    <ui-container :class="$style.container">
-      <picture v-if="frontmatter.hero">
-        <source
-          type="image/avif"
-          media="(max-width: 600px)"
-          :srcSet="frontmatter.hero.mobile.avif"
-        />
-        <source type="image/avif" :srcSet="frontmatter.hero.desktop.avif" />
-        <source
-          type="image/webp"
-          media="(max-width: 600px)"
-          :srcSet="frontmatter.hero.mobile.webp"
-        />
-        <img
-          :class="$style.image"
-          :srcSet="frontmatter.hero.desktop.webp"
-          sizes="(max-width: 600px), 800px"
-          :alt="frontmatter.title"
-          width="820"
-          height="410"
-          draggable="false"
-        />
-      </picture>
-    </ui-container>
-  </div>
+  <ui-hero
+    v-if="frontmatter.hero"
+    :hero="frontmatter.hero"
+    :title="frontmatter.title"
+  />
   <ui-container>
-    <ui-typography :class="$style.title" color="brand" size="2xl" as="h1" bold>
+    <ui-typography class="title" color="brand" size="2xl" as="h1" bold>
       {{ frontmatter.title }}
     </ui-typography>
-    <div :class="$style.info">
-      <ui-typography :class="$style['info-text']" color="primary" size="xs">
+    <div class="info">
+      <ui-typography class="info-text" color="primary" size="xs">
         {{ post.current?.date.string }}
       </ui-typography>
-      <ui-typography :class="$style['info-text']" color="primary" size="xs">
+      <ui-typography class="info-text" color="primary" size="xs">
         <icon-coffee-cup
           v-for="n in coffeeCups"
           :key="n"
-          :class="{
-            [$style.cup]: true,
-            [$style['last-cup']]: n === coffeeCups,
-          }"
+          :class="[
+            'cup',
+            {
+              ['last-cup']: n === coffeeCups,
+            },
+          ]"
         />
         {{
           post.current?.readingTime &&
@@ -110,12 +92,12 @@ export default {
     </div>
     <div
       v-if="post.current?.availableLanguages.length"
-      :class="$style['available-languages']"
+      class="available-languages"
     >
       <ui-typography color="primary" size="xs">
         {{ t['also-translated'] }}
       </ui-typography>
-      <div :class="$style['available-languages-list']">
+      <div class="available-languages-list">
         <ui-tag
           v-for="{ href, language, languageName } in post.current
             .availableLanguages"
@@ -126,36 +108,36 @@ export default {
         </ui-tag>
       </div>
     </div>
-    <article :class="$style.article">
+    <article class="article">
       <Content />
     </article>
     <ui-typography color="primary" size="s">
       <a
         :href="editPageLink"
-        :class="$style['post-link']"
+        class="post-link"
         target="_blank"
         rel="noreferrer"
         v-text="t['edit-this-page']"
       />
     </ui-typography>
-    <div v-if="post.previous || post.next" :class="$style['post-list']">
+    <div v-if="post.previous || post.next" class="post-list">
       <div v-if="post.previous">
         <ui-typography color="primary" size="s">
           {{ t['previous-post'] }}
         </ui-typography>
         <ui-typography color="primary" size="s">
-          <a :class="$style['post-link']" :href="post.previous.href">
+          <a class="post-link" :href="post.previous.href">
             {{ post.previous.title }}
           </a>
         </ui-typography>
       </div>
       <div v-else />
-      <div v-if="post.next" :class="$style['post-next']">
+      <div v-if="post.next" class="post-next">
         <ui-typography color="primary" size="s">
           {{ t['next-post'] }}
         </ui-typography>
         <ui-typography color="primary" size="s">
-          <a :class="$style['post-link']" :href="post.next.href">
+          <a class="post-link" :href="post.next.href">
             {{ post.next.title }}
           </a>
         </ui-typography>
@@ -164,25 +146,7 @@ export default {
   </ui-container>
 </template>
 
-<style module>
-.hero {
-  background: oklch(74.68% 0.014 78.24);
-}
-
-.container {
-  display: flex;
-  min-block-size: clamp(12.5rem, 8.125rem + 17.5vw, 25.625rem);
-  padding-block: 0;
-}
-
-.image {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  user-select: none;
-}
-
+<style scoped>
 .title {
   margin-block: var(--space-l) var(--space-xs);
 }
@@ -257,13 +221,6 @@ export default {
 
   .post-next {
     text-align: end;
-  }
-}
-
-@media (width <= 800px) {
-  .container {
-    width: 100vi;
-    padding: 0;
   }
 }
 </style>

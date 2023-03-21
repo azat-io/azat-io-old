@@ -35,10 +35,10 @@ export default {
 
 <template>
   <ui-container>
-    <ui-typography :class="$style.text" color="brand" size="2xl" as="h1" bold>
+    <ui-typography class="text" color="brand" size="2xl" as="h1" bold>
       Timeline
     </ui-typography>
-    <ui-typography :class="$style.text" color="primary" size="m">
+    <ui-typography class="text" color="primary" size="m">
       My lifetime visualization. Each cell represents one week. There are 52
       weeks in each row, which equals 1 year
     </ui-typography>
@@ -52,41 +52,41 @@ export default {
         World Health Organization monitoring
       </a>
     </ui-typography>
-    <ul :class="$style.examples">
+    <ul class="examples">
       <li>
         <ui-typography color="primary" size="m">
-          <span :class="[$style.example, $style.passed]" /> - Past week
+          <span class="example passed" /> - Past week
         </ui-typography>
       </li>
       <li>
         <ui-typography color="primary" size="m">
-          <span :class="[$style.example, $style['hale-example']]" /> - Healthy
-          life expectancy
+          <span class="example hale-example" /> - Healthy life expectancy
         </ui-typography>
       </li>
       <li>
         <ui-typography color="primary" size="m">
-          <span :class="[$style.example, $style['leb-example']]" /> - Life
-          expectancy at birth
+          <span class="example leb-example" /> - Life expectancy at birth
         </ui-typography>
       </li>
     </ul>
-    <div :class="$style.timeline">
+    <div class="timeline">
       <div
         v-for="index in Math.floor(lifeExpectancyAtBirth * 52)"
         :key="index"
-        :class="{
-          [$style.element]: true,
-          [$style.passed]: livedWeeks > index,
-          [$style.healthy]: healthyLifeExpectancy * 52 > index,
-          [$style.counter]: index % (52 * 4) === 0,
-        }"
+        :class="[
+          'element',
+          {
+            passed: livedWeeks > index,
+            healthy: healthyLifeExpectancy * 52 > index,
+            counter: index % (52 * 4) === 0,
+          },
+        ]"
       />
     </div>
   </ui-container>
 </template>
 
-<style module>
+<style scoped>
 .text {
   margin-block-end: var(--space-s);
 }

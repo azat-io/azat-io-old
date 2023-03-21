@@ -5,10 +5,10 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.paranja" />
+  <div class="paranja" />
 </template>
 
-<style module>
+<style scoped>
 .paranja {
   position: absolute;
   inset: 0;

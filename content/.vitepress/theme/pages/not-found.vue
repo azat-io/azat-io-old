@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <main :class="$style.main">
+  <main class="main">
     <div>
       <ui-typography color="brand" size="2xl" bold>404</ui-typography>
       <ui-typography color="primary" size="m">
@@ -19,7 +19,7 @@ export default {
   </main>
 </template>
 
-<style module>
+<style scoped>
 .main {
   display: grid;
   place-items: center;

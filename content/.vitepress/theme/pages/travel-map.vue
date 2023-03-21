@@ -29,11 +29,11 @@ export default {
       Travel map
     </ui-typography>
     <ui-world-map :visited="countries.map(({ code }) => code)" />
-    <ul :class="$style.list">
+    <ul class="list">
       <li
         v-for="({ code, name, originName }, index) in countries"
         :key="index"
-        :class="$style.item"
+        class="item"
       >
         <ui-flag :code="code" />
         <div>
@@ -47,7 +47,7 @@ export default {
   </ui-container>
 </template>
 
-<style module>
+<style scoped>
 .list {
   display: grid;
   gap: var(--space-m) var(--space-s);

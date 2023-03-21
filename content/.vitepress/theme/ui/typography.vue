@@ -24,18 +24,18 @@ export default {
   <component
     :is="props.as"
     :class="[
-      $style.typography,
-      $style[`size-${props.size}`],
-      $style[`color-${props.color}`],
-      props.bold ? $style['weight-bold'] : $style['weight-normal'],
-      props.noWrap && $style['no-wrap'],
+      'typography',
+      `size-${props.size}`,
+      `color-${props.color}`,
+      props.bold ? 'weight-bold' : 'weight-normal',
+      props.noWrap && 'no-wrap',
     ]"
   >
     <slot />
   </component>
 </template>
 
-<style module>
+<style scoped>
 .typography {
   margin-block: 0;
 }

@@ -21,14 +21,10 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.banner">
-    <img
-      :class="[$style.content, $style.image]"
-      src="/banner.webp"
-      alt="Azat S."
-    />
+  <div class="banner">
+    <img class="content image" src="/banner.webp" alt="Azat S." />
     <video
-      :class="[$style.content, $style.video]"
+      class="content video"
       poster="/banner-poster.webp"
       width="1280"
       height="720"
@@ -50,10 +46,10 @@ export default {
       <img src="/banner-poster.webp" loading="lazy" alt="Azat S." />
     </video>
     <ui-paranja />
-    <div :class="$style.greeting">
+    <div class="greeting">
       <ui-container>
-        <h1 :class="$style.title" v-text="t.title" />
-        <ui-typography :class="$style.subtitle" color="primary" size="l">
+        <h1 class="title" v-text="t.title" />
+        <ui-typography class="subtitle" color="primary" size="l">
           {{ t.subtitle }}
         </ui-typography>
       </ui-container>
@@ -61,7 +57,7 @@ export default {
   </div>
 </template>
 
-<style module>
+<style scoped>
 .banner {
   position: relative;
 }

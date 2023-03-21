@@ -31,13 +31,13 @@ export default {
 <template>
   <ui-banner />
   <ui-container>
-    <ul :class="$style.posts">
+    <ul class="posts">
       <li
         v-for="{ title, href, date } in languagePosts"
         :key="title"
-        :class="$style.post"
+        class="post"
       >
-        <a :href="href" :class="$style.link">
+        <a :href="href" class="link">
           <ui-typography color="brand" size="m" as="h3">
             {{ title }}
           </ui-typography>
@@ -50,7 +50,7 @@ export default {
   </ui-container>
 </template>
 
-<style module>
+<style scoped>
 .link {
   display: inline-block;
   padding-inline: 0;

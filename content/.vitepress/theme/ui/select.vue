@@ -37,11 +37,8 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.wrapper">
-    <select
-      v-model="model"
-      :class="[$style.select, $style[`select-${iconPosition}`]]"
-    >
+  <div class="wrapper">
+    <select v-model="model" :class="['select', `select-${iconPosition}`]">
       <option
         v-if="props.emptyLabel"
         disabled
@@ -56,15 +53,17 @@ export default {
         v-text="label"
       />
     </select>
-    <props.icon :class="[$style.icon, $style[`icon-${iconPosition}`]]" />
+    <props.icon :class="['icon', `icon-${iconPosition}`]" />
   </div>
 </template>
 
-<style module>
+<style>
 :root {
   --select-icon-size: 16px;
 }
+</style>
 
+<style scoped>
 .wrapper {
   position: relative;
 }

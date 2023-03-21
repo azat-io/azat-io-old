@@ -17,12 +17,12 @@ export default {
 </script>
 
 <template>
-  <component :is="props.as" :class="[$style.container, $style[`size-${size}`]]">
+  <component :is="props.as" :class="['container', `size-${size}`]">
     <slot />
   </component>
 </template>
 
-<style module>
+<style scoped>
 .container {
   inline-size: min(840px, 100vi);
   padding: var(--space-l) var(--space-m);

@@ -28,16 +28,12 @@ export default {
 </script>
 
 <template>
-  <component
-    :is="componentType"
-    :class="[$style.tag, $style[type]]"
-    v-bind="props"
-  >
+  <component :is="componentType" :class="['tag', type]" v-bind="props">
     <slot />
   </component>
 </template>
 
-<style module>
+<style scoped>
 .tag {
   display: inline-block;
   padding-inline: var(--space-xs);

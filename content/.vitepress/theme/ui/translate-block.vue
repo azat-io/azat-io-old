@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrapper">你好!</div>
+  <div class="wrapper">你好!</div>
 </template>
 
 <script lang="ts">
@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style module>
+<style scoped>
 .wrapper {
   padding: var(--space-m);
   background: var(--color-background-secondary);

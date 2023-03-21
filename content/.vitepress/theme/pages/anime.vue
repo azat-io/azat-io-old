@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 
+import { timeConvert } from '~/lib/time-convert'
 import IconSortDown from '~/icons/sort-down.vue'
 import UiTypography from '~/ui/typography.vue'
 import UiContainer from '~/ui/container.vue'
@@ -51,17 +52,6 @@ type FormattedAnime = Anime & {
 let selectedGenres = ref<Genre[]>([])
 
 let selectedSorting = ref(null)
-
-let timeConvert = (totalMinutes: number): string => {
-  let hours = totalMinutes / 60
-  let rhours = Math.floor(hours)
-  let minutes = (hours - rhours) * 60
-  let rminutes = Math.round(minutes)
-  return (
-    (rhours > 0 ? rhours + ' h. ' : '') +
-    (rminutes > 0 ? rminutes + ' min. ' : '')
-  )
-}
 
 let formattedAnimeList: FormattedAnime[] = anime.map(
   ({ duration, episodes, ...data }) => ({
@@ -134,7 +124,7 @@ export default {
 <template>
   <ui-container size="l">
     <ui-typography color="brand" size="2xl" as="h1" bold>Anime</ui-typography>
-    <div :class="$style.options">
+    <div class="options">
       <ui-select
         v-model="selectedSorting"
         :options="sortSelectOptions"
@@ -142,7 +132,7 @@ export default {
         icon-position="start"
         :icon="IconSortDown"
       />
-      <div :class="$style.genres">
+      <div class="genres">
         <ui-tag
           v-for="genre in animeGenres"
           :key="genre"
@@ -163,7 +153,7 @@ export default {
         </ui-tag>
       </div>
     </div>
-    <ul v-if="animeList.length > 0" :class="$style.list">
+    <ul v-if="animeList.length > 0" class="list">
       <li
         v-for="{
           name,
@@ -175,12 +165,12 @@ export default {
           time,
         } in animeList"
         :key="name"
-        :class="$style.element"
+        class="element"
       >
         <picture>
           <source type="image/avif" :srcSet="image.avif" />
           <img
-            :class="$style.image"
+            class="image"
             :src="image.webp"
             :alt="name"
             width="460"
@@ -188,8 +178,8 @@ export default {
             draggable="false"
           />
         </picture>
-        <div :class="$style.info">
-          <div :class="$style.data">
+        <div class="info">
+          <div class="data">
             <div>
               <ui-typography color="brand" size="s" no-wrap>
                 {{ name }}
@@ -208,34 +198,31 @@ export default {
               {{ `Year: ${year}` }}
             </ui-typography>
           </div>
-          <div :class="$style.stars">
+          <div class="stars">
             <icon-star
               v-for="star in 10"
               :key="star"
-              :class="{
-                [$style.star]: true,
-                [$style['star-active']]: star <= score,
-              }"
+              :class="[
+                'star',
+                {
+                  ['star-active']: star <= score,
+                },
+              ]"
             />
           </div>
         </div>
       </li>
     </ul>
-    <ui-typography
-      v-else
-      :class="$style['additional-data']"
-      color="primary"
-      size="m"
-    >
+    <ui-typography v-else class="additional-data" color="primary" size="m">
       No anime found.
     </ui-typography>
-    <ui-typography :class="$style['additional-data']" color="primary" size="m">
+    <ui-typography class="additional-data" color="primary" size="m">
       {{ `Total: ${timeConvert(totalTime)}` }}
     </ui-typography>
   </ui-container>
 </template>
 
-<style module>
+<style>
 :root {
   --origin-image-width: 460px;
   --origin-image-height: 630px;
@@ -248,7 +235,9 @@ export default {
   );
   --star-size: clamp(1rem, 0.825rem + 0.25vi, 1.125rem);
 }
+</style>
 
+<style scoped>
 .options {
   display: grid;
   gap: var(--space-l);
