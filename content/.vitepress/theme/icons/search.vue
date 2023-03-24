@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'IconNavArrowDown',
+  name: 'IconSearch',
 }
 </script>
 
@@ -12,7 +12,7 @@ export default {
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="1.5"
-      d="M12.25 5.5V18m0 0l-6-6m6 6l6-6"
+      d="m17 17l4 4M3 11a8 8 0 1 0 16 0a8 8 0 0 0-16 0Z"
     />
   </svg>
 </template>

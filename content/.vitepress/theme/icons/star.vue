@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+  <svg viewBox="0 0 24 24">
     <path
       stroke="currentColor"
       stroke-linecap="round"

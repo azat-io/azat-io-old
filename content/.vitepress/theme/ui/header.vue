@@ -4,7 +4,7 @@ import type { Directive } from 'vue'
 import { watchEffect, shallowRef, computed, onMounted, watch, ref } from 'vue'
 import { useData } from 'vitepress'
 
-import IconLanguage from '~/icons/language.vue'
+import IconTranslate from '~/icons/translate.vue'
 import UiTypography from '~/ui/typography.vue'
 import UiFlag from '~/ui/flag.vue'
 import UiLogo from '~/ui/logo.vue'
@@ -125,7 +125,7 @@ export default {
       </ui-typography>
     </a>
     <button ref="languageButton" class="item" @click="toggleLocalePopup">
-      <icon-language class="icon" />
+      <icon-translate class="icon" />
       {{ t.language }}
     </button>
     <Transition
