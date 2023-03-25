@@ -12,13 +12,13 @@
   {
     "name": "All scripts",
     "path": ["dist/assets/**/*.js"],
-    "limit": "120 kB",
+    "limit": "140 kB",
     "brotli": true
   },
   {
     "name": "All styles",
     "path": ["dist/assets/*.css"],
-    "limit": "5 kB",
+    "limit": "10 kB",
     "brotli": true
   }
 ]

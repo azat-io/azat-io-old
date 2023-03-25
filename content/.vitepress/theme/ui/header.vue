@@ -1,13 +1,24 @@
 <script lang="ts" setup>
 import type { Directive } from 'vue'
 
-import { watchEffect, shallowRef, computed, onMounted, watch, ref } from 'vue'
+import {
+  defineAsyncComponent,
+  watchEffect,
+  shallowRef,
+  computed,
+  onMounted,
+  watch,
+  ref,
+} from 'vue'
 import { useData } from 'vitepress'
 
 import IconTranslate from '~/icons/translate.vue'
 import UiTypography from '~/ui/typography.vue'
+import IconSearch from '~/icons/search.vue'
 import UiFlag from '~/ui/flag.vue'
 import UiLogo from '~/ui/logo.vue'
+
+let UiAlgolia = defineAsyncComponent(() => import('~/ui/algolia.vue'))
 
 interface Props {
   transparent?: boolean
@@ -26,7 +37,7 @@ let title = computed(() => site.value.title)
 let lang = computed(() => site.value.localeIndex)
 let href = computed(() => site.value.locales[lang.value!].link)
 
-let t = computed<{ language: string; en: string; ru: string }>(
+let t = computed<{ language: string; search: string; en: string; ru: string }>(
   () => theme.value.header,
 )
 
@@ -124,10 +135,16 @@ export default {
         {{ title }}
       </ui-typography>
     </a>
-    <button ref="languageButton" class="item" @click="toggleLocalePopup">
-      <icon-translate class="icon" />
-      {{ t.language }}
-    </button>
+    <nav class="navigation">
+      <button ref="languageButton" class="item" @click="toggleLocalePopup">
+        <icon-search class="icon" />
+        {{ t.search }}
+      </button>
+      <button ref="languageButton" class="item" @click="toggleLocalePopup">
+        <icon-translate class="icon" />
+        {{ t.language }}
+      </button>
+    </nav>
     <Transition
       v-click-away="closeLocalePopup"
       enter-active-class="locales-enter"
@@ -151,6 +168,7 @@ export default {
         </li>
       </ul>
     </Transition>
+    <ui-algolia v-if="true" :algolia="theme.algolia" />
   </header>
 </template>
 
@@ -201,6 +219,11 @@ export default {
   color: var(--color-content-brand);
 }
 
+.navigation {
+  display: flex;
+  gap: var(--space-m);
+}
+
 .item {
   display: grid;
   grid-template-columns: 20px auto;
@@ -222,7 +245,7 @@ export default {
 }
 
 .item:focus-visible {
-  background: var(--color-background-overlay);
+  background: var(--color-background-overlay-brand);
   box-shadow: 0 0 0 2px var(--color-border-brand);
 }
 

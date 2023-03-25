@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.5.0
   '@commitlint/config-conventional': ^17.4.4
+  '@docsearch/css': ^3.3.3
+  '@docsearch/js': ^3.3.3
   '@logux/eslint-config': ^49.0.0
   '@logux/stylelint-config': ^0.14.0
   '@size-limit/file': ^8.2.4
@@ -42,6 +44,8 @@ specifiers:
   vue3-click-away: ^1.2.4
 
 dependencies:
+  '@docsearch/css': 3.3.3
+  '@docsearch/js': 3.3.3
   gray-matter: 4.0.3
   iso-639-1: 2.1.15
   markdown-it-image-lazy-loading: 1.2.0

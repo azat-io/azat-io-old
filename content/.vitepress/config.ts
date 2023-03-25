@@ -22,6 +22,12 @@ let hostname = 'https://azat.io/'
 
 let links: string[] = []
 
+let algoliaConfig = {
+  appId: 'NI7EDOO3LQ',
+  apiKey: '3c0c343fff76e51e80e6ba3b32dbed25',
+  indexName: 'azat',
+}
+
 export default ({ mode }: ConfigEnv): UserConfig =>
   defineConfigWithTheme({
     appearance: false,
@@ -97,8 +103,48 @@ export default ({ mode }: ConfigEnv): UserConfig =>
         description: '',
         link: '/en/',
         themeConfig: {
+          algolia: {
+            ...algoliaConfig,
+            placeholder: 'Search posts',
+            translations: {
+              modal: {
+                searchBox: {
+                  resetButtonTitle: 'Clear the query',
+                  resetButtonAriaLabel: 'Clear the query',
+                  cancelButtonText: 'Cancel',
+                  cancelButtonAriaLabel: 'Cancel',
+                },
+                startScreen: {
+                  recentSearchesTitle: 'Recent searches',
+                  noRecentSearchesText: 'No recent searches',
+                  saveRecentSearchButtonTitle: 'Save to search history',
+                  removeRecentSearchButtonTitle: 'Remove from search history',
+                  favoriteSearchesTitle: 'Favorite searches',
+                  removeFavoriteSearchButtonTitle: 'Remove from favorites',
+                },
+                errorScreen: {
+                  titleText: 'Unable to get results',
+                  helpText: 'You may need to check your internet connection',
+                },
+                footer: {
+                  selectText: 'to select',
+                  navigateText: 'to navigate',
+                  closeText: 'to close',
+                  searchByText: 'Search by',
+                },
+                noResultsScreen: {
+                  noResultsText: 'No results for',
+                  suggestedQueryText: 'Try searching for:',
+                  reportMissingResultsText:
+                    'Do you think this query should have results?',
+                  reportMissingResultsLinkText: 'Send feedback',
+                },
+              },
+            },
+          },
           header: {
             language: 'Language',
+            search: 'Search',
             en: 'English',
             ru: 'Russian',
           },
@@ -128,8 +174,48 @@ export default ({ mode }: ConfigEnv): UserConfig =>
         description: '',
         link: '/ru/',
         themeConfig: {
+          algolia: {
+            ...algoliaConfig,
+            placeholder: 'Поиск',
+            translations: {
+              modal: {
+                searchBox: {
+                  resetButtonTitle: 'Очистить',
+                  resetButtonAriaLabel: 'Очистить',
+                  cancelButtonText: 'Отмена',
+                  cancelButtonAriaLabel: 'Отмена',
+                },
+                startScreen: {
+                  recentSearchesTitle: 'История поиска',
+                  noRecentSearchesText: 'Нет истории поиска',
+                  saveRecentSearchButtonTitle: 'Сохранить в историю поиска',
+                  removeRecentSearchButtonTitle: 'Удалить из истории поиска',
+                  favoriteSearchesTitle: 'Избранное',
+                  removeFavoriteSearchButtonTitle: 'Удалить из избранного',
+                },
+                errorScreen: {
+                  titleText: 'Не удаётся получить результаты',
+                  helpText: 'Проверьте подключение к интернету',
+                },
+                footer: {
+                  selectText: 'выбрать',
+                  navigateText: 'перемещаться',
+                  closeText: 'закрыть',
+                  searchByText: 'Поиск от',
+                },
+                noResultsScreen: {
+                  noResultsText: 'Не найдены результаты для',
+                  suggestedQueryText: 'Схожие запросы:',
+                  reportMissingResultsText:
+                    'Этот запрос должен иметь результаты?',
+                  reportMissingResultsLinkText: 'Оставить отзыв',
+                },
+              },
+            },
+          },
           header: {
             language: 'Язык',
+            search: 'Поиск',
             en: 'Английский',
             ru: 'Русский',
           },
@@ -189,7 +275,11 @@ export default ({ mode }: ConfigEnv): UserConfig =>
       plugins: [lightningcss()],
     },
 
-    transformHtml: (_, id, { pageData }) => {
+    transformHtml: (
+      _: unknown,
+      id: string,
+      { pageData }: { pageData: { relativePath: string } },
+    ) => {
       if (!/[\\/]404\.html$/.test(id)) {
         links.push(pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'))
       }
