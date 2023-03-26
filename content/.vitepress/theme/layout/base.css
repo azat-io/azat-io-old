@@ -77,13 +77,13 @@ a {
 }
 
 a:focus-visible {
-  background: var(--color-background-overlay);
+  background: var(--color-background-overlay-brand);
   box-shadow: 0 0 0 2px var(--color-border-brand);
 }
 
 a:hover {
   text-decoration: none;
-  background: var(--color-background-overlay);
+  background: var(--color-background-overlay-brand);
   transition: background 200ms;
 }
 

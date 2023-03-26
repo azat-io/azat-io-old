@@ -42,7 +42,7 @@
 }
 
 [class*='language-'] .copy:focus-visible {
-  background-color: var(--color-background-overlay);
+  background-color: var(--color-background-overlay-brand);
   box-shadow: 0 0 0 2px var(--color-border-brand);
 }
 
