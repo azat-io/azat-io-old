@@ -10,10 +10,10 @@
     "node": ">=19"
   },
   "dependencies": {
+    "@mdit/plugin-img-lazyload": "^0.4.0",
+    "@mdit/plugin-img-size": "^0.4.0",
     "gray-matter": "^4.0.3",
     "iso-639-1": "^2.1.15",
-    "markdown-it-image-lazy-loading": "^1.2.0",
-    "markdown-it-imsize": "^2.0.1",
     "reading-time": "^1.5.0",
     "remove-markdown": "^0.5.0",
     "shiki": "^0.14.1",
