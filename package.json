@@ -21,7 +21,7 @@
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vite-plugin-lightningcss": "^0.0.5",
-    "vitepress": "1.0.0-alpha.62",
+    "vitepress": "1.0.0-alpha.63",
     "vue": "^3.2.47",
     "vue3-click-away": "^1.2.4"
   },
