@@ -92,7 +92,8 @@ ol {
   padding-inline-start: 24px;
 }
 
-ul li {
+ul li,
+ol li {
   margin-block: var(--space-xs);
 }
 
