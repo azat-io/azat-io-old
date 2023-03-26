@@ -18,14 +18,14 @@ type DocSearchProps = Parameters<typeof docsearch>[0]
 
 let getRelativePath = (absoluteUrl: string) => {
   let { pathname, hash } = new URL(absoluteUrl)
-  return pathname.replace(/\.html$/, '') + hash
+  return pathname + hash
 }
 
 let initialize = (userOptions: DefaultTheme.AlgoliaSearchOptions) => {
   let options = Object.assign<{}, {}, DocSearchProps>({}, userOptions, {
     container: '#docsearch',
     navigator: {
-      navigate({ itemUrl }) {
+      navigate: ({ itemUrl }) => {
         let { pathname: hitPathname } = new URL(
           window.location.origin + itemUrl,
         )
@@ -37,25 +37,22 @@ let initialize = (userOptions: DefaultTheme.AlgoliaSearchOptions) => {
       },
     },
 
-    transformItems: items => {
-      return items.map(item => {
-        return Object.assign({}, item, {
+    transformItems: items =>
+      items.map(item =>
+        Object.assign({}, item, {
           url: getRelativePath(item.url),
-        })
-      })
-    },
+        }),
+      ),
 
     // @ts-expect-error
-    hitComponent({ hit, children }) {
-      return {
-        __v: null,
-        type: 'a',
-        ref: undefined,
-        constructor: undefined,
-        key: undefined,
-        props: { href: hit.url, children },
-      }
-    },
+    hitComponent: ({ hit, children }) => ({
+      __v: null,
+      type: 'a',
+      ref: undefined,
+      constructor: undefined,
+      key: undefined,
+      props: { href: hit.url, children },
+    }),
   })
 
   docsearch(options)
@@ -66,14 +63,7 @@ let update = () => {
     ...props.algolia,
     ...props.algolia.locales?.[localeIndex.value],
   }
-  let rawFacetFilters = options.searchParameters?.facetFilters ?? []
-  let facetFilters = [
-    ...(Array.isArray(rawFacetFilters)
-      ? rawFacetFilters
-      : [rawFacetFilters]
-    ).filter(f => !f.startsWith('lang:')),
-    `lang:${lang.value}`,
-  ]
+  let facetFilters = [`lang:${lang.value}`]
   initialize({
     ...options,
     searchParameters: {
