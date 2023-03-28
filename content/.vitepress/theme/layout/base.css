@@ -146,6 +146,9 @@ code {
 }
 
 pre {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
   padding: var(--space-s);
   border: 1px solid var(--color-border-primary);
   border-radius: 8px;
