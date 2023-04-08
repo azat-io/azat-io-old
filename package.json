@@ -7,7 +7,7 @@
   "homepage": "https://azat.io/",
   "author": "Azat S. <to@azat.io>",
   "engines": {
-    "node": ">=19"
+    "node": ">=18"
   },
   "dependencies": {
     "@mdit/plugin-img-lazyload": "^0.4.3",
