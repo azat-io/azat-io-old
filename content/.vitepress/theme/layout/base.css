@@ -102,13 +102,13 @@ img {
 }
 
 img[alt$='>'] {
-  float: right;
+  float: inline-end;
   margin-block-end: var(--space-m);
   margin-inline-start: var(--space-m);
 }
 
 img[alt$='<'] {
-  float: left;
+  float: inline-start;
   margin-block-end: var(--space-m);
   margin-inline-end: var(--space-m);
 }
@@ -118,7 +118,7 @@ img[alt$='<'] {
 }
 
 .header-anchor {
-  float: left;
+  float: inline-start;
   margin-inline-start: -0.87em;
   opacity: 0;
   transition: opacity 0.3s;
@@ -148,7 +148,7 @@ code {
 pre {
   display: flex;
   align-items: center;
-  min-height: 70px;
+  min-block-size: 70px;
   padding: var(--space-s);
   border: 1px solid var(--color-border-primary);
   border-radius: 8px;

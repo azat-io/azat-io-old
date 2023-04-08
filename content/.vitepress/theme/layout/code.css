@@ -5,7 +5,7 @@
 
 [class*='language-'] {
   position: relative;
-  overflow-x: auto;
+  overflow-inline: auto;
 }
 
 [class*='language-'] .copy {

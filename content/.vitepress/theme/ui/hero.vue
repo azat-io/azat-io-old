@@ -74,7 +74,7 @@ export default {
 
 @media (width <= 800px) {
   .hero-container {
-    width: 100vi;
+    inline-size: 100vi;
     padding: 0;
   }
 }

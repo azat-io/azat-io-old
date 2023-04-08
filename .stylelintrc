@@ -1,7 +1,12 @@
 {
-  "files": ["**/*.pcss", "**/*.css"],
+  "files": ["**/*.css"],
   "extends": "@logux/stylelint-config",
+  "plugins": ["stylelint-plugin-logical-css"],
   "ignoreFiles": ["dist/**/*"],
+  "rules": {
+    "plugin/use-logical-properties-and-values": [true, { "severity": "error" }],
+    "plugin/use-logical-units": [true, { "severity": "error" }]
+  },
   "overrides": [
     {
       "files": ["**/*.vue"],
