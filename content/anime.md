@@ -970,4 +970,17 @@ data:
     duration: 23
     episodes: 25
     score: 7
+  - name: Hunter × Hunter
+    originName: Hunter × Hunter
+    image:
+      avif: '/anime/hunter-hunter.avif'
+      webp: '/anime/hunter-hunter.webp'
+    genres:
+      - action
+      - adventure
+      - fantasy
+    year: 2011
+    duration: 23
+    episodes: 148
+    score: 9
 ---
