@@ -983,4 +983,19 @@ data:
     duration: 23
     episodes: 148
     score: 9
+  - name: Death Parade
+    originName: Death Parade
+    image:
+      avif: '/anime/death-parade.avif'
+      webp: '/anime/death-parade.webp'
+    genres:
+      - drama
+      - mystery
+      - psychological
+      - supernatural
+      - thriller
+    year: 2015
+    duration: 23
+    episodes: 12
+    score: 9
 ---
