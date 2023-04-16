@@ -10,7 +10,7 @@
 
 [class*='language-'] .copy {
   position: absolute;
-  inset: var(--space-l) var(--space-m) auto auto;
+  inset: var(--space-s) var(--space-s) auto auto;
   z-index: 3;
   display: block;
   align-items: center;
@@ -48,7 +48,7 @@
 
 [class*='language-'] > span.lang {
   position: absolute;
-  inset: var(--space-l) var(--space-m) auto auto;
+  inset: var(--space-s) var(--space-s) auto auto;
   z-index: 2;
   font: var(--font-xs);
   color: var(--color-content-tertiary);

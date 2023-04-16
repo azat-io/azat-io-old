@@ -119,9 +119,21 @@ image: /posts/fluid-interfaces/preview.png
 
 Для использования резиновой типографики в проекте достаточно установить PostCSS-плагин:
 
-```sh
-pnpm add postcss-responsive
+::: code-group
+
+```bash [npm]
+npm install --save-dev postcss-responsive
 ```
+
+```bash [pnpm]
+pnpm add --save-dev postcss-responsive
+```
+
+```bash [yarn]
+yarn add --dev postcss-responsive
+```
+
+:::
 
 Добавляем плагин в PostCSS конфиг:
 

@@ -119,9 +119,21 @@ To simplify the task, I created a corresponding plugin, [postcss-responsive](htt
 
 To use responsive typography in the project, it is sufficient to install the PostCSS plugin:
 
-```sh
-pnpm add postcss-responsive
+::: code-group
+
+```bash [npm]
+npm install --save-dev postcss-responsive
 ```
+
+```bash [pnpm]
+pnpm add --save-dev postcss-responsive
+```
+
+```bash [yarn]
+yarn add --dev postcss-responsive
+```
+
+:::
 
 Next, add plugin to PostCSS config:
 
