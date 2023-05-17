@@ -6,7 +6,7 @@
   --color-background-brand-hover: oklch(79% 0.15 83);
   --color-background-primary: oklch(22% 0 0);
   --color-background-secondary: oklch(21% 0 0);
-  --color-background-overlay: oklch(83% 0.15 83 / 20%);
+  --color-background-overlay: oklch(83% 0.15 83 / 0.2);
   --color-background-inverted: oklch(98% 0.05 97.5);
   --color-background-inverted-hover: oklch(92% 0.05 97.5);
 

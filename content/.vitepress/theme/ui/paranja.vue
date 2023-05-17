@@ -12,6 +12,6 @@ export default {
 .paranja {
   position: absolute;
   inset: 0;
-  background: oklch(12% 0 0 / 60%);
+  background: oklch(12% 0 0 / 0.6);
 }
 </style>

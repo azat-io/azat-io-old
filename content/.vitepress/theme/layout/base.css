@@ -1,6 +1,6 @@
 ::selection {
   color: var(--color-content-inverted);
-  background-color: oklch(83% 0.15 83 / 99%);
+  background-color: oklch(83% 0.15 83 / 0.99);
 }
 
 * {
