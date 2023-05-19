@@ -998,4 +998,17 @@ data:
     duration: 23
     episodes: 12
     score: 9
+  - name: Jujutsu Kaisen
+    originName: Jujutsu Kaisen
+    image:
+      avif: '/anime/jujutsu-kaisen.avif'
+      webp: '/anime/jujutsu-kaisen.webp'
+    genres:
+      - action
+      - drama
+      - supernatural
+    year: 2020
+    duration: 24
+    episodes: 24
+    score: 8
 ---
