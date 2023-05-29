@@ -1011,4 +1011,19 @@ data:
     duration: 24
     episodes: 24
     score: 8
+  - name: To Your Eternity Season 2
+    originName: Fumetsu no Anata e Season 2
+    image:
+      avif: '/anime/to-your-eternity-season-2.avif'
+      webp: '/anime/to-your-eternity-season-2.webp'
+    genres:
+      - adventure
+      - drama
+      - fantasy
+      - psychological
+      - supernatural
+    year: 2022
+    duration: 25
+    episodes: 20
+    score: 10
 ---
