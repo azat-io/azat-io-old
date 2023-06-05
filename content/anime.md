@@ -1026,4 +1026,17 @@ data:
     duration: 25
     episodes: 20
     score: 10
+  - name: "Onimai: I'm Now Your Sister!"
+    originName: Onii-chan wa Oshimai!
+    image:
+      avif: '/anime/onimai-i-m-now-your-sister.avif'
+      webp: '/anime/onimai-i-m-now-your-sister.webp'
+    genres:
+      - comedy
+      - ecchi
+      - slice-of-life
+    year: 2023
+    duration: 24
+    episodes: 12
+    score: 6
 ---
