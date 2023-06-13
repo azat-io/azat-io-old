@@ -1039,4 +1039,17 @@ data:
     duration: 24
     episodes: 12
     score: 6
+  - name: Bocchi the Rock!
+    originName: Bocchi the Rock!
+    image:
+      avif: '/anime/bocchi-the-rock.avif'
+      webp: '/anime/bocchi-the-rock.webp'
+    genres:
+      - comedy
+      - music
+      - slice-of-life
+    year: 2022
+    duration: 23
+    episodes: 12
+    score: 7
 ---

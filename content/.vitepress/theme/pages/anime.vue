@@ -19,6 +19,7 @@ export type Genre =
   | 'fantasy'
   | 'horror'
   | 'mecha'
+  | 'music'
   | 'mystery'
   | 'psychological'
   | 'romance'
