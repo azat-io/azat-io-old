@@ -103,12 +103,16 @@ img {
 
 img[alt$='>'] {
   float: inline-end;
+  /* stylelint-disable-next-line */
+  float: right;
   margin-block-end: var(--space-m);
   margin-inline-start: var(--space-m);
 }
 
 img[alt$='<'] {
   float: inline-start;
+  /* stylelint-disable-next-line */
+  float: left;
   margin-block-end: var(--space-m);
   margin-inline-end: var(--space-m);
 }
@@ -119,6 +123,8 @@ img[alt$='<'] {
 
 .header-anchor {
   float: inline-start;
+  /* stylelint-disable-next-line */
+  float: left;
   margin-inline-start: -0.87em;
   opacity: 0;
   transition: opacity 0.3s;
