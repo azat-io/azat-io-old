@@ -69,11 +69,11 @@ export default {
 }
 
 .select {
-  appearance: none;
-  inline-size: 100%;
   padding: var(--space-xs) var(--space-s);
   font: var(--font-s);
   color: var(--color-content-primary);
+  inline-size: 100%;
+  appearance: none;
   background: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
   border-radius: 8px;
