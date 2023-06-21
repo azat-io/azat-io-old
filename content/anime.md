@@ -1052,4 +1052,19 @@ data:
     duration: 23
     episodes: 12
     score: 7
+  - name: 'Demon Slayer: Swordsmith Village Arc'
+    originName: 'Kimetsu no Yaiba: Katanakaji no Sato-hen'
+    image:
+      avif: '/anime/demon-slayer-swordsmith-village-arc.avif'
+      webp: '/anime/demon-slayer-swordsmith-village-arc.webp'
+    genres:
+      - action
+      - adventure
+      - drama
+      - fantasy
+      - supernatural
+    year: 2023
+    duration: 24
+    episodes: 11
+    score: 9
 ---
