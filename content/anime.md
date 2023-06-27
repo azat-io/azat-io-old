@@ -1067,4 +1067,18 @@ data:
     duration: 24
     episodes: 11
     score: 9
+  - name: Heavenly Delusion
+    originName: Tengoku Daimakyou
+    image:
+      avif: '/anime/heavenly-delusion.avif'
+      webp: '/anime/heavenly-delusion.webp'
+    genres:
+      - adventure
+      - mystery
+      - sci-fi
+      - thriller
+    year: 2023
+    duration: 23
+    episodes: 13
+    score: 10
 ---
