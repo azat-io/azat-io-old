@@ -1081,4 +1081,18 @@ data:
     duration: 23
     episodes: 13
     score: 10
+  - name: Hell’s Paradise
+    originName: Jigokuraku
+    image:
+      avif: '/anime/hell-s-paradise.avif'
+      webp: '/anime/hell-s-paradise.webp'
+    genres:
+      - action
+      - adventure
+      - mystery
+      - supernatural
+    year: 2023
+    duration: 24
+    episodes: 13
+    score: 8
 ---
