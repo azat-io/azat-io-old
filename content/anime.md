@@ -1095,4 +1095,16 @@ data:
     duration: 24
     episodes: 13
     score: 8
+  - name: Insomniacs After School
+    originName: Kimi wa Houkago Insomnia
+    image:
+      avif: '/anime/insomniacs-after-school.avif'
+      webp: '/anime/insomniacs-after-school.webp'
+    genres:
+      - romance
+      - slice-of-life
+    year: 2023
+    duration: 23
+    episodes: 13
+    score: 8
 ---
