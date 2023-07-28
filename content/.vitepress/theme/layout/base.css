@@ -204,8 +204,8 @@ p {
 
 .vp-code-group .tabs label::after {
   position: absolute;
-  inset-inline: var(--space-xs);
   inset-block-end: -1.5px;
+  inset-inline: var(--space-xs);
   block-size: 2px;
   z-index: 10;
   content: '';
