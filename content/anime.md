@@ -1107,4 +1107,18 @@ data:
     duration: 23
     episodes: 13
     score: 8
+  - name: Buddy Daddies
+    originName: Buddy Daddies
+    image:
+      avif: '/anime/buddy-daddies.avif'
+      webp: '/anime/buddy-daddies.webp'
+    genres:
+      - action
+      - comedy
+      - drama
+      - slice-of-life
+    year: 2023
+    duration: 24
+    episodes: 12
+    score: 7
 ---
