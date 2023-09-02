@@ -1121,4 +1121,18 @@ data:
     duration: 24
     episodes: 12
     score: 7
+  - name: Oshi no Ko
+    originName: Oshi no Ko
+    image:
+      avif: '/anime/oshi-no-ko.avif'
+      webp: '/anime/oshi-no-ko.webp'
+    genres:
+      - drama
+      - mystery
+      - psychological
+      - supernatural
+    year: 2023
+    duration: 24
+    episodes: 11
+    score: 7
 ---
