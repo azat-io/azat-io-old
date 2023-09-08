@@ -1135,4 +1135,17 @@ data:
     duration: 24
     episodes: 11
     score: 7
+  - name: Skip to Loafer
+    originName: Skip to Loafer
+    image:
+      avif: '/anime/skip-to-loafer.avif'
+      webp: '/anime/skip-to-loafer.webp'
+    genres:
+      - comedy
+      - romance
+      - slice-of-life
+    year: 2023
+    duration: 24
+    episodes: 12
+    score: 8
 ---
