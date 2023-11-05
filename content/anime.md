@@ -1148,4 +1148,18 @@ data:
     duration: 24
     episodes: 12
     score: 8
+  - name: 'Attack on Titan: Final Season The Final Chapters Special 1'
+    originName: 'Shingeki no Kyojin: The Final Season - Kanketsu-hen Zenpen'
+    image:
+      avif: '/anime/attack-on-titan-final-season-the-final-chapters-special-1.avif'
+      webp: '/anime/attack-on-titan-final-season-the-final-chapters-special-1.webp'
+    genres:
+      - action
+      - drama
+      - fantasy
+      - mystery
+    year: 2023
+    duration: 61
+    episodes: 1
+    score: 7
 ---
