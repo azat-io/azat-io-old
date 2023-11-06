@@ -1158,8 +1158,25 @@ data:
       - drama
       - fantasy
       - mystery
+      - psychological
     year: 2023
     duration: 61
     episodes: 1
     score: 7
+  - name: 'Attack on Titan: Final Season The Final Chapters Special 2'
+    originName: 'Shingeki no Kyojin: The Final Season - Kanketsu-hen Kouhen'
+    image:
+      avif: '/anime/attack-on-titan-final-season-the-final-chapters-special-2.avif'
+      webp: '/anime/attack-on-titan-final-season-the-final-chapters-special-2.webp'
+    genres:
+      - action
+      - drama
+      - fantasy
+      - psychological
+      - romance
+      - supernatural
+    year: 2023
+    duration: 85
+    episodes: 1
+    score: 8
 ---
