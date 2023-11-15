@@ -1179,4 +1179,17 @@ data:
     duration: 85
     episodes: 1
     score: 8
+  - name: Undead Girl Murder Farce
+    originName: Undead Girl Murder Farce
+    image:
+      avif: '/anime/undead-girl-murder-farce.avif'
+      webp: '/anime/undead-girl-murder-farce.webp'
+    genres:
+      - fantasy
+      - mystery
+      - supernatural
+    year: 2023
+    duration: 23
+    episodes: 13
+    score: 7
 ---
