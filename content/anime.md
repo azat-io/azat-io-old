@@ -1192,4 +1192,17 @@ data:
     duration: 23
     episodes: 13
     score: 7
+  - name: Spy × Family Season 2
+    originName: Spy × Family Season 2
+    image:
+      avif: '/anime/spy-family-season-2.avif'
+      webp: '/anime/spy-family-season-2.webp'
+    genres:
+      - action
+      - comedy
+      - slice-of-lift
+    year: 2023
+    duration: 24
+    episodes: 12
+    score: 7
 ---
